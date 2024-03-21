@@ -39,7 +39,7 @@ class Vec2 {
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
 startPoint = new Vec2(240, 180);
-endPoint = new Vec2(100, 100);
+endPoint = new Vec2(0, 0);
 
 class Node {
   constructor(id, size, posx, posy, walkable, tenant) {
@@ -64,7 +64,7 @@ class Node {
     iconUser(gctx, this, 6, "blue", "blue");
   }
   createEndNode() {
-    nodeDrawer(gctx, this, 2, "orange", "orange");
+    iconEndNode(gctx, this, 6, "green", "green");
   }
   toggleWalkable() {
     this.walkable = !this.walkable;
@@ -93,8 +93,8 @@ class Node {
   createWall() {
     nodeDrawer(gctx, this, 2, "black", "black");
   }
-  createWall1() {
-    nodeDrawer(gctx, this, 2, "orange", "orange");
+  createTenant() {
+    Tenant(gctx);
   }
   drawOpenNode() {
     nodeDrawer(gctx, this, 2, "black", "green");
@@ -102,8 +102,9 @@ class Node {
   drawClosedNode() {
     nodeDrawer(gctx, this, 2, "black", "pink");
   }
+
   drawPath() {
-    drawerPath(gctx, this, 2, "green", "green");
+    drawerPath(gctx, this, 5, "green", "green");
   }
 
   drawNode() {
@@ -122,7 +123,6 @@ class Node {
 
     if (this.walkable === false) {
       this.createWall();
-      this.createWall1();
 
       return;
     }
@@ -200,6 +200,10 @@ class PathFindingAlg {
         currentNode.drawNode();
       }
 
+      if (currentNode.tenant == false) {
+        currentNode.drawNode();
+      }
+
       if (currentNode.id == endNode.id) {
         retracePath(startNode, endNode);
         //hit the last point, exit's the loop.
@@ -262,28 +266,11 @@ class Grid {
         gridPointsByPos[i][j] = countNodes;
         //here's the problem , need to set the walkability of the node without always being true...
         tempNode = new Node(countNodes, NODESIZE, i, j, true, true);
-        if (
-          countNodes === 0 ||
-          countNodes === 1 ||
-          countNodes === 2 ||
-          countNodes === 3 ||
-          countNodes === 4 ||
-          countNodes === 5 ||
-          countNodes === 40 ||
-          countNodes === 41 ||
-          countNodes === 42 ||
-          countNodes === 43 ||
-          countNodes === 44 ||
-          countNodes === 45 ||
-          countNodes === 80 ||
-          countNodes === 81 ||
-          countNodes === 82 ||
-          countNodes === 83 ||
-          countNodes === 84 ||
-          countNodes === 85
-        ) {
-          tempNode.walkable = false;
-        }
+        // if (countNodes === 0) {
+        //   tempNode.walkable = false;
+        // }
+
+        Tenant(gctx);
 
         if (wallSet.has(countNodes)) {
           console.log("wallSet had countNodes!");
@@ -313,6 +300,7 @@ function getDistance(nodeA, nodeB) {
   if (distX > distY) {
     return 14 * distY + 10 * (distX - distY);
   }
+
   return 14 * distX + 10 * (distY - distX);
 }
 
@@ -395,14 +383,36 @@ function iconUser(context, target, lineW, strokeS, fillS) {
   context.stroke(); // Menggambar lingkaran dengan warna strokeS
 }
 
+function iconEndNode(context, target, lineW, strokeS, fillS) {
+  context.beginPath();
+  context.lineWidth = lineW;
+  context.strokeStyle = strokeS;
+  context.fillStyle = fillS;
+
+  // Menggunakan arc() untuk menggambar lingkaran
+  context.arc(
+    target.posx + target.size / 2,
+    target.posy + target.size / 2,
+    lineW,
+    0,
+    Math.PI * 2
+  );
+  context.closePath();
+  // context.fill(); // Mengisi lingkaran dengan warna fillS
+  context.stroke(); // Menggambar lingkaran dengan warna strokeS
+}
+
+function Tenant(context, lineW) {
+  dataTenant.forEach((e) => {
+    HandleTenant(context, e.color, e.x, e.y, e.width, e.height, e.text);
+  });
+}
+
 function drawerPath(context, target, lineW, strokeS) {
   context.beginPath();
   context.lineWidth = lineW;
   context.strokeStyle = strokeS;
 
-  const WIDTH = 20;
-
-  console.log(target.parent.posx, target.parent.posy);
   context.moveTo(target.posx + 10, target.posy + 10);
   context.lineTo(target.parent.posx + 10, target.parent.posy + 10);
 
@@ -428,6 +438,7 @@ function resetWalls() {
 // document.getElementById("btnReset").addEventListener("click", function (event) {
 //   reset();
 // });
+
 document
   .getElementById("btnStartPoint")
   .addEventListener("click", function (event) {
@@ -447,6 +458,7 @@ document
 //   .addEventListener("click", function (event) {
 //     resetWalls();
 //   });
+
 document
   .getElementById("btnBeginPathFind")
   .addEventListener("click", function (event) {
@@ -454,6 +466,7 @@ document
     myPath = new PathFindingAlg(grid, startPoint, endPoint);
     myPath.findPath();
   });
+
 //tells the canvas what to do when clicked
 gCanvas.addEventListener(
   "click",
@@ -468,20 +481,51 @@ gCanvas.addEventListener(
         x > element.posx &&
         x < element.posx + element.size
       ) {
-        if (mode === "startPoint") {
-          startPoint = new Vec2(element.posx, element.posy);
-          reset();
-        } else if (mode === "wall") {
-          //Starting to work out resets without clearning walls, so wallSet doesn't do much yet.
-          wallSet.add(element.id);
-          element.toggleWalkable();
-          element.drawNode();
-        } else if (mode === "endPoint") {
+        console.log({
+          posx: element.posx,
+          posy: element.posy,
+        });
+        if (
+          element.posx >= 0 &&
+          element.posx <= 80 &&
+          element.posy >= 0 &&
+          element.posy <= 120
+        ) {
+          showModal("blue | a1");
+          mode = "endPoint";
+
           endPoint = new Vec2(element.posx, element.posy);
+
           reset();
-        } else {
-          alert("You must select a Mode from the list above!");
+        } else if (
+          element.posx >= 0 &&
+          element.posx <= 80 &&
+          element.posy >= 0 &&
+          element.posy <= 280
+        ) {
+          showModal("red | a2");
+          mode = "endPoint";
+
+          endPoint = new Vec2(element.posx, element.posy);
+
+          reset();
         }
+
+        // if (mode === "startPoint") {
+        //   startPoint = new Vec2(element.posx, element.posy);
+        //   reset();
+        // } else if (mode === "wall") {
+        //   //Starting to work out resets without clearning walls, so wallSet doesn't do much yet.
+        //   wallSet.add(element.id);
+        //   element.toggleWalkable();
+        //   element.drawNode();
+        // } else if (mode === "endPoint") {
+        //   console.log("halo", element.posx, element.posy);
+        //   endPoint = new Vec2(element.posx, element.posy);
+        //   reset();
+        // } else {
+        //   // alert("You must select a Mode from the list above!");
+        // }
       }
     });
   },
