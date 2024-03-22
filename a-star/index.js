@@ -39,7 +39,7 @@ class Vec2 {
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
 startPoint = new Vec2(240, 180);
-endPoint = new Vec2(0, 0);
+endPoint = new Vec2(40, 100);
 
 class Node {
   constructor(id, size, posx, posy, walkable, tenant) {
@@ -104,14 +104,14 @@ class Node {
   }
 
   drawPath() {
-    drawerPath(gctx, this, 5, "green", "green");
+    drawerPath(gctx, this, 2, "green", "green");
   }
 
   drawNode() {
     gctx.beginPath();
     gctx.lineWidth = "2";
-    gctx.strokeStyle = "white";
-    gctx.fillStyle = "white";
+    gctx.strokeStyle = "transparent";
+    gctx.fillStyle = "transparent";
     gctx.fillRect(this.posx, this.posy, this.size, this.size);
     gctx.rect(this.posx, this.posy, this.size, this.size);
     gctx.closePath();
@@ -256,7 +256,7 @@ class Grid {
     gctx.beginPath();
     gctx.lineWidth = "1";
     gctx.strokeStyle = "black";
-    gctx.rect(0, 0, this.width, this.height);
+    // gctx.rect(0, 0, this.width, this.height);
     gctx.stroke();
 
     for (var i = 0; i < this.width; i += NODESIZE) {
@@ -266,9 +266,18 @@ class Grid {
         gridPointsByPos[i][j] = countNodes;
         //here's the problem , need to set the walkability of the node without always being true...
         tempNode = new Node(countNodes, NODESIZE, i, j, true, true);
-        // if (countNodes === 0) {
-        //   tempNode.walkable = false;
-        // }
+        if (
+          countNodes === 405 ||
+          countNodes === 406 ||
+          countNodes === 407 ||
+          countNodes === 408 ||
+          countNodes === 409 ||
+          countNodes === 410 ||
+          countNodes === 411 ||
+          countNodes === 412
+        ) {
+          tempNode.walkable = false;
+        }
 
         Tenant(gctx);
 
@@ -383,13 +392,39 @@ function iconUser(context, target, lineW, strokeS, fillS) {
   context.stroke(); // Menggambar lingkaran dengan warna strokeS
 }
 
-function iconEndNode(context, target, lineW, strokeS, fillS) {
+// function iconEndNode(context, target, lineW, strokeS, fillS) {
+//   context.beginPath();
+//   context.lineWidth = lineW;
+//   context.strokeStyle = strokeS;
+//   context.fillStyle = fillS;
+
+//   // Menggunakan arc() untuk menggambar lingkaran
+//   context.arc(
+//     target.posx + target.size / 2,
+//     target.posy + target.size / 2,
+//     lineW,
+//     0,
+//     Math.PI * 2
+//   );
+//   context.closePath();
+//   context.fill(); // Mengisi lingkaran dengan warna fillS
+//   context.stroke(); // Menggambar lingkaran dengan warna strokeS
+// }
+
+function iconEndNode(
+  context,
+  target,
+  lineW,
+  strokeS,
+  fillS,
+  imageSrc = "./location.png"
+) {
+  // Gambar lingkaran
   context.beginPath();
   context.lineWidth = lineW;
   context.strokeStyle = strokeS;
   context.fillStyle = fillS;
 
-  // Menggunakan arc() untuk menggambar lingkaran
   context.arc(
     target.posx + target.size / 2,
     target.posy + target.size / 2,
@@ -398,8 +433,23 @@ function iconEndNode(context, target, lineW, strokeS, fillS) {
     Math.PI * 2
   );
   context.closePath();
-  // context.fill(); // Mengisi lingkaran dengan warna fillS
-  context.stroke(); // Menggambar lingkaran dengan warna strokeS
+  context.fill();
+  context.stroke();
+
+  // Gambar gambar
+  var image = new Image();
+  image.onload = function () {
+    // Set ukuran gambar
+    var imageSize = target.size * 2; // Sesuaikan dengan kebutuhan
+    context.drawImage(
+      image,
+      target.posx + (target.size - imageSize) / 2,
+      target.posy + (target.size - imageSize) / 2,
+      imageSize,
+      imageSize
+    );
+  };
+  image.src = imageSrc; // Mengatur sumber gambar
 }
 
 function Tenant(context, lineW) {
@@ -494,9 +544,9 @@ gCanvas.addEventListener(
           showModal("blue | a1");
           mode = "endPoint";
 
-          endPoint = new Vec2(element.posx, element.posy);
+          endPoint = new Vec2(40, 100);
 
-          reset();
+          // reset();
         } else if (
           element.posx >= 0 &&
           element.posx <= 80 &&
@@ -506,9 +556,37 @@ gCanvas.addEventListener(
           showModal("red | a2");
           mode = "endPoint";
 
-          endPoint = new Vec2(element.posx, element.posy);
+          endPoint = new Vec2(40, 220);
 
-          reset();
+          // reset();
+        } else if (
+          element.posx >= 100 &&
+          element.posx <= 220 &&
+          element.posy >= 0 &&
+          element.posy <= 60
+        ) {
+          showModal("Brown | b1");
+          mode = "endPoint";
+
+          console.log("brown");
+
+          endPoint = new Vec2(160, 40);
+
+          // reset();
+        } else if (
+          element.posx >= 260 &&
+          element.posx <= 380 &&
+          element.posy >= 0 &&
+          element.posy <= 60
+        ) {
+          showModal("green | b2");
+          mode = "endPoint";
+
+          console.log("green");
+
+          endPoint = new Vec2(320, 40);
+
+          // reset();
         }
 
         // if (mode === "startPoint") {

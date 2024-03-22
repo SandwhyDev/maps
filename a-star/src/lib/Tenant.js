@@ -13,7 +13,7 @@ const dataTenant = [
     y: 152,
     width: 100,
     height: 150,
-    text: "Royalindo & \nKupu",
+    text: "Royalindo, Kupu dan UD TRUCK",
   },
   {
     color: "brown",
@@ -29,7 +29,7 @@ const dataTenant = [
     y: 0,
     width: 150,
     height: 80,
-    text: "green",
+    text: "Royalindo, Kupu dan UD TRUCK",
   },
 ];
 
@@ -41,13 +41,40 @@ const HandleTenant = (context, color, x, y, width, height, text) => {
   context.strokeStyle = color;
   context.fillStyle = color;
   context.fillRect(x, y, width, height);
-  context.font = "14px Arial"; // Font dan ukuran teks
+  context.font = "14px Arial"; // Font dan ukuran teks awal
+
+  const maxWidth = width - 10; // Lebar maksimum teks
+  const lineHeight = 18; // Tinggi baris teks
+  let words = text.split(" ");
+  let line = "";
+  let lines = [];
+
+  // Membagi teks menjadi beberapa baris
+  for (let i = 0; i < words.length; i++) {
+    let testLine = line + words[i] + " ";
+    let testWidth = context.measureText(testLine).width;
+    if (testWidth > maxWidth) {
+      lines.push(line);
+      line = words[i] + " ";
+    } else {
+      line = testLine;
+    }
+  }
+  lines.push(line);
+
+  // Mengatur posisi teks
+  const textX = x + width / 2; // Koordinat X untuk teks
+  let textY = y + height / 2 - (lines.length / 2) * lineHeight;
+
+  // Menambahkan teks ke canvas
   context.fillStyle = "white"; // Warna teks
   context.textAlign = "center"; // Posisi teks
   context.textBaseline = "middle"; // Posisi teks
-  const textX = x + width / 2; // Koordinat X untuk teks
-  const textY = y + height / 2; // Koordinat Y untuk teks
-  context.fillText(text, textX, textY); // Menambahkan teks ke canvas
+  for (let i = 0; i < lines.length; i++) {
+    context.fillText(lines[i], textX, textY);
+    textY += lineHeight;
+  }
+
   context.closePath();
   context.stroke();
 };
