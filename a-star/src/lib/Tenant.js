@@ -7,6 +7,25 @@ const dataTenant = [
     height: 150,
     text: "blue",
   },
+
+  {
+    color: "black",
+    x: 10,
+    y: 10,
+    width: 30,
+    height: 30,
+    text: "C1",
+  },
+
+  {
+    color: "black",
+    x: 10,
+    y: 100,
+    width: 30,
+    height: 30,
+    text: "C2",
+  },
+
   {
     color: "red",
     x: 0,

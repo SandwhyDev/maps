@@ -9,6 +9,16 @@ var CANVAS_WIDTH = gCanvas.width;
 var CANVAS_HEIGHT = gCanvas.height;
 var NODESIZE = 20;
 
+// Fungsi untuk mengatur ulang ukuran canvas saat halaman di-zoom
+function resizeCanvas() {
+  gCanvas.width = window.innerWidth;
+  gCanvas.height = window.innerHeight;
+  draw(); // Gambar ulang setelah mengatur ulang ukuran
+}
+
+// Panggil resizeCanvas() saat jendela di-zoom atau diubah ukurannya
+window.onresize = resizeCanvas;
+
 var path;
 
 var openSet = new Set();
@@ -392,39 +402,13 @@ function iconUser(context, target, lineW, strokeS, fillS) {
   context.stroke(); // Menggambar lingkaran dengan warna strokeS
 }
 
-// function iconEndNode(context, target, lineW, strokeS, fillS) {
-//   context.beginPath();
-//   context.lineWidth = lineW;
-//   context.strokeStyle = strokeS;
-//   context.fillStyle = fillS;
-
-//   // Menggunakan arc() untuk menggambar lingkaran
-//   context.arc(
-//     target.posx + target.size / 2,
-//     target.posy + target.size / 2,
-//     lineW,
-//     0,
-//     Math.PI * 2
-//   );
-//   context.closePath();
-//   context.fill(); // Mengisi lingkaran dengan warna fillS
-//   context.stroke(); // Menggambar lingkaran dengan warna strokeS
-// }
-
-function iconEndNode(
-  context,
-  target,
-  lineW,
-  strokeS,
-  fillS,
-  imageSrc = "./location.png"
-) {
-  // Gambar lingkaran
+function iconEndNode(context, target, lineW, strokeS, fillS) {
   context.beginPath();
   context.lineWidth = lineW;
   context.strokeStyle = strokeS;
   context.fillStyle = fillS;
 
+  // Menggunakan arc() untuk menggambar lingkaran
   context.arc(
     target.posx + target.size / 2,
     target.posy + target.size / 2,
@@ -433,23 +417,8 @@ function iconEndNode(
     Math.PI * 2
   );
   context.closePath();
-  context.fill();
-  context.stroke();
-
-  // Gambar gambar
-  var image = new Image();
-  image.onload = function () {
-    // Set ukuran gambar
-    var imageSize = target.size * 2; // Sesuaikan dengan kebutuhan
-    context.drawImage(
-      image,
-      target.posx + (target.size - imageSize) / 2,
-      target.posy + (target.size - imageSize) / 2,
-      imageSize,
-      imageSize
-    );
-  };
-  image.src = imageSrc; // Mengatur sumber gambar
+  context.fill(); // Mengisi lingkaran dengan warna fillS
+  context.stroke(); // Menggambar lingkaran dengan warna strokeS
 }
 
 function Tenant(context, lineW) {
@@ -539,7 +508,9 @@ gCanvas.addEventListener(
           element.posx >= 0 &&
           element.posx <= 80 &&
           element.posy >= 0 &&
-          element.posy <= 120
+          element.posy <= 120 &&
+          element.posx !== 20 &&
+          element.posY !== 20
         ) {
           showModal("blue | a1");
           mode = "endPoint";
@@ -551,7 +522,9 @@ gCanvas.addEventListener(
           element.posx >= 0 &&
           element.posx <= 80 &&
           element.posy >= 0 &&
-          element.posy <= 280
+          element.posy <= 280 &&
+          element.posx !== 20 &&
+          element.posY !== 20
         ) {
           showModal("red | a2");
           mode = "endPoint";
@@ -585,6 +558,13 @@ gCanvas.addEventListener(
           console.log("green");
 
           endPoint = new Vec2(320, 40);
+
+          // reset();
+        } else if (element.posx == 20 && element.posy == 20) {
+          showModal("black | c1");
+          mode = "endPoint";
+
+          endPoint = new Vec2(20, 20);
 
           // reset();
         }
