@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas with Grid</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+      // Function to draw grid on canvas
+      function drawGrid(context, stepX, stepY) {
+        context.beginPath();
+        for (let x = 0; x <= context.canvas.width; x += stepX) {
+          context.moveTo(x, 0);
+          context.lineTo(x, context.canvas.height);
+        }
+        for (let y = 0; y <= context.canvas.height; y += stepY) {
+          context.moveTo(0, y);
+          context.lineTo(context.canvas.width, y);
+        }
+        context.strokeStyle = "#ddd";
+        context.stroke();
+      }
+
+      // Function to draw a circle marker on canvas
+      function drawMarker(context, x, y, radius, color) {
+        context.beginPath();
+        context.arc(x, y, radius, 0, 2 * Math.PI);
+        context.fillStyle = color;
+        context.fill();
+        context.closePath();
+      }
+
+      // Function to clear canvas
+      function clearCanvas(context, canvas) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // Function to update marker position
+      function updateMarker(x, y) {
+        clearCanvas(context, canvas); // Clear canvas
+        drawGrid(context, 50, 50); // Draw grid
+        drawMarker(context, x, y, 10, "red"); // Draw marker
+      }
+
+      // Get the canvas element and context
+      const canvas = document.getElementById("myCanvas");
+      const context = canvas.getContext("2d");
+
+      // Example usage:
+      // updateMarker(100, 100); // This will update marker position to (100, 100)
+
+      // Function to generate a random number between min and max
+      function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      // Function to update marker position with random coordinates
+      function updateRandomMarker() {
+        let lat = getRandomNumber(10, canvas.width - 10);
+        let lon = getRandomNumber(10, canvas.height - 10);
+        updateMarker(lat, lon);
+      }
+
+      // Call updateRandomMarker() every 1 second
+      setInterval(updateRandomMarker, 1000);
+    </script>
+  </body>
+</html>

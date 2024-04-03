@@ -3,7 +3,7 @@ const dataTenant = [
     color: "blue",
     x: 0,
     y: 0,
-    width: 100,
+    width: 95,
     height: 150,
     text: "blue",
   },
@@ -30,24 +30,24 @@ const dataTenant = [
     color: "red",
     x: 0,
     y: 152,
-    width: 100,
+    width: 95,
     height: 150,
     text: "Royalindo, Kupu dan UD TRUCK",
   },
   {
     color: "brown",
-    x: 102,
+    x: 99,
     y: 0,
     width: 150,
-    height: 80,
+    height: 79,
     text: "brown",
   },
   {
     color: "green",
     x: 254,
     y: 0,
-    width: 150,
-    height: 80,
+    width: 165,
+    height: 79,
     text: "Royalindo, Kupu dan UD TRUCK",
   },
 ];
@@ -120,6 +120,7 @@ const showModal = (text) => {
 
   // BTN CLOSED
   const btnClosed = document.createElement("span");
+  btnClosed.id = "btn-closed";
   btnClosed.className = "text-red-500 absolute top-3 right-5 text-3xl";
   btnClosed.innerHTML = "&times;";
 

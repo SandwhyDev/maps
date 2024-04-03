@@ -1,23 +1,11 @@
-//current version traces path backwards through to start Node.
-
-//this would normally be split across multiple files, however for ease of use with codepen, I decided to place all of it here.
-
 var gCanvas = document.getElementById("gCanvas");
+var btnPath = document.getElementById("btnBeginPathFind");
 var gCanvasOffset;
 var gctx = gCanvas.getContext("2d");
 var CANVAS_WIDTH = gCanvas.width;
 var CANVAS_HEIGHT = gCanvas.height;
 var NODESIZE = 20;
-
-// Fungsi untuk mengatur ulang ukuran canvas saat halaman di-zoom
-function resizeCanvas() {
-  gCanvas.width = window.innerWidth;
-  gCanvas.height = window.innerHeight;
-  draw(); // Gambar ulang setelah mengatur ulang ukuran
-}
-
-// Panggil resizeCanvas() saat jendela di-zoom atau diubah ukurannya
-window.onresize = resizeCanvas;
+var handlePath = [];
 
 var path;
 
@@ -48,13 +36,12 @@ class Vec2 {
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
-startPoint = new Vec2(240, 180);
-endPoint = new Vec2(40, 100);
+startPoint = new Vec2(160, 260);
+endPoint = new Vec2(0, 0);
 
 class Node {
-  constructor(id, size, posx, posy, walkable, tenant) {
+  constructor(id, size, posx, posy, walkable, path) {
     var F;
-
     var parent;
     this.inPath = false;
     this.getGCost = this.getValueG;
@@ -65,7 +52,7 @@ class Node {
     this.posx = posx;
     this.posy = posy;
     this.walkable = walkable;
-    this.tenant = tenant;
+    this.path = path;
 
     this.id = id;
   }
@@ -76,6 +63,7 @@ class Node {
   createEndNode() {
     iconEndNode(gctx, this, 6, "green", "green");
   }
+
   toggleWalkable() {
     this.walkable = !this.walkable;
   }
@@ -120,8 +108,8 @@ class Node {
   drawNode() {
     gctx.beginPath();
     gctx.lineWidth = "2";
-    gctx.strokeStyle = "transparent";
-    gctx.fillStyle = "transparent";
+    gctx.strokeStyle = "white";
+    gctx.fillStyle = "white";
     gctx.fillRect(this.posx, this.posy, this.size, this.size);
     gctx.rect(this.posx, this.posy, this.size, this.size);
     gctx.closePath();
@@ -133,7 +121,6 @@ class Node {
 
     if (this.walkable === false) {
       this.createWall();
-
       return;
     }
 
@@ -155,9 +142,10 @@ class PathFindingAlg {
     this.endNode = gridPointsByPos[endNode.x][endNode.y];
     this.currentNode = null;
 
-    this.openSet = [];
-    this.closedset = [];
+    this.openSet = new Set();
+    this.closedSet = new Set();
   }
+
   findPath() {
     openSet.clear();
     closedSet.clear();
@@ -174,7 +162,9 @@ class PathFindingAlg {
     var newMovementCost; //the new movement cost to neighbor
 
     openSet.add(gridPoints[currentNode]);
+
     console.log("begin");
+
     while (openSet.size > 0) {
       tempArray = Array.from(openSet);
 
@@ -210,7 +200,7 @@ class PathFindingAlg {
         currentNode.drawNode();
       }
 
-      if (currentNode.tenant == false) {
+      if (currentNode.path == false) {
         currentNode.drawNode();
       }
 
@@ -220,6 +210,7 @@ class PathFindingAlg {
 
         return; //exits loop
       }
+
       getNeighbors(currentNode).forEach(function (neighbor) {
         var neighborNode = gridPoints[neighbor];
         var neighborH = neighborNode.getHCost();
@@ -261,22 +252,78 @@ class Grid {
   }
 
   createGrid() {
-    var tempNode;
-    var countNodes = 0;
-    gctx.beginPath();
-    gctx.lineWidth = "1";
-    gctx.strokeStyle = "black";
-    // gctx.rect(0, 0, this.width, this.height);
-    gctx.stroke();
+    var tempNode; // Variabel sementara untuk menyimpan informasi node selama pembuatan
+    var countNodes = 0; // Penghitung untuk melacak jumlah total node yang dibuat
 
+    // Loop melalui lebar grid, membuat node-node sepanjang sumbu X
     for (var i = 0; i < this.width; i += NODESIZE) {
+      // Inisialisasi sebuah array untuk menyimpan titik-titik grid berdasarkan posisi sepanjang sumbu X
       gridPointsByPos[i] = [];
 
+      // Loop melalui tinggi grid, membuat node-node sepanjang sumbu Y
       for (var j = 0; j < this.height; j += NODESIZE) {
+        // Berikan sebuah indeks unik pada setiap titik grid berdasarkan posisinya
         gridPointsByPos[i][j] = countNodes;
-        //here's the problem , need to set the walkability of the node without always being true...
+
+        // Buat sebuah node baru dengan indeks, posisi, dan kemampuan berjalan default yang ditetapkan menjadi true
         tempNode = new Node(countNodes, NODESIZE, i, j, true, true);
+
+        // Tetapkan kemampuan berjalan untuk beberapa node berdasarkan kondisi yang telah ditentukan sebelumnya
         if (
+          // BLUE & RED
+          countNodes === 254 ||
+          countNodes === 255 ||
+          countNodes === 256 ||
+          countNodes === 257 ||
+          countNodes === 258 ||
+          countNodes === 259 ||
+          countNodes === 260 ||
+          countNodes === 261 ||
+          countNodes === 262 ||
+          countNodes === 263 ||
+          countNodes === 264 ||
+          countNodes === 314 ||
+          countNodes === 364 ||
+          countNodes === 464 ||
+          countNodes === 514 ||
+          countNodes === 564 ||
+          countNodes === 614 ||
+          countNodes === 664 ||
+          countNodes === 714 ||
+          countNodes === 764 ||
+          countNodes === 814 ||
+          countNodes === 864 ||
+          countNodes === 914 ||
+          countNodes === 964 ||
+          // BLUE & RED END
+
+          // BLUE & BROWN
+          countNodes === 304 ||
+          countNodes === 354 ||
+          countNodes === 404 ||
+          countNodes === 454 ||
+          countNodes === 504 ||
+          countNodes === 554 ||
+          countNodes === 604 ||
+          countNodes === 654 ||
+          countNodes === 704 ||
+          countNodes === 754 ||
+          countNodes === 804 ||
+          countNodes === 854 ||
+          countNodes === 904 ||
+          countNodes === 954 ||
+          countNodes === 1004 ||
+          countNodes === 1005 ||
+          countNodes === 1006 ||
+          countNodes === 1007 ||
+          countNodes === 1008 ||
+          countNodes === 1009 ||
+          countNodes === 1010 ||
+          countNodes === 1011 ||
+          countNodes === 1012 ||
+          countNodes === 1013 ||
+          countNodes === 1014 ||
+          // BLUE & BROWN END
           countNodes === 405 ||
           countNodes === 406 ||
           countNodes === 407 ||
@@ -284,21 +331,35 @@ class Grid {
           countNodes === 409 ||
           countNodes === 410 ||
           countNodes === 411 ||
-          countNodes === 412
+          countNodes === 412 ||
+          countNodes === 413 ||
+          countNodes === 414
         ) {
+          // tempNode.walkable = false;
+          tempNode.drawNode();
+        } else {
           tempNode.walkable = false;
         }
 
+        //HANDLE TENANT
         Tenant(gctx);
 
+        // Periksa apakah node saat ini ditetapkan sebagai tembok (tidak dapat dilalui) berdasarkan set eksternal
         if (wallSet.has(countNodes)) {
-          console.log("wallSet had countNodes!");
+          console.log("wallSet memiliki countNodes!");
           tempNode.walkable = false;
         }
 
-        tempNode.drawNode();
+        // if (countNodes === 255) {
+        // }
+
+        // Hitung dan tetapkan nilai heuristik untuk node
         tempNode.F = tempNode.getValueF();
+
+        // Masukkan node yang dibuat ke dalam array gridPoints
         gridPoints.push(tempNode);
+
+        // Inkrementasi penghitung node
         countNodes++;
       }
     }
@@ -311,7 +372,8 @@ var grid = new Grid(CANVAS_WIDTH, CANVAS_HEIGHT, 0, 0);
 grid.createGrid();
 
 var myPath = new PathFindingAlg(grid, startPoint, endPoint);
-//distance from a node to  another node
+
+// jarak dari satu node ke node lainnya
 function getDistance(nodeA, nodeB) {
   var distX = Math.abs(nodeA.posx - nodeB.posx);
   var distY = Math.abs(nodeA.posy - nodeB.posy);
@@ -323,6 +385,7 @@ function getDistance(nodeA, nodeB) {
   return 14 * distX + 10 * (distY - distX);
 }
 
+// BUAT JALUR ARAH (DIRECTION)
 function retracePath(startNode, endNode) {
   path = new Set();
   var currentNode = endNode;
@@ -339,9 +402,18 @@ function retracePath(startNode, endNode) {
 
   reverseArray.reverse();
   path = new Set(reverseArray);
+
+  if (handlePath.length <= 0) {
+    path.forEach((e) => {
+      handlePath.push({
+        posx: e.posx,
+        posy: e.posy,
+      });
+    });
+  }
 }
 
-//list of neighbors
+//daftar tetangga
 function getNeighbors(node) {
   var checkX;
   var checkY;
@@ -370,7 +442,7 @@ function getNeighbors(node) {
   return neighborList;
 }
 
-//tells canvas to how to draw the node
+// memberitahu kanvas cara menggambar simpul
 function nodeDrawer(context, target, lineW, strokeS, fillS) {
   context.beginPath();
   context.lineWidth = lineW;
@@ -447,6 +519,7 @@ function reset() {
   gctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   grid.createGrid();
 }
+
 //resets everything INCLUDING walls
 function resetWalls() {
   wallSet.clear();
@@ -469,22 +542,72 @@ document
   .addEventListener("click", function (event) {
     mode = "endPoint";
   });
-// document.getElementById("btnWall").addEventListener("click", function (event) {
-//   mode = "wall";
+
+// btnReset.addEventListener("click", function (event) {
+//   resetWalls();
 // });
-// document
-//   .getElementById("wallReset")
-//   .addEventListener("click", function (event) {
-//     resetWalls();
-//   });
 
 document
   .getElementById("btnBeginPathFind")
   .addEventListener("click", function (event) {
     reset();
+
+    if (endPoint.x === 0 && endPoint.y === 0) {
+      alert("Tujuan belum dipilih");
+      return;
+    }
+
+    console.log("find PATH", startPoint, endPoint);
+
     myPath = new PathFindingAlg(grid, startPoint, endPoint);
     myPath.findPath();
+
+    printNextPosx(handlePath);
+
+    console.log("path ", handlePath);
   });
+
+function printNextPosx(cekLine) {
+  let index = 0;
+
+  const intervalId = setInterval(() => {
+    console.log(index, handlePath.length);
+    if (index <= handlePath.length) {
+      reset();
+
+      myPath = new PathFindingAlg(grid, startPoint, endPoint);
+      myPath.findPath();
+
+      if (handlePath[index] !== undefined) {
+        startPoint.x = handlePath[index].posx;
+        startPoint.y = handlePath[index].posy;
+        var update = new Vec2(startPoint.x, startPoint.y);
+        startPoint = new Vec2(startPoint.x, startPoint.y);
+        index++;
+      } else {
+        clearInterval(intervalId);
+        alert("KAMU SAMPAI TUJUAN");
+        reset();
+        handlePath = [];
+        console.log("start ", handlePath);
+        // index = 0;
+      }
+    }
+  }, 1000);
+}
+
+// setInterval(greet, 1000);
+function greet(x, y) {
+  reset();
+
+  myPath = new PathFindingAlg(grid, startPoint, endPoint);
+  myPath.findPath();
+
+  startPoint.x = x;
+  startPoint.y = y;
+
+  var update = new Vec2(startPoint.x, startPoint.y);
+}
 
 //tells the canvas what to do when clicked
 gCanvas.addEventListener(
@@ -508,28 +631,24 @@ gCanvas.addEventListener(
           element.posx >= 0 &&
           element.posx <= 80 &&
           element.posy >= 0 &&
-          element.posy <= 120 &&
-          element.posx !== 20 &&
-          element.posY !== 20
+          element.posy <= 120
         ) {
           showModal("blue | a1");
           mode = "endPoint";
 
-          endPoint = new Vec2(40, 100);
+          endPoint = new Vec2(100, 120);
 
           // reset();
         } else if (
           element.posx >= 0 &&
           element.posx <= 80 &&
           element.posy >= 0 &&
-          element.posy <= 280 &&
-          element.posx !== 20 &&
-          element.posY !== 20
+          element.posy <= 280
         ) {
           showModal("red | a2");
           mode = "endPoint";
 
-          endPoint = new Vec2(40, 220);
+          endPoint = new Vec2(100, 220);
 
           // reset();
         } else if (
@@ -543,7 +662,7 @@ gCanvas.addEventListener(
 
           console.log("brown");
 
-          endPoint = new Vec2(160, 40);
+          endPoint = new Vec2(120, 80);
 
           // reset();
         } else if (
@@ -557,10 +676,10 @@ gCanvas.addEventListener(
 
           console.log("green");
 
-          endPoint = new Vec2(320, 40);
+          endPoint = new Vec2(320, 80);
 
           // reset();
-        } else if (element.posx == 20 && element.posy == 20) {
+        } else if (element.posx === 20 && element.posy === 20) {
           showModal("black | c1");
           mode = "endPoint";
 
