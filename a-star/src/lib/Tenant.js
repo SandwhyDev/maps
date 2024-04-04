@@ -8,23 +8,23 @@ const dataTenant = [
     text: "blue",
   },
 
-  {
-    color: "black",
-    x: 10,
-    y: 10,
-    width: 30,
-    height: 30,
-    text: "C1",
-  },
+  // {
+  //   color: "black",
+  //   x: 10,
+  //   y: 10,
+  //   width: 30,
+  //   height: 30,
+  //   text: "C1",
+  // },
 
-  {
-    color: "black",
-    x: 10,
-    y: 100,
-    width: 30,
-    height: 30,
-    text: "C2",
-  },
+  // {
+  //   color: "black",
+  //   x: 10,
+  //   y: 100,
+  //   width: 30,
+  //   height: 30,
+  //   text: "C2",
+  // },
 
   {
     color: "red",
@@ -32,7 +32,7 @@ const dataTenant = [
     y: 152,
     width: 95,
     height: 150,
-    text: "Royalindo, Kupu dan UD TRUCK",
+    text: "red",
   },
   {
     color: "brown",
@@ -48,7 +48,7 @@ const dataTenant = [
     y: 0,
     width: 165,
     height: 79,
-    text: "Royalindo, Kupu dan UD TRUCK",
+    text: "green",
   },
 ];
 
@@ -106,12 +106,12 @@ const showModal = (text) => {
   // Buat elemen-elemen modal secara dinamis
   const modal = document.createElement("div");
   modal.id = "modal";
-  modal.className = "w-full h-[200px] fixed bottom-0 left-0 p-10 ";
+  // modal.className = "w-full h-[200px] fixed bottom-0 left-0 p-10 ";
 
   // CONTENT
   const modalContent = document.createElement("div");
-  modalContent.className =
-    "bg-white w-full h-full  flex items-center p-5 shadow-xl border uppercase font-extrabold text-xl relative";
+  // modalContent.className =
+  //   "bg-white w-full h-full  flex items-center p-5 shadow-xl border uppercase font-extrabold text-xl relative";
 
   // CONTENT TEXT
   const modalText = document.createElement("p");
@@ -121,7 +121,7 @@ const showModal = (text) => {
   // BTN CLOSED
   const btnClosed = document.createElement("span");
   btnClosed.id = "btn-closed";
-  btnClosed.className = "text-red-500 absolute top-3 right-5 text-3xl";
+  // btnClosed.className = "text-red-500 absolute top-3 right-5 text-3xl";
   btnClosed.innerHTML = "&times;";
 
   modalContent.appendChild(modalText);

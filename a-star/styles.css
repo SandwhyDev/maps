@@ -7,7 +7,10 @@ body{
 }
 
 canvas {
-  border: none;
+  /* border: none;
+  transform: rotate(90deg);
+  transform-origin: 250px 250px; */
+
 }
 
 
@@ -15,7 +18,8 @@ canvas {
   padding-top:20px;
   padding-bottom:20px;
 }
-.instructions{display:block; 
+.instructions{
+  display:block; 
 
 width:800px;
 position:relative;}
@@ -69,7 +73,7 @@ position:relative;}
 #btn-closed {
   color: #ff0000;                                                                                       
   position: absolute;
-  top: 50px;
+  top: 25px;
   right: 40px;
   font-size: 1.875rem; /* equivalent to text-3xl in Tailwind */
 }
@@ -77,3 +81,12 @@ position:relative;}
 #btn-closed:hover {
   cursor: pointer;
 }
+
+/* .container-stick{
+  position: fixed;
+  bottom: 10%;
+  left: 30%;
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+} */

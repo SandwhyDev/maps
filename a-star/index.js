@@ -6,6 +6,17 @@ var CANVAS_WIDTH = gCanvas.width;
 var CANVAS_HEIGHT = gCanvas.height;
 var NODESIZE = 20;
 var handlePath = [];
+var start = document.getElementById("start");
+var end = document.getElementById("end");
+var btnStart = document.getElementById("btnStart");
+var btnEnd = document.getElementById("btnEnd");
+var startValue;
+var endValue;
+
+const arrowUp = document.getElementById("arrow-up");
+const arrowDown = document.getElementById("arrow-down");
+const arrowRight = document.getElementById("arrow-right");
+const arrowLeft = document.getElementById("arrow-left");
 
 var path;
 
@@ -36,8 +47,9 @@ class Vec2 {
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
-startPoint = new Vec2(160, 260);
-endPoint = new Vec2(0, 0);
+startPoint = new Vec2(160, 100);
+
+endPoint = new Vec2(100, 260);
 
 class Node {
   constructor(id, size, posx, posy, walkable, path) {
@@ -58,10 +70,10 @@ class Node {
   }
 
   createStartNode() {
-    iconUser(gctx, this, 6, "blue", "blue");
+    iconUser(gctx, this, 6, "#22C55E", "#22C55E");
   }
   createEndNode() {
-    iconEndNode(gctx, this, 6, "green", "green");
+    iconEndNode(gctx, this, 6, "#E72929", "#E72929");
   }
 
   toggleWalkable() {
@@ -121,6 +133,7 @@ class Node {
 
     if (this.walkable === false) {
       this.createWall();
+
       return;
     }
 
@@ -197,7 +210,7 @@ class PathFindingAlg {
         currentNode.drawNode();
       }
       if (currentNode.walkable == false) {
-        currentNode.drawNode();
+        // currentNode.drawNode();
       }
 
       if (currentNode.path == false) {
@@ -211,7 +224,7 @@ class PathFindingAlg {
         return; //exits loop
       }
 
-      getNeighbors(currentNode).forEach(function (neighbor) {
+      getNeighbors(currentNode).forEach(function (neighbor, i) {
         var neighborNode = gridPoints[neighbor];
         var neighborH = neighborNode.getHCost();
         var neighborG = neighborNode.getGCost();
@@ -220,7 +233,18 @@ class PathFindingAlg {
         var currentH = currentNode.getHCost();
 
         if (!neighborNode.walkable || closedSet.has(neighborNode)) {
+          // console.log(neighborNode.posx, neighborNode.posy);
+
           return; //acts as a continue, no need to continue if the wall was already checked.
+        }
+
+        if (
+          neighborNode.posx + 20 === startPoint.x ||
+          neighborNode.posx - 20 === startPoint.x ||
+          neighborNode.posy + 20 === startPoint.y ||
+          (neighborNode.posy - 20 === startPoint.y && i <= 4)
+        ) {
+          console.log(neighborNode.posx, neighborNode.posy);
         }
 
         newMovementCost = currentG + getDistance(currentNode, neighborNode);
@@ -350,9 +374,6 @@ class Grid {
           tempNode.walkable = false;
         }
 
-        // if (countNodes === 255) {
-        // }
-
         // Hitung dan tetapkan nilai heuristik untuk node
         tempNode.F = tempNode.getValueF();
 
@@ -379,10 +400,10 @@ function getDistance(nodeA, nodeB) {
   var distY = Math.abs(nodeA.posy - nodeB.posy);
 
   if (distX > distY) {
-    return 14 * distY + 10 * (distX - distY);
+    return 24 * distY + 10 * (distX - distY);
   }
 
-  return 14 * distX + 10 * (distY - distX);
+  return 24 * distX + 10 * (distY - distX);
 }
 
 // BUAT JALUR ARAH (DIRECTION)
@@ -433,7 +454,9 @@ function getNeighbors(node) {
         checkY >= 0 &&
         checkY <= CANVAS_HEIGHT - NODESIZE
       ) {
-        tempList.push(gridPointsByPos[checkX][checkY]);
+        if (checkX === node.posx || checkY === node.posy) {
+          tempList.push(gridPointsByPos[checkX][checkY]);
+        }
       }
     }
   }
@@ -531,17 +554,17 @@ function resetWalls() {
 //   reset();
 // });
 
-document
-  .getElementById("btnStartPoint")
-  .addEventListener("click", function (event) {
-    mode = "startPoint";
-  });
+// document
+//   .getElementById("btnStartPoint")
+//   .addEventListener("click", function (event) {
+//     mode = "startPoint";
+//   });
 
-document
-  .getElementById("btnEndPoint")
-  .addEventListener("click", function (event) {
-    mode = "endPoint";
-  });
+// document
+//   .getElementById("btnEndPoint")
+//   .addEventListener("click", function (event) {
+//     mode = "endPoint";
+//   });
 
 // btnReset.addEventListener("click", function (event) {
 //   resetWalls();
@@ -551,6 +574,11 @@ document
   .getElementById("btnBeginPathFind")
   .addEventListener("click", function (event) {
     reset();
+
+    if (startPoint.x === 0 && startPoint.y === 0) {
+      alert("Tentukan titik Awal");
+      return;
+    }
 
     if (endPoint.x === 0 && endPoint.y === 0) {
       alert("Tujuan belum dipilih");
@@ -586,10 +614,12 @@ function printNextPosx(cekLine) {
         index++;
       } else {
         clearInterval(intervalId);
-        alert("KAMU SAMPAI TUJUAN");
+        // alert("KAMU SAMPAI TUJUAN");
         reset();
         handlePath = [];
-        console.log("start ", handlePath);
+        start.value = end.value;
+        endValue = "";
+        end.value = "";
         // index = 0;
       }
     }
@@ -636,7 +666,7 @@ gCanvas.addEventListener(
           showModal("blue | a1");
           mode = "endPoint";
 
-          endPoint = new Vec2(100, 120);
+          // endPoint = new Vec2(100, 120);
 
           // reset();
         } else if (
@@ -648,7 +678,7 @@ gCanvas.addEventListener(
           showModal("red | a2");
           mode = "endPoint";
 
-          endPoint = new Vec2(100, 220);
+          // endPoint = new Vec2(100, 220);
 
           // reset();
         } else if (
@@ -662,7 +692,7 @@ gCanvas.addEventListener(
 
           console.log("brown");
 
-          endPoint = new Vec2(120, 80);
+          // endPoint = new Vec2(120, 80);
 
           // reset();
         } else if (
@@ -674,16 +704,14 @@ gCanvas.addEventListener(
           showModal("green | b2");
           mode = "endPoint";
 
-          console.log("green");
-
-          endPoint = new Vec2(320, 80);
+          // endPoint = new Vec2(320, 80);
 
           // reset();
         } else if (element.posx === 20 && element.posy === 20) {
           showModal("black | c1");
           mode = "endPoint";
 
-          endPoint = new Vec2(20, 20);
+          // endPoint = new Vec2(20, 20);
 
           // reset();
         }
@@ -708,3 +736,105 @@ gCanvas.addEventListener(
   },
   false
 );
+
+btnStart.addEventListener("click", () => {
+  var startValue = start.value;
+
+  switch (startValue) {
+    case "blue":
+      startPoint = new Vec2(100, 120);
+      break;
+
+    case "brown":
+      startPoint = new Vec2(160, 80);
+      break;
+
+    case "green":
+      startPoint = new Vec2(320, 80);
+      break;
+
+    case "red":
+      startPoint = new Vec2(100, 220);
+      break;
+
+    default:
+      alert("Exhibitor tidak ditemukan");
+      break;
+  }
+  reset();
+});
+
+btnEnd.addEventListener("click", () => {
+  var endValue = end.value;
+  endPoint = "";
+  handlePath = [];
+
+  console.log(endValue);
+
+  switch (endValue) {
+    case "blue":
+      endPoint = new Vec2(100, 120);
+      break;
+
+    case "brown":
+      endPoint = new Vec2(160, 80);
+      break;
+
+    case "green":
+      endPoint = new Vec2(320, 80);
+      break;
+
+    case "red":
+      endPoint = new Vec2(100, 220);
+      break;
+
+    default:
+      alert("Exhibitor tidak ditemukan");
+      break;
+  }
+
+  reset();
+
+  myPath = new PathFindingAlg(grid, startPoint, endPoint);
+  myPath.findPath();
+});
+
+// HANDLE ARROW
+function handleArrow(tanda, operator) {
+  var update;
+
+  if (tanda === "y") {
+    var update = operator === "tambah" ? startPoint.y + 20 : startPoint.y - 20;
+
+    startPoint = new Vec2(startPoint.x, update);
+  } else if (tanda === "x") {
+    var update = operator === "tambah" ? startPoint.x + 20 : startPoint.x - 20;
+
+    startPoint = new Vec2(update, startPoint.y);
+  }
+
+  reset();
+
+  myPath = new PathFindingAlg(grid, startPoint, endPoint);
+  myPath.findPath();
+}
+
+// ARROW UP
+arrowUp.addEventListener("click", () => {
+  handleArrow("y", "kurang");
+});
+
+// ARROW DOWN
+arrowDown.addEventListener("click", () => {
+  handleArrow("y", "tambah");
+});
+
+// ARROW RIGHT
+arrowRight.addEventListener("click", () => {
+  handleArrow("x", "tambah");
+});
+
+// ARROW LEFT
+arrowLeft.addEventListener("click", () => {
+  handleArrow("x", "kurang");
+});
