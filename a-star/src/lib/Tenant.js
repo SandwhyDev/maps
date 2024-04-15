@@ -1,66 +1,317 @@
 const dataTenant = [
   {
-    color: "blue",
+    color: "#ff9",
     x: 0,
-    y: 0,
-    width: 95,
-    height: 150,
-    text: "blue",
+    y: 60,
+    width: 60,
+    height: 240,
+    text: "A1A2-01",
   },
 
-  // {
-  //   color: "black",
-  //   x: 10,
-  //   y: 10,
-  //   width: 30,
-  //   height: 30,
-  //   text: "C1",
-  // },
-
-  // {
-  //   color: "black",
-  //   x: 10,
-  //   y: 100,
-  //   width: 30,
-  //   height: 30,
-  //   text: "C2",
-  // },
-
   {
-    color: "red",
+    color: "#ff9",
     x: 0,
-    y: 152,
-    width: 95,
-    height: 150,
-    text: "red",
+    y: 300,
+    width: 60,
+    height: 120,
+    text: "A1A2-05",
   },
   {
-    color: "brown",
-    x: 99,
-    y: 0,
-    width: 150,
-    height: 79,
-    text: "brown",
+    color: "#ff9",
+    x: 0,
+    y: 420,
+    width: 60,
+    height: 120,
+    text: "A1A2-07",
+  },
+
+  {
+    color: "#ff9",
+    x: 0,
+    y: 540,
+    width: 60,
+    height: 120,
+    text: "A1A3-01",
+  },
+
+  {
+    color: "#ff9",
+    x: 0,
+    y: 660,
+    width: 60,
+    height: 120,
+    text: "A1A3-03",
+  },
+
+  {
+    color: "#9bbb59",
+    x: 0,
+    y: 900,
+    width: 60,
+    height: 120,
+    text: "",
+    border: true,
   },
   {
-    color: "green",
-    x: 254,
+    color: "#ff9",
+    x: 0,
+    y: 780,
+    width: 60,
+    height: 120,
+    text: "A1A3-05",
+  },
+  {
+    color: "#9bbb59",
+    x: 0,
+    y: 1020,
+    width: 140,
+    height: 60,
+    border: true,
+    text: "VIP LONGUE",
+  },
+  {
+    color: "#9bbb59",
+    x: 140,
+    y: 1020,
+    width: 180,
+    height: 120,
+    text: "Seminar Area",
+  },
+
+  // x
+  {
+    color: "#ff9",
+    x: 60,
     y: 0,
-    width: 165,
-    height: 79,
-    text: "green",
+    width: 120,
+    height: 60,
+    text: "JABABEKA",
+  },
+  {
+    color: "#ff9",
+    x: 180,
+    y: 0,
+    width: 240,
+    height: 60,
+    text: "ITA AUTOPARTS",
+  },
+  {
+    color: "#ff9",
+    x: 540,
+    y: 0,
+    width: 160,
+    height: 60,
+    text: "PT. ANEKA",
+  },
+  {
+    color: "#ff9",
+    x: 700,
+    y: 0,
+    width: 140,
+    height: 60,
+    text: "PANAMA",
+  },
+  {
+    color: "#ff9",
+    x: 840,
+    y: 0,
+    width: 140,
+    height: 60,
+    text: "Evosend",
+  },
+
+  {
+    color: "#ff9",
+    x: 980,
+    y: 0,
+    width: 160,
+    height: 60,
+    text: "Happy Steel",
+  },
+
+  {
+    color: "#ff9",
+    x: 1140,
+    y: 0,
+    width: 240,
+    height: 60,
+    text: "Weichai Torch Technology Co.,Ltd.",
+  },
+  {
+    color: "#ff9",
+    x: 1520,
+    y: 0,
+    width: 160,
+    height: 60,
+    text: "Arthaplast",
+  },
+  {
+    color: "#ff9",
+    x: 1680,
+    y: 0,
+    width: 240,
+    height: 60,
+    text: "A2K1-01",
+  },
+  {
+    color: "#ff9",
+    x: 1920,
+    y: 0,
+    width: 240,
+    height: 60,
+    text: "Guangzhou Toby's Optronics Technology",
+  },
+  {
+    color: "#ff9",
+    x: 2160,
+    y: 0,
+    width: 160,
+    height: 60,
+    text: "ACIPI",
+  },
+
+  {
+    color: "#ff9",
+    x: 2500,
+    y: 0,
+    width: 200,
+    height: 60,
+    text: "Aokly Group",
+  },
+  {
+    color: "#ff9",
+    x: 2700,
+    y: 0,
+    width: 120,
+    height: 60,
+    text: "Sing Spare Part",
+  },
+
+  // wes sz
+
+  {
+    color: "#ff9",
+    x: 200 - 40,
+    y: 180 - 40,
+    width: 100,
+    height: 160,
+    text: "wes sz",
+  },
+  {
+    color: "#ff9",
+    x: 300 - 40,
+    y: 180 - 40,
+    width: 100,
+    height: 160,
+    text: "wes sz",
+  },
+  {
+    color: "#ff9",
+    x: 200 - 40,
+    y: 340 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+  {
+    color: "#ff9",
+    x: 300 - 40,
+    y: 340 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+
+  {
+    color: "#ff9",
+    x: 200 - 40,
+    y: 440 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+  {
+    color: "#ff9",
+    x: 300 - 40,
+    y: 440 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+
+  {
+    color: "#ff9",
+    x: 200 - 40,
+    y: 540 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+  {
+    color: "#ff9",
+    x: 300 - 40,
+    y: 540 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+
+  {
+    color: "#ff9",
+    x: 200 - 40,
+    y: 640 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+  {
+    color: "#ff9",
+    x: 300 - 40,
+    y: 640 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+
+  {
+    color: "#ff9",
+    x: 200 - 40,
+    y: 740 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
+  },
+  {
+    color: "#ff9",
+    x: 300 - 40,
+    y: 740 - 40,
+    width: 100,
+    height: 100,
+    text: "wes sz",
   },
 ];
 
 var currentModal;
 
-const HandleTenant = (context, color, x, y, width, height, text) => {
+const HandleTenant = (
+  context,
+  color,
+  x,
+  y,
+  width,
+  height,
+  text,
+  border,
+  fontSize
+) => {
   context.beginPath();
-  context.lineWidth = 2;
-  context.strokeStyle = color;
+  context.lineWidth = 0.5;
+
+  context.strokeStyle = !border ? "black" : color;
   context.fillStyle = color;
   context.fillRect(x, y, width, height);
-  context.font = "14px Arial"; // Font dan ukuran teks awal
+  context.font = fontSize ? "20px Arial" : "14px Arial"; // Font dan ukuran teks awal
+  context.strokeRect(x, y, width, height);
 
   const maxWidth = width - 10; // Lebar maksimum teks
   const lineHeight = 18; // Tinggi baris teks
@@ -68,7 +319,7 @@ const HandleTenant = (context, color, x, y, width, height, text) => {
   let line = "";
   let lines = [];
 
-  // Membagi teks menjadi beberapa baris
+  // // Membagi teks menjadi beberapa baris
   for (let i = 0; i < words.length; i++) {
     let testLine = line + words[i] + " ";
     let testWidth = context.measureText(testLine).width;
@@ -86,7 +337,7 @@ const HandleTenant = (context, color, x, y, width, height, text) => {
   let textY = y + height / 2 - (lines.length / 2) * lineHeight;
 
   // Menambahkan teks ke canvas
-  context.fillStyle = "white"; // Warna teks
+  context.fillStyle = "black"; // Warna teks
   context.textAlign = "center"; // Posisi teks
   context.textBaseline = "middle"; // Posisi teks
   for (let i = 0; i < lines.length; i++) {

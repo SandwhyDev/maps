@@ -1,5 +1,7 @@
 var gCanvas = document.getElementById("gCanvas");
 var btnPath = document.getElementById("btnBeginPathFind");
+var btnZoomIn = document.getElementById("btnZoomIn");
+var btnZoomOut = document.getElementById("btnZoomOut");
 var gCanvasOffset;
 var gctx = gCanvas.getContext("2d");
 var CANVAS_WIDTH = gCanvas.width;
@@ -10,13 +12,34 @@ var start = document.getElementById("start");
 var end = document.getElementById("end");
 var btnStart = document.getElementById("btnStart");
 var btnEnd = document.getElementById("btnEnd");
+var btnPushToWalk = document.getElementById("pushToWalk");
 var startValue;
 var endValue;
+var scale = 0.7;
 
-const arrowUp = document.getElementById("arrow-up");
-const arrowDown = document.getElementById("arrow-down");
-const arrowRight = document.getElementById("arrow-right");
-const arrowLeft = document.getElementById("arrow-left");
+start.value = "green";
+end.value = "brown";
+
+btnZoomIn.addEventListener("click", zoomIn);
+btnZoomOut.addEventListener("click", zoomOut);
+
+function zoomIn() {
+  console.log(scale);
+
+  if (scale <= 0.9) {
+    scale += 0.1;
+    gCanvas.style.transform = "scale(" + scale + ")";
+  }
+}
+
+function zoomOut() {
+  console.log(scale);
+  // if (scale > 1) {
+  // Batasi agar tidak dapat zoom out terlalu jauh
+  scale -= 0.1;
+  gCanvas.style.transform = "scale(" + scale + ")";
+  // }
+}
 
 var path;
 
@@ -26,10 +49,6 @@ var gridPointsByPos = [];
 var gridPoints = [];
 
 var wallSet = new Set();
-
-// You can also draw other things on the canvas if needed
-gctx.fillStyle = "red";
-gctx.fillRect(10, 10, 50, 50);
 
 //used to store the start and endPoint during resets, etc.
 var startPoint;
@@ -47,9 +66,9 @@ class Vec2 {
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
-startPoint = new Vec2(160, 100);
+startPoint = new Vec2(280, 100);
 
-endPoint = new Vec2(100, 260);
+endPoint = new Vec2(0, 80);
 
 class Node {
   constructor(id, size, posx, posy, walkable, path) {
@@ -70,7 +89,7 @@ class Node {
   }
 
   createStartNode() {
-    iconUser(gctx, this, 6, "#22C55E", "#22C55E");
+    iconUser(gctx, this, 8, "#22C55E", "#22C55E");
   }
   createEndNode() {
     iconEndNode(gctx, this, 6, "#E72929", "#E72929");
@@ -120,13 +139,17 @@ class Node {
   drawNode() {
     gctx.beginPath();
     gctx.lineWidth = "2";
-    gctx.strokeStyle = "white";
+    gctx.strokeStyle = "black";
     gctx.fillStyle = "white";
     gctx.fillRect(this.posx, this.posy, this.size, this.size);
     gctx.rect(this.posx, this.posy, this.size, this.size);
     gctx.closePath();
     gctx.stroke();
-
+    if (this.posx == startPoint.x && this.posy == startPoint.y) {
+      console.log("hit the startNode");
+      this.createStartNode();
+      return;
+    }
     if (this.inPath === true) {
       this.drawPath();
     }
@@ -137,11 +160,6 @@ class Node {
       return;
     }
 
-    if (this.posx == startPoint.x && this.posy == startPoint.y) {
-      console.log("hit the startNode");
-      this.createStartNode();
-      return;
-    }
     if (this.posx == endPoint.x && this.posy == endPoint.y) {
       this.createEndNode();
     }
@@ -244,7 +262,7 @@ class PathFindingAlg {
           neighborNode.posy + 20 === startPoint.y ||
           (neighborNode.posy - 20 === startPoint.y && i <= 4)
         ) {
-          console.log(neighborNode.posx, neighborNode.posy);
+          // console.log(neighborNode.posx, neighborNode.posy);
         }
 
         newMovementCost = currentG + getDistance(currentNode, neighborNode);
@@ -278,6 +296,7 @@ class Grid {
   createGrid() {
     var tempNode; // Variabel sementara untuk menyimpan informasi node selama pembuatan
     var countNodes = 0; // Penghitung untuk melacak jumlah total node yang dibuat
+    //HANDLE TENANT
 
     // Loop melalui lebar grid, membuat node-node sepanjang sumbu X
     for (var i = 0; i < this.width; i += NODESIZE) {
@@ -293,80 +312,78 @@ class Grid {
         tempNode = new Node(countNodes, NODESIZE, i, j, true, true);
 
         // Tetapkan kemampuan berjalan untuk beberapa node berdasarkan kondisi yang telah ditentukan sebelumnya
-        if (
-          // BLUE & RED
-          countNodes === 254 ||
-          countNodes === 255 ||
-          countNodes === 256 ||
-          countNodes === 257 ||
-          countNodes === 258 ||
-          countNodes === 259 ||
-          countNodes === 260 ||
-          countNodes === 261 ||
-          countNodes === 262 ||
-          countNodes === 263 ||
-          countNodes === 264 ||
-          countNodes === 314 ||
-          countNodes === 364 ||
-          countNodes === 464 ||
-          countNodes === 514 ||
-          countNodes === 564 ||
-          countNodes === 614 ||
-          countNodes === 664 ||
-          countNodes === 714 ||
-          countNodes === 764 ||
-          countNodes === 814 ||
-          countNodes === 864 ||
-          countNodes === 914 ||
-          countNodes === 964 ||
-          // BLUE & RED END
+        // if (
+        //   // BLUE & RED
+        //   countNodes === 254 ||
+        //   countNodes === 255 ||
+        //   countNodes === 256 ||
+        //   countNodes === 257 ||
+        //   countNodes === 258 ||
+        //   countNodes === 259 ||
+        //   countNodes === 260 ||
+        //   countNodes === 261 ||
+        //   countNodes === 262 ||
+        //   countNodes === 263 ||
+        //   countNodes === 264 ||
+        //   countNodes === 314 ||
+        //   countNodes === 364 ||
+        //   countNodes === 464 ||
+        //   countNodes === 514 ||
+        //   countNodes === 564 ||
+        //   countNodes === 614 ||
+        //   countNodes === 664 ||
+        //   countNodes === 714 ||
+        //   countNodes === 764 ||
+        //   countNodes === 814 ||
+        //   countNodes === 864 ||
+        //   countNodes === 914 ||
+        //   countNodes === 964 ||
+        //   // BLUE & RED END
 
-          // BLUE & BROWN
-          countNodes === 304 ||
-          countNodes === 354 ||
-          countNodes === 404 ||
-          countNodes === 454 ||
-          countNodes === 504 ||
-          countNodes === 554 ||
-          countNodes === 604 ||
-          countNodes === 654 ||
-          countNodes === 704 ||
-          countNodes === 754 ||
-          countNodes === 804 ||
-          countNodes === 854 ||
-          countNodes === 904 ||
-          countNodes === 954 ||
-          countNodes === 1004 ||
-          countNodes === 1005 ||
-          countNodes === 1006 ||
-          countNodes === 1007 ||
-          countNodes === 1008 ||
-          countNodes === 1009 ||
-          countNodes === 1010 ||
-          countNodes === 1011 ||
-          countNodes === 1012 ||
-          countNodes === 1013 ||
-          countNodes === 1014 ||
-          // BLUE & BROWN END
-          countNodes === 405 ||
-          countNodes === 406 ||
-          countNodes === 407 ||
-          countNodes === 408 ||
-          countNodes === 409 ||
-          countNodes === 410 ||
-          countNodes === 411 ||
-          countNodes === 412 ||
-          countNodes === 413 ||
-          countNodes === 414
-        ) {
-          // tempNode.walkable = false;
-          tempNode.drawNode();
-        } else {
-          tempNode.walkable = false;
-        }
+        //   // BLUE & BROWN
+        //   countNodes === 304 ||
+        //   countNodes === 354 ||
+        //   countNodes === 404 ||
+        //   countNodes === 454 ||
+        //   countNodes === 504 ||
+        //   countNodes === 554 ||
+        //   countNodes === 604 ||
+        //   countNodes === 654 ||
+        //   countNodes === 704 ||
+        //   countNodes === 754 ||
+        //   countNodes === 804 ||
+        //   countNodes === 854 ||
+        //   countNodes === 904 ||
+        //   countNodes === 954 ||
+        //   countNodes === 1004 ||
+        //   countNodes === 1005 ||
+        //   countNodes === 1006 ||
+        //   countNodes === 1007 ||
+        //   countNodes === 1008 ||
+        //   countNodes === 1009 ||
+        //   countNodes === 1010 ||
+        //   countNodes === 1011 ||
+        //   countNodes === 1012 ||
+        //   countNodes === 1013 ||
+        //   countNodes === 1014 ||
+        //   // BLUE & BROWN END
+        //   countNodes === 405 ||
+        //   countNodes === 406 ||
+        //   countNodes === 407 ||
+        //   countNodes === 408 ||
+        //   countNodes === 409 ||
+        //   countNodes === 410 ||
+        //   countNodes === 411 ||
+        //   countNodes === 412 ||
+        //   countNodes === 413 ||
+        //   countNodes === 414
+        // ) {
+        //   tempNode.drawNode();
+        // } else {
+        //   // tempNode.walkable = false;
+        // }
 
-        //HANDLE TENANT
-        Tenant(gctx);
+        tempNode.drawNode();
 
         // Periksa apakah node saat ini ditetapkan sebagai tembok (tidak dapat dilalui) berdasarkan set eksternal
         if (wallSet.has(countNodes)) {
@@ -384,6 +401,8 @@ class Grid {
         countNodes++;
       }
     }
+
+    Tenant(gctx);
   }
 }
 
@@ -497,6 +516,25 @@ function iconUser(context, target, lineW, strokeS, fillS) {
   context.stroke(); // Menggambar lingkaran dengan warna strokeS
 }
 
+function iconUser(context, target, lineW, strokeS, fillS) {
+  context.beginPath();
+  context.lineWidth = lineW;
+  context.strokeStyle = strokeS;
+  context.fillStyle = fillS;
+
+  // Menggunakan arc() untuk menggambar lingkaran
+  context.arc(
+    target.posx + target.size / 2,
+    target.posy + target.size / 2,
+    lineW,
+    0,
+    Math.PI * 2
+  );
+  context.closePath();
+  context.fill(); // Mengisi lingkaran dengan warna fillS
+  context.stroke(); // Menggambar lingkaran dengan warna strokeS
+}
+
 function iconEndNode(context, target, lineW, strokeS, fillS) {
   context.beginPath();
   context.lineWidth = lineW;
@@ -518,7 +556,17 @@ function iconEndNode(context, target, lineW, strokeS, fillS) {
 
 function Tenant(context, lineW) {
   dataTenant.forEach((e) => {
-    HandleTenant(context, e.color, e.x, e.y, e.width, e.height, e.text);
+    HandleTenant(
+      context,
+      e.color,
+      e.x,
+      e.y,
+      e.width,
+      e.height,
+      e.text,
+      e?.border,
+      e?.fontSize
+    );
   });
 }
 
@@ -570,30 +618,30 @@ function resetWalls() {
 //   resetWalls();
 // });
 
-document
-  .getElementById("btnBeginPathFind")
-  .addEventListener("click", function (event) {
-    reset();
+// document
+//   .getElementById("btnBeginPathFind")
+//   .addEventListener("click", function (event) {
+//     reset();
 
-    if (startPoint.x === 0 && startPoint.y === 0) {
-      alert("Tentukan titik Awal");
-      return;
-    }
+//     if (startPoint.x === 0 && startPoint.y === 0) {
+//       alert("Tentukan titik Awal");
+//       return;
+//     }
 
-    if (endPoint.x === 0 && endPoint.y === 0) {
-      alert("Tujuan belum dipilih");
-      return;
-    }
+//     if (endPoint.x === 0 && endPoint.y === 0) {
+//       alert("Tujuan belum dipilih");
+//       return;
+//     }
 
-    console.log("find PATH", startPoint, endPoint);
+//     console.log("find PATH", startPoint, endPoint);
 
-    myPath = new PathFindingAlg(grid, startPoint, endPoint);
-    myPath.findPath();
+//     myPath = new PathFindingAlg(grid, startPoint, endPoint);
+//     myPath.findPath();
 
-    printNextPosx(handlePath);
+//     printNextPosx(handlePath);
 
-    console.log("path ", handlePath);
-  });
+//     console.log("path ", handlePath);
+//   });
 
 function printNextPosx(cekLine) {
   let index = 0;
@@ -624,19 +672,6 @@ function printNextPosx(cekLine) {
       }
     }
   }, 1000);
-}
-
-// setInterval(greet, 1000);
-function greet(x, y) {
-  reset();
-
-  myPath = new PathFindingAlg(grid, startPoint, endPoint);
-  myPath.findPath();
-
-  startPoint.x = x;
-  startPoint.y = y;
-
-  var update = new Vec2(startPoint.x, startPoint.y);
 }
 
 //tells the canvas what to do when clicked
@@ -738,7 +773,7 @@ gCanvas.addEventListener(
 );
 
 btnStart.addEventListener("click", () => {
-  var startValue = start.value;
+  var startValue = start.value.toLowerCase();
 
   switch (startValue) {
     case "blue":
@@ -750,7 +785,7 @@ btnStart.addEventListener("click", () => {
       break;
 
     case "green":
-      startPoint = new Vec2(320, 80);
+      startPoint = new Vec2(320, 100);
       break;
 
     case "red":
@@ -761,15 +796,23 @@ btnStart.addEventListener("click", () => {
       alert("Exhibitor tidak ditemukan");
       break;
   }
+
   reset();
+  myPath = new PathFindingAlg(grid, startPoint, endPoint);
+
+  if (endPoint.x === 0 && endPoint.y === 0) {
+    return false;
+  }
+  myPath.findPath();
+
+  btnPushToWalk.style.display = "block";
 });
 
 btnEnd.addEventListener("click", () => {
-  var endValue = end.value;
+  var endValue = end.value.toLowerCase();
+
   endPoint = "";
   handlePath = [];
-
-  console.log(endValue);
 
   switch (endValue) {
     case "blue":
@@ -777,7 +820,7 @@ btnEnd.addEventListener("click", () => {
       break;
 
     case "brown":
-      endPoint = new Vec2(160, 80);
+      endPoint = new Vec2(120, 580);
       break;
 
     case "green":
@@ -794,10 +837,26 @@ btnEnd.addEventListener("click", () => {
   }
 
   reset();
-
   myPath = new PathFindingAlg(grid, startPoint, endPoint);
+
+  if (startPoint.x === 0 && startPoint.y === 0) {
+    return false;
+  }
+
   myPath.findPath();
+
+  btnPushToWalk.style.display = "block";
 });
+
+// setInterval(() => {
+//   if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
+//     console.log("oiii");
+//     alert("sudah sampai");
+
+//     endPoint = new Vec2(0, 0);
+//     reset();
+//   }
+// }, 1000);
 
 // HANDLE ARROW
 function handleArrow(tanda, operator) {
@@ -819,22 +878,67 @@ function handleArrow(tanda, operator) {
   myPath.findPath();
 }
 
-// ARROW UP
-arrowUp.addEventListener("click", () => {
-  handleArrow("y", "kurang");
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (window.DeviceOrientationEvent) {
+    // document.getElementById("notice").innerHTML = "Working API detected";
+    window.addEventListener(
+      "deviceorientation",
+      (eventData) => {
+        // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
+        const tiltLR = eventData.gamma;
+        // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
+        const tiltFB = eventData.beta;
+        // alpha: The direction the compass of the device aims to in degrees.
+        const dir = eventData.alpha;
+        // Call the function to use the data on the page.
+        deviceOrientationHandler(tiltLR, tiltFB, dir);
+      },
+      false
+    );
+  } else {
+    // document.getElementById("notice").innerHTML = "No API detected";
+  }
+
+  function deviceOrientationHandler(tiltLR, tiltFB, dir) {
+    // BETA
+    document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
+    // GAMMA
+    document.getElementById("tiltFB").innerHTML = Math.ceil(tiltFB);
+    // ALPHA
+    document.getElementById("direction").innerHTML = Math.ceil(dir);
+
+    // arrow.style.transform = `translate(-50%, -50%) rotateZ(${-dir}deg)`;
+
+    // if (
+    //   (startPoint.x === 0 && startPoint.y === 0) ||
+    //   (endPoint.x === 0 && endPoint.y === 0)
+    // ) {
+    //   gCanvas.className = `origin-[250px_250px] rotate-[${Math.ceil(dir)}deg]`;
+    // } else {
+    //   gCanvas.className = `origin-[${Math.ceil(startPoint.x)}px_${Math.ceil(
+    //     startPoint.y
+    //   )}px] rotate-[${Math.ceil(dir)}deg]`;
+    // }
+  }
 });
 
-// ARROW DOWN
-arrowDown.addEventListener("click", () => {
-  handleArrow("y", "tambah");
-});
+btnPushToWalk.addEventListener("click", () => {
+  if (handlePath.length > 0) {
+    const removedElement = handlePath.shift();
 
-// ARROW RIGHT
-arrowRight.addEventListener("click", () => {
-  handleArrow("x", "tambah");
-});
+    startPoint = new Vec2(removedElement.posx, removedElement.posy);
+    reset();
 
-// ARROW LEFT
-arrowLeft.addEventListener("click", () => {
-  handleArrow("x", "kurang");
+    myPath = new PathFindingAlg(grid, startPoint, endPoint);
+    myPath.findPath();
+  }
+
+  if (handlePath.length === 0) {
+    btnPushToWalk.style.display = "none";
+
+    handlePath = [];
+    start.value = end.value;
+    endValue = "";
+    end.value = "";
+  }
 });

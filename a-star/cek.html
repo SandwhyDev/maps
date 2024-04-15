@@ -3,74 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Canvas with Grid</title>
+    <title>3D Object Rotation with Device Orientation</title>
     <style>
+      body {
+        margin: 0;
+      }
       canvas {
-        border: 1px solid black;
+        display: block;
       }
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="400" height="400"></canvas>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
-      // Function to draw grid on canvas
-      function drawGrid(context, stepX, stepY) {
-        context.beginPath();
-        for (let x = 0; x <= context.canvas.width; x += stepX) {
-          context.moveTo(x, 0);
-          context.lineTo(x, context.canvas.height);
+      document.addEventListener("DOMContentLoaded", function (event) {
+        if (window.DeviceOrientationEvent) {
+          // Inisialisasi Three.js
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(
+            75,
+            window.innerWidth / window.innerHeight,
+            0.1,
+            1000
+          );
+          const renderer = new THREE.WebGLRenderer();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          document.body.appendChild(renderer.domElement);
+
+          // Membuat kubus 3D sederhana
+          const geometry = new THREE.BoxGeometry();
+          const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+          const cube = new THREE.Mesh(geometry, material);
+          scene.add(cube);
+
+          // Menambah panah untuk menunjukkan arah utara
+          const arrowGeometry = new THREE.ConeGeometry(0.5, 2, 8);
+          const arrowMaterial = new THREE.MeshBasicMaterial({
+            color: 0xff0000,
+          });
+          const arrow = new THREE.Mesh(arrowGeometry, arrowMaterial);
+          arrow.position.set(0, 3, 0);
+          arrow.rotation.x = Math.PI / 2; // Memutar panah agar mengarah ke bawah
+          scene.add(arrow);
+
+          // Memperbarui posisi kubus berdasarkan data orientasi perangkat
+          window.addEventListener(
+            "deviceorientation",
+            (eventData) => {
+              const gamma = eventData.gamma; // Perubahan arah samping (ke kiri atau ke kanan)
+              const beta = eventData.beta; // Perubahan arah depan-belakang (miring ke depan atau ke belakang)
+              const alpha = eventData.alpha; // Arah kompas
+
+              // Mengatur rotasi kubus berdasarkan data orientasi perangkat
+              cube.rotation.x = (beta * Math.PI) / 180;
+              cube.rotation.y = (gamma * Math.PI) / 180;
+
+              // Memperbarui rotasi panah agar mengarah ke utara
+              arrow.rotation.z = (-(alpha - 180) * Math.PI) / 180;
+
+              // Memperbarui tampilan
+              renderer.render(scene, camera);
+            },
+            false
+          );
+
+          // Inisialisasi kamera
+          camera.position.z = 5;
+
+          // Fungsi untuk menangani ukuran halaman yang berubah
+          function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+          }
+          window.addEventListener("resize", onWindowResize, false);
+
+          // Render pertama
+          function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+          }
+          animate();
+        } else {
+          console.log("No DeviceOrientationEvent detected");
         }
-        for (let y = 0; y <= context.canvas.height; y += stepY) {
-          context.moveTo(0, y);
-          context.lineTo(context.canvas.width, y);
-        }
-        context.strokeStyle = "#ddd";
-        context.stroke();
-      }
-
-      // Function to draw a circle marker on canvas
-      function drawMarker(context, x, y, radius, color) {
-        context.beginPath();
-        context.arc(x, y, radius, 0, 2 * Math.PI);
-        context.fillStyle = color;
-        context.fill();
-        context.closePath();
-      }
-
-      // Function to clear canvas
-      function clearCanvas(context, canvas) {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-      }
-
-      // Function to update marker position
-      function updateMarker(x, y) {
-        clearCanvas(context, canvas); // Clear canvas
-        drawGrid(context, 50, 50); // Draw grid
-        drawMarker(context, x, y, 10, "red"); // Draw marker
-      }
-
-      // Get the canvas element and context
-      const canvas = document.getElementById("myCanvas");
-      const context = canvas.getContext("2d");
-
-      // Example usage:
-      // updateMarker(100, 100); // This will update marker position to (100, 100)
-
-      // Function to generate a random number between min and max
-      function getRandomNumber(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-
-      // Function to update marker position with random coordinates
-      function updateRandomMarker() {
-        let lat = getRandomNumber(10, canvas.width - 10);
-        let lon = getRandomNumber(10, canvas.height - 10);
-        updateMarker(lat, lon);
-      }
-
-      // Call updateRandomMarker() every 1 second
-      setInterval(updateRandomMarker, 1000);
+      });
     </script>
   </body>
 </html>
