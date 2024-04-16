@@ -15,7 +15,8 @@ var btnEnd = document.getElementById("btnEnd");
 var btnPushToWalk = document.getElementById("pushToWalk");
 var startValue;
 var endValue;
-var scale = 0.7;
+var scale = 0.6;
+gCanvas.style.transform = "scale(" + scale + ")";
 
 start.value = "green";
 end.value = "brown";
@@ -26,7 +27,7 @@ btnZoomOut.addEventListener("click", zoomOut);
 function zoomIn() {
   console.log(scale);
 
-  if (scale <= 0.9) {
+  if (scale <= 1) {
     scale += 0.1;
     gCanvas.style.transform = "scale(" + scale + ")";
   }
@@ -89,7 +90,7 @@ class Node {
   }
 
   createStartNode() {
-    iconUser(gctx, this, 8, "#22C55E", "#22C55E");
+    iconUser(gctx, this, 9, "#22C55E", "#22C55E");
   }
   createEndNode() {
     iconEndNode(gctx, this, 6, "#E72929", "#E72929");
@@ -560,7 +561,7 @@ function Tenant(context, lineW) {
       context,
       e.color,
       e.x,
-      e.y,
+      e.y + 160,
       e.width,
       e.height,
       e.text,
@@ -785,7 +786,7 @@ btnStart.addEventListener("click", () => {
       break;
 
     case "green":
-      startPoint = new Vec2(320, 100);
+      startPoint = new Vec2(280, 80);
       break;
 
     case "red":
@@ -820,7 +821,7 @@ btnEnd.addEventListener("click", () => {
       break;
 
     case "brown":
-      endPoint = new Vec2(120, 580);
+      endPoint = new Vec2(80, 380);
       break;
 
     case "green":
