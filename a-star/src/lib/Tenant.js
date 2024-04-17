@@ -1,3 +1,6 @@
+var gCanvas = document.getElementById("gCanvas");
+let handleX, handleY;
+
 const dataTenant = [
   ...Medical_TO_Agent,
   ...JABABEKA_SINGSPA,
@@ -61,6 +64,9 @@ const HandleTenant = (
   context.beginPath();
   context.lineWidth = 1;
 
+  let currentColor = color; // Simpan warna asli
+  let clicked = false; // Menyimpan status elemen apakah sudah diklik atau belum
+
   context.strokeStyle = !border ? "black" : color;
   context.fillStyle = color;
   context.fillRect(x, y, width, height);
@@ -73,7 +79,7 @@ const HandleTenant = (
   let line = "";
   let lines = [];
 
-  // // Membagi teks menjadi beberapa baris
+  // Membagi teks menjadi beberapa baris
   for (let i = 0; i < words.length; i++) {
     let testLine = line + words[i] + " ";
     let testWidth = context.measureText(testLine).width;
@@ -99,6 +105,35 @@ const HandleTenant = (
     textY += lineHeight;
   }
 
+  // Menambahkan event listener untuk meng-handle klik
+  gCanvas.addEventListener("click", function (event) {
+    const rect = gCanvas.getBoundingClientRect();
+    const clickX = event.clientX - rect.left;
+    const clickY = event.clientY - rect.top;
+
+    // Cek apakah klik terjadi di dalam kotak yang di-handle
+    if (
+      clickX >= x &&
+      clickX <= x + width &&
+      clickY >= y &&
+      clickY <= y + height
+    ) {
+      showModal(text);
+      // Jika klik di dalam kotak
+      if (!clicked) {
+        currentColor = "red";
+        clicked = true;
+      } else {
+        // Jika sudah pernah diklik sebelumnya
+        currentColor = color; // Ganti warna menjadi warna asli
+        clicked = false; // Set status menjadi belum diklik
+      }
+
+      context.fillStyle = currentColor; // Ubah warna di canvas
+      context.fillRect(x, y, width, height);
+    }
+  });
+
   context.closePath();
   context.stroke();
 };
@@ -115,13 +150,22 @@ const showModal = (text) => {
 
   // CONTENT
   const modalContent = document.createElement("div");
-  // modalContent.className =
-  //   "bg-white w-full h-full  flex items-center p-5 shadow-xl border uppercase font-extrabold text-xl relative";
+  modalContent.className = "modal-content";
 
   // CONTENT TEXT
   const modalText = document.createElement("p");
-  modalText.classList.add("modal-content");
   modalText.innerText = text;
+  modalText.className = "text-sm font-normal";
+
+  // DESKRIPSI
+  const modalDeskripsi = document.createElement("p");
+  modalDeskripsi.innerText = `Trumecs`;
+
+  // GAMBAR
+  const modalImage = document.createElement("img");
+  modalImage.src = "./images/tenant.webp"; // Ganti dengan URL atau path ke gambar Anda
+  modalImage.alt = "Deskripsi gambar"; // Ganti dengan deskripsi gambar yang sesuai
+  modalImage.className = "modal-image";
 
   // BTN CLOSED
   const btnClosed = document.createElement("span");
@@ -129,7 +173,9 @@ const showModal = (text) => {
   // btnClosed.className = "text-red-500 absolute top-3 right-5 text-3xl";
   btnClosed.innerHTML = "&times;";
 
+  modalContent.appendChild(modalDeskripsi);
   modalContent.appendChild(modalText);
+  modalContent.appendChild(modalImage);
   modalContent.appendChild(btnClosed);
 
   modal.appendChild(modalContent);
