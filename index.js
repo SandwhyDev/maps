@@ -74,7 +74,7 @@ gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
 startPoint = new Vec2(260, 240);
 
-endPoint = new Vec2(1340, 460);
+endPoint = new Vec2(0, 0);
 
 document.addEventListener("DOMContentLoaded", function (event) {
   if (window.DeviceOrientationEvent) {
