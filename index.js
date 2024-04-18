@@ -13,6 +13,7 @@ var inputStart = document.getElementById("inputStart");
 var inputEnd = document.getElementById("inputEnd");
 var btnStart = document.getElementById("btnStart");
 var btnEnd = document.getElementById("btnEnd");
+var iconEnd = document.getElementById("iconEnd");
 var btnPushToWalk = document.getElementById("pushToWalk");
 var startValue;
 var endValue;
@@ -124,6 +125,7 @@ searchPoint.addEventListener("click", () => {
   searchPoint.classList.remove("py-5");
   searchPoint.className = "hidden";
   containerSearch.classList.remove("hidden");
+  iconEnd.classList.remove("hidden");
 
   //tambahkan focus di input
   inputStart.focus();
