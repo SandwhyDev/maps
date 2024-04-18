@@ -132,7 +132,7 @@ searchPoint.addEventListener("click", () => {
   HandleSearch("start");
 });
 
-function iconUser(context, target, rotateDegrees = 190) {
+function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
   var img = new Image();
   img.onload = function () {
     context.save(); // Simpan status konteks gambar
@@ -141,16 +141,19 @@ function iconUser(context, target, rotateDegrees = 190) {
       target.posy + target.size / 2
     ); // Pusat rotasi
     context.rotate((rotateDegrees * Math.PI) / 180); // Putar gambar
+
+    // Mengubah ukuran gambar sesuai faktor perbesaran
+    var scaledSize = target.size * scaleFactor;
     context.drawImage(
       img,
-      -target.size / 2,
-      -target.size / 2,
-      target.size,
-      target.size
+      -scaledSize / 2,
+      -scaledSize / 2,
+      scaledSize,
+      scaledSize
     );
     context.restore(); // Pulihkan status konteks gambar
   };
-  img.src = "./images/icon.gif";
+  img.src = "./images/human.png";
 }
 
 class Node {
@@ -223,7 +226,7 @@ class Node {
   drawNode() {
     gctx.beginPath();
     gctx.lineWidth = "2";
-    gctx.strokeStyle = "black";
+    gctx.strokeStyle = "white";
     gctx.fillStyle = "white";
     gctx.fillRect(this.posx, this.posy, this.size, this.size);
     gctx.rect(this.posx, this.posy, this.size, this.size);
