@@ -219,6 +219,7 @@ class Node {
     gctx.rect(this.posx, this.posy, this.size, this.size);
     gctx.closePath();
     gctx.stroke();
+
     if (this.posx == startPoint.x && this.posy == startPoint.y) {
       console.log("hit the startNode");
       this.createStartNode();
@@ -296,17 +297,17 @@ class PathFindingAlg {
 
       //might need to put this after getNighbors.... then replace closedSet.hasIn(neighborNode with currentNode
       if (currentNode.id == startNode.id) {
-        currentNode.drawNode();
+        // currentNode.drawNode();
+        console.log("oi");
       }
       if (currentNode.id == endNode.id) {
         currentNode.drawNode();
-      }
-      if (currentNode.walkable == false) {
-        // currentNode.drawNode();
+        console.log("oi end");
       }
 
       if (currentNode.path == false) {
         currentNode.drawNode();
+        console.log("ay ay ay");
       }
 
       if (currentNode.id == endNode.id) {
@@ -328,15 +329,6 @@ class PathFindingAlg {
           // console.log(neighborNode.posx, neighborNode.posy);
 
           return; //acts as a continue, no need to continue if the wall was already checked.
-        }
-
-        if (
-          neighborNode.posx + 20 === startPoint.x ||
-          neighborNode.posx - 20 === startPoint.x ||
-          neighborNode.posy + 20 === startPoint.y ||
-          (neighborNode.posy - 20 === startPoint.y && i <= 4)
-        ) {
-          // console.log(neighborNode.posx, neighborNode.posy);
         }
 
         newMovementCost = currentG + getDistance(currentNode, neighborNode);
@@ -412,10 +404,10 @@ class Grid {
         // tempNode.drawNode();
 
         // Periksa apakah node saat ini ditetapkan sebagai tembok (tidak dapat dilalui) berdasarkan set eksternal
-        if (wallSet.has(countNodes)) {
-          console.log("wallSet memiliki countNodes!");
-          tempNode.walkable = false;
-        }
+        // if (wallSet.has(countNodes)) {
+        //   console.log("wallSet memiliki countNodes!");
+        //   tempNode.walkable = false;
+        // }
 
         // Hitung dan tetapkan nilai heuristik untuk node
         tempNode.F = tempNode.getValueF();
@@ -437,7 +429,7 @@ class Grid {
 var grid = new Grid(CANVAS_WIDTH, CANVAS_HEIGHT, 0, 0);
 grid.createGrid();
 
-var myPath = new PathFindingAlg(grid, startPoint, endPoint);
+// var myPath = new PathFindingAlg(grid, startPoint, endPoint);
 
 // jarak dari satu node ke node lainnya
 function getDistance(nodeA, nodeB) {
