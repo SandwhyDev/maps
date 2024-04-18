@@ -5,6 +5,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 120,
     height: 60,
+    code: "A1A1-31",
     text: "JABABEKA",
   },
   {
@@ -13,6 +14,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 240,
     height: 60,
+    code: "A1A1-32",
     text: "ITA AUTOPARTS",
   },
   {
@@ -21,6 +23,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 160,
     height: 60,
+    code: "A1A1-33",
     text: "PT. ANEKA",
   },
   {
@@ -29,6 +32,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 140,
     height: 60,
+    code: "A1A1-34",
     text: "PANAMA",
   },
   {
@@ -37,6 +41,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 140,
     height: 60,
+    code: "A1A1-35",
     text: "Evosend",
   },
 
@@ -46,6 +51,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 160,
     height: 60,
+    code: "A1A1-36",
     text: "Happy Steel",
   },
 
@@ -55,6 +61,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 240,
     height: 60,
+    code: "A1A1-37",
     text: "Weichai Torch Technology Co.,Ltd.",
   },
   {
@@ -63,6 +70,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 160,
     height: 60,
+    code: "A1A1-31",
     text: "Arthaplast",
   },
   {
@@ -71,6 +79,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 240,
     height: 60,
+    code: "A1A1-31",
     text: "A2K1-01",
   },
   {
@@ -79,6 +88,8 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 240,
     height: 60,
+    code: "A1A1-31",
+
     text: "Guangzhou Toby's Optronics Technology",
   },
   {
@@ -87,6 +98,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 160,
     height: 60,
+    code: "A1A1-31",
     text: "ACIPI",
   },
 
@@ -96,6 +108,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 200,
     height: 60,
+    code: "A1A1-31",
     text: "Aokly Group",
   },
   {
@@ -104,6 +117,7 @@ const JABABEKA_SINGSPA = [
     y: 0,
     width: 120,
     height: 60,
+    code: "A1A1-31",
     text: "Sing Spare Part",
   },
 ];
@@ -116,6 +130,7 @@ const A1A2 = [
     y: 60,
     width: 60,
     height: 240,
+    code: "A1A1-31",
     text: "A1A2-01",
   },
 
@@ -125,6 +140,7 @@ const A1A2 = [
     y: 300,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A1A2-05",
   },
   {
@@ -133,6 +149,7 @@ const A1A2 = [
     y: 420,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A1A2-07",
   },
 
@@ -142,6 +159,7 @@ const A1A2 = [
     y: 540,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A1A3-01",
   },
 
@@ -151,6 +169,7 @@ const A1A2 = [
     y: 660,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A1A3-03",
   },
 
@@ -160,6 +179,7 @@ const A1A2 = [
     y: 900,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "",
     border: true,
   },
@@ -169,6 +189,7 @@ const A1A2 = [
     y: 780,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A1A3-05",
   },
   {
@@ -178,6 +199,7 @@ const A1A2 = [
     width: 140,
     height: 60,
     border: true,
+    code: "A1A1-31",
     text: "VIP LONGUE",
   },
   {
@@ -186,6 +208,7 @@ const A1A2 = [
     y: 1020,
     width: 180,
     height: 80,
+    code: "A1A1-31",
     text: "Seminar Area",
   },
 ];
@@ -197,6 +220,7 @@ const A1B2 = [
     y: 120,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "wes sz",
   },
   {
@@ -205,6 +229,7 @@ const A1B2 = [
     y: 120,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "Guoneng",
   },
   {
@@ -213,6 +238,7 @@ const A1B2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-05",
   },
   {
@@ -221,6 +247,7 @@ const A1B2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-06",
   },
 
@@ -230,6 +257,7 @@ const A1B2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-07",
   },
   {
@@ -238,6 +266,7 @@ const A1B2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-08",
   },
 
@@ -247,6 +276,7 @@ const A1B2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-09",
   },
   {
@@ -255,6 +285,7 @@ const A1B2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-10",
   },
 
@@ -264,6 +295,7 @@ const A1B2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-11",
   },
   {
@@ -272,6 +304,7 @@ const A1B2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-12",
   },
 
@@ -281,6 +314,7 @@ const A1B2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-13",
   },
   {
@@ -289,6 +323,7 @@ const A1B2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B2-14",
   },
 ];
@@ -300,6 +335,7 @@ const A1C2 = [
     y: 120,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "DMM",
   },
 
@@ -309,6 +345,7 @@ const A1C2 = [
     y: 240,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "Iroad",
   },
   {
@@ -317,6 +354,7 @@ const A1C2 = [
     y: 240,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "BTS",
   },
   {
@@ -325,6 +363,7 @@ const A1C2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "GIAMM",
   },
   {
@@ -333,6 +372,7 @@ const A1C2 = [
     y: 320,
     width: 60,
     height: 20,
+    code: "A1A1-31",
     text: "",
   },
   {
@@ -341,6 +381,7 @@ const A1C2 = [
     y: 340,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "Tongil",
   },
 
@@ -350,6 +391,7 @@ const A1C2 = [
     y: 420,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "KAPCI",
   }, // YIDA UP
   {
@@ -358,6 +400,7 @@ const A1C2 = [
     y: 120,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "DMM",
   },
 
@@ -367,6 +410,7 @@ const A1C2 = [
     y: 240,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "Iroad",
   },
   {
@@ -375,6 +419,7 @@ const A1C2 = [
     y: 240,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "BTS",
   },
   {
@@ -383,6 +428,7 @@ const A1C2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "GIAMM",
   },
   {
@@ -391,6 +437,7 @@ const A1C2 = [
     y: 320,
     width: 60,
     height: 20,
+    code: "A1A1-31",
     text: "",
   },
   {
@@ -399,6 +446,7 @@ const A1C2 = [
     y: 340,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "Tongil",
   },
 
@@ -408,6 +456,7 @@ const A1C2 = [
     y: 420,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "KAPCI",
   },
 ];
@@ -419,6 +468,7 @@ const A1D2 = [
     y: 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-01",
   },
   {
@@ -427,6 +477,7 @@ const A1D2 = [
     y: 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-02",
   },
   {
@@ -435,6 +486,7 @@ const A1D2 = [
     y: 120 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-03",
   },
   {
@@ -443,6 +495,7 @@ const A1D2 = [
     y: 120 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-04",
   },
 
@@ -452,6 +505,7 @@ const A1D2 = [
     y: 120 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-05",
   },
   {
@@ -460,6 +514,7 @@ const A1D2 = [
     y: 120 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-06",
   },
   {
@@ -468,6 +523,7 @@ const A1D2 = [
     y: 120 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-07",
   },
   {
@@ -476,6 +532,7 @@ const A1D2 = [
     y: 120 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-08",
   },
 
@@ -485,6 +542,7 @@ const A1D2 = [
     y: 120 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-09",
   },
   {
@@ -493,6 +551,7 @@ const A1D2 = [
     y: 120 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-10",
   },
 
@@ -502,6 +561,7 @@ const A1D2 = [
     y: 120 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-11",
   },
   {
@@ -510,6 +570,7 @@ const A1D2 = [
     y: 120 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-12",
   },
 
@@ -519,6 +580,7 @@ const A1D2 = [
     y: 120 + 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-13",
   },
   {
@@ -527,6 +589,7 @@ const A1D2 = [
     y: 120 + 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D2-14",
   },
 ];
@@ -538,6 +601,7 @@ const A1E2 = [
     y: 120,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A1E2-01",
   },
   {
@@ -546,6 +610,7 @@ const A1E2 = [
     y: 120,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A1E2-02",
   },
   {
@@ -554,6 +619,7 @@ const A1E2 = [
     y: 120 + 120,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A1E2-05",
   },
   {
@@ -562,6 +628,7 @@ const A1E2 = [
     y: 120 + 120,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A1E2-06",
   },
   {
@@ -570,6 +637,7 @@ const A1E2 = [
     y: 120 + 200,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A1E2-07",
   },
   {
@@ -578,6 +646,7 @@ const A1E2 = [
     y: 120 + 200,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A1E2-08",
   },
 
@@ -587,6 +656,7 @@ const A1E2 = [
     y: 120 + 280,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A1E2-11",
   },
   {
@@ -595,6 +665,7 @@ const A1E2 = [
     y: 120 + 280,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A1E2-12",
   },
 
@@ -604,6 +675,7 @@ const A1E2 = [
     y: 120 + 360,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A1E2-13",
   },
   {
@@ -612,6 +684,7 @@ const A1E2 = [
     y: 120 + 360,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A1E2-14",
   },
 ];
@@ -623,6 +696,7 @@ const A1F2 = [
     y: 120,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "A1F2-01",
   },
   {
@@ -631,6 +705,7 @@ const A1F2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-02",
   },
   {
@@ -639,6 +714,7 @@ const A1F2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-03",
   },
   {
@@ -647,6 +723,7 @@ const A1F2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-04",
   },
   {
@@ -655,6 +732,7 @@ const A1F2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-05",
   },
   {
@@ -663,6 +741,7 @@ const A1F2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-06",
   },
   {
@@ -671,6 +750,7 @@ const A1F2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-07",
   },
   {
@@ -679,6 +759,7 @@ const A1F2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-08",
   },
   {
@@ -687,6 +768,7 @@ const A1F2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-09",
   },
   {
@@ -695,6 +777,7 @@ const A1F2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-10",
   },
   {
@@ -703,6 +786,7 @@ const A1F2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F2-11",
   },
   {
@@ -711,6 +795,7 @@ const A1F2 = [
     y: 540,
     width: 20,
     height: 20,
+    code: "A1A1-31",
     text: "",
   },
 ];
@@ -722,6 +807,7 @@ const A1G2 = [
     y: 120,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "A1G2-01",
   },
   {
@@ -730,6 +816,7 @@ const A1G2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-02",
   },
   {
@@ -738,6 +825,7 @@ const A1G2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-03",
   },
   {
@@ -746,6 +834,7 @@ const A1G2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-04",
   },
   {
@@ -754,6 +843,7 @@ const A1G2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-05",
   },
   {
@@ -762,6 +852,7 @@ const A1G2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-06",
   },
   {
@@ -770,6 +861,7 @@ const A1G2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-07",
   },
   {
@@ -778,6 +870,7 @@ const A1G2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-08",
   },
   {
@@ -786,6 +879,7 @@ const A1G2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-09",
   },
   {
@@ -794,6 +888,7 @@ const A1G2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-10",
   },
   {
@@ -802,6 +897,7 @@ const A1G2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1G2-11",
   },
 ];
@@ -813,6 +909,7 @@ const A1H2 = [
     y: 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-01",
   },
   {
@@ -821,6 +918,7 @@ const A1H2 = [
     y: 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-02",
   },
   {
@@ -829,6 +927,7 @@ const A1H2 = [
     y: 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-03",
   },
   {
@@ -837,6 +936,7 @@ const A1H2 = [
     y: 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-04",
   },
   {
@@ -845,6 +945,7 @@ const A1H2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-05",
   },
   {
@@ -853,6 +954,7 @@ const A1H2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-06",
   },
   {
@@ -861,6 +963,7 @@ const A1H2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-07",
   },
   {
@@ -869,6 +972,7 @@ const A1H2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-08",
   },
   {
@@ -877,6 +981,7 @@ const A1H2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-09",
   },
   {
@@ -885,6 +990,7 @@ const A1H2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-10",
   },
   {
@@ -893,6 +999,7 @@ const A1H2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-11",
   },
   {
@@ -901,6 +1008,7 @@ const A1H2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-12",
   },
   {
@@ -909,6 +1017,7 @@ const A1H2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-13",
   },
   {
@@ -917,6 +1026,7 @@ const A1H2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1H2-14",
   },
 ];
@@ -928,6 +1038,7 @@ const A2I2 = [
     y: 120,
     width: 120,
     height: 140,
+    code: "A1A1-31",
     text: "A2I2-01",
   },
   {
@@ -936,6 +1047,7 @@ const A2I2 = [
     y: 260,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2I2-07",
   },
   {
@@ -944,6 +1056,7 @@ const A2I2 = [
     y: 260,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2I2-08",
   },
   {
@@ -952,6 +1065,7 @@ const A2I2 = [
     y: 340,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2I2-09",
   },
   {
@@ -960,6 +1074,7 @@ const A2I2 = [
     y: 340,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2I2-10",
   },
   {
@@ -968,6 +1083,7 @@ const A2I2 = [
     y: 420,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A2I2-11",
   },
   {
@@ -976,6 +1092,7 @@ const A2I2 = [
     y: 420,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A2I2-12",
   },
 ];
@@ -987,6 +1104,7 @@ const A2J2 = [
     y: 120,
     width: 120,
     height: 100,
+    code: "A1A1-31",
     text: "A2J2-01",
   },
   {
@@ -995,6 +1113,7 @@ const A2J2 = [
     y: 220,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J2-03",
   },
   {
@@ -1003,6 +1122,7 @@ const A2J2 = [
     y: 220,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J2-04",
   },
   {
@@ -1011,6 +1131,7 @@ const A2J2 = [
     y: 300,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J2-05",
   },
   {
@@ -1019,6 +1140,7 @@ const A2J2 = [
     y: 300,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J2-06",
   },
   {
@@ -1027,6 +1149,7 @@ const A2J2 = [
     y: 380,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J2-07",
   },
   {
@@ -1035,6 +1158,7 @@ const A2J2 = [
     y: 380,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J2-08",
   },
   {
@@ -1043,6 +1167,7 @@ const A2J2 = [
     y: 460,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J2-11",
   },
   {
@@ -1051,6 +1176,7 @@ const A2J2 = [
     y: 460,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J2-12",
   },
 ];
@@ -1062,6 +1188,7 @@ const A2K2 = [
     y: 120,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A2K2-01",
   },
   {
@@ -1070,6 +1197,7 @@ const A2K2 = [
     y: 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2K2-02",
   },
   {
@@ -1078,6 +1206,7 @@ const A2K2 = [
     y: 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2K2-04",
   },
   {
@@ -1086,6 +1215,7 @@ const A2K2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2K2-05",
   },
   {
@@ -1094,6 +1224,7 @@ const A2K2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2K2-06",
   },
   {
@@ -1102,6 +1233,7 @@ const A2K2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2K2-07",
   },
   {
@@ -1110,6 +1242,7 @@ const A2K2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2K2-08",
   },
   {
@@ -1118,6 +1251,7 @@ const A2K2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2K2-09",
   },
   {
@@ -1126,6 +1260,7 @@ const A2K2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2K2-10",
   },
   {
@@ -1134,6 +1269,7 @@ const A2K2 = [
     y: 420,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "A2K2-11",
   },
 ];
@@ -1145,6 +1281,7 @@ const A3L2 = [
     y: 120,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "A3L2-01",
   },
 
@@ -1154,6 +1291,7 @@ const A3L2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-05",
   },
   {
@@ -1162,6 +1300,7 @@ const A3L2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-06",
   },
   {
@@ -1170,6 +1309,7 @@ const A3L2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-07",
   },
   {
@@ -1178,6 +1318,7 @@ const A3L2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-08",
   },
   {
@@ -1186,6 +1327,7 @@ const A3L2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-09",
   },
   {
@@ -1194,6 +1336,7 @@ const A3L2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-10",
   },
   {
@@ -1202,6 +1345,7 @@ const A3L2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-11",
   },
   {
@@ -1210,6 +1354,7 @@ const A3L2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-12",
   },
   {
@@ -1218,6 +1363,7 @@ const A3L2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-13",
   },
   {
@@ -1226,6 +1372,7 @@ const A3L2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L2-14",
   },
 ];
@@ -1237,6 +1384,7 @@ const A3M2 = [
     y: 120,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "A3M2-01",
   },
 
@@ -1246,6 +1394,7 @@ const A3M2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-05",
   },
   {
@@ -1254,6 +1403,7 @@ const A3M2 = [
     y: 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-06",
   },
   {
@@ -1262,6 +1412,7 @@ const A3M2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-07",
   },
   {
@@ -1270,6 +1421,7 @@ const A3M2 = [
     y: 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-08",
   },
   {
@@ -1278,6 +1430,7 @@ const A3M2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-09",
   },
   {
@@ -1286,6 +1439,7 @@ const A3M2 = [
     y: 360,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-10",
   },
   {
@@ -1294,6 +1448,7 @@ const A3M2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-11",
   },
   {
@@ -1302,6 +1457,7 @@ const A3M2 = [
     y: 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-12",
   },
   {
@@ -1310,6 +1466,7 @@ const A3M2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-13",
   },
   {
@@ -1318,6 +1475,7 @@ const A3M2 = [
     y: 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M2-14",
   },
 ];
@@ -1329,6 +1487,7 @@ const A3N2 = [
     y: 120,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "A3N2-01",
   },
   {
@@ -1337,6 +1496,7 @@ const A3N2 = [
     y: 240,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A3N2-05",
   },
   {
@@ -1345,6 +1505,7 @@ const A3N2 = [
     y: 320,
     width: 60,
     height: 20,
+    code: "A1A1-31",
     text: "",
   },
   {
@@ -1353,6 +1514,7 @@ const A3N2 = [
     y: 240,
     width: 60,
     height: 100,
+    code: "A1A1-31",
     text: "A3N2-06",
   },
   {
@@ -1361,6 +1523,7 @@ const A3N2 = [
     y: 340,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A3N2-07",
   },
   {
@@ -1369,6 +1532,7 @@ const A3N2 = [
     y: 340,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A3N2-08",
   },
   {
@@ -1377,6 +1541,7 @@ const A3N2 = [
     y: 420,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3N2-11",
   },
   {
@@ -1385,6 +1550,7 @@ const A3N2 = [
     y: 420,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3N2-12",
   },
 ];
@@ -1396,6 +1562,7 @@ const A3O2 = [
     y: 120,
     width: 120,
     height: 220,
+    code: "A1A1-31",
     text: "A3O2-01",
   },
   {
@@ -1404,6 +1571,7 @@ const A3O2 = [
     y: 340,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A3O2-03",
   },
 
@@ -1413,6 +1581,7 @@ const A3O2 = [
     y: 340,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A3O2-04",
   },
   {
@@ -1421,6 +1590,7 @@ const A3O2 = [
     y: 420,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3O2-07",
   },
   {
@@ -1429,6 +1599,7 @@ const A3O2 = [
     y: 420,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3O2-08",
   },
 ];
@@ -1440,6 +1611,7 @@ const A3P2 = [
     y: 120,
     width: 120,
     height: 220,
+    code: "A1A1-31",
     text: "A3P2-01",
   },
   {
@@ -1448,6 +1620,7 @@ const A3P2 = [
     y: 340,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A3P2-07",
   },
   {
@@ -1456,6 +1629,7 @@ const A3P2 = [
     y: 340,
     width: 60,
     height: 200,
+    code: "A1A1-31",
     text: "A3P2-08",
   },
   {
@@ -1464,6 +1638,7 @@ const A3P2 = [
     y: 420,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3P2-09",
   },
 ];
@@ -1477,6 +1652,7 @@ const A1B3 = [
     y: 120 + 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-01",
   },
   {
@@ -1485,6 +1661,7 @@ const A1B3 = [
     y: 120 + 480,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-02",
   },
   {
@@ -1493,6 +1670,7 @@ const A1B3 = [
     y: 240 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-03",
   },
   {
@@ -1501,6 +1679,7 @@ const A1B3 = [
     y: 240 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-04",
   },
 
@@ -1510,6 +1689,7 @@ const A1B3 = [
     y: 300 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-05",
   },
   {
@@ -1518,6 +1698,7 @@ const A1B3 = [
     y: 300 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-06",
   },
 
@@ -1527,6 +1708,7 @@ const A1B3 = [
     y: 360 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-07",
   },
   {
@@ -1535,6 +1717,7 @@ const A1B3 = [
     y: 360 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-08",
   },
 
@@ -1544,6 +1727,7 @@ const A1B3 = [
     y: 420 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-09",
   },
   {
@@ -1552,6 +1736,7 @@ const A1B3 = [
     y: 420 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-10",
   },
 
@@ -1561,6 +1746,7 @@ const A1B3 = [
     y: 480 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-11",
   },
   {
@@ -1569,6 +1755,7 @@ const A1B3 = [
     y: 480 + 420,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1B3-12",
   },
 ];
@@ -1580,6 +1767,7 @@ const A1C3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-01",
   },
   {
@@ -1588,6 +1776,7 @@ const A1C3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-02",
   },
   {
@@ -1596,6 +1785,7 @@ const A1C3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-03",
   },
   {
@@ -1604,6 +1794,7 @@ const A1C3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-04",
   },
   {
@@ -1612,6 +1803,7 @@ const A1C3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-05",
   },
   {
@@ -1620,6 +1812,7 @@ const A1C3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-06",
   },
 
@@ -1629,6 +1822,7 @@ const A1C3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-07",
   },
   {
@@ -1637,6 +1831,7 @@ const A1C3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-08",
   },
 
@@ -1646,6 +1841,7 @@ const A1C3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-09",
   },
   {
@@ -1654,6 +1850,7 @@ const A1C3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-10",
   },
 
@@ -1663,6 +1860,7 @@ const A1C3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-11",
   },
   {
@@ -1671,6 +1869,7 @@ const A1C3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1C3-12",
   },
 ];
@@ -1682,6 +1881,7 @@ const A1D3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-01",
   },
   {
@@ -1690,6 +1890,7 @@ const A1D3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-02",
   },
   {
@@ -1698,6 +1899,7 @@ const A1D3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-03",
   },
   {
@@ -1706,6 +1908,7 @@ const A1D3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-04",
   },
 
@@ -1715,6 +1918,7 @@ const A1D3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-05",
   },
   {
@@ -1723,6 +1927,7 @@ const A1D3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-06",
   },
   {
@@ -1731,6 +1936,7 @@ const A1D3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-07",
   },
   {
@@ -1739,6 +1945,7 @@ const A1D3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-08",
   },
 
@@ -1748,6 +1955,7 @@ const A1D3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-09",
   },
   {
@@ -1756,6 +1964,7 @@ const A1D3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-10",
   },
 
@@ -1765,6 +1974,7 @@ const A1D3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-11",
   },
   {
@@ -1773,6 +1983,7 @@ const A1D3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1D3-12",
   },
 ];
@@ -1784,6 +1995,7 @@ const A1E3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-01",
   },
   {
@@ -1792,6 +2004,7 @@ const A1E3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-02",
   },
   {
@@ -1800,6 +2013,7 @@ const A1E3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-03",
   },
   {
@@ -1808,6 +2022,7 @@ const A1E3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-04",
   },
 
@@ -1817,6 +2032,7 @@ const A1E3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-05",
   },
   {
@@ -1825,6 +2041,7 @@ const A1E3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-06",
   },
   {
@@ -1833,6 +2050,7 @@ const A1E3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-07",
   },
   {
@@ -1841,6 +2059,7 @@ const A1E3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-08",
   },
 
@@ -1850,6 +2069,7 @@ const A1E3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-09",
   },
   {
@@ -1858,6 +2078,7 @@ const A1E3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-10",
   },
 
@@ -1867,6 +2088,7 @@ const A1E3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-11",
   },
   {
@@ -1875,6 +2097,7 @@ const A1E3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E3-12",
   },
 ];
@@ -1886,6 +2109,7 @@ const A1F3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-01",
   },
   {
@@ -1894,6 +2118,7 @@ const A1F3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-02",
   },
   {
@@ -1902,6 +2127,7 @@ const A1F3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-03",
   },
   {
@@ -1910,6 +2136,7 @@ const A1F3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-04",
   },
 
@@ -1919,6 +2146,7 @@ const A1F3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-05",
   },
   {
@@ -1927,6 +2155,7 @@ const A1F3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-06",
   },
   {
@@ -1935,6 +2164,7 @@ const A1F3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-07",
   },
   {
@@ -1943,6 +2173,7 @@ const A1F3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-08",
   },
 
@@ -1952,6 +2183,7 @@ const A1F3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-09",
   },
   {
@@ -1960,6 +2192,7 @@ const A1F3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-10",
   },
 
@@ -1969,6 +2202,7 @@ const A1F3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-11",
   },
   {
@@ -1977,6 +2211,7 @@ const A1F3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F3-12",
   },
 ];
@@ -1988,6 +2223,7 @@ const A2G3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-01",
   },
   {
@@ -1996,6 +2232,7 @@ const A2G3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-02",
   },
   {
@@ -2004,6 +2241,7 @@ const A2G3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-03",
   },
   {
@@ -2012,6 +2250,7 @@ const A2G3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-04",
   },
 
@@ -2021,6 +2260,7 @@ const A2G3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-05",
   },
   {
@@ -2029,6 +2269,7 @@ const A2G3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-06",
   },
   {
@@ -2037,6 +2278,7 @@ const A2G3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-07",
   },
   {
@@ -2045,6 +2287,7 @@ const A2G3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-08",
   },
 
@@ -2054,6 +2297,7 @@ const A2G3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-09",
   },
   {
@@ -2062,6 +2306,7 @@ const A2G3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-10",
   },
 
@@ -2071,6 +2316,7 @@ const A2G3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-11",
   },
   {
@@ -2079,6 +2325,7 @@ const A2G3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G3-12",
   },
 ];
@@ -2090,6 +2337,7 @@ const A2H3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-01",
   },
   {
@@ -2098,6 +2346,7 @@ const A2H3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-02",
   },
   {
@@ -2106,6 +2355,7 @@ const A2H3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-03",
   },
   {
@@ -2114,6 +2364,7 @@ const A2H3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-04",
   },
 
@@ -2123,6 +2374,7 @@ const A2H3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-05",
   },
   {
@@ -2131,6 +2383,7 @@ const A2H3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-06",
   },
   {
@@ -2139,6 +2392,7 @@ const A2H3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-07",
   },
   {
@@ -2147,6 +2401,7 @@ const A2H3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-08",
   },
 
@@ -2156,6 +2411,7 @@ const A2H3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-09",
   },
   {
@@ -2164,6 +2420,7 @@ const A2H3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-10",
   },
 
@@ -2173,6 +2430,7 @@ const A2H3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-11",
   },
   {
@@ -2181,6 +2439,7 @@ const A2H3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H3-12",
   },
 ];
@@ -2192,6 +2451,7 @@ const A2I3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-01",
   },
   {
@@ -2200,6 +2460,7 @@ const A2I3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-02",
   },
   {
@@ -2208,6 +2469,7 @@ const A2I3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-03",
   },
   {
@@ -2216,6 +2478,7 @@ const A2I3 = [
     y: 600 + 60,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-04",
   },
 
@@ -2225,6 +2488,7 @@ const A2I3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-05",
   },
   {
@@ -2233,6 +2497,7 @@ const A2I3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-06",
   },
   {
@@ -2241,6 +2506,7 @@ const A2I3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-07",
   },
   {
@@ -2249,6 +2515,7 @@ const A2I3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-08",
   },
 
@@ -2258,6 +2525,7 @@ const A2I3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-09",
   },
   {
@@ -2266,6 +2534,7 @@ const A2I3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-10",
   },
 
@@ -2275,6 +2544,7 @@ const A2I3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-11",
   },
   {
@@ -2283,6 +2553,7 @@ const A2I3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I3-12",
   },
 ];
@@ -2294,6 +2565,7 @@ const A2J3 = [
     y: 600,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "A2J3-01",
   },
   {
@@ -2302,6 +2574,7 @@ const A2J3 = [
     y: 600 + 120,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J3-05",
   },
   {
@@ -2310,6 +2583,7 @@ const A2J3 = [
     y: 600 + 120,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J3-06",
   },
   {
@@ -2318,6 +2592,7 @@ const A2J3 = [
     y: 600 + 200,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J3-07",
   },
   {
@@ -2326,6 +2601,7 @@ const A2J3 = [
     y: 600 + 200,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J3-08",
   },
   {
@@ -2334,6 +2610,7 @@ const A2J3 = [
     y: 600 + 280,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J3-09",
   },
   {
@@ -2342,6 +2619,7 @@ const A2J3 = [
     y: 600 + 280,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2J3-10",
   },
 ];
@@ -2353,6 +2631,7 @@ const A2K3 = [
     y: 600,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "A2K3-01",
   },
   {
@@ -2361,6 +2640,7 @@ const A2K3 = [
     y: 600 + 120,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2K3-05",
   },
   {
@@ -2369,6 +2649,7 @@ const A2K3 = [
     y: 600 + 120,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2K3-06",
   },
   {
@@ -2377,6 +2658,7 @@ const A2K3 = [
     y: 600 + 200,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2K3-07",
   },
   {
@@ -2385,6 +2667,7 @@ const A2K3 = [
     y: 600 + 200,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "A2K3-08",
   },
   {
@@ -2393,6 +2676,7 @@ const A2K3 = [
     y: 600 + 280,
     width: 120,
     height: 80,
+    code: "A1A1-31",
     text: "A2K3-09",
   },
 ];
@@ -2404,6 +2688,7 @@ const A3L3 = [
     y: 600,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3L3-01",
   },
   {
@@ -2412,6 +2697,7 @@ const A3L3 = [
     y: 600,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3L3-02",
   },
   {
@@ -2420,6 +2706,7 @@ const A3L3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L3-05",
   },
   {
@@ -2428,6 +2715,7 @@ const A3L3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L3-06",
   },
   {
@@ -2436,6 +2724,7 @@ const A3L3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L3-07",
   },
   {
@@ -2444,6 +2733,7 @@ const A3L3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L3-08",
   },
   {
@@ -2452,6 +2742,7 @@ const A3L3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L3-09",
   },
   {
@@ -2460,6 +2751,7 @@ const A3L3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L3-10",
   },
   {
@@ -2468,6 +2760,7 @@ const A3L3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L3-11",
   },
   {
@@ -2476,6 +2769,7 @@ const A3L3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L3-12",
   },
 ];
@@ -2487,6 +2781,7 @@ const A3M3 = [
     y: 600,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3M3-01",
   },
   {
@@ -2495,6 +2790,7 @@ const A3M3 = [
     y: 600,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3M3-02",
   },
   {
@@ -2503,6 +2799,7 @@ const A3M3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M3-05",
   },
   {
@@ -2511,6 +2808,7 @@ const A3M3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M3-06",
   },
   {
@@ -2519,6 +2817,7 @@ const A3M3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M3-07",
   },
   {
@@ -2527,6 +2826,7 @@ const A3M3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M3-08",
   },
   {
@@ -2535,6 +2835,7 @@ const A3M3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M3-09",
   },
   {
@@ -2543,6 +2844,7 @@ const A3M3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M3-10",
   },
   {
@@ -2551,6 +2853,7 @@ const A3M3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M3-11",
   },
   {
@@ -2559,6 +2862,7 @@ const A3M3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3M3-12",
   },
 ];
@@ -2570,6 +2874,7 @@ const A3N3 = [
     y: 600,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3N3-01",
   },
   {
@@ -2578,6 +2883,7 @@ const A3N3 = [
     y: 600,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3N3-02",
   },
   {
@@ -2586,6 +2892,7 @@ const A3N3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3N3-05",
   },
   {
@@ -2594,6 +2901,7 @@ const A3N3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3N3-06",
   },
   {
@@ -2602,6 +2910,7 @@ const A3N3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3N3-07",
   },
   {
@@ -2610,6 +2919,7 @@ const A3N3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3N3-08",
   },
   {
@@ -2618,6 +2928,7 @@ const A3N3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3N3-09",
   },
   {
@@ -2626,6 +2937,7 @@ const A3N3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3N3-10",
   },
   {
@@ -2634,6 +2946,7 @@ const A3N3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3N3-11",
   },
   {
@@ -2642,6 +2955,7 @@ const A3N3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3N3-12",
   },
 ];
@@ -2653,6 +2967,7 @@ const A3O3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-01",
   },
   {
@@ -2661,6 +2976,7 @@ const A3O3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-02",
   },
   {
@@ -2669,6 +2985,7 @@ const A3O3 = [
     y: 660,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-03",
   },
   {
@@ -2677,6 +2994,7 @@ const A3O3 = [
     y: 660,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-04",
   },
   {
@@ -2685,6 +3003,7 @@ const A3O3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-05",
   },
   {
@@ -2693,6 +3012,7 @@ const A3O3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-06",
   },
   {
@@ -2701,6 +3021,7 @@ const A3O3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-07",
   },
   {
@@ -2709,6 +3030,7 @@ const A3O3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-08",
   },
   {
@@ -2717,6 +3039,7 @@ const A3O3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-09",
   },
   {
@@ -2725,6 +3048,7 @@ const A3O3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-10",
   },
   {
@@ -2733,6 +3057,7 @@ const A3O3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-11",
   },
   {
@@ -2741,6 +3066,7 @@ const A3O3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3O3-12",
   },
 ];
@@ -2752,6 +3078,7 @@ const A3P3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-01",
   },
   {
@@ -2760,6 +3087,7 @@ const A3P3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-02",
   },
   {
@@ -2768,6 +3096,7 @@ const A3P3 = [
     y: 660,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-03",
   },
   {
@@ -2776,6 +3105,7 @@ const A3P3 = [
     y: 660,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-04",
   },
   {
@@ -2784,6 +3114,7 @@ const A3P3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-05",
   },
   {
@@ -2792,6 +3123,7 @@ const A3P3 = [
     y: 600 + 120,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-06",
   },
   {
@@ -2800,6 +3132,7 @@ const A3P3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-07",
   },
   {
@@ -2808,6 +3141,7 @@ const A3P3 = [
     y: 600 + 180,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-08",
   },
   {
@@ -2816,6 +3150,7 @@ const A3P3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-09",
   },
   {
@@ -2824,6 +3159,7 @@ const A3P3 = [
     y: 600 + 240,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-10",
   },
   {
@@ -2832,6 +3168,7 @@ const A3P3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-11",
   },
   {
@@ -2840,6 +3177,7 @@ const A3P3 = [
     y: 600 + 300,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3P3-12",
   },
 ];
@@ -2852,6 +3190,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 120,
     height: 60,
+    code: "A1A1-31",
     text: "A1B4-04",
   },
   {
@@ -2860,6 +3199,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 80,
     height: 60,
+    code: "A1A1-31",
     text: "A1C4-01",
   },
   {
@@ -2868,6 +3208,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 80,
     height: 60,
+    code: "A1A1-31",
     text: "A1D4-03",
   },
   {
@@ -2876,6 +3217,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E4-01",
   },
   {
@@ -2884,6 +3226,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1E4-02",
   },
   {
@@ -2892,6 +3235,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F4-01",
   },
 
@@ -2901,6 +3245,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A1F4-02",
   },
   {
@@ -2909,6 +3254,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G4-01",
   },
   {
@@ -2917,6 +3263,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G4-02",
   },
   {
@@ -2925,6 +3272,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G4-03",
   },
   {
@@ -2933,6 +3281,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2G4-04",
   },
   {
@@ -2941,6 +3290,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H4-01",
   },
   {
@@ -2949,6 +3299,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H4-02",
   },
   {
@@ -2957,6 +3308,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2H4-03",
   },
   {
@@ -2965,6 +3317,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2I4-01",
   },
   {
@@ -2973,6 +3326,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2J4-01",
   },
   {
@@ -2981,6 +3335,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2J4-02",
   },
   {
@@ -2989,6 +3344,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2J4-03",
   },
   {
@@ -2997,6 +3353,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2J4-04",
   },
 
@@ -3006,6 +3363,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A2J4-05",
   },
 
@@ -3015,6 +3373,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-01",
   },
 
@@ -3024,6 +3383,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-02",
   },
   {
@@ -3032,6 +3392,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-03",
   },
   {
@@ -3040,6 +3401,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-04",
   },
   {
@@ -3048,6 +3410,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-05",
   },
   {
@@ -3056,6 +3419,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-06",
   },
   {
@@ -3064,6 +3428,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-07",
   },
   {
@@ -3072,6 +3437,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-08",
   },
   {
@@ -3080,6 +3446,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-09",
   },
   {
@@ -3088,6 +3455,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-10",
   },
   {
@@ -3096,6 +3464,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-11",
   },
   {
@@ -3104,6 +3473,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-12",
   },
   {
@@ -3112,6 +3482,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-13",
   },
   {
@@ -3120,6 +3491,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-14",
   },
   {
@@ -3128,6 +3500,7 @@ const Shuangfei_Tube = [
     y: 1020,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3L4-15",
   },
 ];
@@ -3139,6 +3512,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 60,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "TEC ALLIANCE",
   },
   {
@@ -3147,6 +3521,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 180,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "KATA VINA",
   },
   {
@@ -3155,6 +3530,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 260,
     width: 100,
     height: 140,
+    code: "A1A1-31",
     text: "D1A2-05",
   },
   {
@@ -3163,6 +3539,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 480,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "A3Q3-01",
   },
   {
@@ -3171,6 +3548,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3Q3-02",
   },
   {
@@ -3179,6 +3557,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 660,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3Q3-04",
   },
   {
@@ -3187,6 +3566,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 720,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3Q3-05",
   },
   {
@@ -3195,6 +3575,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 780,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3Q3-06",
   },
   {
@@ -3203,6 +3584,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 840,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3Q3-07",
   },
   {
@@ -3211,6 +3593,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 900,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3Q3-08",
   },
   {
@@ -3219,6 +3602,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     y: 960,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "A3Q3-09",
   },
 ];
@@ -3230,6 +3614,7 @@ const blackSpot = [
     y: 0,
     width: 40,
     height: 200,
+    code: "A1A1-31",
     text: "0",
   },
   {
@@ -3238,6 +3623,7 @@ const blackSpot = [
     y: 0,
     width: 80,
     height: 140,
+    code: "A1A1-31",
     text: "0",
   },
   {
@@ -3246,6 +3632,7 @@ const blackSpot = [
     y: 200,
     width: 80,
     height: 60,
+    code: "A1A1-31",
     text: "",
   },
 ];
@@ -3257,6 +3644,7 @@ const D1A2_TO_D1A3 = [
     y: 260,
     width: 100,
     height: 140,
+    code: "A1A1-31",
     text: "D1A2-06",
   },
   {
@@ -3265,6 +3653,7 @@ const D1A2_TO_D1A3 = [
     y: 180,
     width: 60,
     height: 80,
+    code: "A1A1-31",
     text: "D1A2-01",
   },
   {
@@ -3273,6 +3662,7 @@ const D1A2_TO_D1A3 = [
     y: 480,
     width: 120,
     height: 120,
+    code: "A1A1-31",
     text: "D1A3-01",
   },
   {
@@ -3281,6 +3671,7 @@ const D1A2_TO_D1A3 = [
     y: 600,
     width: 60,
     height: 120,
+    code: "A1A1-31",
     text: "",
   },
   {
@@ -3289,6 +3680,7 @@ const D1A2_TO_D1A3 = [
     y: 600,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "D1A3-04",
   },
   {
@@ -3297,6 +3689,7 @@ const D1A2_TO_D1A3 = [
     y: 660,
     width: 60,
     height: 60,
+    code: "A1A1-31",
     text: "D1A3-05",
   },
   {
@@ -3305,6 +3698,7 @@ const D1A2_TO_D1A3 = [
     y: 720,
     width: 120,
     height: 100,
+    code: "A1A1-31",
     text: "D1A3-07",
   },
   {
@@ -3313,6 +3707,7 @@ const D1A2_TO_D1A3 = [
     y: 900,
     width: 180,
     height: 200,
+    code: "A1A1-31",
     text: "",
     border: true,
   },
@@ -3325,6 +3720,7 @@ const Medical_TO_Agent = [
     y: -160,
     width: 120,
     height: 160,
+    code: "A1A1-31",
     text: "MEDICAL ROOM",
   },
   {
@@ -3333,6 +3729,7 @@ const Medical_TO_Agent = [
     y: -160,
     width: 180,
     height: 160,
+    code: "A1A1-31",
     text: "FORWARDER OFFICER",
   },
   {
@@ -3341,6 +3738,7 @@ const Medical_TO_Agent = [
     y: -160,
     width: 160,
     height: 160,
+    code: "A1A1-31",
     text: "CONTRACTOR OFFICE",
   },
   {
@@ -3349,6 +3747,7 @@ const Medical_TO_Agent = [
     y: -160,
     width: 280,
     height: 160,
+    code: "A1A1-31",
     text: "ORGANIZER OFFICE",
   },
   {
@@ -3357,6 +3756,7 @@ const Medical_TO_Agent = [
     y: -160,
     width: 180,
     height: 160,
+    code: "A1A1-31",
     text: "AGENT COUNTER",
   },
 ];

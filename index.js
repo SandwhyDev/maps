@@ -9,9 +9,8 @@ var gctx = gCanvas.getContext("2d");
 var CANVAS_WIDTH = gCanvas.width;
 var CANVAS_HEIGHT = gCanvas.height;
 var NODESIZE = 20;
-var handlePath = [];
-var start = document.getElementById("start");
-var end = document.getElementById("end");
+var inputStart = document.getElementById("inputStart");
+var inputEnd = document.getElementById("inputEnd");
 var btnStart = document.getElementById("btnStart");
 var btnEnd = document.getElementById("btnEnd");
 var btnPushToWalk = document.getElementById("pushToWalk");
@@ -19,29 +18,34 @@ var startValue;
 var endValue;
 var scale = 1;
 var dir;
-
 // gCanvas.style.transform = "scale(" + scale + ")";
+// Mendapatkan URL saat ini
+var urlParams = new URLSearchParams(window.location.search);
 
-btnZoomIn.addEventListener("click", zoomIn);
-btnZoomOut.addEventListener("click", zoomOut);
+// Mendapatkan nilai dari parameter "inputStart"
+var paramStart = urlParams.get("inputStart");
+var paramEnd = urlParams.get("inputEnd");
 
-function zoomIn() {
-  console.log(scale);
+// btnZoomIn.addEventListener("click", zoomIn);
+// btnZoomOut.addEventListener("click", zoomOut);
 
-  if (scale <= 0.9) {
-    scale += 0.1;
-    gCanvas.style.transform = "scale(" + scale + ")";
-  }
-}
+// function zoomIn() {
+//   console.log(scale);
 
-function zoomOut() {
-  if (scale > 0.5) {
-    scale -= 0.1;
-    console.log(scale);
+//   if (scale <= 0.9) {
+//     scale += 0.1;
+//     gCanvas.style.transform = "scale(" + scale + ")";
+//   }
+// }
 
-    gCanvas.style.transform = "scale(" + scale + ")";
-  }
-}
+// function zoomOut() {
+//   if (scale > 0.5) {
+//     scale -= 0.1;
+//     console.log(scale);
+
+//     gCanvas.style.transform = "scale(" + scale + ")";
+//   }
+// }
 
 var path;
 
@@ -52,7 +56,7 @@ var gridPoints = [];
 
 var wallSet = new Set();
 
-//used to store the start and endPoint during resets, etc.
+//used to store the inputStart and endPoint during resets, etc.
 var startPoint;
 var endPoint;
 
@@ -70,7 +74,7 @@ gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
 startPoint = new Vec2(260, 240);
 
-endPoint = new Vec2(0, 0);
+endPoint = new Vec2(1340, 460);
 
 document.addEventListener("DOMContentLoaded", function (event) {
   if (window.DeviceOrientationEvent) {
@@ -120,6 +124,12 @@ searchPoint.addEventListener("click", () => {
   searchPoint.classList.remove("py-5");
   searchPoint.className = "hidden";
   containerSearch.classList.remove("hidden");
+
+  //tambahkan focus di input
+  inputStart.focus();
+
+  //search
+  HandleSearch("start");
 });
 
 function iconUser(context, target, rotateDegrees = 190) {
@@ -256,9 +266,7 @@ class PathFindingAlg {
     openSet.clear();
     closedSet.clear();
 
-    var grid = this.grid; //the grid we're working with
-
-    var currentNode = this.startNode; // the currentNode, defaults to start node for now
+    var currentNode = this.startNode; // the currentNode, defaults to inputStart node for now
 
     var endNode = gridPoints[this.endNode]; //the target node
     var startNode = gridPoints[this.startNode];
@@ -276,16 +284,16 @@ class PathFindingAlg {
 
       currentNode = tempArray[0];
 
-      for (var i = 1; i < tempArray.length; i++) {
-        //this if statement is solely to build the starting walls.
-        if (
-          tempArray[i].getValueF() < currentNode.getValueF() ||
-          (tempArray[i].getValueF() == currentNode.getValueF() &&
-            tempArray[i].getValueH() < currentNode.getValueH())
-        ) {
-          currentNode = tempArray[i]; //sets the currentNode to openSetI if it has a lower F value, or an = F value with a lower HCost.
-        }
-      }
+      // for (var i = 1; i < tempArray.length; i++) {
+      //   //this if statement is solely to build the starting walls.
+      //   if (
+      //     tempArray[i].getValueF() < currentNode.getValueF() ||
+      //     (tempArray[i].getValueF() == currentNode.getValueF() &&
+      //       tempArray[i].getValueH() < currentNode.getValueH())
+      //   ) {
+      //     currentNode = tempArray[i]; //sets the currentNode to openSetI if it has a lower F value, or an = F value with a lower HCost.
+      //   }
+      // }
 
       //exits for loop with either lowest F value or combined H value and F value
 
@@ -297,17 +305,14 @@ class PathFindingAlg {
 
       //might need to put this after getNighbors.... then replace closedSet.hasIn(neighborNode with currentNode
       if (currentNode.id == startNode.id) {
-        // currentNode.drawNode();
-        console.log("oi");
+        currentNode.drawNode();
       }
       if (currentNode.id == endNode.id) {
         currentNode.drawNode();
-        console.log("oi end");
       }
 
       if (currentNode.path == false) {
         currentNode.drawNode();
-        console.log("ay ay ay");
       }
 
       if (currentNode.id == endNode.id) {
@@ -460,15 +465,6 @@ function retracePath(startNode, endNode) {
 
   reverseArray.reverse();
   path = new Set(reverseArray);
-
-  if (handlePath.length <= 0) {
-    path.forEach((e) => {
-      handlePath.push({
-        posx: e.posx,
-        posy: e.posy,
-      });
-    });
-  }
 }
 
 //daftar tetangga
@@ -664,9 +660,9 @@ function resetWalls() {
 //         // alert("KAMU SAMPAI TUJUAN");
 //         reset();
 //         handlePath = [];
-//         start.value = end.value;
+//         inputStart.value = inputEnd.value;
 //         endValue = "";
-//         end.value = "";
+//         inputEnd.value = "";
 //         // index = 0;
 //       }
 //     }
@@ -715,7 +711,7 @@ function resetWalls() {
 // );
 
 // btnStart.addEventListener("click", () => {
-//   var startValue = start.value.toLowerCase();
+//   var startValue = inputStart.value.toLowerCase();
 
 //   switch (startValue) {
 //     case "blue":
@@ -751,7 +747,7 @@ function resetWalls() {
 // });
 
 // btnEnd.addEventListener("click", () => {
-//   var endValue = end.value.toLowerCase();
+//   var endValue = inputEnd.value.toLowerCase();
 
 //   endPoint = "";
 //   handlePath = [];
@@ -825,9 +821,38 @@ function resetWalls() {
 //     btnPushToWalk.style.display = "none";
 
 //     handlePath = [];
-//     start.value = end.value;
+//     inputStart.value = inputEnd.value;
 //     endValue = "";
-//     end.value = "";
+//     inputEnd.value = "";
+//   }
+// });
+
+// Menambahkan event listener untuk meng-handle klik
+// gCanvas.addEventListener("click", function (event) {
+//   const rect = gCanvas.getBoundingClientRect();
+//   const clickX = event.clientX - rect.left;
+//   const clickY = event.clientY - rect.top;
+
+//   // Cek apakah klik terjadi di dalam kotak yang di-handle
+//   if (
+//     clickX >= x &&
+//     clickX <= x + width &&
+//     clickY >= y &&
+//     clickY <= y + height
+//   ) {
+//     showModal(text);
+//     // Jika klik di dalam kotak
+//     if (!clicked) {
+//       currentColor = "red";
+//       clicked = true;
+//     } else {
+//       // Jika sudah pernah diklik sebelumnya
+//       currentColor = color; // Ganti warna menjadi warna asli
+//       clicked = false; // Set status menjadi belum diklik
+//     }
+
+//     context.fillStyle = currentColor; // Ubah warna di canvas
+//     context.fillRect(x, y, width, height);
 //   }
 // });
 
@@ -850,14 +875,26 @@ gCanvas.addEventListener(
       console.log({
         posx: clickedElement.posx,
         posy: clickedElement.posy,
+        endx: endPoint.x,
+        endy: endPoint.y,
       });
+
+      if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
+        endPoint = "";
+        endPoint = new Vec2(0, 0);
+        myPath = new PathFindingAlg(grid, startPoint, endPoint);
+        reset();
+
+        return;
+      }
 
       startPoint = "";
       startPoint = new Vec2(clickedElement.posx, clickedElement.posy);
+      // showModal("text");
 
       reset();
-      myPath = new PathFindingAlg(grid, startPoint, endPoint);
 
+      myPath = new PathFindingAlg(grid, startPoint, endPoint);
       myPath.findPath();
     }
   },
@@ -865,33 +902,54 @@ gCanvas.addEventListener(
 );
 
 const HandleSearch = (point) => {
+  var cekSearch = document.getElementById("dataSearch");
+  if (cekSearch) {
+    cekSearch.remove();
+  }
+  console.log(point);
+
+  const filter =
+    point === "start"
+      ? inputStart.value.toUpperCase()
+      : inputEnd.value.toUpperCase();
+
   const search = document.createElement("div");
   search.id = "dataSearch";
 
-  var dataSearch = document.getElementById("dataSearch");
+  const ul = document.createElement("ul");
 
-  if (!dataSearch) {
-    const ul = document.createElement("ul");
+  search.className = `w-screen h-screen fixed top-0 left-0 bg-white  pt-32 pb-10`;
 
-    search.className = `w-screen h-screen fixed top-0 left-0 bg-white  pt-32`;
+  ul.className = "px-5 py-2 space-y-2  overflow-scroll h-full";
 
-    ul.className = "px-5 py-2 space-y-2";
+  for (let i = 0; i < dataTenant.length; i++) {
+    const info = dataTenant[i];
 
-    kotaJakarta.forEach((kota) => {
+    if (
+      info.text.toUpperCase().indexOf(filter) > -1 ||
+      info.code.toUpperCase().indexOf(filter) > -1
+    ) {
       const li = document.createElement("li");
+      li.textContent = `${info.text} | ${info.code}`;
+      li.classList.add(
+        "px-4",
+        "py-2",
+        "bg-white",
+        "border",
+        "border-gray-300",
+        "rounded-md"
+      );
 
-      li.className = "border-b-2 p-2 cursor-pointer";
-      li.textContent = `${kota.nama} - ${kota.kodePos}`;
       ul.appendChild(li);
 
       li.addEventListener("click", () => {
         if (point === "start") {
           startPoint = "";
-          start.value = kota.nama;
+          inputStart.value = `${info.text} | ${info.code}`;
           startPoint = new Vec2(80, 460);
         } else {
           endPoint = "";
-          end.value = kota.nama;
+          inputEnd.value = `${info.text} | ${info.code}`;
           endPoint = new Vec2(620, 880);
         }
 
@@ -903,23 +961,52 @@ const HandleSearch = (point) => {
         search.remove();
         ul.remove();
       });
-    });
-
-    search.appendChild(ul);
-
-    document.body.appendChild(search);
+    }
   }
+
+  // dataTenant.forEach((info) => {
+  //   const li = document.createElement("li");
+
+  //   li.className = "border-b-2 p-2 cursor-pointer";
+  //   li.textContent = `${info.text} - ${info.kodePos}`;
+  //   ul.appendChild(li);
+
+  //   li.addEventListener("click", () => {
+  //     if (point === "inputStart") {
+  //       startPoint = "";
+  //       inputStart.value = info.text;
+  //       startPoint = new Vec2(80, 460);
+  //     } else {
+  //       endPoint = "";
+  //       inputEnd.value = info.text;
+  //       endPoint = new Vec2(620, 880);
+  //     }
+
+  //     reset();
+  //     myPath = new PathFindingAlg(grid, startPoint, endPoint);
+
+  //     myPath.findPath();
+
+  //     search.remove();
+  //     ul.remove();
+  //   });
+  // });
+
+  search.appendChild(ul);
+
+  document.body.appendChild(search);
 };
 
-start.addEventListener("click", () => {
+inputStart.addEventListener("click", () => {
   var search = document.getElementById("dataSearch");
+
   if (search) {
     search.remove();
   }
   HandleSearch("start");
 });
 
-end.addEventListener("click", () => {
+inputEnd.addEventListener("click", () => {
   var search = document.getElementById("dataSearch");
 
   if (search) {

@@ -6,6 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
     />
+
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,24 +17,31 @@
     ></script>
   </head>
   <body class="py-20">
+    <div id="dynamic-content">
+      <!-- Konten yang ingin diperbarui -->
+    </div>
+
     <div
-      class="flex flex-col gap-10 px-5 fixed top-0 left-0 items-center w-screen z-10"
+      class="flex flex-col gap-10 fixed top-0 left-0 items-center w-screen z-10"
     >
       <!-- <div id="btnWall" class="btn">Wall</div> -->
-      <div id="searchPoint" class="StartPoint py-5">
-        <p class="p-2 rounded w-52 text-gray-500 bg-white">Search Point</p>
-      </div>
-      <!-- <div id="btnStartPoint" class="btn">StartPoint</div> -->
-      <div id="containerSearch" class="flex gap-2 p-5 hidden">
-        <div class="w-5 bg-red-500"></div>
+      <div id="searchPoint" class="StartPoint p-5 w-full flex gap-2">
+        <div class="w-10 bg-red-500"></div>
 
-        <div class="space-y-2">
+        <p class="p-2 rounded w-full text-gray-500 bg-white">Search Point</p>
+      </div>
+
+      <div id="containerSearch" class="flex gap-2 p-5 w-full hidden">
+        <div class="w-10 bg-red-500"></div>
+
+        <div class="space-y-2 w-full">
           <div class="StartPoint flex">
             <input
               class="p-2 rounded w-full border-[.5px] border-black p-2 rounded focus:outline-none"
               type="text"
-              id="start"
+              id="inputStart"
               name="start"
+              onkeyup="HandleSearch(`start`)"
               placeholder="Start Point "
             />
           </div>
@@ -42,8 +50,9 @@
             <input
               class="p-2 rounded w-full border-[.5px] border-black p-2 rounded focus:outline-none"
               type="text"
-              id="end"
+              id="inputEnd"
               name="end"
+              onkeyup="HandleSearch(`end`)"
               placeholder="End Point "
             />
           </div>
@@ -72,7 +81,7 @@
     </div>
 
     <div class="w-screen h-full overflow-scroll border-4 border-black">
-      <canvas id="gCanvas" width="5700" height="1400"></canvas>
+      <canvas id="gCanvas" width="5700" height="1400"> </canvas>
     </div>
 
     <!-- <div
@@ -117,7 +126,7 @@
       </div>
     </div> -->
 
-    <div class="fixed bottom-20 left-10 flex gap-5">
+    <!-- <div class="fixed bottom-20 left-10 flex gap-5">
       <div
         id="btnZoomOut"
         class="w-14 h-14 bg-white flex items-center justify-center text-3xl rounded-full border shadow cursor-pointer"
@@ -130,7 +139,7 @@
       >
         +
       </div>
-    </div>
+    </div> -->
 
     <script src="/constant/dataTenant.js"></script>
     <script src="/src/lib/Tenant.js"></script>

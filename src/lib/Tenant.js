@@ -106,33 +106,33 @@ const HandleTenant = (
   }
 
   // Menambahkan event listener untuk meng-handle klik
-  gCanvas.addEventListener("click", function (event) {
-    const rect = gCanvas.getBoundingClientRect();
-    const clickX = event.clientX - rect.left;
-    const clickY = event.clientY - rect.top;
+  // gCanvas.addEventListener("click", function (event) {
+  //   const rect = gCanvas.getBoundingClientRect();
+  //   const clickX = event.clientX - rect.left;
+  //   const clickY = event.clientY - rect.top;
 
-    // Cek apakah klik terjadi di dalam kotak yang di-handle
-    if (
-      clickX >= x &&
-      clickX <= x + width &&
-      clickY >= y &&
-      clickY <= y + height
-    ) {
-      showModal(text);
-      // Jika klik di dalam kotak
-      if (!clicked) {
-        currentColor = "red";
-        clicked = true;
-      } else {
-        // Jika sudah pernah diklik sebelumnya
-        currentColor = color; // Ganti warna menjadi warna asli
-        clicked = false; // Set status menjadi belum diklik
-      }
+  //   // Cek apakah klik terjadi di dalam kotak yang di-handle
+  //   if (
+  //     clickX >= x &&
+  //     clickX <= x + width &&
+  //     clickY >= y &&
+  //     clickY <= y + height
+  //   ) {
+  //     showModal(text);
+  //     // Jika klik di dalam kotak
+  //     if (!clicked) {
+  //       currentColor = "red";
+  //       clicked = true;
+  //     } else {
+  //       // Jika sudah pernah diklik sebelumnya
+  //       currentColor = color; // Ganti warna menjadi warna asli
+  //       clicked = false; // Set status menjadi belum diklik
+  //     }
 
-      context.fillStyle = currentColor; // Ubah warna di canvas
-      context.fillRect(x, y, width, height);
-    }
-  });
+  //     context.fillStyle = currentColor; // Ubah warna di canvas
+  //     context.fillRect(x, y, width, height);
+  //   }
+  // });
 
   context.closePath();
   context.stroke();
