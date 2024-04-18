@@ -2,8 +2,8 @@ var gCanvas = document.getElementById("gCanvas");
 var btnPath = document.getElementById("btnBeginPathFind");
 var containerSearch = document.getElementById("containerSearch");
 var searchPoint = document.getElementById("searchPoint");
-// var btnZoomIn = document.getElementById("btnZoomIn");
-// var btnZoomOut = document.getElementById("btnZoomOut");
+var btnZoomIn = document.getElementById("btnZoomIn");
+var btnZoomOut = document.getElementById("btnZoomOut");
 var gCanvasOffset;
 var gctx = gCanvas.getContext("2d");
 var CANVAS_WIDTH = gCanvas.width;
@@ -17,36 +17,31 @@ var btnEnd = document.getElementById("btnEnd");
 var btnPushToWalk = document.getElementById("pushToWalk");
 var startValue;
 var endValue;
-var scale = 0.6;
-
-searchPoint.addEventListener("click", () => {
-  searchPoint.classList.remove("py-5");
-  searchPoint.className = "hidden";
-  containerSearch.classList.remove("hidden");
-});
+var scale = 1;
+var dir;
 
 // gCanvas.style.transform = "scale(" + scale + ")";
 
-// btnZoomIn.addEventListener("click", zoomIn);
-// btnZoomOut.addEventListener("click", zoomOut);
+btnZoomIn.addEventListener("click", zoomIn);
+btnZoomOut.addEventListener("click", zoomOut);
 
-// function zoomIn() {
-//   console.log(scale);
+function zoomIn() {
+  console.log(scale);
 
-//   if (scale <= 1) {
-//     scale += 0.1;
-//     gCanvas.style.transform = "scale(" + scale + ")";
-//   }
-// }
+  if (scale <= 0.9) {
+    scale += 0.1;
+    gCanvas.style.transform = "scale(" + scale + ")";
+  }
+}
 
-// function zoomOut() {
-//   console.log(scale);
-//   // if (scale > 1) {
-//   // Batasi agar tidak dapat zoom out terlalu jauh
-//   scale -= 0.1;
-//   gCanvas.style.transform = "scale(" + scale + ")";
-//   // }
-// }
+function zoomOut() {
+  if (scale > 0.5) {
+    scale -= 0.1;
+    console.log(scale);
+
+    gCanvas.style.transform = "scale(" + scale + ")";
+  }
+}
 
 var path;
 
@@ -77,6 +72,77 @@ startPoint = new Vec2(260, 240);
 
 endPoint = new Vec2(0, 0);
 
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (window.DeviceOrientationEvent) {
+    // document.getElementById("notice").innerHTML = "Working API detected";
+    window.addEventListener(
+      "deviceorientation",
+      (eventData) => {
+        // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
+        const tiltLR = eventData.gamma;
+        // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
+        const tiltFB = eventData.beta;
+        // alpha: The direction the compass of the device aims to in degrees.
+        dir = eventData.alpha;
+        // Call the function to use the data on the page.
+        deviceOrientationHandler(tiltLR, tiltFB, dir);
+      },
+      false
+    );
+  } else {
+    // document.getElementById("notice").innerHTML = "No API detected";
+  }
+
+  function deviceOrientationHandler(tiltLR, tiltFB, dir) {
+    // BETA
+    document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
+    // GAMMA
+    document.getElementById("tiltFB").innerHTML = Math.ceil(tiltFB);
+    // ALPHA
+    document.getElementById("direction").innerHTML = Math.ceil(dir);
+
+    // arrow.style.transform = `translate(-50%, -50%) rotateZ(${-dir}deg)`;
+
+    // if (
+    //   (startPoint.x === 0 && startPoint.y === 0) ||
+    //   (endPoint.x === 0 && endPoint.y === 0)
+    // ) {
+    //   gCanvas.className = `origin-[250px_250px] rotate-[${Math.ceil(dir)}deg]`;
+    // } else {
+    //   gCanvas.className = `origin-[${Math.ceil(startPoint.x)}px_${Math.ceil(
+    //     startPoint.y
+    //   )}px] rotate-[${Math.ceil(dir)}deg]`;
+    // }
+  }
+});
+
+searchPoint.addEventListener("click", () => {
+  searchPoint.classList.remove("py-5");
+  searchPoint.className = "hidden";
+  containerSearch.classList.remove("hidden");
+});
+
+function iconUser(context, target, rotateDegrees = 190) {
+  var img = new Image();
+  img.onload = function () {
+    context.save(); // Simpan status konteks gambar
+    context.translate(
+      target.posx + target.size / 2,
+      target.posy + target.size / 2
+    ); // Pusat rotasi
+    context.rotate((rotateDegrees * Math.PI) / 180); // Putar gambar
+    context.drawImage(
+      img,
+      -target.size / 2,
+      -target.size / 2,
+      target.size,
+      target.size
+    );
+    context.restore(); // Pulihkan status konteks gambar
+  };
+  img.src = "./images/icon.gif";
+}
+
 class Node {
   constructor(id, size, posx, posy, walkable, path) {
     var F;
@@ -96,8 +162,9 @@ class Node {
   }
 
   createStartNode() {
-    iconUser(gctx, this, 6, "#22C55E", "#22C55E");
+    iconUser(gctx, this);
   }
+
   createEndNode() {
     iconEndNode(gctx, this, 6, "#E72929", "#E72929");
   }
@@ -475,25 +542,6 @@ function nodeDrawer(context, target, lineW, strokeS, fillS) {
 //   context.stroke(); // Menggambar lingkaran dengan warna strokeS
 // }
 
-function iconUser(context, target, lineW, strokeS, fillS) {
-  context.beginPath();
-  context.lineWidth = lineW;
-  context.strokeStyle = strokeS;
-  context.fillStyle = fillS;
-
-  // Menggunakan arc() untuk menggambar lingkaran
-  context.arc(
-    target.posx + target.size / 2,
-    target.posy + target.size / 2,
-    lineW,
-    0,
-    Math.PI * 2
-  );
-  context.closePath();
-  context.fill(); // Mengisi lingkaran dengan warna fillS
-  context.stroke(); // Menggambar lingkaran dengan warna strokeS
-}
-
 function iconEndNode(context, target, lineW, strokeS, fillS) {
   context.beginPath();
   context.lineWidth = lineW;
@@ -602,76 +650,77 @@ function resetWalls() {
 //     console.log("path ", handlePath);
 //   });
 
-function printNextPosx(cekLine) {
-  let index = 0;
+// function printNextPosx(cekLine) {
+//   let index = 0;
 
-  const intervalId = setInterval(() => {
-    console.log(index, handlePath.length);
-    if (index <= handlePath.length) {
-      reset();
+//   const intervalId = setInterval(() => {
+//     console.log(index, handlePath.length);
+//     if (index <= handlePath.length) {
+//       reset();
 
-      myPath = new PathFindingAlg(grid, startPoint, endPoint);
-      myPath.findPath();
+//       myPath = new PathFindingAlg(grid, startPoint, endPoint);
+//       myPath.findPath();
 
-      if (handlePath[index] !== undefined) {
-        startPoint.x = handlePath[index].posx;
-        startPoint.y = handlePath[index].posy;
-        var update = new Vec2(startPoint.x, startPoint.y);
-        startPoint = new Vec2(startPoint.x, startPoint.y);
-        index++;
-      } else {
-        clearInterval(intervalId);
-        // alert("KAMU SAMPAI TUJUAN");
-        reset();
-        handlePath = [];
-        start.value = end.value;
-        endValue = "";
-        end.value = "";
-        // index = 0;
-      }
-    }
-  }, 1000);
-}
+//       if (handlePath[index] !== undefined) {
+//         startPoint.x = handlePath[index].posx;
+//         startPoint.y = handlePath[index].posy;
+//         var update = new Vec2(startPoint.x, startPoint.y);
+//         startPoint = new Vec2(startPoint.x, startPoint.y);
+//         index++;
+//       } else {
+//         clearInterval(intervalId);
+//         // alert("KAMU SAMPAI TUJUAN");
+//         reset();
+//         handlePath = [];
+//         start.value = end.value;
+//         endValue = "";
+//         end.value = "";
+//         // index = 0;
+//       }
+//     }
+//   }, 1000);
+// }
 
 //tells the canvas what to do when clicked
-gCanvas.addEventListener(
-  "click",
-  function (event) {
-    var x = event.pageX - $(gCanvas).position().left;
-    var y = event.pageY - $(gCanvas).position().top;
 
-    gridPoints.forEach(function (element) {
-      if (
-        y > element.posy &&
-        y < element.posy + element.size &&
-        x > element.posx &&
-        x < element.posx + element.size
-      ) {
-        console.log({
-          posx: element.posx,
-          posy: element.posy,
-        });
+// gCanvas.addEventListener(
+//   "click",
+//   function (event) {
+//     var x = event.pageX - $(gCanvas).position().left;
+//     var y = event.pageY - $(gCanvas).position().top;
 
-        // if (mode === "startPoint") {
-        //   startPoint = new Vec2(element.posx, element.posy);
-        //   reset();
-        // } else if (mode === "wall") {
-        //   //Starting to work out resets without clearning walls, so wallSet doesn't do much yet.
-        //   wallSet.add(element.id);
-        //   element.toggleWalkable();
-        //   element.drawNode();
-        // } else if (mode === "endPoint") {
-        //   console.log("halo", element.posx, element.posy);
-        //   endPoint = new Vec2(element.posx, element.posy);
-        //   reset();
-        // } else {
-        //   // alert("You must select a Mode from the list above!");
-        // }
-      }
-    });
-  },
-  false
-);
+//     gridPoints.forEach(function (element) {
+//       if (
+//         y > element.posy &&
+//         y < element.posy + element.size &&
+//         x > element.posx &&
+//         x < element.posx + element.size
+//       ) {
+//         console.log({
+//           posx: element.posx,
+//           posy: element.posy,
+//         });
+
+//         // if (mode === "startPoint") {
+//         //   startPoint = new Vec2(element.posx, element.posy);
+//         //   reset();
+//         // } else if (mode === "wall") {
+//         //   //Starting to work out resets without clearning walls, so wallSet doesn't do much yet.
+//         //   wallSet.add(element.id);
+//         //   element.toggleWalkable();
+//         //   element.drawNode();
+//         // } else if (mode === "endPoint") {
+//         //   console.log("halo", element.posx, element.posy);
+//         //   endPoint = new Vec2(element.posx, element.posy);
+//         //   reset();
+//         // } else {
+//         //   // alert("You must select a Mode from the list above!");
+//         // }
+//       }
+//     });
+//   },
+//   false
+// );
 
 // btnStart.addEventListener("click", () => {
 //   var startValue = start.value.toLowerCase();
@@ -750,89 +799,78 @@ gCanvas.addEventListener(
 // });
 
 // HANDLE ARROW
-function handleArrow(tanda, operator) {
-  var update;
+// function handleArrow(tanda, operator) {
+//   var update;
 
-  if (tanda === "y") {
-    var update = operator === "tambah" ? startPoint.y + 20 : startPoint.y - 20;
+//   if (tanda === "y") {
+//     var update = operator === "tambah" ? startPoint.y + 20 : startPoint.y - 20;
 
-    startPoint = new Vec2(startPoint.x, update);
-  } else if (tanda === "x") {
-    var update = operator === "tambah" ? startPoint.x + 20 : startPoint.x - 20;
+//     startPoint = new Vec2(startPoint.x, update);
+//   } else if (tanda === "x") {
+//     var update = operator === "tambah" ? startPoint.x + 20 : startPoint.x - 20;
 
-    startPoint = new Vec2(update, startPoint.y);
-  }
+//     startPoint = new Vec2(update, startPoint.y);
+//   }
 
-  reset();
+//   reset();
 
-  myPath = new PathFindingAlg(grid, startPoint, endPoint);
-  myPath.findPath();
-}
+//   myPath = new PathFindingAlg(grid, startPoint, endPoint);
+//   myPath.findPath();
+// }
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  if (window.DeviceOrientationEvent) {
-    // document.getElementById("notice").innerHTML = "Working API detected";
-    window.addEventListener(
-      "deviceorientation",
-      (eventData) => {
-        // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
-        const tiltLR = eventData.gamma;
-        // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
-        const tiltFB = eventData.beta;
-        // alpha: The direction the compass of the device aims to in degrees.
-        const dir = eventData.alpha;
-        // Call the function to use the data on the page.
-        deviceOrientationHandler(tiltLR, tiltFB, dir);
-      },
-      false
-    );
-  } else {
-    // document.getElementById("notice").innerHTML = "No API detected";
-  }
+// btnPushToWalk.addEventListener("click", () => {
+//   if (handlePath.length > 0) {
+//     const removedElement = handlePath.shift();
 
-  function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-    // BETA
-    document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
-    // GAMMA
-    document.getElementById("tiltFB").innerHTML = Math.ceil(tiltFB);
-    // ALPHA
-    document.getElementById("direction").innerHTML = Math.ceil(dir);
+//     startPoint = new Vec2(removedElement.posx, removedElement.posy);
+//     reset();
 
-    // arrow.style.transform = `translate(-50%, -50%) rotateZ(${-dir}deg)`;
+//     myPath = new PathFindingAlg(grid, startPoint, endPoint);
+//     myPath.findPath();
+//   }
 
-    // if (
-    //   (startPoint.x === 0 && startPoint.y === 0) ||
-    //   (endPoint.x === 0 && endPoint.y === 0)
-    // ) {
-    //   gCanvas.className = `origin-[250px_250px] rotate-[${Math.ceil(dir)}deg]`;
-    // } else {
-    //   gCanvas.className = `origin-[${Math.ceil(startPoint.x)}px_${Math.ceil(
-    //     startPoint.y
-    //   )}px] rotate-[${Math.ceil(dir)}deg]`;
-    // }
-  }
-});
+//   if (handlePath.length === 0) {
+//     btnPushToWalk.style.display = "none";
 
-btnPushToWalk.addEventListener("click", () => {
-  if (handlePath.length > 0) {
-    const removedElement = handlePath.shift();
+//     handlePath = [];
+//     start.value = end.value;
+//     endValue = "";
+//     end.value = "";
+//   }
+// });
 
-    startPoint = new Vec2(removedElement.posx, removedElement.posy);
-    reset();
+gCanvas.addEventListener(
+  "click",
+  function (event) {
+    var x = event.pageX - $(gCanvas).position().left;
+    var y = event.pageY - $(gCanvas).position().top;
 
-    myPath = new PathFindingAlg(grid, startPoint, endPoint);
-    myPath.findPath();
-  }
+    var clickedElement = gridPoints.find(function (element) {
+      return (
+        y > element.posy &&
+        y < element.posy + element.size &&
+        x > element.posx &&
+        x < element.posx + element.size
+      );
+    });
 
-  if (handlePath.length === 0) {
-    btnPushToWalk.style.display = "none";
+    if (clickedElement) {
+      console.log({
+        posx: clickedElement.posx,
+        posy: clickedElement.posy,
+      });
 
-    handlePath = [];
-    start.value = end.value;
-    endValue = "";
-    end.value = "";
-  }
-});
+      startPoint = "";
+      startPoint = new Vec2(clickedElement.posx, clickedElement.posy);
+
+      reset();
+      myPath = new PathFindingAlg(grid, startPoint, endPoint);
+
+      myPath.findPath();
+    }
+  },
+  false
+);
 
 const HandleSearch = (point) => {
   const search = document.createElement("div");
@@ -869,8 +907,6 @@ const HandleSearch = (point) => {
         myPath = new PathFindingAlg(grid, startPoint, endPoint);
 
         myPath.findPath();
-
-        btnPushToWalk.style.display = "block";
 
         search.remove();
         ul.remove();
