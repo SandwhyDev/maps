@@ -27,26 +27,26 @@ var urlParams = new URLSearchParams(window.location.search);
 var paramStart = urlParams.get("inputStart");
 var paramEnd = urlParams.get("inputEnd");
 
-// btnZoomIn.addEventListener("click", zoomIn);
-// btnZoomOut.addEventListener("click", zoomOut);
+btnZoomIn.addEventListener("click", zoomIn);
+btnZoomOut.addEventListener("click", zoomOut);
 
-// function zoomIn() {
-//   console.log(scale);
+function zoomIn() {
+  // console.log(scale);
 
-//   if (scale <= 0.9) {
-//     scale += 0.1;
-//     gCanvas.style.transform = "scale(" + scale + ")";
-//   }
-// }
+  if (scale <= 0.9) {
+    scale += 0.1;
+    gCanvas.style.transform = "scale(" + scale + ")";
+  }
+}
 
-// function zoomOut() {
-//   if (scale > 0.5) {
-//     scale -= 0.1;
-//     console.log(scale);
+function zoomOut() {
+  if (scale > 0.5) {
+    scale -= 0.1;
+    // console.log(scale);
 
-//     gCanvas.style.transform = "scale(" + scale + ")";
-//   }
-// }
+    gCanvas.style.transform = "scale(" + scale + ")";
+  }
+}
 
 var path;
 
@@ -75,7 +75,7 @@ gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
 startPoint = new Vec2(260, 240);
 
-endPoint = new Vec2(0, 0);
+endPoint = new Vec2(480, 140);
 
 document.addEventListener("DOMContentLoaded", function (event) {
   if (window.DeviceOrientationEvent) {
@@ -159,7 +159,7 @@ function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
 }
 
 class Node {
-  constructor(id, size, posx, posy, walkable, path) {
+  constructor(id, size, posx, posy, walkable, path, direction = "all") {
     var F;
     var parent;
     this.inPath = false;
@@ -172,6 +172,7 @@ class Node {
     this.posy = posy;
     this.walkable = walkable;
     this.path = path;
+    this.direction = direction;
 
     this.id = id;
   }
@@ -236,7 +237,7 @@ class Node {
     gctx.stroke();
 
     if (this.posx == startPoint.x && this.posy == startPoint.y) {
-      console.log("hit the startNode");
+      // console.log("hit the startNode");
       this.createStartNode();
       return;
     }
@@ -245,7 +246,7 @@ class Node {
     }
 
     if (this.walkable === false) {
-      this.createWall();
+      // this.createWall();
 
       return;
     }
@@ -282,7 +283,7 @@ class PathFindingAlg {
 
     openSet.add(gridPoints[currentNode]);
 
-    console.log("begin");
+    // console.log("begin");
 
     while (openSet.size > 0) {
       tempArray = Array.from(openSet);
@@ -390,22 +391,39 @@ class Grid {
         // Tetapkan kemampuan berjalan untuk beberapa node berdasarkan kondisi yang telah ditentukan sebelumnya
         if (
           // JALAN ATAS
-          ((countNodes - 292) % 70 === 0 &&
-            countNodes >= 292 &&
-            countNodes <= 292 + 70 * 135) ||
+
           // HANDLE JALAN LURUS
           ((countNodes - 293) % 630 <= 44 &&
             countNodes >= 293 &&
             countNodes <= 337 + 630 * 15) ||
           // JALANN TENGAH
-          ((countNodes - 316) % 70 === 0 &&
-            countNodes >= 316 &&
-            countNodes <= 316 + 70 * 135) ||
+
           // JALAN BAWAH
           ((countNodes - 337) % 70 === 0 &&
             countNodes >= 337 &&
-            countNodes <= 337 + 70 * 135)
+            countNodes <= 337 + 70 * 135) ||
+          countNodes === 1610
         ) {
+          tempNode.drawNode();
+        } else if (countNodes >= 1680 && countNodes <= 1691) {
+          tempNode.direction = "down";
+          tempNode.drawNode();
+        } else if (countNodes >= 1540 && countNodes <= 1551) {
+          tempNode.direction = "up";
+          tempNode.drawNode();
+        } else if (
+          (countNodes - 292) % 70 === 0 &&
+          countNodes >= 292 &&
+          countNodes <= 292 + 70 * 135
+        ) {
+          tempNode.direction = "left";
+          tempNode.drawNode();
+        } else if (
+          (countNodes - 316) % 70 === 0 &&
+          countNodes >= 316 &&
+          countNodes <= 316 + 70 * 135
+        ) {
+          tempNode.direction = "left";
           tempNode.drawNode();
         } else {
           tempNode.walkable = false;
@@ -493,7 +511,32 @@ function getNeighbors(node) {
         checkY <= CANVAS_HEIGHT - NODESIZE
       ) {
         if (checkX === node.posx || checkY === node.posy) {
-          tempList.push(gridPointsByPos[checkX][checkY]);
+          // untuk satu arah y
+          if (
+            (checkY >= node.posy && node.direction == "down") ||
+            node.direction === "all"
+          ) {
+            tempList.push(gridPointsByPos[checkX][checkY]);
+          } else if (
+            (checkY <= node.posy && node.direction == "up") ||
+            node.direction === "all"
+          ) {
+            tempList.push(gridPointsByPos[checkX][checkY]);
+          }
+          // untuk satu arah x
+          else if (
+            (checkX >= node.posx && node.direction == "right") ||
+            node.direction === "all"
+          ) {
+            tempList.push(gridPointsByPos[checkX][checkY]);
+          } else if (
+            (checkX <= node.posx && node.direction == "left") ||
+            node.direction === "all"
+          ) {
+            tempList.push(gridPointsByPos[checkX][checkY]);
+          } else if (node.direction === "all") {
+            tempList.push(gridPointsByPos[checkX][checkY]);
+          }
         }
       }
     }
@@ -565,7 +608,8 @@ function Tenant(context, lineW) {
       e.height,
       e.text,
       e?.border,
-      e?.fontSize
+      e?.fontSize,
+      e?.code
     );
   });
 }
@@ -864,43 +908,67 @@ function resetWalls() {
 gCanvas.addEventListener(
   "click",
   function (event) {
+    // console.log(scale);
     var x = event.pageX - $(gCanvas).position().left;
     var y = event.pageY - $(gCanvas).position().top;
 
     var clickedElement = gridPoints.find(function (element) {
       return (
-        y > element.posy &&
-        y < element.posy + element.size &&
-        x > element.posx &&
-        x < element.posx + element.size
+        y > element.posy * scale &&
+        y < (element.posy + element.size) * scale &&
+        x > element.posx * scale &&
+        x < (element.posx + element.size) * scale
       );
     });
 
-    if (clickedElement) {
-      console.log({
-        posx: clickedElement.posx,
-        posy: clickedElement.posy,
-        endx: endPoint.x,
-        endy: endPoint.y,
-      });
+    console.log(clickedElement);
 
-      if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
-        endPoint = "";
-        endPoint = new Vec2(0, 0);
-        myPath = new PathFindingAlg(grid, startPoint, endPoint);
+    if (clickedElement) {
+      var posx = clickedElement.posx;
+      var posy = clickedElement.posy;
+
+      if (clickedElement.walkable === true) {
+        // Kalau jalan
+
+        console.log({
+          posx: posx,
+          posy: posy,
+        });
+
+        // handle jika user mengklik icon endPoint
+        if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
+          endPoint = "";
+          endPoint = new Vec2(0, 0);
+          myPath = new PathFindingAlg(grid, startPoint, endPoint);
+          reset();
+          return;
+        }
+
+        startPoint = "";
+        startPoint = new Vec2(posx, posy);
+        // showModal("text");
+
         reset();
 
-        return;
+        myPath = new PathFindingAlg(grid, startPoint, endPoint);
+        myPath.findPath();
+      } else {
+        // Kalau tenant
+        var tenant = dataTenant.find(function (element) {
+          return (
+            y > (element.y + 160) * scale &&
+            y < (element.y + element.height + 160) * scale &&
+            x > element.x * scale &&
+            x < (element.x + element.width) * scale
+          );
+        });
+
+        if (tenant) {
+          console.log(x, y);
+          console.log(tenant.x, tenant.y + 160, tenant.text);
+          showModal(tenant.text, tenant.code);
+        }
       }
-
-      startPoint = "";
-      startPoint = new Vec2(clickedElement.posx, clickedElement.posy);
-      // showModal("text");
-
-      reset();
-
-      myPath = new PathFindingAlg(grid, startPoint, endPoint);
-      myPath.findPath();
     }
   },
   false
@@ -911,7 +979,7 @@ const HandleSearch = (point) => {
   if (cekSearch) {
     cekSearch.remove();
   }
-  console.log(point);
+  // console.log(point);
 
   const filter =
     point === "start"
@@ -968,34 +1036,6 @@ const HandleSearch = (point) => {
       });
     }
   }
-
-  // dataTenant.forEach((info) => {
-  //   const li = document.createElement("li");
-
-  //   li.className = "border-b-2 p-2 cursor-pointer";
-  //   li.textContent = `${info.text} - ${info.kodePos}`;
-  //   ul.appendChild(li);
-
-  //   li.addEventListener("click", () => {
-  //     if (point === "inputStart") {
-  //       startPoint = "";
-  //       inputStart.value = info.text;
-  //       startPoint = new Vec2(80, 460);
-  //     } else {
-  //       endPoint = "";
-  //       inputEnd.value = info.text;
-  //       endPoint = new Vec2(620, 880);
-  //     }
-
-  //     reset();
-  //     myPath = new PathFindingAlg(grid, startPoint, endPoint);
-
-  //     myPath.findPath();
-
-  //     search.remove();
-  //     ul.remove();
-  //   });
-  // });
 
   search.appendChild(ul);
 

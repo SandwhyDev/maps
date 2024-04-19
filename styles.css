@@ -53,10 +53,11 @@ position:relative;}
  
   position: fixed;
   bottom: 0%;
-  left: 0;
+  left: 0%;
   width: 100vw;
   /* height: 200px; */
   padding:  20px;
+  z-index: 50;
 }
 
 .modal-content{

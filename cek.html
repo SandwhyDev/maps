@@ -1,19 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Search Food</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Food</title>
+    <link rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body class="w-screen h-screen">
+    <div
+      class="flex flex-col mt-[200px] bg-gray-500 w-fit h-fit overflow-scroll relative"
+    >
+      <div class="fixed top-0 left-0 w-fit h-fit absolute z-20 m-[80px]">
+        <canvas id="gCanvas" width="800" height="640" class="bg-white"></canvas>
+      </div>
 
-<div class="container mx-auto p-6">
-  <h2 class="text-2xl font-bold mb-4">Search Food</h2>
-  <input type="text" id="searchInput" onkeyup="search()" placeholder="Search for food..." class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-1 focus:ring-blue-500">
-  <ul id="foodList" class="space-y-2"></ul>
-</div>
+      <!-- atas -->
+      <div class="flex mx-[80px]">
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+      </div>
 
-<script src="script.js"></script>
-</body>
+      <!-- tengah -->
+      <div class="flex justify-between relative">
+        <div class="">
+          <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+        </div>
+
+        <div class="pt-[20px] absolute top-[40px] left-[160px] flex z-50">
+          <div class="">
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+          </div>
+          <div class="">
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-gray-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+          </div>
+        </div>
+
+        <div class="pt-[20px] absolute top-[40px] left-[380px] flex z-50">
+          <div class="">
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+          </div>
+          <div class="">
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-gray-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+          </div>
+        </div>
+
+        <div class="pt-[20px] absolute top-[40px] left-[600px] flex z-50">
+          <div class="">
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500 z-20"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+          </div>
+          <div class="">
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-gray-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+            <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+          </div>
+        </div>
+
+        <div class="">
+          <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+          <div id="tenant" class="w-[80px] h-[80px] bg-blue-500"></div>
+        </div>
+      </div>
+      <!-- tengah end -->
+
+      <!-- bottom -->
+      <div class="flex mx-[80px]">
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-yellow-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-green-500"></div>
+        <div id="tenant" class="w-[80px] h-[80px] bg-red-500"></div>
+      </div>
+    </div>
+
+    <div class="fixed top-0 left-10 flex gap-5 z-100">
+      <div
+        id="btnZoomOut"
+        class="w-14 h-14 bg-white flex items-center justify-center text-3xl rounded-full border shadow cursor-pointer"
+      >
+        -
+      </div>
+      <div
+        id="btnZoomIn"
+        class="w-14 h-14 bg-white flex items-center justify-center text-3xl rounded-full border shadow cursor-pointer"
+      >
+        +
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

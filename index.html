@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
     />
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 
     <title>Maps</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,7 +18,15 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="py-20">
+  <body class="py-28">
+    <div class="w-full max-h-28 flex gap-4 p-2">
+      <div class="object-cover bg-black p-5 rounded">
+        <img src="/images/logo.png" alt="" srcset="" />
+      </div>
+      <div class="object-cover bg-black p-5 rounded w-fit">
+        <img src="/images/logo.png" alt="" srcset="" />
+      </div>
+    </div>
     <div
       class="flex flex-col gap-10 fixed top-0 left-0 items-center w-screen z-10"
     >
@@ -82,7 +92,7 @@
       <!-- <div id="wallReset" class="btn">Clear</div> -->
     </div>
 
-    <div class="w-screen h-full overflow-scroll border-4 border-black">
+    <div class="w-fit h-full border-4 border-black">
       <canvas id="gCanvas" width="5700" height="1400"> </canvas>
     </div>
 
@@ -128,7 +138,20 @@
       </div>
     </div> -->
 
-    <!-- <div class="fixed bottom-20 left-10 flex gap-5">
+    <div id="modal" class="hidden">
+      <div class="modal-content">
+        <p id="modal-name">Trumecs</p>
+        <p id="modal-code" class="text-sm font-normal">A1A2-01</p>
+        <img
+          src="./images/tenant.webp"
+          alt="Deskripsi gambar"
+          class="modal-image"
+          style="filter: invert(0)"
+        /><span id="btn-closed">×</span>
+      </div>
+    </div>
+
+    <div class="fixed bottom-20 left-10 flex gap-5">
       <div
         id="btnZoomOut"
         class="w-14 h-14 bg-white flex items-center justify-center text-3xl rounded-full border shadow cursor-pointer"
@@ -141,7 +164,7 @@
       >
         +
       </div>
-    </div> -->
+    </div>
 
     <script src="/constant/dataTenant.js"></script>
     <script src="/src/lib/Tenant.js"></script>

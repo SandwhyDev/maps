@@ -1,4 +1,5 @@
 var gCanvas = document.getElementById("gCanvas");
+var btnClosed = document.getElementById("btn-closed");
 let handleX, handleY;
 
 const dataTenant = [
@@ -59,7 +60,8 @@ const HandleTenant = (
   height,
   text,
   border,
-  fontSize
+  fontSize,
+  codeTenant
 ) => {
   context.beginPath();
   context.lineWidth = 1;
@@ -107,7 +109,7 @@ const HandleTenant = (
 
   // Menambahkan event listener untuk meng-handle klik
   // gCanvas.addEventListener("click", function (event) {
-  //   const rect = gCanvas.getBoundingClientRect();
+  // const rect = gCanvas.getBoundingClientRect();
   //   const clickX = event.clientX - rect.left;
   //   const clickY = event.clientY - rect.top;
 
@@ -118,7 +120,7 @@ const HandleTenant = (
   //     clickY >= y &&
   //     clickY <= y + height
   //   ) {
-  //     showModal(text);
+  //
   //     // Jika klik di dalam kotak
   //     if (!clicked) {
   //       currentColor = "red";
@@ -138,53 +140,25 @@ const HandleTenant = (
   context.stroke();
 };
 
-const showModal = (text) => {
-  if (currentModal) {
-    currentModal.remove();
-  }
+const showModal = (text, codeTenant) => {
+  var modal = document.getElementById("modal");
 
-  // Buat elemen-elemen modal secara dinamis
-  const modal = document.createElement("div");
-  modal.id = "modal";
-  // modal.className = "w-full h-[200px] fixed bottom-0 left-0 p-10 ";
+  modal.classList.remove("hidden");
 
-  // CONTENT
-  const modalContent = document.createElement("div");
-  modalContent.className = "modal-content";
+  var modalName = document.getElementById("modal-name");
+  var modalCode = document.getElementById("modal-code");
 
   // CONTENT TEXT
-  const modalText = document.createElement("p");
-  modalText.innerText = text;
-  modalText.className = "text-sm font-normal";
-
+  modalName.innerText = text;
   // DESKRIPSI
-  const modalDeskripsi = document.createElement("p");
-  modalDeskripsi.innerText = `Trumecs`;
-
-  // GAMBAR
-  const modalImage = document.createElement("img");
-  modalImage.src = "./images/tenant.webp"; // Ganti dengan URL atau path ke gambar Anda
-  modalImage.alt = "Deskripsi gambar"; // Ganti dengan deskripsi gambar yang sesuai
-  modalImage.className = "modal-image";
-
-  // BTN CLOSED
-  const btnClosed = document.createElement("span");
-  btnClosed.id = "btn-closed";
-  // btnClosed.className = "text-red-500 absolute top-3 right-5 text-3xl";
-  btnClosed.innerHTML = "&times;";
-
-  modalContent.appendChild(modalDeskripsi);
-  modalContent.appendChild(modalText);
-  modalContent.appendChild(modalImage);
-  modalContent.appendChild(btnClosed);
-
-  modal.appendChild(modalContent);
-  document.body.appendChild(modal);
-
-  currentModal = document.getElementById("modal");
-
-  btnClosed.addEventListener("click", function () {
-    modal.remove();
-    currentModal = null; // Set currentModal menjadi null setelah modal ditutup
-  });
+  modalCode.innerText = codeTenant;
 };
+
+btnClosed.addEventListener("click", function () {
+  var modal = document.getElementById("modal");
+
+  modal.className = "hidden";
+  currentModal = null; // Set currentModal menjadi null setelah modal ditutup
+});
+
+let clickedOutsideTenant = false; // Flag to track outside clicks

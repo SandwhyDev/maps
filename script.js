@@ -1,42 +1,76 @@
-const foodData = [
-  { name: "Pizza", category: "Italian" },
-  { name: "Burger", category: "American" },
-  { name: "Pasta", category: "Italian" },
-  { name: "Salad", category: "Healthy" },
-  { name: "Sushi", category: "Japanese" },
-  { name: "Tacos", category: "Mexican" },
-  { name: "Steak", category: "American" },
-  { name: "Sandwich", category: "American" },
-  { name: "Soup", category: "Healthy" },
-  { name: "Ramen", category: "Japanese" },
-  { name: "Curry", category: "Indian" },
-  { name: "Fried Chicken", category: "American" },
-  { name: "Shrimp", category: "Seafood" },
-  { name: "Ice Cream", category: "Dessert" },
-  { name: "Cake", category: "Dessert" },
-  { name: "Pancakes", category: "Breakfast" },
-];
+document.addEventListener("DOMContentLoaded", function () {
+  // Mengambil semua elemen dengan kelas "tenant"
+  var tenants = document.querySelectorAll("#tenant");
 
-function search() {
-  const input = document.getElementById("searchInput");
-  const filter = input.value.toUpperCase();
-  const foodList = document.getElementById("foodList");
-  foodList.innerHTML = "";
-  for (let i = 0; i < foodData.length; i++) {
-    const food = foodData[i];
-    console.log(food.name);
-    if (food.name.toUpperCase().indexOf(filter) > -1) {
-      const li = document.createElement("li");
-      li.textContent = `${food.name} - ${food.category}`;
-      li.classList.add(
-        "px-4",
-        "py-2",
-        "bg-white",
-        "border",
-        "border-gray-300",
-        "rounded-md"
-      );
-      foodList.appendChild(li);
-    }
+  // Menambahkan event listener untuk setiap elemen tenant
+  tenants.forEach(function (tenant) {
+    tenant.addEventListener("click", function () {
+      // Memunculkan alert saat elemen tenant diklik
+      console.log("Tenant clicked!");
+    });
+  });
+});
+
+var canvas = document.getElementById("gCanvas");
+var ctx = canvas.getContext("2d");
+var btnZoomIn = document.getElementById("btnZoomIn");
+var btnZoomOut = document.getElementById("btnZoomOut");
+scale = 1;
+canvas.style.transform = "scale(" + scale + ")";
+
+btnZoomIn.addEventListener("click", zoomIn);
+
+function zoomIn() {
+  if (scale > 0.5) {
+    scale -= 0.1;
+    console.log(scale);
+
+    gCanvas.style.transform = "scale(" + scale + ")";
   }
 }
+
+function zoomOut() {
+  if (scale > 0.5) {
+    scale -= 0.1;
+    console.log(scale);
+
+    gCanvas.style.transform = "scale(" + scale + ")";
+  }
+}
+
+// Set grid properties
+var gridSize = 20; // Size of each grid cell
+var canvasWidth = canvas.width;
+var canvasHeight = canvas.height;
+
+// Draw grid
+for (var x = 0; x <= canvasWidth; x += gridSize) {
+  ctx.moveTo(x, 0);
+  ctx.lineTo(x, canvasHeight);
+}
+
+for (var y = 0; y <= canvasHeight; y += gridSize) {
+  ctx.moveTo(0, y);
+  ctx.lineTo(canvasWidth, y);
+}
+
+// Set grid color and width
+ctx.strokeStyle = "#000"; // Black color
+ctx.lineWidth = 1;
+
+// Draw grid lines
+ctx.stroke();
+
+canvas.addEventListener("click", function (event) {
+  // Get mouse position relative to canvas
+  var rect = canvas.getBoundingClientRect();
+  var mouseX = event.clientX - rect.left;
+  var mouseY = event.clientY - rect.top;
+
+  // Convert mouse position to grid coordinates
+  var gridX = Math.floor(mouseX / gridSize);
+  var gridY = Math.floor(mouseY / gridSize);
+
+  // Log grid coordinates
+  console.log("Grid X:", gridX, "Grid Y:", gridY);
+});
