@@ -7,6 +7,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-31",
     text: "JABABEKA",
+    pointx: 120,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -16,6 +18,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-32",
     text: "ITA AUTOPARTS",
+    pointx: 280,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -25,6 +29,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-33",
     text: "PT. ANEKA",
+    pointx: 620,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -34,6 +40,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-34",
     text: "PANAMA",
+    pointx: 760,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -43,6 +51,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-35",
     text: "Evosend",
+    pointx: 900,
+    pointy: 240,
   },
 
   {
@@ -53,6 +63,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-36",
     text: "Happy Steel",
+    pointx: 1060,
+    pointy: 240,
   },
 
   {
@@ -63,6 +75,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-37",
     text: "Weichai Torch Technology Co.,Ltd.",
+    pointx: 1240,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -72,6 +86,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-31",
     text: "Arthaplast",
+    pointx: 1600,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -81,6 +97,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-31",
     text: "A2K1-01",
+    pointx: 1800,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -89,8 +107,9 @@ const JABABEKA_SINGSPA = [
     width: 240,
     height: 60,
     code: "A1A1-31",
-
     text: "Guangzhou Toby's Optronics Technology",
+    pointx: 2020,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -100,6 +119,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-31",
     text: "ACIPI",
+    pointx: 2220,
+    pointy: 240,
   },
 
   {
@@ -110,6 +131,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-31",
     text: "Aokly Group",
+    pointx: 2600,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -119,6 +142,8 @@ const JABABEKA_SINGSPA = [
     height: 60,
     code: "A1A1-31",
     text: "Sing Spare Part",
+    pointx: 2760,
+    pointy: 240,
   },
 ];
 
@@ -132,6 +157,8 @@ const A1A2 = [
     height: 240,
     code: "A1A1-31",
     text: "A1A2-01",
+    pointx: 80,
+    pointy: 340,
   },
 
   {
@@ -142,6 +169,8 @@ const A1A2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1A2-05",
+    pointx: 80,
+    pointy: 500,
   },
   {
     color: "#ff9",
@@ -151,6 +180,8 @@ const A1A2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1A2-07",
+    pointx: 80,
+    pointy: 620,
   },
 
   {
@@ -161,6 +192,8 @@ const A1A2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1A3-01",
+    pointx: 80,
+    pointy: 620 + 120,
   },
 
   {
@@ -171,6 +204,8 @@ const A1A2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1A3-03",
+    pointx: 80,
+    pointy: 620 + 120 * 2,
   },
 
   {
@@ -182,6 +217,8 @@ const A1A2 = [
     code: "A1A1-31",
     text: "",
     border: true,
+    pointx: 80,
+    pointy: 620 + 120,
   },
   {
     color: "#ff9",
@@ -191,6 +228,8 @@ const A1A2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1A3-05",
+    pointx: 80,
+    pointy: 620 + 120 * 3,
   },
   {
     color: "#9bbb59",
@@ -201,6 +240,8 @@ const A1A2 = [
     border: true,
     code: "A1A1-31",
     text: "VIP LONGUE",
+    pointx: 80,
+    pointy: 1140,
   },
   {
     color: "#9bbb59",
@@ -210,6 +251,8 @@ const A1A2 = [
     height: 80,
     code: "A1A1-31",
     text: "Seminar Area",
+    pointx: 200,
+    pointy: 1140,
   },
 ];
 
@@ -222,6 +265,8 @@ const A1B2 = [
     height: 120,
     code: "A1A1-31",
     text: "wes sz",
+    pointx: 80,
+    pointy: 340,
   },
   {
     color: "#ff9",
@@ -231,6 +276,8 @@ const A1B2 = [
     height: 120,
     code: "A1A1-31",
     text: "Guoneng",
+    pointx: 260,
+    pointy: 340,
   },
   {
     color: "#ff9",
@@ -240,6 +287,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-05",
+    pointx: 80,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -249,6 +298,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-06",
+    pointx: 260,
+    pointy: 420,
   },
 
   {
@@ -259,6 +310,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-07",
+    pointx: 80,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -268,6 +321,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-08",
+    pointx: 260,
+    pointy: 420 + 60,
   },
 
   {
@@ -278,6 +333,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-09",
+    pointx: 80,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -287,6 +344,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-10",
+    pointx: 260,
+    pointy: 420 + 60 * 2,
   },
 
   {
@@ -297,6 +356,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-11",
+    pointx: 80,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -306,6 +367,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-12",
+    pointx: 260,
+    pointy: 420 + 60 * 3,
   },
 
   {
@@ -316,6 +379,8 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-13",
+    pointx: 80,
+    pointy: 420 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -325,8 +390,11 @@ const A1B2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B2-14",
+    pointx: 260,
+    pointy: 420 + 60 * 4,
   },
 ];
+
 const A1C2 = [
   // YIDA UP
   {
@@ -337,6 +405,8 @@ const A1C2 = [
     height: 120,
     code: "A1A1-31",
     text: "DMM",
+    pointx: 340,
+    pointy: 240,
   },
 
   {
@@ -347,6 +417,8 @@ const A1C2 = [
     height: 120,
     code: "A1A1-31",
     text: "Iroad",
+    pointx: 260,
+    pointy: 440,
   },
   {
     color: "#ff9",
@@ -356,6 +428,8 @@ const A1C2 = [
     height: 80,
     code: "A1A1-31",
     text: "BTS",
+    pointx: 440,
+    pointy: 440,
   },
   {
     color: "#ff9",
@@ -365,6 +439,8 @@ const A1C2 = [
     height: 60,
     code: "A1A1-31",
     text: "GIAMM",
+    pointx: 260,
+    pointy: 540,
   },
   {
     color: "black",
@@ -383,6 +459,8 @@ const A1C2 = [
     height: 120,
     code: "A1A1-31",
     text: "Tongil",
+    pointx: 440,
+    pointy: 540,
   },
 
   {
@@ -393,72 +471,9 @@ const A1C2 = [
     height: 120,
     code: "A1A1-31",
     text: "KAPCI",
+    pointx: 360,
+    pointy: 720,
   }, // YIDA UP
-  {
-    color: "#ff9",
-    x: 120 + 180,
-    y: 120,
-    width: 120,
-    height: 120,
-    code: "A1A1-31",
-    text: "DMM",
-  },
-
-  {
-    color: "#ff9",
-    x: 120 + 180,
-    y: 240,
-    width: 60,
-    height: 120,
-    code: "A1A1-31",
-    text: "Iroad",
-  },
-  {
-    color: "#ff9",
-    x: 180 + 180,
-    y: 240,
-    width: 60,
-    height: 80,
-    code: "A1A1-31",
-    text: "BTS",
-  },
-  {
-    color: "#ff9",
-    x: 180 + 120,
-    y: 360,
-    width: 60,
-    height: 60,
-    code: "A1A1-31",
-    text: "GIAMM",
-  },
-  {
-    color: "black",
-    x: 180 + 180,
-    y: 320,
-    width: 60,
-    height: 20,
-    code: "A1A1-31",
-    text: "",
-  },
-  {
-    color: "#ff9",
-    x: 180 + 180,
-    y: 340,
-    width: 60,
-    height: 120,
-    code: "A1A1-31",
-    text: "Tongil",
-  },
-
-  {
-    color: "#ff9",
-    x: 120 + 180,
-    y: 420,
-    width: 120,
-    height: 120,
-    code: "A1A1-31",
-    text: "KAPCI",
-  },
 ];
 
 const A1D2 = [
@@ -470,6 +485,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-01",
+    pointx: 440,
+    pointy: 300,
   },
   {
     color: "#ff9",
@@ -479,6 +496,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-02",
+    pointx: 620,
+    pointy: 300,
   },
   {
     color: "#ff9",
@@ -488,6 +507,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-03",
+    pointx: 440,
+    pointy: 300 + 60,
   },
   {
     color: "#ff9",
@@ -497,6 +518,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-04",
+    pointx: 620,
+    pointy: 300 + 60,
   },
 
   {
@@ -507,6 +530,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-05",
+    pointx: 440,
+    pointy: 300 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -516,6 +541,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-06",
+    pointx: 620,
+    pointy: 300 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -525,6 +552,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-07",
+    pointx: 440,
+    pointy: 300 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -534,6 +563,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-08",
+    pointx: 620,
+    pointy: 300 + 60 * 3,
   },
 
   {
@@ -544,6 +575,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-09",
+    pointx: 440,
+    pointy: 300 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -553,6 +586,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-10",
+    pointx: 620,
+    pointy: 300 + 60 * 4,
   },
 
   {
@@ -563,6 +598,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-11",
+    pointx: 440,
+    pointy: 300 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -572,6 +609,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-12",
+    pointx: 620,
+    pointy: 300 + 60 * 5,
   },
 
   {
@@ -582,6 +621,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-13",
+    pointx: 440,
+    pointy: 300 + 60 * 6,
   },
   {
     color: "#ff9",
@@ -591,6 +632,8 @@ const A1D2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D2-14",
+    pointx: 620,
+    pointy: 300 + 60 * 6,
   },
 ];
 
@@ -603,6 +646,8 @@ const A1E2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1E2-01",
+    pointx: 620,
+    pointy: 340,
   },
   {
     color: "#ff9",
@@ -612,6 +657,8 @@ const A1E2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1E2-02",
+    pointx: 800,
+    pointy: 340,
   },
   {
     color: "#ff9",
@@ -621,6 +668,8 @@ const A1E2 = [
     height: 80,
     code: "A1A1-31",
     text: "A1E2-05",
+    pointx: 620,
+    pointy: 340 + 100,
   },
   {
     color: "#ff9",
@@ -630,6 +679,8 @@ const A1E2 = [
     height: 80,
     code: "A1A1-31",
     text: "A1E2-06",
+    pointx: 800,
+    pointy: 340 + 100,
   },
   {
     color: "#ff9",
@@ -639,6 +690,8 @@ const A1E2 = [
     height: 80,
     code: "A1A1-31",
     text: "A1E2-07",
+    pointx: 620,
+    pointy: 340 + 80 * 2,
   },
   {
     color: "#ff9",
@@ -648,6 +701,8 @@ const A1E2 = [
     height: 80,
     code: "A1A1-31",
     text: "A1E2-08",
+    pointx: 800,
+    pointy: 340 + 80 * 2,
   },
 
   {
@@ -658,6 +713,8 @@ const A1E2 = [
     height: 80,
     code: "A1A1-31",
     text: "A1E2-11",
+    pointx: 620,
+    pointy: 340 + 80 * 3,
   },
   {
     color: "#ff9",
@@ -667,6 +724,8 @@ const A1E2 = [
     height: 80,
     code: "A1A1-31",
     text: "A1E2-12",
+    pointx: 800,
+    pointy: 340 + 80 * 3,
   },
 
   {
@@ -677,6 +736,8 @@ const A1E2 = [
     height: 80,
     code: "A1A1-31",
     text: "A1E2-13",
+    pointx: 620,
+    pointy: 340 + 80 * 4,
   },
   {
     color: "#ff9",
@@ -686,6 +747,8 @@ const A1E2 = [
     height: 80,
     code: "A1A1-31",
     text: "A1E2-14",
+    pointx: 800,
+    pointy: 340 + 80 * 4,
   },
 ];
 
@@ -698,6 +761,8 @@ const A1F2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1F2-01",
+    pointx: 900,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -707,6 +772,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-02",
+    pointx: 800,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -716,6 +783,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-03",
+    pointx: 980,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -725,6 +794,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-04",
+    pointx: 800,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -734,6 +805,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-05",
+    pointx: 980,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -743,6 +816,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-06",
+    pointx: 800,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -752,6 +827,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-07",
+    pointx: 980,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -761,6 +838,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-08",
+    pointx: 800,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -770,6 +849,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-09",
+    pointx: 980,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -779,6 +860,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-10",
+    pointx: 800,
+    pointy: 420 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -788,6 +871,8 @@ const A1F2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F2-11",
+    pointx: 980,
+    pointy: 420 + 60 * 4,
   },
   {
     color: "black",
@@ -809,6 +894,8 @@ const A1G2 = [
     height: 120,
     code: "A1A1-31",
     text: "A1G2-01",
+    pointx: 1080,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -818,6 +905,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-02",
+    pointx: 980,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -827,6 +916,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-03",
+    pointx: 1160,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -836,6 +927,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-04",
+    pointx: 980,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -845,6 +938,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-05",
+    pointx: 1160,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -854,6 +949,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-06",
+    pointx: 980,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -863,6 +960,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-07",
+    pointx: 1160,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -872,6 +971,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-08",
+    pointx: 980,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -881,6 +982,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-09",
+    pointx: 1160,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -890,6 +993,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-10",
+    pointx: 980,
+    pointy: 420 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -899,6 +1004,8 @@ const A1G2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1G2-11",
+    pointx: 1160,
+    pointy: 420 + 60 * 4,
   },
 ];
 
@@ -911,6 +1018,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-01",
+    pointx: 1160,
+    pointy: 300,
   },
   {
     color: "#ff9",
@@ -920,6 +1029,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-02",
+    pointx: 1340,
+    pointy: 300,
   },
   {
     color: "#ff9",
@@ -929,6 +1040,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-03",
+    pointx: 1160,
+    pointy: 300 + 60,
   },
   {
     color: "#ff9",
@@ -938,6 +1051,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-04",
+    pointx: 1340,
+    pointy: 300 + 60,
   },
   {
     color: "#ff9",
@@ -947,6 +1062,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-05",
+    pointx: 1160,
+    pointy: 300 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -956,6 +1073,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-06",
+    pointx: 1340,
+    pointy: 300 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -965,6 +1084,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-07",
+    pointx: 1160,
+    pointy: 300 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -974,6 +1095,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-08",
+    pointx: 1340,
+    pointy: 300 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -983,6 +1106,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-09",
+    pointx: 1160,
+    pointy: 300 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -992,6 +1117,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-10",
+    pointx: 1340,
+    pointy: 300 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1001,6 +1128,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-11",
+    pointx: 1160,
+    pointy: 300 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -1010,6 +1139,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-12",
+    pointx: 1340,
+    pointy: 300 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -1019,6 +1150,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-13",
+    pointx: 1160,
+    pointy: 300 + 60 * 6,
   },
   {
     color: "#ff9",
@@ -1028,6 +1161,8 @@ const A1H2 = [
     height: 60,
     code: "A1A1-31",
     text: "A1H2-14",
+    pointx: 1340,
+    pointy: 300 + 60 * 6,
   },
 ];
 
@@ -1040,6 +1175,8 @@ const A2I2 = [
     height: 140,
     code: "A1A1-31",
     text: "A2I2-01",
+    pointx: 1440,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -1049,6 +1186,8 @@ const A2I2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2I2-07",
+    pointx: 1340,
+    pointy: 460,
   },
   {
     color: "#ff9",
@@ -1058,6 +1197,8 @@ const A2I2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2I2-08",
+    pointx: 1520,
+    pointy: 460,
   },
   {
     color: "#ff9",
@@ -1067,6 +1208,8 @@ const A2I2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2I2-09",
+    pointx: 1340,
+    pointy: 460 + 80,
   },
   {
     color: "#ff9",
@@ -1076,6 +1219,8 @@ const A2I2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2I2-10",
+    pointx: 1520,
+    pointy: 460 + 80,
   },
   {
     color: "#ff9",
@@ -1085,6 +1230,8 @@ const A2I2 = [
     height: 120,
     code: "A1A1-31",
     text: "A2I2-11",
+    pointx: 1340,
+    pointy: 460 + 80 * 2,
   },
   {
     color: "#ff9",
@@ -1094,6 +1241,8 @@ const A2I2 = [
     height: 120,
     code: "A1A1-31",
     text: "A2I2-12",
+    pointx: 1520,
+    pointy: 460 + 80 * 2,
   },
 ];
 
@@ -1106,6 +1255,8 @@ const A2J2 = [
     height: 100,
     code: "A1A1-31",
     text: "A2J2-01",
+    pointx: 1600,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -1115,6 +1266,8 @@ const A2J2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J2-03",
+    pointx: 1520,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -1124,6 +1277,8 @@ const A2J2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J2-04",
+    pointx: 1700,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -1133,6 +1288,8 @@ const A2J2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J2-05",
+    pointx: 1520,
+    pointy: 420 + 80,
   },
   {
     color: "#ff9",
@@ -1142,6 +1299,8 @@ const A2J2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J2-06",
+    pointx: 1700,
+    pointy: 420 + 80,
   },
   {
     color: "#ff9",
@@ -1151,6 +1310,8 @@ const A2J2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J2-07",
+    pointx: 1520,
+    pointy: 420 + 80 * 2,
   },
   {
     color: "#ff9",
@@ -1160,6 +1321,8 @@ const A2J2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J2-08",
+    pointx: 1700,
+    pointy: 420 + 80 * 2,
   },
   {
     color: "#ff9",
@@ -1169,6 +1332,8 @@ const A2J2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J2-11",
+    pointx: 1520,
+    pointy: 420 + 80 * 3,
   },
   {
     color: "#ff9",
@@ -1178,6 +1343,8 @@ const A2J2 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J2-12",
+    pointx: 1700,
+    pointy: 420 + 80 * 3,
   },
 ];
 
@@ -1190,6 +1357,8 @@ const A2K2 = [
     height: 120,
     code: "A1A1-31",
     text: "A2K2-01",
+    pointx: 1700,
+    pointy: 340,
   },
   {
     color: "#ff9",
@@ -1199,6 +1368,8 @@ const A2K2 = [
     height: 60,
     code: "A1A1-31",
     text: "A2K2-02",
+    pointx: 1880,
+    pointy: 300,
   },
   {
     color: "#ff9",
@@ -1208,6 +1379,8 @@ const A2K2 = [
     height: 60,
     code: "A1A1-31",
     text: "A2K2-04",
+    pointx: 1880,
+    pointy: 300 + 60,
   },
   {
     color: "#ff9",
@@ -1217,6 +1390,8 @@ const A2K2 = [
     height: 60,
     code: "A1A1-31",
     text: "A2K2-05",
+    pointx: 1700,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -1226,6 +1401,8 @@ const A2K2 = [
     height: 60,
     code: "A1A1-31",
     text: "A2K2-06",
+    pointx: 1880,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -1235,6 +1412,8 @@ const A2K2 = [
     height: 60,
     code: "A1A1-31",
     text: "A2K2-07",
+    pointx: 1700,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -1244,6 +1423,8 @@ const A2K2 = [
     height: 60,
     code: "A1A1-31",
     text: "A2K2-08",
+    pointx: 1880,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -1253,6 +1434,8 @@ const A2K2 = [
     height: 60,
     code: "A1A1-31",
     text: "A2K2-09",
+    pointx: 1700,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1262,6 +1445,8 @@ const A2K2 = [
     height: 60,
     code: "A1A1-31",
     text: "A2K2-10",
+    pointx: 1880,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1271,6 +1456,8 @@ const A2K2 = [
     height: 120,
     code: "A1A1-31",
     text: "A2K2-11",
+    pointx: 1700,
+    pointy: 620,
   },
 ];
 
@@ -1283,6 +1470,8 @@ const A3L2 = [
     height: 120,
     code: "A1A1-31",
     text: "A3L2-01",
+    pointx: 1980,
+    pointy: 240,
   },
 
   {
@@ -1293,6 +1482,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-05",
+    pointx: 1880,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -1302,6 +1493,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-06",
+    pointx: 2060,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -1311,6 +1504,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-07",
+    pointx: 1880,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -1320,6 +1515,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-08",
+    pointx: 2060,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -1329,6 +1526,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-09",
+    pointx: 1880,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1338,6 +1537,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-10",
+    pointx: 2060,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1347,6 +1548,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-11",
+    pointx: 1880,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1356,6 +1559,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-12",
+    pointx: 2060,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1365,6 +1570,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-13",
+    pointx: 1880,
+    pointy: 420 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1374,6 +1581,8 @@ const A3L2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L2-14",
+    pointx: 2060,
+    pointy: 420 + 60 * 4,
   },
 ];
 
@@ -1386,6 +1595,8 @@ const A3M2 = [
     height: 120,
     code: "A1A1-31",
     text: "A3M2-01",
+    pointx: 2140,
+    pointy: 240,
   },
 
   {
@@ -1396,6 +1607,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-05",
+    pointx: 2060,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -1405,6 +1618,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-06",
+    pointx: 2240,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -1414,6 +1629,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-07",
+    pointx: 2060,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -1423,6 +1640,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-08",
+    pointx: 2240,
+    pointy: 420 + 60,
   },
   {
     color: "#ff9",
@@ -1432,6 +1651,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-09",
+    pointx: 2060,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1441,6 +1662,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-10",
+    pointx: 2240,
+    pointy: 420 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1450,6 +1673,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-11",
+    pointx: 2060,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1459,6 +1684,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-12",
+    pointx: 2240,
+    pointy: 420 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1468,6 +1695,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-13",
+    pointx: 2060,
+    pointy: 420 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1477,6 +1706,8 @@ const A3M2 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M2-14",
+    pointx: 2240,
+    pointy: 420 + 60 * 4,
   },
 ];
 
@@ -1489,6 +1720,8 @@ const A3N2 = [
     height: 120,
     code: "A1A1-31",
     text: "A3N2-01",
+    pointx: 2340,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -1498,6 +1731,8 @@ const A3N2 = [
     height: 80,
     code: "A1A1-31",
     text: "A3N2-05",
+    pointx: 2240,
+    pointy: 440,
   },
   {
     color: "black",
@@ -1516,6 +1751,8 @@ const A3N2 = [
     height: 100,
     code: "A1A1-31",
     text: "A3N2-06",
+    pointx: 2420,
+    pointy: 440,
   },
   {
     color: "#ff9",
@@ -1525,6 +1762,8 @@ const A3N2 = [
     height: 80,
     code: "A1A1-31",
     text: "A3N2-07",
+    pointx: 2240,
+    pointy: 540,
   },
   {
     color: "#ff9",
@@ -1534,6 +1773,8 @@ const A3N2 = [
     height: 80,
     code: "A1A1-31",
     text: "A3N2-08",
+    pointx: 2420,
+    pointy: 540,
   },
   {
     color: "#ff9",
@@ -1543,6 +1784,8 @@ const A3N2 = [
     height: 120,
     code: "A1A1-31",
     text: "A3N2-11",
+    pointx: 2240,
+    pointy: 640,
   },
   {
     color: "#ff9",
@@ -1552,6 +1795,8 @@ const A3N2 = [
     height: 120,
     code: "A1A1-31",
     text: "A3N2-12",
+    pointx: 2420,
+    pointy: 640,
   },
 ];
 
@@ -1564,6 +1809,8 @@ const A3O2 = [
     height: 220,
     code: "A1A1-31",
     text: "A3O2-01",
+    pointx: 2520,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -1573,6 +1820,8 @@ const A3O2 = [
     height: 80,
     code: "A1A1-31",
     text: "A3O2-03",
+    pointx: 2420,
+    pointy: 540,
   },
 
   {
@@ -1583,6 +1832,8 @@ const A3O2 = [
     height: 80,
     code: "A1A1-31",
     text: "A3O2-04",
+    pointx: 2600,
+    pointy: 540,
   },
   {
     color: "#ff9",
@@ -1592,6 +1843,9 @@ const A3O2 = [
     height: 120,
     code: "A1A1-31",
     text: "A3O2-07",
+
+    pointx: 2420,
+    pointy: 540 + 100,
   },
   {
     color: "#ff9",
@@ -1601,6 +1855,8 @@ const A3O2 = [
     height: 120,
     code: "A1A1-31",
     text: "A3O2-08",
+    pointx: 2600,
+    pointy: 540 + 100,
   },
 ];
 
@@ -1613,6 +1869,8 @@ const A3P2 = [
     height: 220,
     code: "A1A1-31",
     text: "A3P2-01",
+    pointx: 2700,
+    pointy: 240,
   },
   {
     color: "#ff9",
@@ -1622,6 +1880,8 @@ const A3P2 = [
     height: 80,
     code: "A1A1-31",
     text: "A3P2-07",
+    pointx: 2600,
+    pointy: 540,
   },
   {
     color: "#ff9",
@@ -1631,6 +1891,8 @@ const A3P2 = [
     height: 200,
     code: "A1A1-31",
     text: "A3P2-08",
+    pointx: 2780,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -1640,6 +1902,8 @@ const A3P2 = [
     height: 120,
     code: "A1A1-31",
     text: "A3P2-09",
+    pointx: 2600,
+    pointy: 540 + 100,
   },
 ];
 // A1A2 - A3P2 END
@@ -1654,6 +1918,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-01",
+    pointx: 80,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -1663,6 +1929,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-02",
+    pointx: 260,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -1672,6 +1940,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-03",
+    pointx: 80,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -1681,6 +1951,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-04",
+    pointx: 260,
+    pointy: 780 + 60,
   },
 
   {
@@ -1691,6 +1963,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-05",
+    pointx: 80,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1700,6 +1974,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-06",
+    pointx: 260,
+    pointy: 780 + 60 * 2,
   },
 
   {
@@ -1710,6 +1986,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-07",
+    pointx: 80,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1719,6 +1997,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-08",
+    pointx: 260,
+    pointy: 780 + 60 * 3,
   },
 
   {
@@ -1729,6 +2009,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-09",
+    pointx: 80,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1738,6 +2020,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-10",
+    pointx: 260,
+    pointy: 780 + 60 * 4,
   },
 
   {
@@ -1748,6 +2032,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-11",
+    pointx: 80,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -1757,6 +2043,8 @@ const A1B3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1B3-12",
+    pointx: 260,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -1769,6 +2057,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-01",
+    pointx: 260,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -1778,6 +2068,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-02",
+    pointx: 440,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -1787,6 +2079,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-03",
+    pointx: 260,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -1796,6 +2090,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-04",
+    pointx: 440,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -1805,6 +2101,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-05",
+    pointx: 260,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1814,6 +2112,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-06",
+    pointx: 440,
+    pointy: 780 + 60 * 2,
   },
 
   {
@@ -1824,6 +2124,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-07",
+    pointx: 260,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1833,6 +2135,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-08",
+    pointx: 440,
+    pointy: 780 + 60 * 3,
   },
 
   {
@@ -1843,6 +2147,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-09",
+    pointx: 260,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1852,6 +2158,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-10",
+    pointx: 440,
+    pointy: 780 + 60 * 4,
   },
 
   {
@@ -1862,6 +2170,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-11",
+    pointx: 260,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -1871,6 +2181,8 @@ const A1C3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1C3-12",
+    pointx: 440,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -1883,6 +2195,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-01",
+    pointx: 440,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -1892,6 +2206,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-02",
+    pointx: 620,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -1901,6 +2217,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-03",
+    pointx: 440,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -1910,6 +2228,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-04",
+    pointx: 620,
+    pointy: 780 + 60,
   },
 
   {
@@ -1920,6 +2240,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-05",
+    pointx: 440,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1929,6 +2251,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-06",
+    pointx: 620,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1938,6 +2262,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-07",
+    pointx: 440,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1947,6 +2273,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-08",
+    pointx: 620,
+    pointy: 780 + 60 * 3,
   },
 
   {
@@ -1957,6 +2285,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-09",
+    pointx: 440,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1966,6 +2296,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-10",
+    pointx: 620,
+    pointy: 780 + 60 * 4,
   },
 
   {
@@ -1976,6 +2308,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-11",
+    pointx: 440,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -1985,6 +2319,8 @@ const A1D3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1D3-12",
+    pointx: 620,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -1997,6 +2333,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-01",
+    pointx: 620,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2006,6 +2344,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-02",
+    pointx: 800,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2015,6 +2355,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-03",
+    pointx: 620,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -2024,6 +2366,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-04",
+    pointx: 800,
+    pointy: 780 + 60,
   },
 
   {
@@ -2034,6 +2378,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-05",
+    pointx: 620,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2043,6 +2389,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-06",
+    pointx: 800,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2052,6 +2400,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-07",
+    pointx: 620,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2061,6 +2411,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-08",
+    pointx: 800,
+    pointy: 780 + 60 * 3,
   },
 
   {
@@ -2071,6 +2423,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-09",
+    pointx: 620,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2080,6 +2434,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-10",
+    pointx: 800,
+    pointy: 780 + 60 * 4,
   },
 
   {
@@ -2090,6 +2446,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-11",
+    pointx: 620,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2099,6 +2457,8 @@ const A1E3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1E3-12",
+    pointx: 800,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -2111,6 +2471,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-01",
+    pointx: 800,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2120,6 +2482,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-02",
+    pointx: 980,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2129,6 +2493,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-03",
+    pointx: 800,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -2138,6 +2504,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-04",
+    pointx: 980,
+    pointy: 780 + 60,
   },
 
   {
@@ -2148,6 +2516,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-05",
+    pointx: 800,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2157,6 +2527,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-06",
+    pointx: 980,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2166,6 +2538,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-07",
+    pointx: 800,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2175,6 +2549,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-08",
+    pointx: 980,
+    pointy: 780 + 60 * 3,
   },
 
   {
@@ -2185,6 +2561,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-09",
+    pointx: 800,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2194,6 +2572,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-10",
+    pointx: 980,
+    pointy: 780 + 60 * 4,
   },
 
   {
@@ -2204,6 +2584,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-11",
+    pointx: 800,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2213,6 +2595,8 @@ const A1F3 = [
     height: 60,
     code: "A1A1-31",
     text: "A1F3-12",
+    pointx: 980,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -2225,6 +2609,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-01",
+    pointx: 980,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2234,6 +2620,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-02",
+    pointx: 1160,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2243,6 +2631,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-03",
+    pointx: 980,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -2252,6 +2642,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-04",
+    pointx: 1160,
+    pointy: 780 + 60,
   },
 
   {
@@ -2262,6 +2654,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-05",
+    pointx: 980,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2271,6 +2665,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-06",
+    pointx: 1160,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2280,6 +2676,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-07",
+    pointx: 980,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2289,6 +2687,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-08",
+    pointx: 1160,
+    pointy: 780 + 60 * 3,
   },
 
   {
@@ -2299,6 +2699,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-09",
+    pointx: 980,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2308,6 +2710,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-10",
+    pointx: 1160,
+    pointy: 780 + 60 * 4,
   },
 
   {
@@ -2318,6 +2722,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-11",
+    pointx: 980,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2327,6 +2733,8 @@ const A2G3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2G3-12",
+    pointx: 1160,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -2339,6 +2747,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-01",
+    pointx: 1160,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2348,6 +2758,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-02",
+    pointx: 1340,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2357,6 +2769,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-03",
+    pointx: 1160,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -2366,6 +2780,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-04",
+    pointx: 1340,
+    pointy: 780 + 60,
   },
 
   {
@@ -2376,6 +2792,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-05",
+    pointx: 1160,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2385,6 +2803,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-06",
+    pointx: 1340,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2394,6 +2814,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-07",
+    pointx: 1160,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2403,6 +2825,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-08",
+    pointx: 1340,
+    pointy: 780 + 60 * 3,
   },
 
   {
@@ -2413,6 +2837,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-09",
+    pointx: 1160,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2422,6 +2848,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-10",
+    pointx: 1340,
+    pointy: 780 + 60 * 4,
   },
 
   {
@@ -2432,6 +2860,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-11",
+    pointx: 1160,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2441,6 +2871,8 @@ const A2H3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2H3-12",
+    pointx: 1340,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -2453,6 +2885,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-01",
+    pointx: 1340,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2462,6 +2896,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-02",
+    pointx: 1520,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2471,6 +2907,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-03",
+    pointx: 1340,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -2480,6 +2918,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-04",
+    pointx: 1520,
+    pointy: 780 + 60,
   },
 
   {
@@ -2490,6 +2930,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-05",
+    pointx: 1340,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2499,6 +2941,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-06",
+    pointx: 1520,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2508,6 +2952,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-07",
+    pointx: 1340,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2517,6 +2963,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-08",
+    pointx: 1520,
+    pointy: 780 + 60 * 3,
   },
 
   {
@@ -2527,6 +2975,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-09",
+    pointx: 1340,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2536,6 +2986,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-10",
+    pointx: 1520,
+    pointy: 780 + 60 * 4,
   },
 
   {
@@ -2546,6 +2998,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-11",
+    pointx: 1340,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2555,6 +3009,8 @@ const A2I3 = [
     height: 60,
     code: "A1A1-31",
     text: "A2I3-12",
+    pointx: 1520,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -2567,6 +3023,8 @@ const A2J3 = [
     height: 120,
     code: "A1A1-31",
     text: "A2J3-01",
+    pointx: 1520,
+    pointy: 800,
   },
   {
     color: "#ff9",
@@ -2576,6 +3034,8 @@ const A2J3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J3-05",
+    pointx: 1520,
+    pointy: 800 + 200,
   },
   {
     color: "#ff9",
@@ -2585,6 +3045,8 @@ const A2J3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J3-06",
+    pointx: 1700,
+    pointy: 800 + 120,
   },
   {
     color: "#ff9",
@@ -2594,6 +3056,8 @@ const A2J3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J3-07",
+    pointx: 1520,
+    pointy: 1000,
   },
   {
     color: "#ff9",
@@ -2603,6 +3067,8 @@ const A2J3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J3-08",
+    pointx: 1700,
+    pointy: 1000,
   },
   {
     color: "#ff9",
@@ -2612,6 +3078,8 @@ const A2J3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J3-09",
+    pointx: 1520,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -2621,6 +3089,8 @@ const A2J3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2J3-10",
+    pointx: 1700,
+    pointy: 1080,
   },
 ];
 
@@ -2633,6 +3103,8 @@ const A2K3 = [
     height: 120,
     code: "A1A1-31",
     text: "A2K3-01",
+    pointx: 1700,
+    pointy: 800,
   },
   {
     color: "#ff9",
@@ -2642,6 +3114,8 @@ const A2K3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2K3-05",
+    pointx: 1700,
+    pointy: 800 + 120,
   },
   {
     color: "#ff9",
@@ -2651,6 +3125,8 @@ const A2K3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2K3-06",
+    pointx: 1880,
+    pointy: 800 + 120,
   },
   {
     color: "#ff9",
@@ -2660,6 +3136,8 @@ const A2K3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2K3-07",
+    pointx: 1700,
+    pointy: 800 + 100 * 2,
   },
   {
     color: "#ff9",
@@ -2669,6 +3147,8 @@ const A2K3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2K3-08",
+    pointx: 1880,
+    pointy: 800 + 100 * 2,
   },
   {
     color: "#ff9",
@@ -2678,6 +3158,10 @@ const A2K3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2K3-09",
+    pointx: 1880,
+    pointy: 800 + 120,
+    pointx: 1700,
+    pointy: 1060,
   },
 ];
 
@@ -2690,6 +3174,8 @@ const A3L3 = [
     height: 120,
     code: "A1A1-31",
     text: "A3L3-01",
+    pointx: 1880,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -2699,6 +3185,8 @@ const A3L3 = [
     height: 120,
     code: "A1A1-31",
     text: "A3L3-02",
+    pointx: 2060,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -2708,6 +3196,8 @@ const A3L3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L3-05",
+    pointx: 1880,
+    pointy: 820 + 80,
   },
   {
     color: "#ff9",
@@ -2717,6 +3207,8 @@ const A3L3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L3-06",
+    pointx: 2060,
+    pointy: 820 + 80,
   },
   {
     color: "#ff9",
@@ -2726,6 +3218,8 @@ const A3L3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L3-07",
+    pointx: 1880,
+    pointy: 960,
   },
   {
     color: "#ff9",
@@ -2735,6 +3229,8 @@ const A3L3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L3-08",
+    pointx: 2060,
+    pointy: 960,
   },
   {
     color: "#ff9",
@@ -2744,6 +3240,8 @@ const A3L3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L3-09",
+    pointx: 1880,
+    pointy: 1020,
   },
   {
     color: "#ff9",
@@ -2753,6 +3251,8 @@ const A3L3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L3-10",
+    pointx: 2060,
+    pointy: 1020,
   },
   {
     color: "#ff9",
@@ -2762,6 +3262,8 @@ const A3L3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L3-11",
+    pointx: 1880,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -2771,6 +3273,8 @@ const A3L3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3L3-12",
+    pointx: 2060,
+    pointy: 1080,
   },
 ];
 
@@ -2783,6 +3287,8 @@ const A3M3 = [
     height: 120,
     code: "A1A1-31",
     text: "A3M3-01",
+    pointx: 2060,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -2792,6 +3298,8 @@ const A3M3 = [
     height: 120,
     code: "A1A1-31",
     text: "A3M3-02",
+    pointx: 2240,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -2801,6 +3309,8 @@ const A3M3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M3-05",
+    pointx: 2060,
+    pointy: 820 + 80,
   },
   {
     color: "#ff9",
@@ -2810,6 +3320,8 @@ const A3M3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M3-06",
+    pointx: 2240,
+    pointy: 820 + 80,
   },
   {
     color: "#ff9",
@@ -2819,6 +3331,8 @@ const A3M3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M3-07",
+    pointx: 2060,
+    pointy: 960,
   },
   {
     color: "#ff9",
@@ -2828,6 +3342,8 @@ const A3M3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M3-08",
+    pointx: 2240,
+    pointy: 960,
   },
   {
     color: "#ff9",
@@ -2837,6 +3353,8 @@ const A3M3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M3-09",
+    pointx: 2060,
+    pointy: 960 + 60,
   },
   {
     color: "#ff9",
@@ -2846,6 +3364,8 @@ const A3M3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M3-10",
+    pointx: 2240,
+    pointy: 960 + 60,
   },
   {
     color: "#ff9",
@@ -2855,6 +3375,8 @@ const A3M3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M3-11",
+    pointx: 2060,
+    pointy: 960 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2864,6 +3386,8 @@ const A3M3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3M3-12",
+    pointx: 2240,
+    pointy: 960 + 60 * 2,
   },
 ];
 
@@ -2876,6 +3400,8 @@ const A3N3 = [
     height: 120,
     code: "A1A1-31",
     text: "A3N3-01",
+    pointx: 2240,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -2885,6 +3411,8 @@ const A3N3 = [
     height: 120,
     code: "A1A1-31",
     text: "A3N3-02",
+    pointx: 2420,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -2894,6 +3422,8 @@ const A3N3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3N3-05",
+    pointx: 2240,
+    pointy: 900,
   },
   {
     color: "#ff9",
@@ -2903,6 +3433,8 @@ const A3N3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3N3-06",
+    pointx: 2420,
+    pointy: 900,
   },
   {
     color: "#ff9",
@@ -2912,6 +3444,8 @@ const A3N3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3N3-07",
+    pointx: 2240,
+    pointy: 900 + 60,
   },
   {
     color: "#ff9",
@@ -2921,6 +3455,8 @@ const A3N3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3N3-08",
+    pointx: 2420,
+    pointy: 900 + 60,
   },
   {
     color: "#ff9",
@@ -2930,6 +3466,8 @@ const A3N3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3N3-09",
+    pointx: 2240,
+    pointy: 900 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2939,6 +3477,8 @@ const A3N3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3N3-10",
+    pointx: 2420,
+    pointy: 900 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2948,6 +3488,8 @@ const A3N3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3N3-11",
+    pointx: 2240,
+    pointy: 900 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2957,6 +3499,8 @@ const A3N3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3N3-12",
+    pointx: 2420,
+    pointy: 900 + 60 * 3,
   },
 ];
 
@@ -2969,6 +3513,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-01",
+    pointx: 2420,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2978,6 +3524,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-02",
+    pointx: 2600,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -2987,6 +3535,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-03",
+    pointx: 2420,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -2996,6 +3546,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-04",
+    pointx: 2600,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -3005,6 +3557,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-05",
+    pointx: 2420,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3014,6 +3568,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-06",
+    pointx: 2600,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3023,6 +3579,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-07",
+    pointx: 2420,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3032,6 +3590,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-08",
+    pointx: 2600,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3041,6 +3601,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-09",
+    pointx: 2420,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3050,6 +3612,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-10",
+    pointx: 2600,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3059,6 +3623,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-11",
+    pointx: 2420,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -3068,6 +3634,8 @@ const A3O3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3O3-12",
+    pointx: 2600,
+    pointy: 780 + 60 * 5,
   },
 ];
 
@@ -3080,6 +3648,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-01",
+    pointx: 2600,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -3089,6 +3659,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-02",
+    pointx: 2780,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -3098,6 +3670,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-03",
+    pointx: 2600,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -3107,6 +3681,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-04",
+    pointx: 2780,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -3116,6 +3692,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-05",
+    pointx: 2600,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3125,6 +3703,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-06",
+    pointx: 2780,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3134,6 +3714,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-07",
+    pointx: 2600,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3143,6 +3725,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-08",
+    pointx: 2780,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3152,6 +3736,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-09",
+    pointx: 2600,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3161,6 +3747,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-10",
+    pointx: 2780,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3170,6 +3758,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-11",
+    pointx: 2600,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -3179,6 +3769,8 @@ const A3P3 = [
     height: 60,
     code: "A1A1-31",
     text: "A3P3-12",
+    pointx: 2780,
+    pointy: 780 + 60 * 5,
   },
 ];
 //   B3 - P3 END
@@ -3192,6 +3784,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A1B4-04",
+    pointx: 440,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3201,6 +3795,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A1C4-01",
+    pointx: 540,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3210,6 +3806,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A1D4-03",
+    pointx: 620,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3219,6 +3817,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A1E4-01",
+    pointx: 780,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3228,6 +3828,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A1E4-02",
+    pointx: 780 + 60,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3237,6 +3839,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A1F4-01",
+    pointx: 780 + 60 * 2,
+    pointy: 1140,
   },
 
   {
@@ -3247,6 +3851,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A1F4-02",
+    pointx: 780 + 60 * 3,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3256,6 +3862,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2G4-01",
+    pointx: 780 + 60 * 4,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3265,6 +3873,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2G4-02",
+    pointx: 780 + 60 * 5,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3274,6 +3884,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2G4-03",
+    pointx: 780 + 60 * 6,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3283,6 +3895,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2G4-04",
+    pointx: 780 + 60 * 7,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3292,6 +3906,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2H4-01",
+    pointx: 780 + 60 * 8,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3301,6 +3917,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2H4-02",
+    pointx: 780 + 60 * 9,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3310,6 +3928,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2H4-03",
+    pointx: 780 + 60 * 10,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3319,6 +3939,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2I4-01",
+    pointx: 780 + 60 * 11,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3328,6 +3950,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2J4-01",
+    pointx: 780 + 60 * 12,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3337,6 +3961,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2J4-02",
+    pointx: 780 + 60 * 13,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3346,6 +3972,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2J4-03",
+    pointx: 780 + 60 * 14,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3355,6 +3983,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2J4-04",
+    pointx: 780 + 60 * 15,
+    pointy: 1140,
   },
 
   {
@@ -3365,6 +3995,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A2J4-05",
+    pointx: 780 + 60 * 16,
+    pointy: 1140,
   },
 
   {
@@ -3375,6 +4007,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-01",
+    pointx: 1900,
+    pointy: 1140,
   },
 
   {
@@ -3385,6 +4019,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-02",
+    pointx: 1900 + 60,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3394,6 +4030,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-03",
+    pointx: 1900 + 60 * 2,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3403,6 +4041,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-04",
+    pointx: 1900 + 60 * 3,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3412,6 +4052,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-05",
+    pointx: 1900 + 60 * 4,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3421,6 +4063,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-06",
+    pointx: 1900 + 60 * 5,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3430,6 +4074,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-07",
+    pointx: 1900 + 60 * 6,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3439,6 +4085,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-08",
+    pointx: 1900 + 60 * 7,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3448,6 +4096,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-09",
+    pointx: 1900 + 60 * 8,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3457,6 +4107,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-10",
+    pointx: 1900 + 60 * 9,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3466,6 +4118,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-11",
+    pointx: 1900 + 60 * 10,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3475,6 +4129,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-12",
+    pointx: 1900 + 60 * 11,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3484,6 +4140,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-13",
+    pointx: 1900 + 60 * 12,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3493,6 +4151,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-14",
+    pointx: 1900 + 60 * 13,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3502,6 +4162,8 @@ const Shuangfei_Tube = [
     height: 60,
     code: "A1A1-31",
     text: "A3L4-15",
+    pointx: 1900 + 60 * 14,
+    pointy: 1140,
   },
 ];
 
@@ -3514,6 +4176,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 120,
     code: "A1A1-31",
     text: "TEC ALLIANCE",
+    pointx: 2780,
+    pointy: 260,
   },
   {
     color: "#ff9",
@@ -3523,6 +4187,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 80,
     code: "A1A1-31",
     text: "KATA VINA",
+    pointx: 2780,
+    pointy: 380,
   },
   {
     color: "#ff9",
@@ -3532,6 +4198,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 140,
     code: "A1A1-31",
     text: "D1A2-05",
+    pointx: 2780,
+    pointy: 480,
   },
   {
     color: "#ff9",
@@ -3541,6 +4209,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 120,
     code: "A1A1-31",
     text: "A3Q3-01",
+    pointx: 2780,
+    pointy: 700,
   },
   {
     color: "#ff9",
@@ -3550,6 +4220,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 60,
     code: "A1A1-31",
     text: "A3Q3-02",
+    pointx: 2780,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -3559,6 +4231,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 60,
     code: "A1A1-31",
     text: "A3Q3-04",
+    pointx: 2780,
+    pointy: 780 + 60,
   },
   {
     color: "#ff9",
@@ -3568,6 +4242,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 60,
     code: "A1A1-31",
     text: "A3Q3-05",
+    pointx: 2780,
+    pointy: 780 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3577,6 +4253,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 60,
     code: "A1A1-31",
     text: "A3Q3-06",
+    pointx: 2780,
+    pointy: 780 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3586,6 +4264,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 60,
     code: "A1A1-31",
     text: "A3Q3-07",
+    pointx: 2780,
+    pointy: 780 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3595,6 +4275,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 60,
     code: "A1A1-31",
     text: "A3Q3-08",
+    pointx: 2780,
+    pointy: 780 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -3604,6 +4286,8 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 60,
     code: "A1A1-31",
     text: "A3Q3-09",
+    pointx: 2780,
+    pointy: 780 + 60 * 6,
   },
 ];
 
