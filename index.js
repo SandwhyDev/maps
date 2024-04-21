@@ -386,17 +386,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // document.getElementById("direction").innerHTML = Math.ceil(dir);
 
     arrow.style.transform = ` rotateZ(${-dir}deg)`;
-
-    // if (
-    //   (startPoint.x === 0 && startPoint.y === 0) ||
-    //   (endPoint.x === 0 && endPoint.y === 0)
-    // ) {
-    //   gCanvas.className = `origin-[250px_250px] rotate-[${Math.ceil(dir)}deg]`;
-    // } else {
-    //   gCanvas.className = `origin-[${Math.ceil(startPoint.x)}px_${Math.ceil(
-    //     startPoint.y
-    //   )}px] rotate-[${Math.ceil(dir)}deg]`;
-    // }
   }
 });
 

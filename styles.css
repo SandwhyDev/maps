@@ -16,6 +16,11 @@ canvas {
 
 }
 
+#icon-user{
+  padding: 10px;
+  background-color: black;
+}
+
 
 .ptb{
   padding-top:20px;
