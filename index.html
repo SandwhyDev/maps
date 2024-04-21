@@ -76,93 +76,75 @@
         <div>Gamma: <span id="tiltLR"></span></div>
         <div>Alpha: <span id="direction"></span></div>
       </div> -->
-
-      <!-- <div class="">
-        <i id="arrow" class="fa-solid fa-arrow-up"></i>
-      </div> -->
-
-      <!-- <div id="btnEndPoint" class="btn">EndPoint</div> -->
-      <!-- <div
-        title="Mulai"
-        id="btnBeginPathFind"
-        class="p-2 bg-white shadow hover:cursor-pointer rounded-full text-3xl text-blue-500 flex items-center"
-      >
-        <i class="fa-solid fa-diamond-turn-right"></i>
-      </div> -->
-      <!-- <div id="wallReset" class="btn">Clear</div> -->
     </div>
 
-    <div class="w-fit h-full border-4 border-black">
+    <div class="w-full h-full border-4 border-black overflow-x-scroll">
       <canvas id="gCanvas" width="5700" height="1400"> </canvas>
     </div>
 
-    <!-- <div
-      id="pushToWalk"
-      class="fixed bottom-12 right-40 p-3 bg-orange-500 rounded-full hidden"
-    >
-      <div class="w-14 h-14 bg-black rounded-full"></div>
-    </div> -->
-
-    <!-- <div class="w-56 h-20 space-y-2 fixed top-96 right-20 z-10">
-      ARROW UP 
-      <div
-        id="arrow-up"
-        class="w-full h-full bg-white border-2 border-black rounded-lg flex items-center justify-center text-4xl hover:cursor-pointer hover:bg-gray-300"
-      >
-        <i class="fa-solid fa-arrow-up"></i>
-      </div>
-      <div id="arrow-right-left" class="w-full h-full flex gap-2">
-        ARROW LEFT 
-        <div
-          id="arrow-left"
-          class="w-full h-full bg-white border-2 border-black rounded-lg flex items-center justify-center text-4xl hover:cursor-pointer hover:bg-gray-300"
-        >
-          <i class="fa-solid fa-arrow-left"></i>
-        </div>
-
-        ARROW BOTTOM 
-        <div
-          id="arrow-down"
-          class="w-full h-full bg-white border-2 border-black rounded-lg flex items-center justify-center text-4xl hover:cursor-pointer hover:bg-gray-300"
-        >
-          <i class="fa-solid fa-arrow-down"></i>
-        </div>
-
-        ARROW RIGHT 
-        <div
-          id="arrow-right"
-          class="w-full h-full bg-white border-2 border-black rounded-lg flex items-center justify-center text-4xl hover:cursor-pointer hover:bg-gray-300"
-        >
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </div>
-    </div> -->
-
     <div id="modal" class="hidden">
       <div class="modal-content">
-        <p id="modal-name">Trumecs</p>
+        <div class="flex items-center gap-2">
+          <p id="modal-name">Trumecs</p>
+          <div
+            id="rute"
+            class="rounded p-2 border border-black text-sm font-normal flex gap-2 items-center"
+          >
+            <div class="w-3.5 h-3.5 mb-1">
+              <img src="/images/location.png" alt="" srcset="" />
+            </div>
+            <p>Rute</p>
+          </div>
+        </div>
         <p id="modal-code" class="text-sm font-normal">A1A2-01</p>
         <img
           src="./images/tenant.webp"
           alt="Deskripsi gambar"
           class="modal-image"
-          style="filter: invert(0)"
-        /><span id="btn-closed">×</span>
+        />
+
+        <div class="hidden" id="more-info">
+          <p id="modal-code" class="text-sm font-normal">
+            Lobunta Building, Jl. Pintu Air Raya No.31B Lantai 3, RT.13/RW.8,
+            Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus
+            Ibukota
+          </p>
+          <p id="modal-code" class="text-sm font-normal">021 3812143</p>
+          <p id="modal-code" class="text-sm font-normal">info@trumecs.com</p>
+          <a href="#" class="underline">
+            <p id="modal-code" class="text-sm font-normal">trumecs.com</p>
+          </a>
+          <p id="modal-code" class="text-sm font-normal">Product</p>
+        </div>
+
+        <p id="modal-detail" class="text-sm font-normal text-center underline">
+          more detail
+        </p>
+
+        <span id="btn-closed">×</span>
       </div>
     </div>
 
-    <div class="fixed bottom-20 left-10 flex gap-5">
-      <div
-        id="btnZoomOut"
-        class="w-14 h-14 bg-white flex items-center justify-center text-3xl rounded-full border shadow cursor-pointer"
-      >
-        -
+    <div class="fixed bottom-20 left-10 flex gap-28 w-full items-center">
+      <div class="flex gap-5">
+        <div
+          id="btnZoomOut"
+          class="w-14 h-14 bg-white flex items-center justify-center text-3xl rounded-full border shadow cursor-pointer"
+        >
+          -
+        </div>
+        <div
+          id="btnZoomIn"
+          class="w-14 h-14 bg-white flex items-center justify-center text-3xl rounded-full border shadow cursor-pointer"
+        >
+          +
+        </div>
       </div>
+
       <div
-        id="btnZoomIn"
-        class="w-14 h-14 bg-white flex items-center justify-center text-3xl rounded-full border shadow cursor-pointer"
+        class="text-3xl bg-orange-500 rounded-full w-14 h-14 flex items-center justify-center"
       >
-        +
+        <i id="arrow" class="fa-solid fa-arrow-up"></i>
       </div>
     </div>
 

@@ -5,8 +5,7 @@ let handleX, handleY;
 const dataTenant = [
   ...Medical_TO_Agent,
   ...JABABEKA_SINGSPA,
-
-  // A2 -
+  // A1A2 -A3P2
   ...A1A2,
   ...A1B2,
   ...A1C2,
@@ -24,7 +23,6 @@ const dataTenant = [
   ...A3O2,
   ...A3P2,
   // A2 - END
-
   // B3 - P3
   ...A1B3,
   ...A1C3,
@@ -42,7 +40,6 @@ const dataTenant = [
   ...A3O3,
   ...A3P3,
   // B3 - P3 END
-
   ...Shuangfei_Tube,
   ...TEC_ALIIANCE_TO_PPS_POLICE,
   ...blackSpot,
@@ -142,6 +139,25 @@ const HandleTenant = (
 
 const showModal = (text, codeTenant) => {
   var modal = document.getElementById("modal");
+  var moreDetail = document.getElementById("modal-detail");
+  var moreInfo = document.getElementById("more-info");
+  let click = false;
+
+  moreDetail.innerHTML = "more detail";
+
+  moreDetail.addEventListener("click", () => {
+    moreInfo.classList.remove("hidden");
+
+    console.log(click);
+    if (click) {
+      moreInfo.classList.add("hidden");
+      click = false;
+      moreDetail.innerHTML = "more detail";
+    } else {
+      click = true;
+      moreDetail.innerHTML = "close detail";
+    }
+  });
 
   modal.classList.remove("hidden");
 
@@ -152,13 +168,15 @@ const showModal = (text, codeTenant) => {
   modalName.innerText = text;
   // DESKRIPSI
   modalCode.innerText = codeTenant;
+
+  btnClosed.addEventListener("click", function () {
+    var modal = document.getElementById("modal");
+
+    modal.className = "hidden";
+    currentModal = null;
+    click = false;
+    moreInfo.classList.add("hidden");
+  });
 };
-
-btnClosed.addEventListener("click", function () {
-  var modal = document.getElementById("modal");
-
-  modal.className = "hidden";
-  currentModal = null; // Set currentModal menjadi null setelah modal ditutup
-});
 
 let clickedOutsideTenant = false; // Flag to track outside clicks

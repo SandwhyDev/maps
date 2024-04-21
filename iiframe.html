@@ -2,42 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
-    />
-    <title>Embed Map</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas dengan Gambar</title>
     <style>
-      /* CSS untuk mengatur tinggi iframe */
-      .iframe-container {
-        position: relative;
-        padding-bottom: 100%; /* Ini menjaga aspek rasio 1:1 */
-        height: 0;
-        overflow: hidden;
-      }
-
-      .iframe-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; /* Mengisi seluruh ruang div */
-        border: 0;
+      canvas {
+        border: 1px solid black;
       }
     </style>
   </head>
   <body>
-    <div class="w-screen h-screen bg-green-500">
-      <iframe
-        src="https://maps-dev-trumecs.vercel.app/"
-        frameborder="0"
-        allowfullscreen=""
-        aria-hidden="false"
-        tabindex="0"
-        class="bg-red-500 h-screen w-screen"
-        style="pointer-events: auto"
-      ></iframe>
-    </div>
+    <canvas id="myCanvas" width="1550" height="700"></canvas>
+
+    <button onclick="zoomIn(1)">Image 1</button>
+    <button onclick="zoomIn(2)">Image 2</button>
+    <button onclick="zoomIn(3)">Image 3</button>
+
+    <script>
+      window.onload = function () {
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        var img1 = new Image();
+        img1.onload = function () {
+          ctx.drawImage(img1, 50, 50, 400, 300);
+        };
+        img1.src = "/images/tenant.webp";
+
+        var img2 = new Image();
+        img2.onload = function () {
+          ctx.drawImage(img2, 550, 50, 400, 300);
+        };
+        img2.src = "/images/icon.gif";
+
+        var img3 = new Image();
+        img3.onload = function () {
+          ctx.drawImage(img3, 1050, 50, 400, 300);
+        };
+        img3.src = "/images/human.png";
+      };
+
+      function zoomIn(imageNumber) {
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // clear canvas
+
+        var img = new Image();
+        var x = 0;
+        if (imageNumber === 1) {
+          x = 50;
+          img.src = "/images/tenant.webp";
+        } else if (imageNumber === 2) {
+          x = 550;
+          img.src = "/images/icon.gif";
+        } else if (imageNumber === 3) {
+          x = 1050;
+          img.src = "/images/human.png";
+        }
+
+        img.onload = function () {
+          ctx.save(); // save current context state
+          ctx.translate(x + img.width / 2, 50 + img.height / 2); // translate to the center of the image
+          ctx.scale(1.1, 1.1); // zoom in by 10%
+          ctx.translate(-(x + img.width / 2), -(50 + img.height / 2)); // translate back
+          ctx.drawImage(img, x, 50, img.width, img.height); // draw image
+          ctx.restore(); // restore context to its original state
+        };
+      }
+    </script>
   </body>
 </html>
