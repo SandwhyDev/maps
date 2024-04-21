@@ -1019,11 +1019,11 @@ const HandleSearch = (point) => {
         if (point === "start") {
           startPoint = "";
           inputStart.value = `${info.text} | ${info.code}`;
-          startPoint = new Vec2(80, 460);
+          startPoint = new Vec2(info.pointx, info.pointy);
         } else {
           endPoint = "";
           inputEnd.value = `${info.text} | ${info.code}`;
-          endPoint = new Vec2(620, 880);
+          endPoint = new Vec2(info.pointx, info.pointy);
         }
 
         reset();
