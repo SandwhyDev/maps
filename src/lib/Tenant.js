@@ -2,50 +2,6 @@ var gCanvas = document.getElementById("gCanvas");
 var btnClosed = document.getElementById("btn-closed");
 let handleX, handleY;
 
-const dataTenant = [
-  ...Medical_TO_Agent,
-  ...JABABEKA_SINGSPA,
-  // A1A2 -A3P2
-  ...A1A2,
-  ...A1B2,
-  ...A1C2,
-  ...A1D2,
-  ...A1E2,
-  ...A1F2,
-  ...A1G2,
-  ...A1H2,
-  ...A2I2,
-  ...A2J2,
-  ...A2K2,
-  ...A3L2,
-  ...A3M2,
-  ...A3N2,
-  ...A3O2,
-  ...A3P2,
-  // A2 - END
-  // B3 - P3
-  ...A1B3,
-  ...A1C3,
-  ...A1D3,
-  ...A1E3,
-  ...A1F3,
-  ...A2G3,
-  ...A2H3,
-  ...A2I3,
-  ...A2J3,
-  ...A2K3,
-  ...A3L3,
-  ...A3M3,
-  ...A3N3,
-  ...A3O3,
-  ...A3P3,
-  // B3 - P3 END
-  ...Shuangfei_Tube,
-  ...TEC_ALIIANCE_TO_PPS_POLICE,
-  ...blackSpot,
-  ...D1A2_TO_D1A3,
-];
-
 var currentModal;
 
 const HandleTenant = (

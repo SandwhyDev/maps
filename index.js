@@ -68,6 +68,7 @@ inputEnd.addEventListener("click", () => {
   HandleSearch("end");
 });
 
+// function
 function zoomIn() {
   // console.log(scale);
 
@@ -342,6 +343,7 @@ function HandleSearch(point) {
 
   document.body.appendChild(search);
 }
+// function end
 
 //any point in 2D space
 class Vec2 {
@@ -460,7 +462,7 @@ class Node {
   drawNode() {
     gctx.beginPath();
     gctx.lineWidth = "2";
-    gctx.strokeStyle = "white";
+    gctx.strokeStyle = "black";
     gctx.fillStyle = "white";
     gctx.fillRect(this.posx, this.posy, this.size, this.size);
     gctx.rect(this.posx, this.posy, this.size, this.size);
@@ -621,49 +623,80 @@ class Grid {
 
         // Tetapkan kemampuan berjalan untuk beberapa node berdasarkan kondisi yang telah ditentukan sebelumnya
         if (
-          // JALAN ATAS
-          ((countNodes - 292) % 70 === 0 &&
-            countNodes >= 292 &&
-            countNodes <= 292 + 70 * 135) ||
-          // HANDLE JALAN LURUS
-          ((countNodes - 293) % 630 <= 44 &&
-            countNodes >= 293 &&
-            countNodes <= 337 + 630 * 15) ||
-          // JALANN TENGAH
-          ((countNodes - 316) % 70 === 0 &&
-            countNodes >= 316 &&
-            countNodes <= 316 + 70 * 135) ||
-          // JALAN BAWAH
-          ((countNodes - 337) % 70 === 0 &&
-            countNodes >= 337 &&
-            countNodes <= 337 + 70 * 135) ||
-          countNodes === 1610
+          // JALAN ATAS X
+          ((countNodes - 332) % 80 === 0 &&
+            countNodes >= 332 &&
+            countNodes <= 332 + 80 * 135) ||
+          // HANDLE JALAN LURUS Y
+          ((countNodes - 333) % 720 <= 44 &&
+            countNodes >= 333 &&
+            countNodes <= 377 + 720 * 15) ||
+          // // JALANN TENGAH X
+          ((countNodes - 356) % 80 === 0 &&
+            countNodes >= 356 &&
+            countNodes <= 356 + 80 * 135) ||
+          // // JALAN BAWAH X
+          ((countNodes - 377) % 80 === 0 &&
+            countNodes >= 377 &&
+            countNodes <= 377 + 80 * 135) ||
+          // MASUK HALL D1 X
+          ((countNodes - 11230) % 80 === 0 &&
+            countNodes >= 11230 &&
+            countNodes <= 11230 + 80 * 12) ||
+          // JALAN ATAS HALL D1 X
+          ((countNodes - 12173) % 80 === 0 &&
+            countNodes >= 12173 &&
+            countNodes <= 12173 + 80 * 53) ||
+          // JALAN TENGAH HALL D1 SAMPAI D2 X
+          ((countNodes - 12203) % 80 === 0 &&
+            countNodes >= 12203 &&
+            countNodes <= 12203 + 80 * 126) ||
+          // JALAN BAWAH HALL D1 X
+          ((countNodes - 13034) % 80 === 0 &&
+            countNodes >= 13034 &&
+            countNodes <= 13034 + 80 * 35) ||
+          // JALAN LURUS SEMINAR AREA HALL D1
+          ((countNodes - 15911) % 80 === 0 &&
+            countNodes >= 15911 &&
+            countNodes <= 15911 + 80 * 8) ||
+          // jalan samping wes tw hall d1
+          ((countNodes - 15901) % 80 === 0 &&
+            countNodes >= 15901 &&
+            countNodes <= 15901 + 80 * 8) ||
+          countNodes === 15901 ||
+          // // JALAN LURUS Y HALL D1
+          (countNodes >= 12173 && countNodes <= 12203) ||
+          ((countNodes - 12893) % 720 <= 61 &&
+            countNodes >= 12893 &&
+            countNodes <= 12951 + 720 * 5)
         ) {
-          tempNode.drawNode();
-        } else if (countNodes >= 1680 && countNodes <= 1691) {
-          tempNode.direction = "down";
-          tempNode.drawNode();
-        } else if (countNodes >= 1540 && countNodes <= 1551) {
-          tempNode.direction = "up";
           tempNode.drawNode();
         }
 
-        // else if (
-        //   (countNodes - 292) % 70 === 0 &&
-        //   countNodes >= 292 &&
-        //   countNodes <= 292 + 70 * 135
-        // ) {
-        //   tempNode.direction = "left";
+        // else if (countNodes >= 1680 && countNodes <= 1691) {
+        //   tempNode.direction = "down";
+        //   tempNode.drawNode();
+        // } else if (countNodes >= 1540 && countNodes <= 1551) {
+        //   tempNode.direction = "up";
         //   tempNode.drawNode();
         // }
-        // else if (
-        //   (countNodes - 316) % 70 === 0 &&
-        //   countNodes >= 316 &&
-        //   countNodes <= 316 + 70 * 135
-        // ) {
-        //   tempNode.direction = "left";
-        //   tempNode.drawNode();
-        // }
+
+        // // else if (
+        // //   (countNodes - 292) % 70 === 0 &&
+        // //   countNodes >= 292 &&
+        // //   countNodes <= 292 + 70 * 135
+        // // ) {
+        // //   tempNode.direction = "RIGHT";
+        // //   tempNode.drawNode();
+        // // }
+        // // else if (
+        // //   (countNodes - 316) % 70 === 0 &&
+        // //   countNodes >= 316 &&
+        // //   countNodes <= 316 + 70 * 135
+        // // ) {
+        // //   tempNode.direction = "left";
+        // //   tempNode.drawNode();
+        // // }
         else {
           tempNode.walkable = false;
         }
