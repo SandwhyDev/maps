@@ -236,13 +236,13 @@ function Tenant(context) {
       context,
       e.color,
       e.x,
-      e.y + 160,
+      e.y + 320,
       e.width,
       e.height,
       e.text,
       e?.border,
       e?.fontSize,
-      e?.code
+      e?.image
     );
   });
 }
@@ -355,7 +355,7 @@ class Vec2 {
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 startPoint = new Vec2(260, 240);
-endPoint = new Vec2(480, 140);
+endPoint = new Vec2(480, 220);
 
 document.addEventListener("DOMContentLoaded", function (event) {
   if (window.DeviceOrientationEvent) {
@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 class Node {
-  constructor(id, size, posx, posy, walkable, path, direction = "all") {
+  constructor(id, size, posx, posy, walkable, path, direction = "all", color) {
     var F;
     var parent;
     this.inPath = false;
@@ -406,7 +406,7 @@ class Node {
     this.walkable = walkable;
     this.path = path;
     this.direction = direction;
-
+    this.color = "white";
     this.id = id;
   }
 
@@ -463,7 +463,7 @@ class Node {
     gctx.beginPath();
     gctx.lineWidth = "2";
     gctx.strokeStyle = "black";
-    gctx.fillStyle = "white";
+    gctx.fillStyle = this.color === "white" ? "white" : "blue";
     gctx.fillRect(this.posx, this.posy, this.size, this.size);
     gctx.rect(this.posx, this.posy, this.size, this.size);
     gctx.closePath();
@@ -606,7 +606,6 @@ class Grid {
   createGrid() {
     var tempNode; // Variabel sementara untuk menyimpan informasi node selama pembuatan
     var countNodes = 0; // Penghitung untuk melacak jumlah total node yang dibuat
-    //HANDLE TENANT
 
     // Loop melalui lebar grid, membuat node-node sepanjang sumbu X
     for (var i = 0; i < this.width; i += NODESIZE) {
@@ -621,65 +620,132 @@ class Grid {
         // Buat sebuah node baru dengan indeks, posisi, dan kemampuan berjalan default yang ditetapkan menjadi true
         tempNode = new Node(countNodes, NODESIZE, i, j, true, true);
 
-        // Tetapkan kemampuan berjalan untuk beberapa node berdasarkan kondisi yang telah ditentukan sebelumnya
+        // HANDLE JALAN SATUU ARAH MASUK DARI HALL A1 SAMPAI D2
         if (
-          // JALAN ATAS X
-          ((countNodes - 332) % 80 === 0 &&
-            countNodes >= 332 &&
-            countNodes <= 332 + 80 * 135) ||
-          // HANDLE JALAN LURUS Y
-          ((countNodes - 333) % 720 <= 44 &&
-            countNodes >= 333 &&
-            countNodes <= 377 + 720 * 15) ||
-          // // JALANN TENGAH X
-          ((countNodes - 356) % 80 === 0 &&
-            countNodes >= 356 &&
-            countNodes <= 356 + 80 * 135) ||
-          // // JALAN BAWAH X
-          ((countNodes - 377) % 80 === 0 &&
-            countNodes >= 377 &&
-            countNodes <= 377 + 80 * 135) ||
-          // MASUK HALL D1 X
-          ((countNodes - 11230) % 80 === 0 &&
-            countNodes >= 11230 &&
-            countNodes <= 11230 + 80 * 12) ||
-          // JALAN ATAS HALL D1 X
-          ((countNodes - 12173) % 80 === 0 &&
-            countNodes >= 12173 &&
-            countNodes <= 12173 + 80 * 53) ||
-          // JALAN TENGAH HALL D1 SAMPAI D2 X
-          ((countNodes - 12203) % 80 === 0 &&
-            countNodes >= 12203 &&
-            countNodes <= 12203 + 80 * 126) ||
-          // JALAN BAWAH HALL D1 X
-          ((countNodes - 13034) % 80 === 0 &&
-            countNodes >= 13034 &&
-            countNodes <= 13034 + 80 * 35) ||
-          // JALAN LURUS SEMINAR AREA HALL D1
-          ((countNodes - 15911) % 80 === 0 &&
-            countNodes >= 15911 &&
-            countNodes <= 15911 + 80 * 8) ||
-          // jalan samping wes tw hall d1
-          ((countNodes - 15901) % 80 === 0 &&
-            countNodes >= 15901 &&
-            countNodes <= 15901 + 80 * 8) ||
-          countNodes === 15901 ||
-          // // JALAN LURUS Y HALL D1
-          (countNodes >= 12173 && countNodes <= 12203) ||
-          ((countNodes - 12893) % 720 <= 61 &&
-            countNodes >= 12893 &&
-            countNodes <= 12951 + 720 * 5)
+          // JALAN MASUK Y HALL A1
+          (countNodes >= 2331 && countNodes <= 2348) ||
+          // JALAN MASUK Y ACIPI HALL A3
+          (countNodes >= 11643 && countNodes <= 11659) ||
+          // JALAN MASUK Y INTOP HALL D1
+          (countNodes >= 16202 && countNodes <= 16220) ||
+          // JALAN MASUK Y D1G1-01 HALL D1
+          (countNodes >= 18627 && countNodes <= 18645) ||
+          // JALAN MASUK Y ARVENTO HALL D2
+          (countNodes >= 22216 && countNodes <= 22235) ||
+          // JALAN MASUK Y MULTICO HALL D2
+          (countNodes >= 25417 && countNodes <= 25435)
+        ) {
+          tempNode.direction = "down";
+          tempNode.drawNode();
+        }
+
+        // Tetapkan kemampuan berjalan untuk beberapa node berdasarkan kondisi yang telah ditentukan sebelumnya
+        else if (
+          // JALAN MASUK Y ARTHAPLAST HALL A2
+          (countNodes >= 6987 && countNodes <= 7003) ||
+          // JALAN ATAS X HALL A1
+          ((countNodes - 408) % 97 === 0 &&
+            countNodes >= 408 &&
+            countNodes <= 408 + 97 * 135) ||
+          // // // // JALANN TENGAH X HALL A
+          ((countNodes - 432) % 97 === 0 &&
+            countNodes >= 432 &&
+            countNodes <= 432 + 97 * 135) ||
+          // // // // JALAN BAWAH X
+          ((countNodes - 453) % 97 === 0 &&
+            countNodes >= 453 &&
+            countNodes <= 453 + 97 * 135) ||
+          // // // HANDLE JALAN LURUS Y HALL A
+          ((countNodes - 409) % 873 <= 44 &&
+            countNodes >= 409 &&
+            countNodes <= 453 + 873 * 15) ||
+          // HALL A END
+          // // MASUK HALL A1 ke D1 X
+          ((countNodes - 13618) % 97 === 0 &&
+            countNodes >= 13618 &&
+            countNodes <= 13618 + 97 * 12) ||
+          // // JALAN ATAS HALL D1 X
+          ((countNodes - 14765) % 97 === 0 &&
+            countNodes >= 14765 &&
+            countNodes <= 14765 + 97 * 54) ||
+          // // JALAN TENGAH HALL D1 SAMPAI D2 X
+          ((countNodes - 14795) % 97 === 0 &&
+            countNodes >= 14795 &&
+            countNodes <= 14795 + 97 * 126) ||
+          // // JALAN BAWAH HALL D1 X
+          ((countNodes - 15699) % 97 === 0 &&
+            countNodes >= 15699 &&
+            countNodes <= 15699 + 97 * 36) ||
+          //  JALAN LURUS Y HALL D1 PERTAMA
+          (countNodes >= 14766 && countNodes <= 14794) ||
+          // JALAN LURUS Y HALL D1 KEDUA SAMPAI SEMINAR HALL D1
+          ((countNodes - 15639) % 873 <= 60 &&
+            countNodes >= 15639 &&
+            countNodes <= 15696 + 873 * 5) ||
+          //  JALAN LURUS X ZIWEI HALL D1
+          ((countNodes - 15787) % 97 === 0 &&
+            countNodes >= 15787 &&
+            countNodes <= 15787 + 97 * 16) ||
+          // // JALAN LURUS SEMINAR AREA HALL D1
+          ((countNodes - 19285) % 97 === 0 &&
+            countNodes >= 19285 &&
+            countNodes <= 19285 + 97 * 8) ||
+          // // JALAN LURUS X PINHANG HALL D1
+          ((countNodes - 19275) % 97 === 0 &&
+            countNodes >= 19275 &&
+            countNodes <= 19275 + 97 * 8) ||
+          // // JALAN X AKHIR HALL D2
+          ((countNodes - 21124) % 97 === 0 &&
+            countNodes >= 21124 &&
+            countNodes <= 21124 + 97 * 61) ||
+          // JALAN LURUS X JS AUTOMOTIVE D1
+          ((countNodes - 18406) % 97 === 0 &&
+            countNodes >= 18406 &&
+            countNodes <= 18406 + 97 * 8) ||
+          // // JALAN ATAS X HALL D2
+          ((countNodes - 20974) % 97 === 0 &&
+            countNodes >= 20974 &&
+            countNodes <= 20974 + 97 * 62) ||
+          // // JALAN Y LUGONG HALL D2
+          ((countNodes - 20974) % 873 <= 53 &&
+            countNodes >= 20974 &&
+            countNodes <= 21027 + 873 * 1) ||
+          // // JALAN Y TENGAH HALL D2
+          ((countNodes - 23497) % 873 <= 52 &&
+            countNodes >= 23497 &&
+            countNodes <= 23549 + 873 * 1) ||
+          // // JALAN Y AKHIR HALL D2
+          ((countNodes - 26116) % 873 <= 52 &&
+            countNodes >= 26116 &&
+            countNodes <= 26167 + 873 * 1) ||
+          // // JALAN Y MIMA HALL D2
+          ((countNodes - 25369) % 873 <= 22 &&
+            countNodes >= 25369 &&
+            countNodes <= 25391 + 873 * 0) ||
+          // // JALAN X DIBAWAH MIMA HALL D2
+          ((countNodes - 24510) % 97 === 0 &&
+            countNodes >= 24510 &&
+            countNodes <= 24510 + 97 * 9) ||
+          // JALAN X VIP LONGUE HALL D2
+          ((countNodes - 21117) % 97 === 0 &&
+            countNodes >= 21117 &&
+            countNodes <= 21117 + 97 * 17) ||
+          // JALAN Y FTY UNION HALL D2
+          (countNodes >= 22750 && countNodes <= 22772) ||
+          // JALAN X DARI HALL A1
+          ((countNodes - 2331) % 97 === 0 &&
+            countNodes >= 2331 &&
+            countNodes <= 2331 + 97 * 238)
+          // TEST
+          // countNodes === 2329
         ) {
           tempNode.drawNode();
         }
 
-        // else if (countNodes >= 1680 && countNodes <= 1691) {
-        //   tempNode.direction = "down";
-        //   tempNode.drawNode();
-        // } else if (countNodes >= 1540 && countNodes <= 1551) {
-        //   tempNode.direction = "up";
-        //   tempNode.drawNode();
-        // }
+        // else if (countNodes >= 1540 && countNodes <= 1551) {
+        // //   tempNode.direction = "up";
+        // //   tempNode.drawNode();
+        // // }
 
         // // else if (
         // //   (countNodes - 292) % 70 === 0 &&
@@ -700,14 +766,6 @@ class Grid {
         else {
           tempNode.walkable = false;
         }
-
-        // tempNode.drawNode();
-
-        // Periksa apakah node saat ini ditetapkan sebagai tembok (tidak dapat dilalui) berdasarkan set eksternal
-        // if (wallSet.has(countNodes)) {
-        //   console.log("wallSet memiliki countNodes!");
-        //   tempNode.walkable = false;
-        // }
 
         // Hitung dan tetapkan nilai heuristik untuk node
         tempNode.F = tempNode.getValueF();
@@ -750,11 +808,10 @@ gCanvas.addEventListener(
       var posy = clickedElement.posy;
 
       if (clickedElement.walkable === true) {
-        // Kalau jalan
-
         console.log({
           posx: posx,
           posy: posy,
+          clickedElement: clickedElement,
         });
 
         // handle jika user mengklik icon endPoint
@@ -776,8 +833,8 @@ gCanvas.addEventListener(
         // Kalau tenant
         var tenant = dataTenant.find(function (element) {
           return (
-            y > (element.y + 160) * scale &&
-            y < (element.y + element.height + 160) * scale &&
+            y > (element.y + 320) * scale &&
+            y < (element.y + element.height + 320) * scale &&
             x > element.x * scale &&
             x < (element.x + element.width) * scale
           );
@@ -788,6 +845,7 @@ gCanvas.addEventListener(
           var rute = document.getElementById("rute");
 
           rute.addEventListener("click", () => {
+            console.log(tenant.x, tenant.y + 320, tenant.width, tenant.height);
             endPoint = "";
             endPoint = new Vec2(tenant.pointx, tenant.pointy);
             reset();

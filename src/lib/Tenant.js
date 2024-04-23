@@ -14,13 +14,23 @@ const HandleTenant = (
   text,
   border,
   fontSize,
-  codeTenant
+  image = false
 ) => {
   context.beginPath();
-  context.lineWidth = 1;
 
-  let currentColor = color; // Simpan warna asli
-  let clicked = false; // Menyimpan status elemen apakah sudah diklik atau belum
+  if (image) {
+    var img = new Image();
+
+    img.src = "../images/toilet.png";
+
+    img.onload = function () {
+      // Draw the image at position (0, 0) with width 400 and height 300
+      context.drawImage(img, x, y, 80, 80);
+    };
+    return;
+  }
+
+  context.lineWidth = 1;
 
   context.strokeStyle = !border ? "black" : color;
   context.fillStyle = color;
@@ -60,35 +70,6 @@ const HandleTenant = (
     textY += lineHeight;
   }
 
-  // Menambahkan event listener untuk meng-handle klik
-  // gCanvas.addEventListener("click", function (event) {
-  // const rect = gCanvas.getBoundingClientRect();
-  //   const clickX = event.clientX - rect.left;
-  //   const clickY = event.clientY - rect.top;
-
-  //   // Cek apakah klik terjadi di dalam kotak yang di-handle
-  //   if (
-  //     clickX >= x &&
-  //     clickX <= x + width &&
-  //     clickY >= y &&
-  //     clickY <= y + height
-  //   ) {
-  //
-  //     // Jika klik di dalam kotak
-  //     if (!clicked) {
-  //       currentColor = "red";
-  //       clicked = true;
-  //     } else {
-  //       // Jika sudah pernah diklik sebelumnya
-  //       currentColor = color; // Ganti warna menjadi warna asli
-  //       clicked = false; // Set status menjadi belum diklik
-  //     }
-
-  //     context.fillStyle = currentColor; // Ubah warna di canvas
-  //     context.fillRect(x, y, width, height);
-  //   }
-  // });
-
   context.closePath();
   context.stroke();
 };
@@ -104,7 +85,6 @@ const showModal = (text, codeTenant) => {
   moreDetail.addEventListener("click", () => {
     moreInfo.classList.remove("hidden");
 
-    console.log(click);
     if (click) {
       moreInfo.classList.add("hidden");
       click = false;
@@ -134,5 +114,3 @@ const showModal = (text, codeTenant) => {
     moreInfo.classList.add("hidden");
   });
 };
-
-let clickedOutsideTenant = false; // Flag to track outside clicks
