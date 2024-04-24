@@ -73,8 +73,9 @@ const HandleTenant = (
   context.stroke();
 };
 
-const showModal = (text, codeTenant) => {
-  if (text.split(" ")[0] === "hall") {
+const showModal = (text, codeTenant, x, y) => {
+  console.log(text, "modal ");
+  if (text.split(" ")[0] == "hall") {
     return false;
   }
   var modal = document.getElementById("modal");
@@ -113,11 +114,21 @@ const showModal = (text, codeTenant) => {
 
   var modalName = document.getElementById("modal-name");
   var modalCode = document.getElementById("modal-code");
+  var ruteStart = document.getElementById("ruteStart");
 
   // CONTENT TEXT
   modalName.innerText = text;
   // DESKRIPSI
   modalCode.innerText = codeTenant;
+
+  ruteStart.addEventListener("click", (event) => {
+    updatStart(x, y);
+    inputStart.value = text;
+
+    document.getElementById("modal").classList.add("hidden");
+    event.preventDefault();
+    event.stopPropagation();
+  });
 
   btnClosed.addEventListener("click", function () {
     var modal = document.getElementById("modal");

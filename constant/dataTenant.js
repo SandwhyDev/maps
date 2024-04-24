@@ -8,7 +8,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-31",
     text: "JABABEKA",
     pointx: 120,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -19,7 +19,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-32",
     text: "ITA AUTOPARTS",
     pointx: 280,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -30,7 +30,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-33",
     text: "PT. ANEKA",
     pointx: 620,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -41,7 +41,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-34",
     text: "PANAMA",
     pointx: 760,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -52,7 +52,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-35",
     text: "Evosend",
     pointx: 900,
-    pointy: 240,
+    pointy: 240 + 160,
   },
 
   {
@@ -64,7 +64,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-36",
     text: "Happy Steel",
     pointx: 1060,
-    pointy: 240,
+    pointy: 240 + 160,
   },
 
   {
@@ -76,7 +76,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-37",
     text: "Weichai Torch Technology Co.,Ltd.",
     pointx: 1240,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -87,7 +87,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-31",
     text: "Arthaplast",
     pointx: 1600,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -98,7 +98,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-31",
     text: "A2K1-01",
     pointx: 1800,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -109,7 +109,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-31",
     text: "Guangzhou Toby's Optronics Technology",
     pointx: 2020,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -120,7 +120,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-31",
     text: "ACIPI",
     pointx: 2220,
-    pointy: 240,
+    pointy: 240 + 160,
   },
 
   {
@@ -132,7 +132,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-31",
     text: "Aokly Group",
     pointx: 2600,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -143,7 +143,7 @@ const JABABEKA_SINGSPA = [
     code: "A1A1-31",
     text: "Sing Spare Part",
     pointx: 2760,
-    pointy: 240,
+    pointy: 240 + 160,
   },
 ];
 
@@ -237,7 +237,7 @@ const A1A2 = [
     code: "A1A1-31",
     text: "A1A2-01",
     pointx: 80,
-    pointy: 340,
+    pointy: 340 + 160,
   },
 
   {
@@ -249,7 +249,7 @@ const A1A2 = [
     code: "A1A1-31",
     text: "A1A2-05",
     pointx: 80,
-    pointy: 500,
+    pointy: 500 + 160,
   },
   {
     color: "#ff9",
@@ -260,7 +260,7 @@ const A1A2 = [
     code: "A1A1-31",
     text: "A1A2-07",
     pointx: 80,
-    pointy: 620,
+    pointy: 620 + 160,
   },
 
   {
@@ -272,7 +272,7 @@ const A1A2 = [
     code: "A1A1-31",
     text: "A1A3-01",
     pointx: 80,
-    pointy: 620 + 120,
+    pointy: 620 + 280,
   },
 
   {
@@ -284,7 +284,7 @@ const A1A2 = [
     code: "A1A1-31",
     text: "A1A3-03",
     pointx: 80,
-    pointy: 620 + 120 * 2,
+    pointy: 620 + 280 + 120,
   },
 
   {
@@ -308,7 +308,7 @@ const A1A2 = [
     code: "A1A1-31",
     text: "A1A3-05",
     pointx: 80,
-    pointy: 620 + 120 * 3,
+    pointy: 620 + 280 + 120 * 2,
   },
   {
     color: "#9bbb59",
@@ -320,7 +320,7 @@ const A1A2 = [
     code: "A1A1-31",
     text: "VIP LONGUE HALL A1",
     pointx: 80,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#9bbb59",
@@ -331,7 +331,7 @@ const A1A2 = [
     code: "A1A1-31",
     text: "Seminar Area HALL A1",
     pointx: 200,
-    pointy: 1140,
+    pointy: 1300,
   },
 ];
 

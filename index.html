@@ -33,11 +33,11 @@
       class="flex flex-col gap-10 fixed top-0 left-0 items-center w-screen z-10"
     >
       <!-- <div id="btnWall" class="btn">Wall</div> -->
-      <div id="searchPoint" class="StartPoint p-5 w-full flex gap-2">
+      <div id="searchPoint" class="StartPoint p-5 w-full flex gap-2 hidden">
         <p class="p-2 rounded w-full text-gray-500 bg-white">Search Point</p>
       </div>
 
-      <div id="containerSearch" class="flex gap-2 p-5 w-full hidden">
+      <div id="containerSearch" class="flex gap-2 p-5 w-full">
         <div class="w-10 space-y-2">
           <div class="object-cover p-1">
             <img src="/images/human.png" alt="" srcset="" />
@@ -112,17 +112,17 @@
         <div class="flex items-center gap-2">
           <p id="modal-name" class="min-w-24 max-w-44 text-base">Trumecs</p>
           <div
-            id="ruteStart"
             class="rounded p-2 text-sm font-normal flex gap-2 items-center w-full mr-5"
           >
-            <div
+            <button
+              id="ruteStart"
               class="w-full flex gap-2 p-2 border border-black rounded cursor-pointer"
             >
               <div class="w-5 h-5">
                 <img src="/images/human.png" alt="" srcset="" />
               </div>
               <p>Start</p>
-            </div>
+            </button>
 
             <div
               id="ruteEnd"
@@ -150,9 +150,11 @@
           </p>
           <p id="modal-code" class="text-sm font-normal">021 3812143</p>
           <p id="modal-code" class="text-sm font-normal">info@trumecs.com</p>
-          <a href="#" class="underline">
-            <p id="modal-code" class="text-sm font-normal">trumecs.com</p>
-          </a>
+
+          <p id="modal-code" class="text-sm font-normal">
+            <a href="#"> trumecs.com </a>
+          </p>
+
           <p id="modal-code" class="text-sm font-normal">Product</p>
         </div>
 

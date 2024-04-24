@@ -89,7 +89,6 @@ function zoomOut() {
     gCanvas.style.transform = "scale(" + scale + ")";
   }
 }
-
 function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
   var img = new Image();
   img.onload = function () {
@@ -97,10 +96,10 @@ function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
     context.translate(
       target.posx + target.size / 2,
       target.posy + target.size / 2
-    ); // Pusat rotasi
-    context.rotate((rotateDegrees * Math.PI) / 180); // Putar gambar
+    );
+    //   context.rotate((rotateDegrees * Math.PI) / 180); // Putar gambar
 
-    // Mengubah ukuran gambar sesuai faktor perbesaran
+    //   // Mengubah ukuran gambar sesuai faktor perbesaran
     var scaledSize = target.size * scaleFactor;
     context.drawImage(
       img,
@@ -109,8 +108,12 @@ function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
       scaledSize,
       scaledSize
     );
+
+    // Pusat rotasi
     context.restore(); // Pulihkan status konteks gambar
+    context.closePath(); // Menutup jalur gambar
   };
+
   img.src = "./images/human.png";
 }
 
@@ -353,7 +356,7 @@ function HandleSearch(point) {
 
         console.log(info.x - 200 * scale, info.y + 320 * scale);
         containerCanvas.scrollLeft = (info.x - 200) * scale;
-        window.scroll(0, (info.y + 320) * scale);
+        window.scroll(0, (info.y + 400) * scale);
 
         showModal(info.text, info.code);
 
@@ -365,6 +368,10 @@ function HandleSearch(point) {
           info.width,
           info.height
         );
+
+        point === "start"
+          ? updatStart(info.pointx, info.pointy)
+          : updateEnd(info.pointx, info.pointy);
 
         // reset();
         // myPath = new PathFindingAlg(grid, startPoint, endPoint);
@@ -438,8 +445,8 @@ class Vec2 {
 }
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
-startPoint = new Vec2(260, 240);
-endPoint = new Vec2(2240, 400);
+startPoint = new Vec2(480, 220);
+endPoint = new Vec2(0, 0);
 
 document.addEventListener("DOMContentLoaded", function (event) {
   if (window.DeviceOrientationEvent) {
@@ -496,6 +503,7 @@ class Node {
 
   createStartNode() {
     iconUser(gctx, this);
+    // iconEndNode(gctx, this, 6, "green", "green");
   }
 
   createEndNode() {
@@ -870,85 +878,99 @@ class Grid {
 //the top left corner of the grid will be located at point 0,0 to fill the canvas
 var grid = new Grid(CANVAS_WIDTH, CANVAS_HEIGHT, 0, 0);
 grid.createGrid();
+var ruteEnd = document.getElementById("ruteEnd");
 
-gCanvas.addEventListener(
-  "click",
-  function (event) {
-    // console.log(scale);
-    var x = event.pageX - $(gCanvas).position().left;
-    var y = event.pageY - $(gCanvas).position().top;
+gCanvas.addEventListener("click", canvasClickHandler);
 
-    var clickedElement = gridPoints.find(function (element) {
-      return (
-        y > element.posy * scale &&
-        y < (element.posy + element.size) * scale &&
-        x > element.posx * scale &&
-        x < (element.posx + element.size) * scale
-      );
-    });
+function canvasClickHandler(event) {
+  var x = event.pageX - $(gCanvas).position().left;
+  var y = event.pageY - $(gCanvas).position().top;
 
-    if (clickedElement) {
-      var posx = clickedElement.posx;
-      var posy = clickedElement.posy;
+  var clickedElement = gridPoints.find(function (element) {
+    return (
+      y > element.posy * scale &&
+      y < (element.posy + element.size) * scale &&
+      x > element.posx * scale &&
+      x < (element.posx + element.size) * scale
+    );
+  });
 
-      if (clickedElement.walkable === true) {
-        console.log({
-          posx: posx,
-          posy: posy,
-        });
+  if (clickedElement) {
+    var posx = clickedElement.posx;
+    var posy = clickedElement.posy;
 
-        // handle jika user mengklik icon endPoint
-        if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
-          endPoint = "";
-          endPoint = new Vec2(0, 0);
-          myPath = new PathFindingAlg(grid, startPoint, endPoint);
-          reset();
-          return;
-        }
+    if (clickedElement.walkable === true) {
+      console.log({
+        posx: posx,
+        posy: posy,
+      });
 
-        startPoint = "";
-        startPoint = new Vec2(posx, posy);
-        reset();
-
+      if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
+        endPoint = "";
+        endPoint = new Vec2(0, 0);
         myPath = new PathFindingAlg(grid, startPoint, endPoint);
-        myPath.findPath();
-      } else {
-        // Kalau tenant
-        var tenant = dataTenant.find(function (element) {
-          return (
-            y > (element.y + 320) * scale &&
-            y < (element.y + element.height + 320) * scale &&
-            x > element.x * scale &&
-            x < (element.x + element.width) * scale
-          );
+        reset();
+        return;
+      }
+
+      startPoint = "";
+      startPoint = new Vec2(posx, posy);
+      reset();
+
+      myPath = new PathFindingAlg(grid, startPoint, endPoint);
+      myPath.findPath();
+    } else {
+      var tenant = dataTenant.find(function (element) {
+        return (
+          y > (element.y + 320) * scale &&
+          y < (element.y + element.height + 320) * scale &&
+          x > element.x * scale &&
+          x < (element.x + element.width) * scale
+        );
+      });
+
+      if (tenant) {
+        showModal(tenant.text, tenant.code, tenant.pointx, tenant.pointy);
+        changeColorOnClick(
+          event,
+          tenant.text,
+          tenant.x,
+          tenant.y + 320,
+          tenant.width,
+          tenant.height
+        );
+
+        ruteEnd.addEventListener("click", () => {
+          updateEnd(tenant.pointx, tenant.pointy);
+          inputEnd.value = tenant.text;
+
+          document.getElementById("modal").classList.add("hidden");
         });
-
-        if (tenant) {
-          showModal(tenant.text, tenant.code);
-          changeColorOnClick(
-            event,
-            tenant.text,
-            tenant.x,
-            tenant.y + 320,
-            tenant.width,
-            tenant.height
-          );
-          var ruteEnd = document.getElementById("ruteEnd");
-
-          ruteEnd.addEventListener("click", () => {
-            endPoint = "";
-            endPoint = new Vec2(tenant.pointx, tenant.pointy);
-            reset();
-
-            myPath = new PathFindingAlg(grid, startPoint, endPoint);
-
-            myPath.findPath();
-
-            document.getElementById("modal").classList.add("hidden");
-          });
-        }
       }
     }
-  },
-  false
-);
+  }
+  event.preventDefault();
+  event.stopPropagation();
+}
+
+function updateEnd(x, y) {
+  endPoint = "";
+  console.log("halo 2");
+  endPoint = new Vec2(x, y);
+
+  reset();
+
+  myPath = new PathFindingAlg(grid, startPoint, endPoint);
+  myPath.findPath();
+}
+
+function updatStart(x, y) {
+  console.log("halo", x, y);
+
+  startPoint = "";
+  startPoint = new Vec2(x, y);
+  reset();
+
+  myPath = new PathFindingAlg(grid, startPoint, endPoint);
+  myPath.findPath();
+}
