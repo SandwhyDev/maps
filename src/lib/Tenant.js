@@ -82,7 +82,11 @@ const showModal = (text, codeTenant) => {
   var moreInfo = document.getElementById("more-info");
   let click = false;
 
-  if (text.split(" ")[0] === "toilet") {
+  if (
+    text.split(" ")[0] == "toilet" ||
+    text.split(" ")[0] == "HALL" ||
+    text.split(" ")[0] == "VISITOR"
+  ) {
     moreDetail.classList.add("hidden");
     moreInfo.classList.add("hidden");
   } else {

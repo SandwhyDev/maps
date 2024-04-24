@@ -933,9 +933,9 @@ gCanvas.addEventListener(
             tenant.width,
             tenant.height
           );
-          var rute = document.getElementById("rute");
+          var ruteEnd = document.getElementById("ruteEnd");
 
-          rute.addEventListener("click", () => {
+          ruteEnd.addEventListener("click", () => {
             endPoint = "";
             endPoint = new Vec2(tenant.pointx, tenant.pointy);
             reset();
