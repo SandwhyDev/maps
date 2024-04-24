@@ -73,6 +73,13 @@ const HandleTenant = (
   context.stroke();
 };
 
+var ruteStart = document.getElementById("ruteStart");
+var startX = document.getElementById("startX");
+var startY = document.getElementById("startY");
+
+var modalName = document.getElementById("modal-name");
+var modalCode = document.getElementById("modal-code");
+
 const showModal = (text, codeTenant, x, y) => {
   console.log(text, "modal ");
   if (text.split(" ")[0] == "hall") {
@@ -112,23 +119,12 @@ const showModal = (text, codeTenant, x, y) => {
 
   modal.classList.remove("hidden");
 
-  var modalName = document.getElementById("modal-name");
-  var modalCode = document.getElementById("modal-code");
-  var ruteStart = document.getElementById("ruteStart");
-
   // CONTENT TEXT
   modalName.innerText = text;
   // DESKRIPSI
   modalCode.innerText = codeTenant;
-
-  ruteStart.addEventListener("click", (event) => {
-    updatStart(x, y);
-    inputStart.value = text;
-
-    document.getElementById("modal").classList.add("hidden");
-    event.preventDefault();
-    event.stopPropagation();
-  });
+  startX.innerText = x;
+  startY.innerText = y;
 
   btnClosed.addEventListener("click", function () {
     var modal = document.getElementById("modal");
@@ -139,3 +135,18 @@ const showModal = (text, codeTenant, x, y) => {
     moreInfo.classList.add("hidden");
   });
 };
+
+ruteEnd.addEventListener("click", () => {
+  updatPoint("end", startX.innerText, startY.innerText);
+  inputEnd.value = modalName.innerText;
+
+  document.getElementById("modal").classList.add("hidden");
+});
+
+ruteStart.addEventListener("click", (event) => {
+  updatPoint("start", startX.innerText, startY.innerText);
+
+  inputStart.value = modalName.innerText;
+
+  document.getElementById("modal").classList.add("hidden");
+});

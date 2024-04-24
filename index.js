@@ -353,12 +353,10 @@ function HandleSearch(point) {
         var containerCanvas = document.getElementById("containerCanvas");
         scale = 0.6;
         gCanvas.style.transform = "scale(" + scale + ")";
-
-        console.log(info.x - 200 * scale, info.y + 320 * scale);
         containerCanvas.scrollLeft = (info.x - 200) * scale;
         window.scroll(0, (info.y + 400) * scale);
 
-        showModal(info.text, info.code);
+        // showModal(info.text, info.code);
 
         changeColorOnClick(
           event,
@@ -370,13 +368,8 @@ function HandleSearch(point) {
         );
 
         point === "start"
-          ? updatStart(info.pointx, info.pointy)
-          : updateEnd(info.pointx, info.pointy);
-
-        // reset();
-        // myPath = new PathFindingAlg(grid, startPoint, endPoint);
-
-        // myPath.findPath();
+          ? updatPoint("start", info.pointx, info.pointy)
+          : updatPoint("end", info.pointx, info.pointy);
 
         search.remove();
         ul.remove();
@@ -389,7 +382,7 @@ function HandleSearch(point) {
   document.body.appendChild(search);
 }
 
-function changeColorOnClick(event, name, x, y, width, height) {
+function changeColorOnClick(name, x, y, width, height) {
   Tenant(gctx);
 
   if (name.split(" ")[0] === "HALL") {
@@ -434,6 +427,24 @@ function changeColorOnClick(event, name, x, y, width, height) {
     textY += lineHeight;
   }
 }
+
+// update titik
+function updatPoint(point, x, y) {
+  if (point === "start") {
+    startPoint = "";
+    startPoint = new Vec2(x, y);
+  } else {
+    endPoint = "";
+    console.log("halo 2");
+    endPoint = new Vec2(x, y);
+  }
+
+  reset();
+
+  myPath = new PathFindingAlg(grid, startPoint, endPoint);
+  myPath.findPath();
+}
+
 // function end
 
 //any point in 2D space
@@ -913,12 +924,7 @@ function canvasClickHandler(event) {
         return;
       }
 
-      startPoint = "";
-      startPoint = new Vec2(posx, posy);
-      reset();
-
-      myPath = new PathFindingAlg(grid, startPoint, endPoint);
-      myPath.findPath();
+      updatPoint("start", posx, posy);
     } else {
       var tenant = dataTenant.find(function (element) {
         return (
@@ -932,45 +938,13 @@ function canvasClickHandler(event) {
       if (tenant) {
         showModal(tenant.text, tenant.code, tenant.pointx, tenant.pointy);
         changeColorOnClick(
-          event,
           tenant.text,
           tenant.x,
           tenant.y + 320,
           tenant.width,
           tenant.height
         );
-
-        ruteEnd.addEventListener("click", () => {
-          updateEnd(tenant.pointx, tenant.pointy);
-          inputEnd.value = tenant.text;
-
-          document.getElementById("modal").classList.add("hidden");
-        });
       }
     }
   }
-  event.preventDefault();
-  event.stopPropagation();
-}
-
-function updateEnd(x, y) {
-  endPoint = "";
-  console.log("halo 2");
-  endPoint = new Vec2(x, y);
-
-  reset();
-
-  myPath = new PathFindingAlg(grid, startPoint, endPoint);
-  myPath.findPath();
-}
-
-function updatStart(x, y) {
-  console.log("halo", x, y);
-
-  startPoint = "";
-  startPoint = new Vec2(x, y);
-  reset();
-
-  myPath = new PathFindingAlg(grid, startPoint, endPoint);
-  myPath.findPath();
 }
