@@ -43,7 +43,7 @@ searchPoint.addEventListener("click", () => {
   searchPoint.classList.remove("py-5");
   searchPoint.className = "hidden";
   containerSearch.classList.remove("hidden");
-  iconEnd.classList.remove("hidden");
+  // iconEnd.classList.remove("hidden");
 
   //tambahkan focus di input
   inputStart.focus();
@@ -303,14 +303,15 @@ function HandleSearch(point) {
       info.code.toUpperCase().indexOf(filter) > -1
     ) {
       const li = document.createElement("li");
-      li.textContent = `${info.text} `;
+      li.textContent = `${info.text.toUpperCase()} `;
       li.classList.add(
         "px-4",
         "py-2",
         "bg-white",
         "border",
         "border-gray-300",
-        "rounded-md"
+        "rounded-md",
+        "cursor-pointer"
       );
 
       if (info.text.length > 0) {
@@ -328,10 +329,16 @@ function HandleSearch(point) {
           endPoint = new Vec2(info.pointx, info.pointy);
         }
 
-        reset();
-        myPath = new PathFindingAlg(grid, startPoint, endPoint);
+        var containerCanvas = document.getElementById("containerCanvas");
 
-        myPath.findPath();
+        console.log(info.x - 200 * scale, info.y + 320 * scale);
+        containerCanvas.scrollLeft = (info.x - 200) * scale;
+        window.scroll(0, (info.y + 320) * scale);
+
+        // reset();
+        // myPath = new PathFindingAlg(grid, startPoint, endPoint);
+
+        // myPath.findPath();
 
         search.remove();
         ul.remove();
@@ -355,7 +362,7 @@ class Vec2 {
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 startPoint = new Vec2(260, 240);
-endPoint = new Vec2(480, 220);
+endPoint = new Vec2(2240, 400);
 
 document.addEventListener("DOMContentLoaded", function (event) {
   if (window.DeviceOrientationEvent) {
@@ -462,7 +469,7 @@ class Node {
   drawNode() {
     gctx.beginPath();
     gctx.lineWidth = "2";
-    gctx.strokeStyle = "black";
+    gctx.strokeStyle = "white";
     gctx.fillStyle = this.color === "white" ? "white" : "blue";
     gctx.fillRect(this.posx, this.posy, this.size, this.size);
     gctx.rect(this.posx, this.posy, this.size, this.size);
@@ -845,7 +852,6 @@ gCanvas.addEventListener(
           var rute = document.getElementById("rute");
 
           rute.addEventListener("click", () => {
-            console.log(tenant.x, tenant.y + 320, tenant.width, tenant.height);
             endPoint = "";
             endPoint = new Vec2(tenant.pointx, tenant.pointy);
             reset();

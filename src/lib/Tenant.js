@@ -24,7 +24,6 @@ const HandleTenant = (
     img.src = "../images/toilet.png";
 
     img.onload = function () {
-      // Draw the image at position (0, 0) with width 400 and height 300
       context.drawImage(img, x, y, 80, 80);
     };
     return;
@@ -35,12 +34,12 @@ const HandleTenant = (
   context.strokeStyle = !border ? "black" : color;
   context.fillStyle = color;
   context.fillRect(x, y, width, height);
-  context.font = fontSize ? "20px Arial" : "14px Arial"; // Font dan ukuran teks awal
+  context.font = fontSize ? `bold ${fontSize}px Arial` : "bold 12px Arial"; // Font dan ukuran teks awal
   context.strokeRect(x, y, width, height);
 
   const maxWidth = width - 10; // Lebar maksimum teks
   const lineHeight = 18; // Tinggi baris teks
-  let words = text.split(" ");
+  let words = text.toUpperCase().split(" ");
   let line = "";
   let lines = [];
 

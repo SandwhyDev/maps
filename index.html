@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="py-28">
+  <body id="body" class="py-28">
     <div class="w-full max-h-28 flex gap-4 p-2">
       <div class="object-cover bg-black p-5 rounded">
         <img src="/images/logo.png" alt="" srcset="" />
@@ -27,6 +27,7 @@
         <img src="/images/logo.png" alt="" srcset="" />
       </div>
     </div>
+
     <div
       class="flex flex-col gap-10 fixed top-0 left-0 items-center w-screen z-10"
     >
@@ -78,13 +79,16 @@
       </div> -->
     </div>
 
-    <div class="w-full h-full border-4 border-black overflow-x-scroll">
+    <div
+      id="containerCanvas"
+      class="w-full h-full border-4 border-black overflow-x-scroll"
+    >
       <!-- HEIGHT NAMBAH 200 dari 1400 -->
       <canvas id="gCanvas" width="5700" height="1940"> </canvas>
     </div>
 
     <div id="modal" class="hidden">
-      <div class="modal-content">
+      <div class="modal-content max-w-96">
         <div class="flex items-center gap-2">
           <p id="modal-name" class="max-w-44">Trumecs</p>
           <div

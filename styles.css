@@ -8,7 +8,7 @@ body{
 
 canvas {
   /* border: none; */
-  border: 1px black solid;
+  /* border: 0.5px black solid; */
   transform: rotate(0deg);
   transform-origin: 250px 250px;
   /* background-color: #ffc000; */
