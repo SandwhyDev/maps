@@ -110,15 +110,24 @@
     <div id="modal" class="hidden">
       <div class="modal-content max-w-96">
         <div class="flex items-center gap-2">
-          <p id="modal-name" class="max-w-44">Trumecs</p>
+          <p id="modal-name" class="min-w-24 max-w-44 text-base">Trumecs</p>
           <div
-            id="rute"
-            class="rounded p-2 border border-black text-sm font-normal flex gap-2 items-center"
+            id="ruteStart"
+            class="rounded p-2 text-sm font-normal flex gap-2 items-center w-full mr-5"
           >
-            <div class="w-3.5 h-3.5 mb-1">
-              <img src="/images/location.png" alt="" srcset="" />
+            <div class="w-full flex gap-2 p-2 border border-black rounded">
+              <div class="w-4 h-4">
+                <img src="/images/human.png" alt="" srcset="" />
+              </div>
+              <p>Start</p>
             </div>
-            <p>Rute</p>
+
+            <div class="w-full flex gap-2 p-2 border border-black rounded">
+              <div class="w-3.5 h-3.5 mb-1">
+                <img src="/images/location.png" alt="" srcset="" />
+              </div>
+              <p>Rute</p>
+            </div>
           </div>
         </div>
         <p id="modal-code" class="text-sm font-normal">A1A2-01</p>
@@ -142,7 +151,10 @@
           <p id="modal-code" class="text-sm font-normal">Product</p>
         </div>
 
-        <p id="modal-detail" class="text-sm font-normal text-center underline">
+        <p
+          id="modal-detail"
+          class="text-sm font-normal text-center underline cursor-pointer"
+        >
           more detail
         </p>
 

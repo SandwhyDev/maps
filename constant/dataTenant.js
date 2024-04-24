@@ -343,7 +343,7 @@ const A1B2 = [
     width: 60,
     height: 120,
     code: "A1A1-31",
-    text: "wes sz",
+    text: "wes sz  A1A1-31",
     pointx: 80,
     pointy: 340,
   },
@@ -4587,7 +4587,7 @@ const D1B1_TO_D1G1 = [
     width: 140,
     height: 60,
     code: "D1D1-01",
-    text: "WES SZ",
+    text: "WES SZ D1D1-01",
   },
   {
     color: "#ff9",
@@ -4725,7 +4725,7 @@ const D1H2_TO_D1H3 = [
     width: 60,
     height: 60,
     code: "D1H3-07",
-    text: "Wes sz",
+    text: "Wes sz D1H3-07",
   },
   {
     color: "#ff9",
@@ -4867,7 +4867,7 @@ const Tenglong_TO_Gratari = [
     width: 120,
     height: 120,
     code: "D1B3-01",
-    text: "Wes SZ | D1B3-01",
+    text: "Wes SZ  D1B3-01",
   },
   {
     color: "#ff9",
@@ -5971,7 +5971,7 @@ const JNT_TO_Linshi = [
     width: 60,
     height: 120,
     code: "D1G3-13",
-    text: "WES TW | D1G3-13",
+    text: "WES TW  D1G3-13",
   },
   {
     color: "#ff9",
