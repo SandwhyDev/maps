@@ -345,7 +345,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "wes sz  A1A1-31",
     pointx: 80,
-    pointy: 340,
+    pointy: 340 + 160,
   },
   {
     color: "#ff9",
@@ -356,7 +356,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "Guoneng",
     pointx: 260,
-    pointy: 340,
+    pointy: 340 + 160,
   },
   {
     color: "#ff9",
@@ -367,7 +367,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-05",
     pointx: 80,
-    pointy: 420,
+    pointy: 420 + 160,
   },
   {
     color: "#ff9",
@@ -378,7 +378,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-06",
     pointx: 260,
-    pointy: 420,
+    pointy: 420 + 160,
   },
 
   {
@@ -390,7 +390,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-07",
     pointx: 80,
-    pointy: 420 + 60,
+    pointy: 420 + 60 + 160,
   },
   {
     color: "#ff9",
@@ -401,7 +401,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-08",
     pointx: 260,
-    pointy: 420 + 60,
+    pointy: 420 + 60 + 160,
   },
 
   {
@@ -413,7 +413,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-09",
     pointx: 80,
-    pointy: 420 + 60 * 2,
+    pointy: 580 + 120,
   },
   {
     color: "#ff9",
@@ -424,7 +424,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-10",
     pointx: 260,
-    pointy: 420 + 60 * 2,
+    pointy: 580 + 120,
   },
 
   {
@@ -436,7 +436,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-11",
     pointx: 80,
-    pointy: 420 + 60 * 3,
+    pointy: 760,
   },
   {
     color: "#ff9",
@@ -447,7 +447,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-12",
     pointx: 260,
-    pointy: 420 + 60 * 3,
+    pointy: 760,
   },
 
   {
@@ -459,7 +459,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-13",
     pointx: 80,
-    pointy: 420 + 60 * 4,
+    pointy: 760 + 60,
   },
   {
     color: "#ff9",
@@ -470,7 +470,7 @@ const A1B2 = [
     code: "A1A1-31",
     text: "A1B2-14",
     pointx: 260,
-    pointy: 420 + 60 * 4,
+    pointy: 760 + 60,
   },
 ];
 
@@ -485,7 +485,7 @@ const A1C2 = [
     code: "A1A1-31",
     text: "DMM",
     pointx: 340,
-    pointy: 240,
+    pointy: 240 + 160,
   },
 
   {
@@ -497,7 +497,7 @@ const A1C2 = [
     code: "A1A1-31",
     text: "Iroad",
     pointx: 260,
-    pointy: 440,
+    pointy: 440 + 160,
   },
   {
     color: "#ff9",
@@ -508,7 +508,7 @@ const A1C2 = [
     code: "A1A1-31",
     text: "BTS",
     pointx: 440,
-    pointy: 440,
+    pointy: 440 + 160,
   },
   {
     color: "#ff9",
@@ -519,7 +519,7 @@ const A1C2 = [
     code: "A1A1-31",
     text: "GIAMM",
     pointx: 260,
-    pointy: 540,
+    pointy: 440 + 160 + 100,
   },
   {
     color: "black",
@@ -539,7 +539,7 @@ const A1C2 = [
     code: "A1A1-31",
     text: "Tongil",
     pointx: 440,
-    pointy: 540,
+    pointy: 700,
   },
 
   {
@@ -551,7 +551,7 @@ const A1C2 = [
     code: "A1A1-31",
     text: "KAPCI",
     pointx: 360,
-    pointy: 720,
+    pointy: 880,
   }, // YIDA UP
 ];
 
@@ -565,7 +565,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-01",
     pointx: 440,
-    pointy: 300,
+    pointy: 300 + 160,
   },
   {
     color: "#ff9",
@@ -576,7 +576,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-02",
     pointx: 620,
-    pointy: 300,
+    pointy: 300 + 160,
   },
   {
     color: "#ff9",
@@ -587,7 +587,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-03",
     pointx: 440,
-    pointy: 300 + 60,
+    pointy: 300 + 160 + 60,
   },
   {
     color: "#ff9",
@@ -598,7 +598,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-04",
     pointx: 620,
-    pointy: 300 + 60,
+    pointy: 300 + 160 + 60,
   },
 
   {
@@ -610,7 +610,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-05",
     pointx: 440,
-    pointy: 300 + 60 * 2,
+    pointy: 300 + 160 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -621,7 +621,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-06",
     pointx: 620,
-    pointy: 300 + 60 * 2,
+    pointy: 300 + 160 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -632,7 +632,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-07",
     pointx: 440,
-    pointy: 300 + 60 * 3,
+    pointy: 300 + 160 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -643,7 +643,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-08",
     pointx: 620,
-    pointy: 300 + 60 * 3,
+    pointy: 300 + 160 + 60 * 3,
   },
 
   {
@@ -655,7 +655,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-09",
     pointx: 440,
-    pointy: 300 + 60 * 4,
+    pointy: 300 + 160 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -666,7 +666,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-10",
     pointx: 620,
-    pointy: 300 + 60 * 4,
+    pointy: 300 + 160 + 60 * 4,
   },
 
   {
@@ -678,7 +678,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-11",
     pointx: 440,
-    pointy: 300 + 60 * 5,
+    pointy: 300 + 160 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -689,7 +689,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-12",
     pointx: 620,
-    pointy: 300 + 60 * 5,
+    pointy: 300 + 160 + 60 * 5,
   },
 
   {
@@ -701,7 +701,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-13",
     pointx: 440,
-    pointy: 300 + 60 * 6,
+    pointy: 300 + 160 + 60 * 6,
   },
   {
     color: "#ff9",
@@ -712,7 +712,7 @@ const A1D2 = [
     code: "A1A1-31",
     text: "A1D2-14",
     pointx: 620,
-    pointy: 300 + 60 * 6,
+    pointy: 300 + 160 + 60 * 6,
   },
 ];
 
@@ -726,7 +726,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-01",
     pointx: 620,
-    pointy: 340,
+    pointy: 340 + 160,
   },
   {
     color: "#ff9",
@@ -737,7 +737,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-02",
     pointx: 800,
-    pointy: 340,
+    pointy: 340 + 160,
   },
   {
     color: "#ff9",
@@ -748,7 +748,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-05",
     pointx: 620,
-    pointy: 340 + 100,
+    pointy: 340 + 260,
   },
   {
     color: "#ff9",
@@ -759,7 +759,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-06",
     pointx: 800,
-    pointy: 340 + 100,
+    pointy: 340 + 260,
   },
   {
     color: "#ff9",
@@ -770,7 +770,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-07",
     pointx: 620,
-    pointy: 340 + 80 * 2,
+    pointy: 340 + 260 + 60,
   },
   {
     color: "#ff9",
@@ -781,7 +781,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-08",
     pointx: 800,
-    pointy: 340 + 80 * 2,
+    pointy: 340 + 260 + 60,
   },
 
   {
@@ -793,7 +793,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-11",
     pointx: 620,
-    pointy: 340 + 80 * 3,
+    pointy: 340 + 260 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -804,7 +804,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-12",
     pointx: 800,
-    pointy: 340 + 80 * 3,
+    pointy: 340 + 260 + 60 * 3,
   },
 
   {
@@ -816,7 +816,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-13",
     pointx: 620,
-    pointy: 340 + 80 * 4,
+    pointy: 340 + 260 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -827,7 +827,7 @@ const A1E2 = [
     code: "A1A1-31",
     text: "A1E2-14",
     pointx: 800,
-    pointy: 340 + 80 * 4,
+    pointy: 340 + 260 + 60 * 4,
   },
 ];
 
@@ -841,7 +841,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-01",
     pointx: 900,
-    pointy: 240,
+    pointy: 240 + 160,
   },
   {
     color: "#ff9",
@@ -852,7 +852,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-02",
     pointx: 800,
-    pointy: 420,
+    pointy: 420 + 160,
   },
   {
     color: "#ff9",
@@ -863,7 +863,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-03",
     pointx: 980,
-    pointy: 420,
+    pointy: 420 + 160,
   },
   {
     color: "#ff9",
@@ -874,7 +874,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-04",
     pointx: 800,
-    pointy: 420 + 60,
+    pointy: 420 + 220,
   },
   {
     color: "#ff9",
@@ -885,7 +885,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-05",
     pointx: 980,
-    pointy: 420 + 60,
+    pointy: 420 + 220,
   },
   {
     color: "#ff9",
@@ -896,7 +896,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-06",
     pointx: 800,
-    pointy: 420 + 60 * 2,
+    pointy: 700,
   },
   {
     color: "#ff9",
@@ -907,7 +907,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-07",
     pointx: 980,
-    pointy: 420 + 60 * 2,
+    pointy: 700,
   },
   {
     color: "#ff9",
@@ -918,7 +918,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-08",
     pointx: 800,
-    pointy: 420 + 60 * 3,
+    pointy: 760,
   },
   {
     color: "#ff9",
@@ -929,7 +929,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-09",
     pointx: 980,
-    pointy: 420 + 60 * 3,
+    pointy: 760,
   },
   {
     color: "#ff9",
@@ -940,7 +940,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-10",
     pointx: 800,
-    pointy: 420 + 60 * 4,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -951,7 +951,7 @@ const A1F2 = [
     code: "A1A1-31",
     text: "A1F2-11",
     pointx: 980,
-    pointy: 420 + 60 * 4,
+    pointy: 820,
   },
   {
     color: "black",
@@ -974,7 +974,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-01",
     pointx: 1080,
-    pointy: 240,
+    pointy: 400,
   },
   {
     color: "#ff9",
@@ -985,7 +985,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-02",
     pointx: 980,
-    pointy: 420,
+    pointy: 420 + 160,
   },
   {
     color: "#ff9",
@@ -996,7 +996,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-03",
     pointx: 1160,
-    pointy: 420,
+    pointy: 420 + 160,
   },
   {
     color: "#ff9",
@@ -1007,7 +1007,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-04",
     pointx: 980,
-    pointy: 420 + 60,
+    pointy: 640,
   },
   {
     color: "#ff9",
@@ -1018,7 +1018,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-05",
     pointx: 1160,
-    pointy: 420 + 60,
+    pointy: 640,
   },
   {
     color: "#ff9",
@@ -1029,7 +1029,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-06",
     pointx: 980,
-    pointy: 420 + 60 * 2,
+    pointy: 640 + 60,
   },
   {
     color: "#ff9",
@@ -1040,7 +1040,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-07",
     pointx: 1160,
-    pointy: 420 + 60 * 2,
+    pointy: 640 + 60,
   },
   {
     color: "#ff9",
@@ -1051,7 +1051,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-08",
     pointx: 980,
-    pointy: 420 + 60 * 3,
+    pointy: 760,
   },
   {
     color: "#ff9",
@@ -1062,7 +1062,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-09",
     pointx: 1160,
-    pointy: 420 + 60 * 3,
+    pointy: 760,
   },
   {
     color: "#ff9",
@@ -1073,7 +1073,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-10",
     pointx: 980,
-    pointy: 420 + 60 * 4,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -1084,7 +1084,7 @@ const A1G2 = [
     code: "A1A1-31",
     text: "A1G2-11",
     pointx: 1160,
-    pointy: 420 + 60 * 4,
+    pointy: 820,
   },
 ];
 
@@ -1098,7 +1098,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-01",
     pointx: 1160,
-    pointy: 300,
+    pointy: 460,
   },
   {
     color: "#ff9",
@@ -1109,7 +1109,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-02",
     pointx: 1340,
-    pointy: 300,
+    pointy: 460,
   },
   {
     color: "#ff9",
@@ -1120,7 +1120,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-03",
     pointx: 1160,
-    pointy: 300 + 60,
+    pointy: 460 + 60,
   },
   {
     color: "#ff9",
@@ -1131,7 +1131,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-04",
     pointx: 1340,
-    pointy: 300 + 60,
+    pointy: 460 + 60,
   },
   {
     color: "#ff9",
@@ -1142,7 +1142,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-05",
     pointx: 1160,
-    pointy: 300 + 60 * 2,
+    pointy: 460 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1153,7 +1153,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-06",
     pointx: 1340,
-    pointy: 300 + 60 * 2,
+    pointy: 460 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1164,7 +1164,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-07",
     pointx: 1160,
-    pointy: 300 + 60 * 3,
+    pointy: 460 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1175,7 +1175,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-08",
     pointx: 1340,
-    pointy: 300 + 60 * 3,
+    pointy: 460 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1186,7 +1186,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-09",
     pointx: 1160,
-    pointy: 300 + 60 * 4,
+    pointy: 460 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1197,7 +1197,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-10",
     pointx: 1340,
-    pointy: 300 + 60 * 4,
+    pointy: 460 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1208,7 +1208,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-11",
     pointx: 1160,
-    pointy: 300 + 60 * 5,
+    pointy: 460 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -1219,7 +1219,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-12",
     pointx: 1340,
-    pointy: 300 + 60 * 5,
+    pointy: 460 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -1230,7 +1230,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-13",
     pointx: 1160,
-    pointy: 300 + 60 * 6,
+    pointy: 460 + 60 * 6,
   },
   {
     color: "#ff9",
@@ -1241,7 +1241,7 @@ const A1H2 = [
     code: "A1A1-31",
     text: "A1H2-14",
     pointx: 1340,
-    pointy: 300 + 60 * 6,
+    pointy: 460 + 60 * 6,
   },
 ];
 
@@ -1255,7 +1255,7 @@ const A2I2 = [
     code: "A1A1-31",
     text: "A2I2-01",
     pointx: 1440,
-    pointy: 240,
+    pointy: 400,
   },
   {
     color: "#ff9",
@@ -1266,7 +1266,7 @@ const A2I2 = [
     code: "A1A1-31",
     text: "A2I2-07",
     pointx: 1340,
-    pointy: 460,
+    pointy: 620,
   },
   {
     color: "#ff9",
@@ -1277,7 +1277,7 @@ const A2I2 = [
     code: "A1A1-31",
     text: "A2I2-08",
     pointx: 1520,
-    pointy: 460,
+    pointy: 620,
   },
   {
     color: "#ff9",
@@ -1288,7 +1288,7 @@ const A2I2 = [
     code: "A1A1-31",
     text: "A2I2-09",
     pointx: 1340,
-    pointy: 460 + 80,
+    pointy: 680,
   },
   {
     color: "#ff9",
@@ -1299,7 +1299,7 @@ const A2I2 = [
     code: "A1A1-31",
     text: "A2I2-10",
     pointx: 1520,
-    pointy: 460 + 80,
+    pointy: 680,
   },
   {
     color: "#ff9",
@@ -1310,7 +1310,7 @@ const A2I2 = [
     code: "A1A1-31",
     text: "A2I2-11",
     pointx: 1340,
-    pointy: 460 + 80 * 2,
+    pointy: 620 + 80 * 2,
   },
   {
     color: "#ff9",
@@ -1321,7 +1321,7 @@ const A2I2 = [
     code: "A1A1-31",
     text: "A2I2-12",
     pointx: 1520,
-    pointy: 460 + 80 * 2,
+    pointy: 620 + 80 * 2,
   },
 ];
 
@@ -1335,7 +1335,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-01",
     pointx: 1600,
-    pointy: 240,
+    pointy: 400,
   },
   {
     color: "#ff9",
@@ -1346,7 +1346,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-03",
     pointx: 1520,
-    pointy: 420,
+    pointy: 560,
   },
   {
     color: "#ff9",
@@ -1357,7 +1357,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-04",
     pointx: 1700,
-    pointy: 420,
+    pointy: 560,
   },
   {
     color: "#ff9",
@@ -1368,7 +1368,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-05",
     pointx: 1520,
-    pointy: 420 + 80,
+    pointy: 560 + 80,
   },
   {
     color: "#ff9",
@@ -1379,7 +1379,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-06",
     pointx: 1700,
-    pointy: 420 + 80,
+    pointy: 640,
   },
   {
     color: "#ff9",
@@ -1390,7 +1390,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-07",
     pointx: 1520,
-    pointy: 420 + 80 * 2,
+    pointy: 740,
   },
   {
     color: "#ff9",
@@ -1401,7 +1401,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-08",
     pointx: 1700,
-    pointy: 420 + 80 * 2,
+    pointy: 740,
   },
   {
     color: "#ff9",
@@ -1412,7 +1412,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-11",
     pointx: 1520,
-    pointy: 420 + 80 * 3,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -1423,7 +1423,7 @@ const A2J2 = [
     code: "A1A1-31",
     text: "A2J2-12",
     pointx: 1700,
-    pointy: 420 + 80 * 3,
+    pointy: 820,
   },
 ];
 
@@ -1437,7 +1437,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-01",
     pointx: 1700,
-    pointy: 340,
+    pointy: 500,
   },
   {
     color: "#ff9",
@@ -1448,7 +1448,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-02",
     pointx: 1880,
-    pointy: 300,
+    pointy: 460,
   },
   {
     color: "#ff9",
@@ -1459,7 +1459,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-04",
     pointx: 1880,
-    pointy: 300 + 60,
+    pointy: 460 + 60,
   },
   {
     color: "#ff9",
@@ -1470,7 +1470,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-05",
     pointx: 1700,
-    pointy: 420,
+    pointy: 580,
   },
   {
     color: "#ff9",
@@ -1481,7 +1481,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-06",
     pointx: 1880,
-    pointy: 420,
+    pointy: 580,
   },
   {
     color: "#ff9",
@@ -1492,7 +1492,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-07",
     pointx: 1700,
-    pointy: 420 + 60,
+    pointy: 580 + 60,
   },
   {
     color: "#ff9",
@@ -1503,7 +1503,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-08",
     pointx: 1880,
-    pointy: 420 + 60,
+    pointy: 580 + 60,
   },
   {
     color: "#ff9",
@@ -1514,7 +1514,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-09",
     pointx: 1700,
-    pointy: 420 + 60 * 2,
+    pointy: 580 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1525,7 +1525,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-10",
     pointx: 1880,
-    pointy: 420 + 60 * 2,
+    pointy: 580 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1536,7 +1536,7 @@ const A2K2 = [
     code: "A1A1-31",
     text: "A2K2-11",
     pointx: 1700,
-    pointy: 620,
+    pointy: 880,
   },
 ];
 
@@ -1550,7 +1550,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-01",
     pointx: 1980,
-    pointy: 240,
+    pointy: 400,
   },
 
   {
@@ -1562,7 +1562,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-05",
     pointx: 1880,
-    pointy: 420,
+    pointy: 580,
   },
   {
     color: "#ff9",
@@ -1573,7 +1573,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-06",
     pointx: 2060,
-    pointy: 420,
+    pointy: 580,
   },
   {
     color: "#ff9",
@@ -1584,7 +1584,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-07",
     pointx: 1880,
-    pointy: 420 + 60,
+    pointy: 580 + 60,
   },
   {
     color: "#ff9",
@@ -1595,7 +1595,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-08",
     pointx: 2060,
-    pointy: 420 + 60,
+    pointy: 580 + 60,
   },
   {
     color: "#ff9",
@@ -1606,7 +1606,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-09",
     pointx: 1880,
-    pointy: 420 + 60 * 2,
+    pointy: 580 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1617,7 +1617,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-10",
     pointx: 2060,
-    pointy: 420 + 60 * 2,
+    pointy: 580 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1628,7 +1628,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-11",
     pointx: 1880,
-    pointy: 420 + 60 * 3,
+    pointy: 580 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1639,7 +1639,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-12",
     pointx: 2060,
-    pointy: 420 + 60 * 3,
+    pointy: 580 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1650,7 +1650,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-13",
     pointx: 1880,
-    pointy: 420 + 60 * 4,
+    pointy: 580 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1661,7 +1661,7 @@ const A3L2 = [
     code: "A1A1-31",
     text: "A3L2-14",
     pointx: 2060,
-    pointy: 420 + 60 * 4,
+    pointy: 580 + 60 * 4,
   },
 ];
 
@@ -1675,7 +1675,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-01",
     pointx: 2140,
-    pointy: 240,
+    pointy: 400,
   },
 
   {
@@ -1687,7 +1687,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-05",
     pointx: 2060,
-    pointy: 420,
+    pointy: 580,
   },
   {
     color: "#ff9",
@@ -1698,7 +1698,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-06",
     pointx: 2240,
-    pointy: 420,
+    pointy: 580,
   },
   {
     color: "#ff9",
@@ -1709,7 +1709,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-07",
     pointx: 2060,
-    pointy: 420 + 60,
+    pointy: 580 + 60,
   },
   {
     color: "#ff9",
@@ -1720,7 +1720,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-08",
     pointx: 2240,
-    pointy: 420 + 60,
+    pointy: 580 + 60,
   },
   {
     color: "#ff9",
@@ -1731,7 +1731,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-09",
     pointx: 2060,
-    pointy: 420 + 60 * 2,
+    pointy: 580 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1742,7 +1742,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-10",
     pointx: 2240,
-    pointy: 420 + 60 * 2,
+    pointy: 580 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -1753,7 +1753,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-11",
     pointx: 2060,
-    pointy: 420 + 60 * 3,
+    pointy: 580 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1764,7 +1764,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-12",
     pointx: 2240,
-    pointy: 420 + 60 * 3,
+    pointy: 580 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -1775,7 +1775,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-13",
     pointx: 2060,
-    pointy: 420 + 60 * 4,
+    pointy: 580 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -1786,7 +1786,7 @@ const A3M2 = [
     code: "A1A1-31",
     text: "A3M2-14",
     pointx: 2240,
-    pointy: 420 + 60 * 4,
+    pointy: 580 + 60 * 4,
   },
 ];
 
@@ -1800,7 +1800,7 @@ const A3N2 = [
     code: "A1A1-31",
     text: "A3N2-01",
     pointx: 2340,
-    pointy: 240,
+    pointy: 400,
   },
   {
     color: "#ff9",
@@ -1811,7 +1811,7 @@ const A3N2 = [
     code: "A1A1-31",
     text: "A3N2-05",
     pointx: 2240,
-    pointy: 440,
+    pointy: 600,
   },
   {
     color: "black",
@@ -1831,7 +1831,7 @@ const A3N2 = [
     code: "A1A1-31",
     text: "A3N2-06",
     pointx: 2420,
-    pointy: 440,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -1842,7 +1842,7 @@ const A3N2 = [
     code: "A1A1-31",
     text: "A3N2-07",
     pointx: 2240,
-    pointy: 540,
+    pointy: 680,
   },
   {
     color: "#ff9",
@@ -1853,7 +1853,7 @@ const A3N2 = [
     code: "A1A1-31",
     text: "A3N2-08",
     pointx: 2420,
-    pointy: 540,
+    pointy: 680,
   },
   {
     color: "#ff9",
@@ -1864,7 +1864,7 @@ const A3N2 = [
     code: "A1A1-31",
     text: "A3N2-11",
     pointx: 2240,
-    pointy: 640,
+    pointy: 800,
   },
   {
     color: "#ff9",
@@ -1875,7 +1875,7 @@ const A3N2 = [
     code: "A1A1-31",
     text: "A3N2-12",
     pointx: 2420,
-    pointy: 640,
+    pointy: 800,
   },
 ];
 
@@ -1889,7 +1889,7 @@ const A3O2 = [
     code: "A1A1-31",
     text: "A3O2-01",
     pointx: 2520,
-    pointy: 240,
+    pointy: 400,
   },
   {
     color: "#ff9",
@@ -1900,7 +1900,7 @@ const A3O2 = [
     code: "A1A1-31",
     text: "A3O2-03",
     pointx: 2420,
-    pointy: 540,
+    pointy: 700,
   },
 
   {
@@ -1912,7 +1912,7 @@ const A3O2 = [
     code: "A1A1-31",
     text: "A3O2-04",
     pointx: 2600,
-    pointy: 540,
+    pointy: 700,
   },
   {
     color: "#ff9",
@@ -1924,7 +1924,7 @@ const A3O2 = [
     text: "A3O2-07",
 
     pointx: 2420,
-    pointy: 540 + 100,
+    pointy: 700 + 100,
   },
   {
     color: "#ff9",
@@ -1935,7 +1935,7 @@ const A3O2 = [
     code: "A1A1-31",
     text: "A3O2-08",
     pointx: 2600,
-    pointy: 540 + 100,
+    pointy: 700 + 100,
   },
 ];
 
@@ -1949,7 +1949,7 @@ const A3P2 = [
     code: "A1A1-31",
     text: "A3P2-01",
     pointx: 2700,
-    pointy: 240,
+    pointy: 400,
   },
   {
     color: "#ff9",
@@ -1960,7 +1960,7 @@ const A3P2 = [
     code: "A1A1-31",
     text: "A3P2-07",
     pointx: 2600,
-    pointy: 540,
+    pointy: 680,
   },
   {
     color: "#ff9",
@@ -1971,7 +1971,7 @@ const A3P2 = [
     code: "A1A1-31",
     text: "A3P2-08",
     pointx: 2780,
-    pointy: 600,
+    pointy: 760,
   },
   {
     color: "#ff9",
@@ -1982,7 +1982,7 @@ const A3P2 = [
     code: "A1A1-31",
     text: "A3P2-09",
     pointx: 2600,
-    pointy: 540 + 100,
+    pointy: 780,
   },
 ];
 // A1A2 - A3P2 END
@@ -1998,7 +1998,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-01",
     pointx: 80,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2009,7 +2009,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-02",
     pointx: 260,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2020,7 +2020,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-03",
     pointx: 80,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2031,7 +2031,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-04",
     pointx: 260,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
 
   {
@@ -2043,7 +2043,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-05",
     pointx: 80,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2054,7 +2054,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-06",
     pointx: 260,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
 
   {
@@ -2066,7 +2066,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-07",
     pointx: 80,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2077,7 +2077,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-08",
     pointx: 260,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
 
   {
@@ -2089,7 +2089,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-09",
     pointx: 80,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2100,7 +2100,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-10",
     pointx: 260,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
 
   {
@@ -2112,7 +2112,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-11",
     pointx: 80,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2123,7 +2123,7 @@ const A1B3 = [
     code: "A1A1-31",
     text: "A1B3-12",
     pointx: 260,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -2137,7 +2137,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-01",
     pointx: 260,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2148,7 +2148,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-02",
     pointx: 440,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2159,7 +2159,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-03",
     pointx: 260,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2170,7 +2170,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-04",
     pointx: 440,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2181,7 +2181,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-05",
     pointx: 260,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2192,7 +2192,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-06",
     pointx: 440,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
 
   {
@@ -2204,7 +2204,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-07",
     pointx: 260,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2215,7 +2215,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-08",
     pointx: 440,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
 
   {
@@ -2227,7 +2227,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-09",
     pointx: 260,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2238,7 +2238,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-10",
     pointx: 440,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
 
   {
@@ -2250,7 +2250,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-11",
     pointx: 260,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2261,7 +2261,7 @@ const A1C3 = [
     code: "A1A1-31",
     text: "A1C3-12",
     pointx: 440,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -2275,7 +2275,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-01",
     pointx: 440,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2286,7 +2286,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-02",
     pointx: 620,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2297,7 +2297,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-03",
     pointx: 440,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2308,7 +2308,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-04",
     pointx: 620,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
 
   {
@@ -2320,7 +2320,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-05",
     pointx: 440,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2331,7 +2331,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-06",
     pointx: 620,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2342,7 +2342,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-07",
     pointx: 440,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2353,7 +2353,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-08",
     pointx: 620,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
 
   {
@@ -2365,7 +2365,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-09",
     pointx: 440,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2376,7 +2376,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-10",
     pointx: 620,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
 
   {
@@ -2388,7 +2388,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-11",
     pointx: 440,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2399,7 +2399,7 @@ const A1D3 = [
     code: "A1A1-31",
     text: "A1D3-12",
     pointx: 620,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -2413,7 +2413,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-01",
     pointx: 620,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2424,7 +2424,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-02",
     pointx: 800,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2435,7 +2435,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-03",
     pointx: 620,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2446,7 +2446,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-04",
     pointx: 800,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
 
   {
@@ -2458,7 +2458,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-05",
     pointx: 620,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2469,7 +2469,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-06",
     pointx: 800,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2480,7 +2480,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-07",
     pointx: 620,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2491,7 +2491,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-08",
     pointx: 800,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
 
   {
@@ -2503,7 +2503,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-09",
     pointx: 620,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2514,7 +2514,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-10",
     pointx: 800,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
 
   {
@@ -2526,7 +2526,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-11",
     pointx: 620,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2537,7 +2537,7 @@ const A1E3 = [
     code: "A1A1-31",
     text: "A1E3-12",
     pointx: 800,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -2551,7 +2551,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-01",
     pointx: 800,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2562,7 +2562,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-02",
     pointx: 980,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2573,7 +2573,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-03",
     pointx: 800,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2584,7 +2584,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-04",
     pointx: 980,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
 
   {
@@ -2596,7 +2596,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-05",
     pointx: 800,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2607,7 +2607,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-06",
     pointx: 980,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2618,7 +2618,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-07",
     pointx: 800,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2629,7 +2629,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-08",
     pointx: 980,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
 
   {
@@ -2641,7 +2641,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-09",
     pointx: 800,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2652,7 +2652,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-10",
     pointx: 980,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
 
   {
@@ -2664,7 +2664,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-11",
     pointx: 800,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2675,7 +2675,7 @@ const A1F3 = [
     code: "A1A1-31",
     text: "A1F3-12",
     pointx: 980,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -2689,7 +2689,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-01",
     pointx: 980,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2700,7 +2700,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-02",
     pointx: 1160,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2711,7 +2711,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-03",
     pointx: 980,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2722,7 +2722,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-04",
     pointx: 1160,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
 
   {
@@ -2734,7 +2734,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-05",
     pointx: 980,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2745,7 +2745,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-06",
     pointx: 1160,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2756,7 +2756,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-07",
     pointx: 980,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2767,7 +2767,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-08",
     pointx: 1160,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
 
   {
@@ -2779,7 +2779,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-09",
     pointx: 980,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2790,7 +2790,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-10",
     pointx: 1160,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
 
   {
@@ -2802,7 +2802,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-11",
     pointx: 980,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2813,7 +2813,7 @@ const A2G3 = [
     code: "A1A1-31",
     text: "A2G3-12",
     pointx: 1160,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -2827,7 +2827,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-01",
     pointx: 1160,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2838,7 +2838,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-02",
     pointx: 1340,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2849,7 +2849,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-03",
     pointx: 1160,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2860,7 +2860,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-04",
     pointx: 1340,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
 
   {
@@ -2872,7 +2872,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-05",
     pointx: 1160,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2883,7 +2883,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-06",
     pointx: 1340,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -2894,7 +2894,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-07",
     pointx: 1160,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -2905,7 +2905,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-08",
     pointx: 1340,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
 
   {
@@ -2917,7 +2917,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-09",
     pointx: 1160,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -2928,7 +2928,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-10",
     pointx: 1340,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
 
   {
@@ -2940,7 +2940,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-11",
     pointx: 1160,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -2951,7 +2951,7 @@ const A2H3 = [
     code: "A1A1-31",
     text: "A2H3-12",
     pointx: 1340,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -2965,7 +2965,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-01",
     pointx: 1340,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2976,7 +2976,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-02",
     pointx: 1520,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -2987,7 +2987,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-03",
     pointx: 1340,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -2998,7 +2998,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-04",
     pointx: 1520,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
 
   {
@@ -3010,7 +3010,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-05",
     pointx: 1340,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3021,7 +3021,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-06",
     pointx: 1520,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3032,7 +3032,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-07",
     pointx: 1340,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3043,7 +3043,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-08",
     pointx: 1520,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
 
   {
@@ -3055,7 +3055,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-09",
     pointx: 1340,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3066,7 +3066,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-10",
     pointx: 1520,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
 
   {
@@ -3078,7 +3078,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-11",
     pointx: 1340,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -3089,7 +3089,7 @@ const A2I3 = [
     code: "A1A1-31",
     text: "A2I3-12",
     pointx: 1520,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -3103,7 +3103,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-01",
     pointx: 1520,
-    pointy: 800,
+    pointy: 880,
   },
   {
     color: "#ff9",
@@ -3114,7 +3114,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-05",
     pointx: 1520,
-    pointy: 800 + 200,
+    pointy: 1060 + 200,
   },
   {
     color: "#ff9",
@@ -3125,7 +3125,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-06",
     pointx: 1700,
-    pointy: 800 + 120,
+    pointy: 1060 + 120,
   },
   {
     color: "#ff9",
@@ -3136,7 +3136,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-07",
     pointx: 1520,
-    pointy: 1000,
+    pointy: 1160,
   },
   {
     color: "#ff9",
@@ -3147,7 +3147,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-08",
     pointx: 1700,
-    pointy: 1000,
+    pointy: 1160,
   },
   {
     color: "#ff9",
@@ -3158,7 +3158,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-09",
     pointx: 1520,
-    pointy: 1080,
+    pointy: 1220,
   },
   {
     color: "#ff9",
@@ -3169,7 +3169,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-10",
     pointx: 1700,
-    pointy: 1080,
+    pointy: 1220,
   },
 ];
 
@@ -3183,7 +3183,7 @@ const A2K3 = [
     code: "A1A1-31",
     text: "A2K3-01",
     pointx: 1700,
-    pointy: 800,
+    pointy: 880,
   },
   {
     color: "#ff9",
@@ -3194,7 +3194,7 @@ const A2K3 = [
     code: "A1A1-31",
     text: "A2K3-05",
     pointx: 1700,
-    pointy: 800 + 120,
+    pointy: 1060 + 120,
   },
   {
     color: "#ff9",
@@ -3205,7 +3205,7 @@ const A2K3 = [
     code: "A1A1-31",
     text: "A2K3-06",
     pointx: 1880,
-    pointy: 800 + 120,
+    pointy: 1060 + 120,
   },
   {
     color: "#ff9",
@@ -3216,7 +3216,7 @@ const A2K3 = [
     code: "A1A1-31",
     text: "A2K3-07",
     pointx: 1700,
-    pointy: 800 + 100 * 2,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3227,7 +3227,7 @@ const A2K3 = [
     code: "A1A1-31",
     text: "A2K3-08",
     pointx: 1880,
-    pointy: 800 + 100 * 2,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -3237,10 +3237,8 @@ const A2K3 = [
     height: 80,
     code: "A1A1-31",
     text: "A2K3-09",
-    pointx: 1880,
-    pointy: 800 + 120,
-    pointx: 1700,
-    pointy: 1060,
+    pointx: 1800,
+    pointy: 1300,
   },
 ];
 
@@ -3254,7 +3252,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-01",
     pointx: 1880,
-    pointy: 820,
+    pointy: 980,
   },
   {
     color: "#ff9",
@@ -3265,7 +3263,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-02",
     pointx: 2060,
-    pointy: 820,
+    pointy: 980,
   },
   {
     color: "#ff9",
@@ -3276,7 +3274,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-05",
     pointx: 1880,
-    pointy: 820 + 80,
+    pointy: 980 + 80,
   },
   {
     color: "#ff9",
@@ -3287,7 +3285,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-06",
     pointx: 2060,
-    pointy: 820 + 80,
+    pointy: 980 + 80,
   },
   {
     color: "#ff9",
@@ -3298,7 +3296,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-07",
     pointx: 1880,
-    pointy: 960,
+    pointy: 1120,
   },
   {
     color: "#ff9",
@@ -3309,7 +3307,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-08",
     pointx: 2060,
-    pointy: 960,
+    pointy: 1120,
   },
   {
     color: "#ff9",
@@ -3320,7 +3318,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-09",
     pointx: 1880,
-    pointy: 1020,
+    pointy: 1180,
   },
   {
     color: "#ff9",
@@ -3331,7 +3329,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-10",
     pointx: 2060,
-    pointy: 1020,
+    pointy: 1180,
   },
   {
     color: "#ff9",
@@ -3342,7 +3340,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-11",
     pointx: 1880,
-    pointy: 1080,
+    pointy: 1240,
   },
   {
     color: "#ff9",
@@ -3353,7 +3351,7 @@ const A3L3 = [
     code: "A1A1-31",
     text: "A3L3-12",
     pointx: 2060,
-    pointy: 1080,
+    pointy: 1240,
   },
 ];
 
@@ -3367,7 +3365,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-01",
     pointx: 2060,
-    pointy: 820,
+    pointy: 980,
   },
   {
     color: "#ff9",
@@ -3378,7 +3376,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-02",
     pointx: 2240,
-    pointy: 820,
+    pointy: 980,
   },
   {
     color: "#ff9",
@@ -3389,7 +3387,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-05",
     pointx: 2060,
-    pointy: 820 + 80,
+    pointy: 980 + 80,
   },
   {
     color: "#ff9",
@@ -3400,7 +3398,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-06",
     pointx: 2240,
-    pointy: 820 + 80,
+    pointy: 980 + 80,
   },
   {
     color: "#ff9",
@@ -3411,7 +3409,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-07",
     pointx: 2060,
-    pointy: 960,
+    pointy: 1120,
   },
   {
     color: "#ff9",
@@ -3422,7 +3420,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-08",
     pointx: 2240,
-    pointy: 960,
+    pointy: 1120,
   },
   {
     color: "#ff9",
@@ -3433,7 +3431,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-09",
     pointx: 2060,
-    pointy: 960 + 60,
+    pointy: 1120 + 60,
   },
   {
     color: "#ff9",
@@ -3444,7 +3442,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-10",
     pointx: 2240,
-    pointy: 960 + 60,
+    pointy: 1120 + 60,
   },
   {
     color: "#ff9",
@@ -3455,7 +3453,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-11",
     pointx: 2060,
-    pointy: 960 + 60 * 2,
+    pointy: 1120 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3466,7 +3464,7 @@ const A3M3 = [
     code: "A1A1-31",
     text: "A3M3-12",
     pointx: 2240,
-    pointy: 960 + 60 * 2,
+    pointy: 1120 + 60 * 2,
   },
 ];
 
@@ -3480,7 +3478,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-01",
     pointx: 2240,
-    pointy: 820,
+    pointy: 980,
   },
   {
     color: "#ff9",
@@ -3491,7 +3489,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-02",
     pointx: 2420,
-    pointy: 820,
+    pointy: 980,
   },
   {
     color: "#ff9",
@@ -3502,7 +3500,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-05",
     pointx: 2240,
-    pointy: 900,
+    pointy: 1060,
   },
   {
     color: "#ff9",
@@ -3513,7 +3511,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-06",
     pointx: 2420,
-    pointy: 900,
+    pointy: 1060,
   },
   {
     color: "#ff9",
@@ -3524,7 +3522,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-07",
     pointx: 2240,
-    pointy: 900 + 60,
+    pointy: 1060 + 60,
   },
   {
     color: "#ff9",
@@ -3535,7 +3533,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-08",
     pointx: 2420,
-    pointy: 900 + 60,
+    pointy: 1060 + 60,
   },
   {
     color: "#ff9",
@@ -3546,7 +3544,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-09",
     pointx: 2240,
-    pointy: 900 + 60 * 2,
+    pointy: 1060 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3557,7 +3555,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-10",
     pointx: 2420,
-    pointy: 900 + 60 * 2,
+    pointy: 1060 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3568,7 +3566,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-11",
     pointx: 2240,
-    pointy: 900 + 60 * 3,
+    pointy: 1060 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3579,7 +3577,7 @@ const A3N3 = [
     code: "A1A1-31",
     text: "A3N3-12",
     pointx: 2420,
-    pointy: 900 + 60 * 3,
+    pointy: 1060 + 60 * 3,
   },
 ];
 
@@ -3593,7 +3591,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-01",
     pointx: 2420,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -3604,7 +3602,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-02",
     pointx: 2600,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -3615,7 +3613,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-03",
     pointx: 2420,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -3626,7 +3624,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-04",
     pointx: 2600,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -3637,7 +3635,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-05",
     pointx: 2420,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3648,7 +3646,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-06",
     pointx: 2600,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3659,7 +3657,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-07",
     pointx: 2420,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3670,7 +3668,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-08",
     pointx: 2600,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3681,7 +3679,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-09",
     pointx: 2420,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3692,7 +3690,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-10",
     pointx: 2600,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3703,7 +3701,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-11",
     pointx: 2420,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -3714,7 +3712,7 @@ const A3O3 = [
     code: "A1A1-31",
     text: "A3O3-12",
     pointx: 2600,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 
@@ -3728,7 +3726,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-01",
     pointx: 2600,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -3739,7 +3737,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-02",
     pointx: 2780,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -3750,7 +3748,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-03",
     pointx: 2600,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -3761,7 +3759,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-04",
     pointx: 2780,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -3772,7 +3770,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-05",
     pointx: 2600,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3783,7 +3781,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-06",
     pointx: 2780,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -3794,7 +3792,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-07",
     pointx: 2600,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3805,7 +3803,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-08",
     pointx: 2780,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -3816,7 +3814,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-09",
     pointx: 2600,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3827,7 +3825,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-10",
     pointx: 2780,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -3838,7 +3836,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-11",
     pointx: 2600,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -3849,7 +3847,7 @@ const A3P3 = [
     code: "A1A1-31",
     text: "A3P3-12",
     pointx: 2780,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
 ];
 //   B3 - P3 END
@@ -3864,7 +3862,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A1B4-04",
     pointx: 440,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3875,7 +3873,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A1C4-01",
     pointx: 540,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3886,7 +3884,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A1D4-03",
     pointx: 620,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3897,7 +3895,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A1E4-01",
     pointx: 780,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3908,7 +3906,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A1E4-02",
     pointx: 780 + 60,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3919,7 +3917,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A1F4-01",
     pointx: 780 + 60 * 2,
-    pointy: 1140,
+    pointy: 1300,
   },
 
   {
@@ -3931,7 +3929,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A1F4-02",
     pointx: 780 + 60 * 3,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3942,7 +3940,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2G4-01",
     pointx: 780 + 60 * 4,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3953,7 +3951,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2G4-02",
     pointx: 780 + 60 * 5,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3964,7 +3962,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2G4-03",
     pointx: 780 + 60 * 6,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3975,7 +3973,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2G4-04",
     pointx: 780 + 60 * 7,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3986,7 +3984,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2H4-01",
     pointx: 780 + 60 * 8,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -3997,7 +3995,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2H4-02",
     pointx: 780 + 60 * 9,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4008,7 +4006,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2H4-03",
     pointx: 780 + 60 * 10,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4019,7 +4017,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2I4-01",
     pointx: 780 + 60 * 11,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4030,7 +4028,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2J4-01",
     pointx: 780 + 60 * 12,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4041,7 +4039,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2J4-02",
     pointx: 780 + 60 * 13,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4052,7 +4050,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2J4-03",
     pointx: 780 + 60 * 14,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4063,7 +4061,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2J4-04",
     pointx: 780 + 60 * 15,
-    pointy: 1140,
+    pointy: 1300,
   },
 
   {
@@ -4075,7 +4073,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A2J4-05",
     pointx: 780 + 60 * 16,
-    pointy: 1140,
+    pointy: 1300,
   },
 
   {
@@ -4087,7 +4085,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-01",
     pointx: 1900,
-    pointy: 1140,
+    pointy: 1300,
   },
 
   {
@@ -4099,7 +4097,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-02",
     pointx: 1900 + 60,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4110,7 +4108,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-03",
     pointx: 1900 + 60 * 2,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4121,7 +4119,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-04",
     pointx: 1900 + 60 * 3,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4132,7 +4130,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-05",
     pointx: 1900 + 60 * 4,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4143,7 +4141,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-06",
     pointx: 1900 + 60 * 5,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4154,7 +4152,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-07",
     pointx: 1900 + 60 * 6,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4165,7 +4163,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-08",
     pointx: 1900 + 60 * 7,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4176,7 +4174,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-09",
     pointx: 1900 + 60 * 8,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4187,7 +4185,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-10",
     pointx: 1900 + 60 * 9,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4198,7 +4196,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-11",
     pointx: 1900 + 60 * 10,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4209,7 +4207,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-12",
     pointx: 1900 + 60 * 11,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4220,7 +4218,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-13",
     pointx: 1900 + 60 * 12,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4231,7 +4229,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-14",
     pointx: 1900 + 60 * 13,
-    pointy: 1140,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -4242,7 +4240,7 @@ const Shuangfei_Tube = [
     code: "A1A1-31",
     text: "A3L4-15",
     pointx: 1900 + 60 * 14,
-    pointy: 1140,
+    pointy: 1300,
   },
 ];
 
@@ -4256,7 +4254,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "TEC ALLIANCE",
     pointx: 2780,
-    pointy: 260,
+    pointy: 400,
   },
   {
     color: "#ff9",
@@ -4267,7 +4265,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "KATA VINA",
     pointx: 2780,
-    pointy: 380,
+    pointy: 520,
   },
   {
     color: "#ff9",
@@ -4278,7 +4276,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "D1A2-05",
     pointx: 2780,
-    pointy: 480,
+    pointy: 640,
   },
   {
     color: "#ff9",
@@ -4289,7 +4287,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "A3Q3-01",
     pointx: 2780,
-    pointy: 700,
+    pointy: 860,
   },
   {
     color: "#ff9",
@@ -4300,7 +4298,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "A3Q3-02",
     pointx: 2780,
-    pointy: 780,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -4311,7 +4309,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "A3Q3-04",
     pointx: 2780,
-    pointy: 780 + 60,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -4322,7 +4320,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "A3Q3-05",
     pointx: 2780,
-    pointy: 780 + 60 * 2,
+    pointy: 940 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -4333,7 +4331,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "A3Q3-06",
     pointx: 2780,
-    pointy: 780 + 60 * 3,
+    pointy: 940 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -4344,7 +4342,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "A3Q3-07",
     pointx: 2780,
-    pointy: 780 + 60 * 4,
+    pointy: 940 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -4355,7 +4353,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "A3Q3-08",
     pointx: 2780,
-    pointy: 780 + 60 * 5,
+    pointy: 940 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -4366,7 +4364,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     code: "A1A1-31",
     text: "A3Q3-09",
     pointx: 2780,
-    pointy: 780 + 60 * 6,
+    pointy: 940 + 60 * 6,
   },
 ];
 
@@ -4409,6 +4407,8 @@ const D1A2_TO_D1A3 = [
     height: 140,
     code: "A1A1-31",
     text: "D1A2-06",
+    pointx: 3040,
+    pointy: 540,
   },
   {
     color: "#ff9",
@@ -4418,6 +4418,8 @@ const D1A2_TO_D1A3 = [
     height: 80,
     code: "A1A1-31",
     text: "D1A2-01",
+    pointx: 3040,
+    pointy: 640,
   },
   {
     color: "#ff9",
@@ -4427,6 +4429,8 @@ const D1A2_TO_D1A3 = [
     height: 100,
     code: "A1A1-31",
     text: "D1A3-01",
+    pointx: 3040,
+    pointy: 860,
   },
   {
     color: "black",
@@ -4445,6 +4449,8 @@ const D1A2_TO_D1A3 = [
     height: 60,
     code: "A1A1-31",
     text: "D1A3-04",
+    pointx: 3040,
+    pointy: 940,
   },
   {
     color: "#ff9",
@@ -4454,6 +4460,8 @@ const D1A2_TO_D1A3 = [
     height: 60,
     code: "A1A1-31",
     text: "D1A3-05",
+    pointx: 3040,
+    pointy: 940 + 60,
   },
   {
     color: "#ff9",
@@ -4463,6 +4471,8 @@ const D1A2_TO_D1A3 = [
     height: 100,
     code: "A1A1-31",
     text: "D1A3-07",
+    pointx: 3040,
+    pointy: 960 + 60,
   },
   {
     color: "#A97AD0",
@@ -4570,6 +4580,8 @@ const D1B1_TO_D1G1 = [
     height: 60,
     code: "D1B1-01",
     text: "Disperindag Jateng",
+    pointx: 3100,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -4579,6 +4591,8 @@ const D1B1_TO_D1G1 = [
     height: 60,
     code: "D1B1-02",
     text: "INTOP",
+    pointx: 3220,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -4588,6 +4602,8 @@ const D1B1_TO_D1G1 = [
     height: 60,
     code: "D1D1-01",
     text: "WES SZ D1D1-01",
+    pointx: 3480,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -4597,6 +4613,8 @@ const D1B1_TO_D1G1 = [
     height: 60,
     code: "D1F1-01",
     text: "D1F1-01",
+    pointx: 3660,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -4606,6 +4624,8 @@ const D1B1_TO_D1G1 = [
     height: 60,
     code: "D1G1-01",
     text: "D1G1-01",
+    pointx: 3960,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -4615,6 +4635,8 @@ const D1B1_TO_D1G1 = [
     height: 60,
     code: "D1G1-04",
     text: "D1G1-04",
+    pointx: 4120,
+    pointy: 420,
   },
 ];
 
@@ -4627,6 +4649,8 @@ const D1H2_TO_D1H3 = [
     height: 120,
     code: "D1H2-01",
     text: "Letta Rubber",
+    pointx: 4120,
+    pointy: 460,
   },
   {
     color: "#ff9",
@@ -4636,6 +4660,8 @@ const D1H2_TO_D1H3 = [
     height: 80,
     code: "D1H2-03",
     text: "Kesheng",
+    pointx: 4120,
+    pointy: 580,
   },
   {
     color: "#ff9",
@@ -4645,6 +4671,8 @@ const D1H2_TO_D1H3 = [
     height: 60,
     code: "D1H2-05",
     text: "Sun Beam",
+    pointx: 4120,
+    pointy: 640,
   },
   {
     color: "#ff9",
@@ -4654,6 +4682,8 @@ const D1H2_TO_D1H3 = [
     height: 80,
     code: "D1H2-06",
     text: "Cs Rubber",
+    pointx: 4120,
+    pointy: 700,
   },
   {
     color: "#ff9",
@@ -4663,6 +4693,8 @@ const D1H2_TO_D1H3 = [
     height: 80,
     code: "D1H2-08",
     text: "Tongda",
+    pointx: 4120,
+    pointy: 780,
   },
   {
     color: "black",
@@ -4687,9 +4719,11 @@ const D1H2_TO_D1H3 = [
     x: 4160,
     y: 540,
     width: 140,
-    height: 120,
+    height: 140,
     code: "D1H2-07",
     text: "Timur Raya",
+    pointx: 4220,
+    pointy: 1020,
   },
   {
     color: "#ff9",
@@ -4699,6 +4733,8 @@ const D1H2_TO_D1H3 = [
     height: 120,
     code: "D1H3-01",
     text: "MAKINA",
+    pointx: 4220,
+    pointy: 1020,
   },
   {
     color: "#ff9",
@@ -4708,6 +4744,8 @@ const D1H2_TO_D1H3 = [
     height: 60,
     code: "DIH3-04",
     text: "Jining",
+    pointx: 4120,
+    pointy: 1220,
   },
   {
     color: "#ff9",
@@ -4717,6 +4755,8 @@ const D1H2_TO_D1H3 = [
     height: 80,
     code: "D1H3-05",
     text: "Kwong Fai Rubber",
+    pointx: 4120,
+    pointy: 1280,
   },
   {
     color: "#ff9",
@@ -4726,6 +4766,8 @@ const D1H2_TO_D1H3 = [
     height: 60,
     code: "D1H3-07",
     text: "Wes sz D1H3-07",
+    pointx: 4120,
+    pointy: 1360,
   },
   {
     color: "#ff9",
@@ -4735,6 +4777,8 @@ const D1H2_TO_D1H3 = [
     height: 60,
     code: "D1H3-09",
     text: "Aspindo",
+    pointx: 4120,
+    pointy: 1460,
   },
   {
     color: "#ff9",
@@ -4744,6 +4788,8 @@ const D1H2_TO_D1H3 = [
     height: 60,
     code: "D1H3-10",
     text: "Tyre Mag",
+    pointx: 4120,
+    pointy: 1520,
   },
   {
     color: "#9bbb59",
@@ -4753,6 +4799,8 @@ const D1H2_TO_D1H3 = [
     height: 140,
     code: "",
     text: "Seminar Area hall d1",
+    pointx: 4120,
+    pointy: 1580,
   },
 ];
 
@@ -4765,24 +4813,20 @@ const Tenglong_TO_Gratari = [
     height: 120,
     code: "D1B2-01",
     text: "Tenglong Stainless",
+    pointx: 3040,
+    pointy: 540,
   },
+
   {
     color: "#ff9",
     x: 3080,
     y: 280,
     width: 60,
-    height: 40,
-    code: "",
-    text: "",
-  },
-  {
-    color: "#ff9",
-    x: 3080,
-    y: 320,
-    width: 60,
-    height: 120,
+    height: 160,
     code: "D1B2-07",
     text: "Asia Auto Spring",
+    pointx: 3040,
+    pointy: 640,
   },
   {
     color: "#ff9",
@@ -4792,6 +4836,8 @@ const Tenglong_TO_Gratari = [
     height: 120,
     code: "D1B2-11",
     text: "Chugai Bussan Inter",
+    pointx: 3040,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -4801,6 +4847,8 @@ const Tenglong_TO_Gratari = [
     height: 60,
     code: "D1B2-13",
     text: "D1B2-13",
+    pointx: 3040,
+    pointy: 900,
   },
   {
     color: "#ff9",
@@ -4810,6 +4858,8 @@ const Tenglong_TO_Gratari = [
     height: 60,
     code: "D1B2-13",
     text: "D1B2-13",
+    pointx: 3040,
+    pointy: 900 + 60,
   },
   // KIRI END
   // Kanan
@@ -4821,6 +4871,8 @@ const Tenglong_TO_Gratari = [
     height: 120,
     code: "D1B2-02",
     text: "D1B2-02",
+    pointx: 3220,
+    pointy: 540,
   },
   {
     color: "#ff9",
@@ -4830,6 +4882,8 @@ const Tenglong_TO_Gratari = [
     height: 80,
     code: "D1B2-06",
     text: "Rekatama",
+    pointx: 3220,
+    pointy: 620,
   },
   {
     color: "#ff9",
@@ -4839,6 +4893,8 @@ const Tenglong_TO_Gratari = [
     height: 80,
     code: "D1B2-08",
     text: "Asia Auto Spring",
+    pointx: 3220,
+    pointy: 700,
   },
   {
     color: "#ff9",
@@ -4848,6 +4904,8 @@ const Tenglong_TO_Gratari = [
     height: 120,
     code: "D1B2-12",
     text: "D1B2-12",
+    pointx: 3220,
+    pointy: 820,
   },
   {
     color: "#ff9",
@@ -4857,6 +4915,8 @@ const Tenglong_TO_Gratari = [
     height: 120,
     code: "D1B2-14",
     text: "Gratari Kencana Abdi",
+    pointx: 3220,
+    pointy: 920,
   },
   // Kanan end
 
@@ -4868,6 +4928,8 @@ const Tenglong_TO_Gratari = [
     height: 120,
     code: "D1B3-01",
     text: "Wes SZ  D1B3-01",
+    pointx: 3220,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -4877,6 +4939,8 @@ const Tenglong_TO_Gratari = [
     height: 60,
     code: "D1B3-05.01",
     text: "China Fastener",
+    pointx: 3220,
+    pointy: 1260,
   },
   {
     color: "#ff9",
@@ -4886,6 +4950,8 @@ const Tenglong_TO_Gratari = [
     height: 60,
     code: "D1B3-05.02",
     text: "Hebei Zhongtian",
+    pointx: 3220,
+    pointy: 1260 + 60,
   },
   {
     color: "#ff9",
@@ -4895,6 +4961,8 @@ const Tenglong_TO_Gratari = [
     height: 80,
     code: "D1B3-07",
     text: "Berkat Sinergi Inter",
+    pointx: 3220,
+    pointy: 1260 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -4904,6 +4972,8 @@ const Tenglong_TO_Gratari = [
     height: 60,
     code: "D1B3-08",
     text: "Ziwei Automobile",
+    pointx: 3220,
+    pointy: 1260 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -4913,6 +4983,8 @@ const Tenglong_TO_Gratari = [
     height: 60,
     code: "D1B3-09",
     text: "L&H Internasional",
+    pointx: 3220,
+    pointy: 1260 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -4922,6 +4994,8 @@ const Tenglong_TO_Gratari = [
     height: 60,
     code: "D1B3-10",
     text: "Polyrocks composite",
+    pointx: 3220,
+    pointy: 1260 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -4931,6 +5005,8 @@ const Tenglong_TO_Gratari = [
     height: 60,
     code: "D1B3-11",
     text: "Kening Sealing",
+    pointx: 3220,
+    pointy: 1280 + 60 * 6,
   },
 ];
 
@@ -4943,6 +5019,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 100,
     code: "D1C2-01",
     text: "D1C2-01",
+    pointx: 3300,
+    pointy: 420,
   },
   // KIRI
   {
@@ -4953,6 +5031,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-05",
     text: "Wes sz D1C2-05",
+    pointx: 3220,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -4962,6 +5042,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-07",
     text: "Fihonor",
+    pointx: 3220,
+    pointy: 600 + 60,
   },
   {
     color: "#ff9",
@@ -4971,6 +5053,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-09",
     text: "wes sz D1C2-09",
+    pointx: 3220,
+    pointy: 600 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -4980,6 +5064,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-11",
     text: "wes sz D1C2-11",
+    pointx: 3220,
+    pointy: 600 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -4989,6 +5075,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-13",
     text: "Mingtai",
+    pointx: 3220,
+    pointy: 600 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -4998,6 +5086,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-15",
     text: "wes sz D1C2-15",
+    pointx: 3220,
+    pointy: 600 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -5007,6 +5097,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-17",
     text: "wes sz D1C2-17",
+    pointx: 3220,
+    pointy: 600 + 60 * 6,
   },
   // KIRI END
 
@@ -5019,6 +5111,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-06",
     text: "Wes sz D1C2-06",
+    pointx: 3400,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -5028,6 +5122,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-08",
     text: "KONDA BRAKE",
+    pointx: 3400,
+    pointy: 600 + 60,
   },
   {
     color: "#ff9",
@@ -5037,6 +5133,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-10",
     text: "JINTUO",
+    pointx: 3400,
+    pointy: 600 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5046,6 +5144,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-12",
     text: "BOTNY",
+    pointx: 3400,
+    pointy: 600 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5055,6 +5155,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-14",
     text: "WES SZ D1C2-14",
+    pointx: 3400,
+    pointy: 600 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5064,6 +5166,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-16",
     text: "wes sz D1C2-16",
+    pointx: 3400,
+    pointy: 600 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -5073,6 +5177,8 @@ const D1C2_01_TO_D1C2_17 = [
     height: 60,
     code: "D1C2-18",
     text: "wes sz D1C2-18",
+    pointx: 3400,
+    pointy: 600 + 60 * 6,
   },
   // KANAN END
 ];
@@ -5086,6 +5192,8 @@ const MINGYI_TO_SANJING = [
     height: 100,
     code: "D1D2-01",
     text: "MINGYI",
+    pointx: 3500,
+    pointy: 420,
   },
   // KIRI
   {
@@ -5096,6 +5204,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-07",
     text: "PALAN",
+    pointx: 3400,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -5105,6 +5215,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-09",
     text: "AOKAISEN",
+    pointx: 3400,
+    pointy: 600 + 60,
   },
   {
     color: "#ff9",
@@ -5114,6 +5226,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-11",
     text: "Ruidao ",
+    pointx: 3400,
+    pointy: 600 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5123,6 +5237,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-13",
     text: "XINMING",
+    pointx: 3400,
+    pointy: 600 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5132,6 +5248,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-15",
     text: "Lingzhi",
+    pointx: 3400,
+    pointy: 600 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5141,6 +5259,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-17",
     text: "Yangzhou",
+    pointx: 3400,
+    pointy: 600 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -5150,6 +5270,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-19",
     text: "Jinzheng",
+    pointx: 3400,
+    pointy: 600 + 60 * 6,
   },
   // KIRI END
 
@@ -5162,6 +5284,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-08",
     text: "Marseille",
+    pointx: 3580,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -5171,6 +5295,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-10",
     text: "Xingzhu",
+    pointx: 3580,
+    pointy: 600 + 60,
   },
   {
     color: "#ff9",
@@ -5180,6 +5306,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-12",
     text: "YEFE",
+    pointx: 3580,
+    pointy: 600 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5189,6 +5317,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-14",
     text: "Guangzhou",
+    pointx: 3580,
+    pointy: 600 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5198,6 +5328,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-16",
     text: "Aikreis",
+    pointx: 3580,
+    pointy: 600 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5207,6 +5339,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-18",
     text: "Juxuan",
+    pointx: 3580,
+    pointy: 600 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -5216,6 +5350,8 @@ const MINGYI_TO_SANJING = [
     height: 60,
     code: "D1D2-20",
     text: "Sanjing",
+    pointx: 3580,
+    pointy: 600 + 60 * 6,
   },
   // KANAN END
 ];
@@ -5229,6 +5365,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 100,
     code: "D1E2-01",
     text: "CHANGZHOU",
+    pointx: 3580,
+    pointy: 420,
   },
   // KIRI
   {
@@ -5239,6 +5377,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-02",
     text: "WUHU",
+    pointx: 3580,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -5248,6 +5388,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-04",
     text: "WUXI",
+    pointx: 3580,
+    pointy: 600 + 60,
   },
   {
     color: "#ff9",
@@ -5257,6 +5399,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-06",
     text: "QINGDAO",
+    pointx: 3580,
+    pointy: 600 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5266,6 +5410,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-08",
     text: "RUIAN",
+    pointx: 3580,
+    pointy: 600 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5275,6 +5421,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-10",
     text: "QINGDAO",
+    pointx: 3580,
+    pointy: 600 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5284,6 +5432,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 120,
     code: "D1E2-12",
     text: "SHANDONG",
+    pointx: 3580,
+    pointy: 920,
   },
 
   // KIRI END
@@ -5297,6 +5447,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-03",
     text: "QINGDAO WELLTECH",
+    pointx: 3760,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -5306,6 +5458,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-05",
     text: "HEJIAN",
+    pointx: 3760,
+    pointy: 600 + 60,
   },
   {
     color: "#ff9",
@@ -5315,6 +5469,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-07",
     text: "HENAN YIMING",
+    pointx: 3760,
+    pointy: 600 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5324,6 +5480,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-09",
     text: "FOSHAN",
+    pointx: 3760,
+    pointy: 600 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5333,6 +5491,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 60,
     code: "D1E2-11",
     text: "QINGDAO WANGYU",
+    pointx: 3760,
+    pointy: 600 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5342,6 +5502,8 @@ const CHANGZHOU_TO_QINGDAO = [
     height: 120,
     code: "D1E2-13",
     text: "QINGDAO HONGHUA",
+    pointx: 3760,
+    pointy: 920,
   },
 
   // KANAN END
@@ -5356,6 +5518,8 @@ const OGREEN_TO_WANDA = [
     height: 200,
     code: "D1F2-01",
     text: "OGREEN",
+    pointx: 3860,
+    pointy: 420,
   },
   // KIRI
   {
@@ -5366,6 +5530,8 @@ const OGREEN_TO_WANDA = [
     height: 120,
     code: "D1F2-09",
     text: "YANTAI",
+    pointx: 3760,
+    pointy: 720,
   },
   {
     color: "#ff9",
@@ -5375,6 +5541,8 @@ const OGREEN_TO_WANDA = [
     height: 80,
     code: "D1F2-11",
     text: "Shandong",
+    pointx: 3760,
+    pointy: 820,
   },
   // KIRI END
 
@@ -5387,6 +5555,8 @@ const OGREEN_TO_WANDA = [
     height: 120,
     code: "D1F2-10",
     text: "PIN 365",
+    pointx: 3760,
+    pointy: 720,
   },
   {
     color: "#ff9",
@@ -5396,6 +5566,8 @@ const OGREEN_TO_WANDA = [
     height: 80,
     code: "D1F2-12",
     text: "Eldan",
+    pointx: 3760,
+    pointy: 820,
   },
   // KANAN END
   {
@@ -5406,6 +5578,8 @@ const OGREEN_TO_WANDA = [
     height: 120,
     code: "D1F2-13",
     text: "WANDA BOTO",
+    pointx: 3860,
+    pointy: 1020,
   },
 ];
 
@@ -5418,6 +5592,8 @@ const ASCENDO_TO_Indolorry = [
     height: 400,
     code: "D1G2-01",
     text: "ASCENDO",
+    pointx: 4040,
+    pointy: 420,
   },
   {
     color: "#ff9",
@@ -5427,6 +5603,8 @@ const ASCENDO_TO_Indolorry = [
     height: 120,
     code: "D1G2-13",
     text: "Indolorry",
+    pointx: 4040,
+    pointy: 1020,
   },
 ];
 
@@ -5440,6 +5618,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-01",
     text: "Dingli",
+    pointx: 3220,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -5449,6 +5629,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-03",
     text: "Runming",
+    pointx: 3220,
+    pointy: 1100 + 60,
   },
   {
     color: "#ff9",
@@ -5458,6 +5640,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-05",
     text: "Yixin",
+    pointx: 3220,
+    pointy: 1100 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5467,6 +5651,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-07",
     text: "Diamond",
+    pointx: 3220,
+    pointy: 1100 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5476,6 +5662,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-09",
     text: "Gbrake",
+    pointx: 3220,
+    pointy: 1100 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5485,6 +5673,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-11",
     text: "Huizheng",
+    pointx: 3220,
+    pointy: 1100 + 60 * 5,
   },
   // KIRI END
 
@@ -5497,6 +5687,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-02",
     text: "Anqing",
+    pointx: 3400,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -5506,6 +5698,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-04",
     text: "Male Locomotive",
+    pointx: 3400,
+    pointy: 1100 + 60,
   },
   {
     color: "#ff9",
@@ -5515,6 +5709,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-06",
     text: "Changhui Auto",
+    pointx: 3400,
+    pointy: 1100 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5524,6 +5720,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-08",
     text: "Changhui automobile",
+    pointx: 3400,
+    pointy: 1100 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5533,6 +5731,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-10",
     text: "Huibang Zhongtian",
+    pointx: 3400,
+    pointy: 1100 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5542,6 +5742,8 @@ const Dingli_TO_Luji = [
     height: 60,
     code: "D1C3-12",
     text: "Luji Automobile",
+    pointx: 3400,
+    pointy: 1100 + 60 * 5,
   },
   // KANAN END
 ];
@@ -5556,6 +5758,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-01",
     text: "PUMP INDUSTRY",
+    pointx: 3400,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -5565,6 +5769,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-03",
     text: "BOHONG Automobile",
+    pointx: 3400,
+    pointy: 1100 + 60,
   },
   {
     color: "#ff9",
@@ -5574,6 +5780,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-05",
     text: "TONGXING Automobile",
+    pointx: 3400,
+    pointy: 1100 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5583,6 +5791,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-07",
     text: "JIAJING Automobile",
+    pointx: 3400,
+    pointy: 1100 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5592,6 +5802,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-09",
     text: "YIJIA AUTO PARTS",
+    pointx: 3400,
+    pointy: 1100 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5601,6 +5813,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-11",
     text: "VICTORY MACHINERY",
+    pointx: 3400,
+    pointy: 1100 + 60 * 5,
   },
   // KIRI END
 
@@ -5613,6 +5827,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-02",
     text: "FRIENDSHIP WIPER",
+    pointx: 3580,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -5622,6 +5838,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-04",
     text: "KAIXIANG AUTO",
+    pointx: 3580,
+    pointy: 1100 + 60,
   },
   {
     color: "#ff9",
@@ -5631,6 +5849,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-06",
     text: "STAR CREATE",
+    pointx: 3580,
+    pointy: 1100 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5640,6 +5860,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-08",
     text: "OLEK Auto",
+    pointx: 3580,
+    pointy: 1100 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5649,6 +5871,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-10",
     text: "XUDING AUTO",
+    pointx: 3580,
+    pointy: 1100 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5658,6 +5882,8 @@ const PUMP_TO_GUANWEI = [
     height: 60,
     code: "D1D3-12",
     text: "GUANWEI AUTOPARTS",
+    pointx: 3580,
+    pointy: 1100 + 60 * 5,
   },
   // KANAN END
 ];
@@ -5671,6 +5897,8 @@ const Bestang_TO_Jietuo = [
     height: 120,
     code: "D1E3-01",
     text: "bestang",
+    pointx: 3580,
+    pointy: 1120,
   },
 
   // KIRI
@@ -5682,6 +5910,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-03",
     text: "Huajun tire ",
+    pointx: 3580,
+    pointy: 1220,
   },
   {
     color: "#ff9",
@@ -5691,6 +5921,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-05",
     text: "Sanson autopart",
+    pointx: 3580,
+    pointy: 1220 + 60,
   },
   {
     color: "#ff9",
@@ -5700,6 +5932,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-07",
     text: "Hongfeng rubber",
+    pointx: 3580,
+    pointy: 1220 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5709,6 +5943,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-09",
     text: "Yina automotiive",
+    pointx: 3580,
+    pointy: 1220 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5718,6 +5954,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-11",
     text: "Haishida automotiive",
+    pointx: 3580,
+    pointy: 1220 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -5727,6 +5965,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-13",
     text: "Runtong rubber",
+    pointx: 3580,
+    pointy: 1220 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -5736,6 +5976,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-15",
     text: "Richon chem",
+    pointx: 3580,
+    pointy: 1220 + 60 * 6,
   },
   // KIRI END
 
@@ -5748,6 +5990,8 @@ const Bestang_TO_Jietuo = [
     height: 120,
     code: "D1E3-02",
     text: "Ocsen",
+    pointx: 3760,
+    pointy: 1120,
   },
   {
     color: "#ff9",
@@ -5757,6 +6001,8 @@ const Bestang_TO_Jietuo = [
     height: 120,
     code: "D1E3-04",
     text: "Musheng Technology",
+    pointx: 3760,
+    pointy: 1240,
   },
   {
     color: "#ff9",
@@ -5766,6 +6012,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-08",
     text: "Kaipeng autopart",
+    pointx: 3760,
+    pointy: 1340,
   },
   {
     color: "#ff9",
@@ -5775,6 +6023,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-10",
     text: "Jinhuotong Import",
+    pointx: 3760,
+    pointy: 1340 + 60,
   },
   {
     color: "#ff9",
@@ -5784,6 +6034,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-12",
     text: "js automotiive",
+    pointx: 3760,
+    pointy: 1340 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5793,6 +6045,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-14",
     text: "Hardware products",
+    pointx: 3760,
+    pointy: 1340 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5802,6 +6056,8 @@ const Bestang_TO_Jietuo = [
     height: 60,
     code: "D1E3-16",
     text: "Jietuo bearing",
+    pointx: 3760,
+    pointy: 1340 + 60 * 4,
   },
 
   // KANAN END
@@ -5817,6 +6073,8 @@ const DINDING_TO_Pinhang = [
     height: 80,
     code: "D1F3-01",
     text: "DINDING AUTO PARTS",
+    pointx: 3760,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -5826,6 +6084,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-03",
     text: "AODEHUA AUTO PARTS",
+    pointx: 3760,
+    pointy: 1160,
   },
   {
     color: "#ff9",
@@ -5835,6 +6095,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-05",
     text: "MINGHAO AUTO PARTS",
+    pointx: 3760,
+    pointy: 1160 + 60,
   },
   {
     color: "#ff9",
@@ -5844,6 +6106,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-07",
     text: "TEAM AUTO PARTS",
+    pointx: 3760,
+    pointy: 1160 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5853,6 +6117,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-09",
     text: "GATON PETROCHEMICAL",
+    pointx: 3760,
+    pointy: 1160 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5862,6 +6128,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-11",
     text: "TRUCK PARTS",
+    pointx: 3760,
+    pointy: 1160 + 60 * 4,
   },
   // kiri end
 
@@ -5874,6 +6142,8 @@ const DINDING_TO_Pinhang = [
     height: 80,
     code: "D1F3-02",
     text: "NUOQIN AUTO PARTS",
+    pointx: 3940,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -5883,6 +6153,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-04",
     text: "DONGYI AUTO PARTS",
+    pointx: 3940,
+    pointy: 1160,
   },
   {
     color: "#ff9",
@@ -5892,6 +6164,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-06",
     text: "FUEL injection",
+    pointx: 3940,
+    pointy: 1160 + 60,
   },
   {
     color: "#ff9",
@@ -5901,6 +6175,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-08",
     text: "RICHSTAR AUTO PARTS",
+    pointx: 3940,
+    pointy: 1160 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -5910,6 +6186,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-10",
     text: "JG AUTO LIGHTING",
+    pointx: 3940,
+    pointy: 1160 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -5919,6 +6197,8 @@ const DINDING_TO_Pinhang = [
     height: 60,
     code: "D1F3-12",
     text: "PINHANG electric",
+    pointx: 3940,
+    pointy: 1160 + 60 * 4,
   },
   // kanan end
 ];
@@ -5932,6 +6212,8 @@ const JNT_TO_Linshi = [
     height: 160,
     code: "D1G3-01",
     text: "J&T Cargo",
+    pointx: 3940,
+    pointy: 1120,
   },
   // kiri
   {
@@ -5942,6 +6224,8 @@ const JNT_TO_Linshi = [
     height: 80,
     code: "D1G3-05",
     text: "Newsindo Jaya",
+    pointx: 3940,
+    pointy: 1260,
   },
   {
     color: "#ff9",
@@ -5951,6 +6235,8 @@ const JNT_TO_Linshi = [
     height: 60,
     code: "D1G3-11",
     text: "Actmix Rubber",
+    pointx: 3940,
+    pointy: 1320,
   },
   // kiri end
   {
@@ -5961,6 +6247,8 @@ const JNT_TO_Linshi = [
     height: 100,
     code: "D1G3-12",
     text: "Linshi automobile",
+    pointx: 4120,
+    pointy: 1300,
   },
 
   // bawah
@@ -5972,6 +6260,8 @@ const JNT_TO_Linshi = [
     height: 120,
     code: "D1G3-13",
     text: "WES TW  D1G3-13",
+    pointx: 3940,
+    pointy: 1460,
   },
   {
     color: "#ff9",
@@ -5980,7 +6270,9 @@ const JNT_TO_Linshi = [
     width: 60,
     height: 80,
     code: "D1G3-14",
-    text: "SHIFENG (GROUP) ",
+    text: "SHIFENG (GROUP)",
+    pointx: 4120,
+    pointy: 1460,
   },
 ];
 
@@ -5993,6 +6285,8 @@ const Ningguo_TO_Maixing = [
     height: 60,
     code: "D1C3-15",
     text: "Ningguo Sky Tools",
+    pointx: 3220,
+    pointy: 1520,
   },
   {
     color: "#ff9",
@@ -6002,6 +6296,8 @@ const Ningguo_TO_Maixing = [
     height: 60,
     code: "D1C3-17",
     text: "Tianqi Automobile",
+    pointx: 3220,
+    pointy: 1520 + 60,
   },
 
   {
@@ -6012,6 +6308,8 @@ const Ningguo_TO_Maixing = [
     height: 60,
     code: "D1C3-16",
     text: "Ripo Turbo",
+    pointx: 3400,
+    pointy: 1520,
   },
   {
     color: "#ff9",
@@ -6021,6 +6319,8 @@ const Ningguo_TO_Maixing = [
     height: 60,
     code: "D1C3-18",
     text: "Maixing trading",
+    pointx: 3400,
+    pointy: 1520 + 60,
   },
 ];
 
@@ -6033,6 +6333,8 @@ const HONGXING_TO_RUIQIANG = [
     height: 60,
     code: "D1D3-15",
     text: "HONGXING auto parts",
+    pointx: 3400,
+    pointy: 1520,
   },
   {
     color: "#ff9",
@@ -6042,6 +6344,8 @@ const HONGXING_TO_RUIQIANG = [
     height: 60,
     code: "D1D3-17",
     text: "FORTUNE parts",
+    pointx: 3400,
+    pointy: 1520 + 60,
   },
 
   {
@@ -6052,6 +6356,8 @@ const HONGXING_TO_RUIQIANG = [
     height: 60,
     code: "D1D3-16",
     text: "MINYANG automobile",
+    pointx: 3580,
+    pointy: 1520,
   },
   {
     color: "#ff9",
@@ -6061,6 +6367,8 @@ const HONGXING_TO_RUIQIANG = [
     height: 60,
     code: "D1D3-18",
     text: "RUIQIANG automotive",
+    pointx: 3580,
+    pointy: 1520 + 60,
   },
 ];
 
@@ -6073,6 +6381,8 @@ const JIALUN_TO_KINGLANG = [
     height: 60,
     code: "D1F3-15",
     text: "JIALUN auto parts",
+    pointx: 3760,
+    pointy: 1520,
   },
   {
     color: "#ff9",
@@ -6082,6 +6392,8 @@ const JIALUN_TO_KINGLANG = [
     height: 60,
     code: "D1F3-17",
     text: "SOLAR auto parts",
+    pointx: 3760,
+    pointy: 1520 + 60,
   },
 
   {
@@ -6092,6 +6404,8 @@ const JIALUN_TO_KINGLANG = [
     height: 60,
     code: "D1F3-16",
     text: "LUVIEW",
+    pointx: 3940,
+    pointy: 1520,
   },
   {
     color: "#ff9",
@@ -6101,6 +6415,8 @@ const JIALUN_TO_KINGLANG = [
     height: 60,
     code: "D1F3-18",
     text: "KINGLANG",
+    pointx: 3940,
+    pointy: 1520 + 60,
   },
 ];
 
@@ -6113,6 +6429,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1B4-01",
     text: "D1B4-01",
+    pointx: 3240,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6122,6 +6440,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1B4-02",
     text: "Juqing Auto Parts",
+    pointx: 3240 + 60,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6131,6 +6451,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1C4-01",
     text: "Jingyan Technology",
+    pointx: 3240 + 60 * 2,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6140,6 +6462,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1D4-01",
     text: "JUST ENERGY",
+    pointx: 3240 + 60 * 3,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6149,6 +6473,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1D4-02",
     text: "HONGSUDA TRADING",
+    pointx: 3240 + 60 * 4,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6158,6 +6484,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1D4-03",
     text: "KAIYUE",
+    pointx: 3240 + 60 * 5,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6167,6 +6495,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1E4-01",
     text: "D1E4-01",
+    pointx: 3240 + 60 * 6,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6176,6 +6506,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1E4-02",
     text: "Duowin",
+    pointx: 3240 + 60 * 7,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6185,6 +6517,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1F4-01",
     text: "Benke AUTOPARTS",
+    pointx: 3240 + 60 * 8,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6194,6 +6528,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1F4-02",
     text: "Zhuji City Qike",
+    pointx: 3240 + 60 * 9,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6203,6 +6539,8 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1G4-01",
     text: "D1G4-01",
+    pointx: 3240 + 60 * 10,
+    pointy: 1640,
   },
   {
     color: "#ff9",
@@ -6212,9 +6550,12 @@ const D1B4_01_TO_D1G4_02 = [
     height: 60,
     code: "D1G4-02",
     text: "D1G4-02",
+    pointx: 3240 + 60 * 11,
+    pointy: 1640,
   },
 ];
 
+// HALL D2
 const Genesis_TO_KAMSELINDO = [
   {
     color: "#ff9",
@@ -6224,6 +6565,8 @@ const Genesis_TO_KAMSELINDO = [
     height: 120,
     code: "D2A2-01",
     text: "GENESIS",
+    pointx: 4320,
+    pointy: 480,
   },
   {
     color: "#ff9",
@@ -6233,6 +6576,8 @@ const Genesis_TO_KAMSELINDO = [
     height: 120,
     code: "D2A2-03",
     text: "AROBS TRACKGPS",
+    pointx: 4320,
+    pointy: 580,
   },
   {
     color: "#ff9",
@@ -6242,6 +6587,8 @@ const Genesis_TO_KAMSELINDO = [
     height: 120,
     code: "D2A2-04",
     text: "Dongin Thermo",
+    pointx: 4320,
+    pointy: 700,
   },
   {
     color: "#ff9",
@@ -6251,6 +6598,8 @@ const Genesis_TO_KAMSELINDO = [
     height: 80,
     code: "D2A2-05",
     text: "FLUKE",
+    pointx: 4320,
+    pointy: 800,
   },
   {
     color: "#ff9",
@@ -6260,6 +6609,8 @@ const Genesis_TO_KAMSELINDO = [
     height: 80,
     code: "D2A3-04",
     text: "Slim Stock",
+    pointx: 4320,
+    pointy: 1220,
   },
   {
     color: "#ff9",
@@ -6269,6 +6620,8 @@ const Genesis_TO_KAMSELINDO = [
     height: 80,
     code: "D2A3-05",
     text: "REPAL",
+    pointx: 4320,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -6278,6 +6631,8 @@ const Genesis_TO_KAMSELINDO = [
     height: 60,
     code: "D2A3-07",
     text: "ALI",
+    pointx: 4320,
+    pointy: 1440,
   },
   {
     color: "#ff9",
@@ -6287,6 +6642,8 @@ const Genesis_TO_KAMSELINDO = [
     height: 60,
     code: "D2A3-08",
     text: "KAMSELINDO",
+    pointx: 4320,
+    pointy: 1500,
   },
 ];
 
@@ -6299,6 +6656,8 @@ const INDOTRACTOR_TO_MULTICO = [
     height: 80,
     code: "D2B1-01",
     text: "INDOTRACTOR",
+    pointx: 4420,
+    pointy: 440,
   },
   {
     color: "#ff9",
@@ -6308,6 +6667,8 @@ const INDOTRACTOR_TO_MULTICO = [
     height: 80,
     code: "D2D1-01",
     text: "ARVENTO",
+    pointx: 4720,
+    pointy: 440,
   },
   {
     color: "#ff9",
@@ -6317,6 +6678,8 @@ const INDOTRACTOR_TO_MULTICO = [
     height: 80,
     code: "D2E1-01",
     text: "A&T Engineering",
+    pointx: 4900,
+    pointy: 440,
   },
   {
     color: "#ff9",
@@ -6326,6 +6689,8 @@ const INDOTRACTOR_TO_MULTICO = [
     height: 80,
     code: "D2F1-01",
     text: "DSL",
+    pointx: 5080,
+    pointy: 440,
   },
   {
     color: "#ff9",
@@ -6335,6 +6700,8 @@ const INDOTRACTOR_TO_MULTICO = [
     height: 80,
     code: "D2H1-01",
     text: "MULTICO Equipment Indonesia",
+    pointx: 5460,
+    pointy: 440,
   },
 ];
 
@@ -6347,6 +6714,8 @@ const Transtrack_TO_Deeone = [
     height: 120,
     code: "D2I2-01",
     text: "Transtrack",
+    pointx: 5560,
+    pointy: 480,
   },
   {
     color: "#ff9",
@@ -6356,6 +6725,8 @@ const Transtrack_TO_Deeone = [
     height: 120,
     code: "D2I2-03",
     text: "GEOTAB",
+    pointx: 5560,
+    pointy: 600,
   },
   {
     color: "#ff9",
@@ -6365,6 +6736,8 @@ const Transtrack_TO_Deeone = [
     height: 80,
     code: "D2I2-05",
     text: "Widya Robotic",
+    pointx: 5560,
+    pointy: 680,
   },
   {
     color: "#ff9",
@@ -6374,6 +6747,8 @@ const Transtrack_TO_Deeone = [
     height: 80,
     code: "D2I2-06",
     text: "D2I2-06",
+    pointx: 5560,
+    pointy: 780,
   },
   {
     color: "#ff9",
@@ -6383,6 +6758,8 @@ const Transtrack_TO_Deeone = [
     height: 60,
     code: "D2I2-08",
     text: "D2I2-08",
+    pointx: 5560,
+    pointy: 840,
   },
   {
     color: "#ff9",
@@ -6392,6 +6769,8 @@ const Transtrack_TO_Deeone = [
     height: 60,
     code: "D2I2-09",
     text: "D2I2-09",
+    pointx: 5560,
+    pointy: 900,
   },
   {
     color: "#ff9",
@@ -6401,6 +6780,8 @@ const Transtrack_TO_Deeone = [
     height: 120,
     code: "D2I2-11",
     text: "Eikto Battery",
+    pointx: 5560,
+    pointy: 980,
   },
   {
     color: "#ff9",
@@ -6410,6 +6791,8 @@ const Transtrack_TO_Deeone = [
     height: 60,
     code: "D2I3-03",
     text: "Shanghai Dongmeng",
+    pointx: 5560,
+    pointy: 1140,
   },
   {
     color: "#ff9",
@@ -6419,6 +6802,8 @@ const Transtrack_TO_Deeone = [
     height: 80,
     code: "D2I2-06",
     text: "TUV",
+    pointx: 5560,
+    pointy: 1200,
   },
   {
     color: "#ff9",
@@ -6428,6 +6813,8 @@ const Transtrack_TO_Deeone = [
     height: 80,
     code: "D2I2-09",
     text: "Primanusa",
+    pointx: 5560,
+    pointy: 1400,
   },
   {
     color: "#ff9",
@@ -6437,6 +6824,8 @@ const Transtrack_TO_Deeone = [
     height: 80,
     code: "D2I3-08",
     text: "Deeone",
+    pointx: 5560,
+    pointy: 1480,
   },
 ];
 
@@ -6449,6 +6838,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2A4-01",
     text: "Sipping Gazette",
+    pointx: 4320,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6458,6 +6849,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2A4-03",
     text: "GZ LINK",
+    pointx: 4460,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6467,6 +6860,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2C4-03",
     text: "Multico Millenium Persada",
+    pointx: 4720,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6476,6 +6871,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2D4-01",
     text: "Tiangong Automotive",
+    pointx: 4840,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6485,6 +6882,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2D4-03",
     text: "Machinery Equipment",
+    pointx: 4920,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6494,6 +6893,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2E4-03",
     text: "SF OILLESS Bearing",
+    pointx: 4980,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6503,6 +6904,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2E4-04",
     text: "Speeter Lighting",
+    pointx: 5060,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6512,6 +6915,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2F4-03",
     text: "Shaoshen Machinery",
+    pointx: 5120,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6521,6 +6926,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2F4-04",
     text: "EXIDE",
+    pointx: 5200,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6530,6 +6937,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2H4-01",
     text: "DMT",
+    pointx: 5380,
+    pointy: 1500,
   },
   {
     color: "#ff9",
@@ -6539,6 +6948,8 @@ const Sipping_TO_Artifa = [
     height: 60,
     code: "D2H4-02",
     text: "Artifa Sukses Persada",
+    pointx: 5500,
+    pointy: 1500,
   },
 ];
 
@@ -6551,6 +6962,8 @@ const Lugong_TO_TRAKINDO = [
     height: 520,
     code: "D2B2-05",
     text: "Lugong",
+    pointx: 4320,
+    pointy: 720,
   },
   {
     color: "#ff9",
@@ -6560,6 +6973,8 @@ const Lugong_TO_TRAKINDO = [
     height: 520,
     code: "D2C2-01",
     text: "TRAKNUS",
+    pointx: 4500,
+    pointy: 720,
   },
   {
     color: "#ff9",
@@ -6569,6 +6984,8 @@ const Lugong_TO_TRAKINDO = [
     height: 520,
     code: "D2E2-01",
     text: "HELI FORKLIFT",
+    pointx: 4840,
+    pointy: 720,
   },
   {
     color: "#ff9",
@@ -6578,6 +6995,8 @@ const Lugong_TO_TRAKINDO = [
     height: 520,
     code: "D2F2-01",
     text: "BERCA",
+    pointx: 5020,
+    pointy: 720,
   },
   {
     color: "#ff9",
@@ -6587,6 +7006,8 @@ const Lugong_TO_TRAKINDO = [
     height: 400,
     code: "D2H2-01",
     text: "D2H2-01",
+    pointx: 5380,
+    pointy: 720,
   },
   {
     color: "#ff9",
@@ -6596,6 +7017,8 @@ const Lugong_TO_TRAKINDO = [
     height: 120,
     code: "D2H2-09",
     text: "TRAKINDO",
+    pointx: 5380,
+    pointy: 920,
   },
 ];
 
@@ -6608,6 +7031,8 @@ const SHELL_TO_VIP_LOUNGE = [
     height: 120,
     code: "D2B3-01",
     text: "SHELL",
+    pointx: 4420,
+    pointy: 1020,
   },
   {
     color: "#ff9",
@@ -6617,6 +7042,8 @@ const SHELL_TO_VIP_LOUNGE = [
     height: 80,
     code: "D2B3-05",
     text: "CALS Corp",
+    pointx: 4320,
+    pointy: 1200,
   },
   {
     color: "#ff9",
@@ -6626,6 +7053,8 @@ const SHELL_TO_VIP_LOUNGE = [
     height: 80,
     code: "D2B3-06",
     text: "UMW GRANT",
+    pointx: 4500,
+    pointy: 1200,
   },
   {
     color: "#ff9",
@@ -6635,6 +7064,8 @@ const SHELL_TO_VIP_LOUNGE = [
     height: 80,
     code: "D2B3-07",
     text: "Luk International",
+    pointx: 4420,
+    pointy: 1360,
   },
   {
     color: "#ff9",
@@ -6644,6 +7075,8 @@ const SHELL_TO_VIP_LOUNGE = [
     height: 80,
     code: "D2B3-10",
     text: "VIP LOUNGE HALL D2",
+    pointx: 4420,
+    pointy: 1360,
   },
 ];
 
@@ -6656,6 +7089,8 @@ const Tako_TO_RSV = [
     height: 120,
     code: "D2C3-01",
     text: "Tako Anugerah",
+    pointx: 4600,
+    pointy: 1020,
   },
   {
     color: "#ff9",
@@ -6665,6 +7100,8 @@ const Tako_TO_RSV = [
     height: 80,
     code: "D2C3-05",
     text: "Litech",
+    pointx: 4500,
+    pointy: 1200,
   },
   {
     color: "#ff9",
@@ -6674,6 +7111,8 @@ const Tako_TO_RSV = [
     height: 80,
     code: "D2C3-07",
     text: "Global Lubricant",
+    pointx: 4500,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -6683,6 +7122,8 @@ const Tako_TO_RSV = [
     height: 80,
     code: "D2C3-06",
     text: "Artha Satya Karunia",
+    pointx: 4680,
+    pointy: 1200,
   },
   {
     color: "#ff9",
@@ -6692,6 +7133,8 @@ const Tako_TO_RSV = [
     height: 80,
     code: "D2C3-08",
     text: "DowPol",
+    pointx: 4680,
+    pointy: 1280,
   },
 
   {
@@ -6702,6 +7145,8 @@ const Tako_TO_RSV = [
     height: 80,
     code: "D2C3-10",
     text: "RSV",
+    pointx: 4560,
+    pointy: 1360,
   },
   {
     color: "#ff9",
@@ -6711,6 +7156,8 @@ const Tako_TO_RSV = [
     height: 80,
     code: "D2C3-11",
     text: "M Global Logistic",
+    pointx: 4620,
+    pointy: 1360,
   },
 ];
 
@@ -6724,6 +7171,8 @@ const FTY_TO_YUTE = [
     height: 80,
     code: "D2D3-01",
     text: "FTY Union",
+    pointx: 4680,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -6733,6 +7182,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-03",
     text: "KOOBER shock",
+    pointx: 4680,
+    pointy: 1160,
   },
   {
     color: "#ff9",
@@ -6742,6 +7193,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-05",
     text: "AUTOMOBILE POWER",
+    pointx: 4680,
+    pointy: 1160 + 60,
   },
   {
     color: "#ff9",
@@ -6751,6 +7204,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-07",
     text: "FUHE AUTOMOBILE",
+    pointx: 4680,
+    pointy: 1160 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -6760,6 +7215,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-09",
     text: "AUTO ELECTRIC",
+    pointx: 4680,
+    pointy: 1160 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -6769,6 +7226,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-11",
     text: "MINGYE AUTOPARTS",
+    pointx: 4680,
+    pointy: 1160 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -6778,6 +7237,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-11",
     text: "QIANNENG AUTOPARTS",
+    pointx: 4680,
+    pointy: 1160 + 60 * 5,
   },
   // kiri end
 
@@ -6790,6 +7251,8 @@ const FTY_TO_YUTE = [
     height: 80,
     code: "D2D3-02",
     text: "ZHOUSHI AUTOPARTS",
+    pointx: 4840,
+    pointy: 1100,
   },
   {
     color: "#ff9",
@@ -6799,6 +7262,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-04",
     text: "LANTE LIGHTING",
+    pointx: 4840,
+    pointy: 1160,
   },
   {
     color: "#ff9",
@@ -6808,6 +7273,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-06",
     text: "AUTO SPARE PARTS",
+    pointx: 4840,
+    pointy: 1160 + 60,
   },
   {
     color: "#ff9",
@@ -6817,6 +7284,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-08",
     text: "YUANHAO MACHINERY",
+    pointx: 4840,
+    pointy: 1160 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -6826,6 +7295,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-10",
     text: "CONSTRUCTION MACHINERY",
+    pointx: 4840,
+    pointy: 1160 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -6835,6 +7306,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-12",
     text: "MAIERSI AUTO PARTS",
+    pointx: 4840,
+    pointy: 1160 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -6844,6 +7317,8 @@ const FTY_TO_YUTE = [
     height: 60,
     code: "D2D3-14",
     text: "YUTE MOTOR",
+    pointx: 4840,
+    pointy: 1160 + 60 * 5,
   },
   // KANAN end
 ];
@@ -6858,6 +7333,8 @@ const DWI_TO_Tangshan = [
     height: 120,
     code: "D2E3-01",
     text: "Dwi Tunggal Putra",
+    pointx: 4940,
+    pointy: 1020,
   },
   {
     color: "#ff9",
@@ -6867,6 +7344,8 @@ const DWI_TO_Tangshan = [
     height: 80,
     code: "D2E3-05",
     text: "XFXS",
+    pointx: 4840,
+    pointy: 1220,
   },
   {
     color: "black",
@@ -6885,6 +7364,8 @@ const DWI_TO_Tangshan = [
     height: 80,
     code: "D2E3-07",
     text: "51CC",
+    pointx: 4840,
+    pointy: 1300,
   },
   {
     color: "#ff9",
@@ -6894,6 +7375,8 @@ const DWI_TO_Tangshan = [
     height: 120,
     code: "D2E3-09",
     text: "Anhui Shuncha",
+    pointx: 4840,
+    pointy: 1400,
   },
   // KIRI END
 
@@ -6906,6 +7389,8 @@ const DWI_TO_Tangshan = [
     height: 120,
     code: "D2E3-06",
     text: "RoyPowTech",
+    pointx: 5020,
+    pointy: 1220,
   },
   {
     color: "#ff9",
@@ -6915,6 +7400,8 @@ const DWI_TO_Tangshan = [
     height: 60,
     code: "D2E3-08",
     text: "Yalide Technology",
+    pointx: 5020,
+    pointy: 1320,
   },
   {
     color: "#ff9",
@@ -6924,6 +7411,8 @@ const DWI_TO_Tangshan = [
     height: 120,
     code: "D2E3-10",
     text: "Microtex",
+    pointx: 5020,
+    pointy: 1420,
   },
 
   // KANAN END
@@ -6936,6 +7425,8 @@ const DWI_TO_Tangshan = [
     height: 240,
     code: "D2F3-01",
     text: "MiMa",
+    pointx: 5020,
+    pointy: 1160,
   },
   {
     color: "#ff9",
@@ -6945,6 +7436,8 @@ const DWI_TO_Tangshan = [
     height: 120,
     code: "D2F3-09",
     text: "Tangsha Shenghang",
+    pointx: 5020,
+    pointy: 1400,
   },
 ];
 
@@ -6958,6 +7451,8 @@ const Yudiao_TO_Smartware = [
     height: 120,
     code: "D2G3-01",
     text: "Yudiao",
+    pointx: 5220,
+    pointy: 1120,
   },
   {
     color: "#ff9",
@@ -6967,6 +7462,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-05",
     text: "Mingyi | D2G3-05",
+    pointx: 5220,
+    pointy: 1200,
   },
   {
     color: "#ff9",
@@ -6976,6 +7473,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-07",
     text: "Mingyi | D2G3-07",
+    pointx: 5220,
+    pointy: 1200 + 60,
   },
   {
     color: "#ff9",
@@ -6985,6 +7484,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-09",
     text: "Shangfeng",
+    pointx: 5220,
+    pointy: 1200 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -6994,6 +7495,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-11",
     text: "Yuanbo",
+    pointx: 5220,
+    pointy: 1200 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -7003,63 +7506,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-13",
     text: "Smartware Technology",
-  },
-  // KIRI END
-
-  // KIRI
-  {
-    color: "#ff9",
-    x: 5260,
-    y: 740,
-    width: 60,
-    height: 120,
-    code: "D2G3-01",
-    text: "Yudiao",
-  },
-  {
-    color: "#ff9",
-    x: 5260,
-    y: 860,
-    width: 60,
-    height: 60,
-    code: "D2G3-05",
-    text: "Mingyi | D2G3-05",
-  },
-  {
-    color: "#ff9",
-    x: 5260,
-    y: 860 + 60,
-    width: 60,
-    height: 60,
-    code: "D2G3-07",
-    text: "Mingyi | D2G3-07",
-  },
-  {
-    color: "#ff9",
-    x: 5260,
-    y: 860 + 60 * 2,
-    width: 60,
-    height: 60,
-    code: "D2G3-09",
-    text: "Shangfeng",
-  },
-  {
-    color: "#ff9",
-    x: 5260,
-    y: 860 + 60 * 3,
-    width: 60,
-    height: 60,
-    code: "D2G3-11",
-    text: "Yuanbo",
-  },
-  {
-    color: "#ff9",
-    x: 5260,
-    y: 860 + 60 * 4,
-    width: 60,
-    height: 60,
-    code: "D2G3-13",
-    text: "Smartware Technology",
+    pointx: 5220,
+    pointy: 1200 + 60 * 4,
   },
   // KIRI END
 
@@ -7072,6 +7520,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-02",
     text: "Mingyi | D2G3-02",
+    pointx: 5380,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -7081,6 +7531,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-04",
     text: "Mingyi | D2G3-04",
+    pointx: 5380,
+    pointy: 1080 + 60,
   },
   {
     color: "#ff9",
@@ -7090,6 +7542,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-06",
     text: "Mingyi | D2G3-06",
+    pointx: 5380,
+    pointy: 1080 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -7099,6 +7553,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-08",
     text: "Mingyi | D2G3-08",
+    pointx: 5380,
+    pointy: 1080 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -7108,6 +7564,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-10",
     text: "Mingyi | D2G3-10",
+    pointx: 5380,
+    pointy: 1080 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -7117,6 +7575,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-12",
     text: "Zhongshuo",
+    pointx: 5380,
+    pointy: 1080 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -7126,6 +7586,8 @@ const Yudiao_TO_Smartware = [
     height: 60,
     code: "D2G3-14",
     text: "Mingyi | D2G3-14",
+    pointx: 5380,
+    pointy: 1080 + 60 * 6,
   },
   // KANAN END
 ];
@@ -7140,6 +7602,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-01",
     text: "Mingyi | D2H3-01",
+    pointx: 5380,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -7149,6 +7613,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-03",
     text: "Mingyi | D2H3-03",
+    pointx: 5380,
+    pointy: 1080 + 60,
   },
   {
     color: "#ff9",
@@ -7158,6 +7624,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-05",
     text: "Mingyi | D2H3-05",
+    pointx: 5380,
+    pointy: 1080 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -7167,6 +7635,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-07",
     text: "Mingyi | D2H3-07",
+    pointx: 5380,
+    pointy: 1080 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -7176,6 +7646,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-09",
     text: "Mingyi | D2H3-09",
+    pointx: 5380,
+    pointy: 1080 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -7185,6 +7657,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-11",
     text: "Mingyi | D2H3-11",
+    pointx: 5380,
+    pointy: 1080 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -7194,6 +7668,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-13",
     text: "Mingyi | D2H3-13",
+    pointx: 5380,
+    pointy: 1080 + 60 * 6,
   },
   // KIRI END
 
@@ -7206,6 +7682,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-02",
     text: "Czyz Auto Parts",
+    pointx: 5560,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -7215,6 +7693,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-04",
     text: "Tianji Feihong",
+    pointx: 5560,
+    pointy: 1080 + 60,
   },
   {
     color: "#ff9",
@@ -7224,6 +7704,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-06",
     text: "Howostar Auto Parts",
+    pointx: 5560,
+    pointy: 1080 + 60 * 2,
   },
   {
     color: "#ff9",
@@ -7233,6 +7715,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-08",
     text: "Mingyi | D2H3-08",
+    pointx: 5560,
+    pointy: 1080 + 60 * 3,
   },
   {
     color: "#ff9",
@@ -7242,6 +7726,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-10",
     text: "Yinzhou Zhongchi",
+    pointx: 5560,
+    pointy: 1080 + 60 * 4,
   },
   {
     color: "#ff9",
@@ -7251,6 +7737,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-12",
     text: "Mingyi | D2H3-12",
+    pointx: 5560,
+    pointy: 1080 + 60 * 5,
   },
   {
     color: "#ff9",
@@ -7260,6 +7748,8 @@ const Czyz_TO_D2H3_14 = [
     height: 60,
     code: "D2H3-14",
     text: "Mingyi | D2H3-14",
+    pointx: 5560,
+    pointy: 1080 + 60 * 6,
   },
   // KANAN END
 ];

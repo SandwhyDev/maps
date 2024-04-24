@@ -89,6 +89,7 @@ function zoomOut() {
     gCanvas.style.transform = "scale(" + scale + ")";
   }
 }
+
 function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
   var img = new Image();
   img.onload = function () {
@@ -359,7 +360,6 @@ function HandleSearch(point) {
         // showModal(info.text, info.code);
 
         changeColorOnClick(
-          event,
           info.text,
           info.x,
           info.y + 320,
@@ -565,8 +565,8 @@ class Node {
   drawNode() {
     gctx.beginPath();
     gctx.lineWidth = "2";
-    gctx.strokeStyle = "white";
-    gctx.fillStyle = this.color === "white" ? "white" : "blue";
+    gctx.strokeStyle = this.color === "white" ? "white" : "transparent";
+    gctx.fillStyle = this.color === "white" ? "white" : this.color;
     gctx.fillRect(this.posx, this.posy, this.size, this.size);
     gctx.rect(this.posx, this.posy, this.size, this.size);
     gctx.closePath();
@@ -838,12 +838,20 @@ class Grid {
           // JALAN X DARI HALL A1
           ((countNodes - 2331) % 97 === 0 &&
             countNodes >= 2331 &&
-            countNodes <= 2331 + 97 * 238)
+            countNodes <= 2331 + 97 * 238) ||
           // TEST
-          // countNodes === 2329
+          countNodes === 21 + 97 * 215
         ) {
           tempNode.drawNode();
         }
+
+        // else if (countNodes >= 17848) {
+        //   tempNode.walkable = false;
+
+        //   tempNode.color = "#5BBCFF";
+
+        //   tempNode.drawNode();
+        // }
 
         // else if (countNodes >= 1540 && countNodes <= 1551) {
         // //   tempNode.direction = "up";
@@ -914,6 +922,7 @@ function canvasClickHandler(event) {
       console.log({
         posx: posx,
         posy: posy,
+        clickedElement: clickedElement,
       });
 
       if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
