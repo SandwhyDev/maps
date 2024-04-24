@@ -385,6 +385,10 @@ function HandleSearch(point) {
 function changeColorOnClick(event, name, x, y, width, height) {
   Tenant(gctx);
 
+  if (name.split(" ")[0] === "HALL") {
+    return false;
+  }
+
   gctx.fillStyle = "#7CFC00";
   gctx.fillRect(x, y, width, height);
   gctx.strokeRect(x, y, width, height);

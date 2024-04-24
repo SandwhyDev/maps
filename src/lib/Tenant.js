@@ -74,6 +74,9 @@ const HandleTenant = (
 };
 
 const showModal = (text, codeTenant) => {
+  if (text.split(" ")[0] === "hall") {
+    return false;
+  }
   var modal = document.getElementById("modal");
   var moreDetail = document.getElementById("modal-detail");
   var moreInfo = document.getElementById("more-info");
