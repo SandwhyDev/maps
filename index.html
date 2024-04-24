@@ -28,6 +28,7 @@
       </div>
     </div>
 
+    <!-- SEARCH BAR  -->
     <div
       class="flex flex-col gap-10 fixed top-0 left-0 items-center w-screen z-10"
     >
@@ -47,27 +48,45 @@
           </div>
         </div>
 
+        <!-- SEARCH POINT  -->
         <div class="space-y-2 w-full">
+          <!-- START POINT  -->
           <div class="StartPoint flex">
-            <input
-              class="p-2 rounded w-full border-[.5px] border-black p-2 rounded focus:outline-none"
-              type="text"
-              id="inputStart"
-              name="start"
-              onkeyup="HandleSearch(`start`)"
-              placeholder="Start Point "
-            />
+            <div class="relative w-full">
+              <input
+                class="p-2 rounded w-full border-[.5px] border-black p-2 rounded focus:outline-none"
+                type="text"
+                id="inputStart"
+                name="start"
+                onkeyup="HandleSearch(`start`)"
+                placeholder="Start Point "
+              />
+              <span
+                id="removeStartPoint"
+                class="absolute top-2 right-4 text-gray-500 cursor-pointer hidden"
+                ><i class="fa-solid fa-x"></i
+              ></span>
+            </div>
           </div>
 
+          <!-- END POINT -->
           <div class="EndPoint flex">
-            <input
-              class="p-2 rounded w-full border-[.5px] border-black p-2 rounded focus:outline-none"
-              type="text"
-              id="inputEnd"
-              name="end"
-              onkeyup="HandleSearch(`end`)"
-              placeholder="End Point "
-            />
+            <div class="relative w-full">
+              <input
+                class="p-2 rounded w-full border-[.5px] border-black p-2 rounded focus:outline-none"
+                type="text"
+                id="inputEnd"
+                name="end"
+                onkeyup="HandleSearch(`end`)"
+                placeholder="End Point "
+              />
+
+              <span
+                id="removeEndPoint"
+                class="absolute top-2 right-4 text-gray-500 cursor-pointer hidden"
+                ><i class="fa-solid fa-x"></i
+              ></span>
+            </div>
           </div>
         </div>
       </div>
@@ -79,6 +98,7 @@
       </div> -->
     </div>
 
+    <!-- CANVAS -->
     <div
       id="containerCanvas"
       class="w-full h-full border-4 border-black overflow-x-scroll"

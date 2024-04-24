@@ -24,9 +24,8 @@ const HandleTenant = (
     img.src = "../images/toilet.png";
 
     img.onload = function () {
-      context.drawImage(img, x, y, 80, 80);
+      context.drawImage(img, x, y, width, height);
     };
-    return;
   }
 
   context.lineWidth = 1;
@@ -39,6 +38,7 @@ const HandleTenant = (
 
   const maxWidth = width - 10; // Lebar maksimum teks
   const lineHeight = 18; // Tinggi baris teks
+
   let words = text.toUpperCase().split(" ");
   let line = "";
   let lines = [];
@@ -79,10 +79,18 @@ const showModal = (text, codeTenant) => {
   var moreInfo = document.getElementById("more-info");
   let click = false;
 
+  if (text.split(" ")[0] === "toilet") {
+    moreDetail.classList.add("hidden");
+    moreInfo.classList.add("hidden");
+  } else {
+    moreDetail.classList.remove("hidden");
+  }
+
   moreDetail.innerHTML = "more detail";
 
   moreDetail.addEventListener("click", () => {
     moreInfo.classList.remove("hidden");
+    // moreDetail.classList.remove("hidden");
 
     if (click) {
       moreInfo.classList.add("hidden");

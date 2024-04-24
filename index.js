@@ -43,6 +43,7 @@ searchPoint.addEventListener("click", () => {
   searchPoint.classList.remove("py-5");
   searchPoint.className = "hidden";
   containerSearch.classList.remove("hidden");
+
   // iconEnd.classList.remove("hidden");
 
   //tambahkan focus di input
@@ -53,6 +54,7 @@ searchPoint.addEventListener("click", () => {
 });
 inputStart.addEventListener("click", () => {
   var search = document.getElementById("dataSearch");
+  document.getElementById("modal").classList.add("hidden");
 
   if (search) {
     search.remove();
@@ -66,6 +68,7 @@ inputEnd.addEventListener("click", () => {
     search.remove();
   }
   HandleSearch("end");
+  document.getElementById("modal").classList.add("hidden");
 });
 
 // function
@@ -276,10 +279,22 @@ function resetWalls() {
 
 function HandleSearch(point) {
   var cekSearch = document.getElementById("dataSearch");
-  if (cekSearch) {
-    cekSearch.remove();
-  }
-  // console.log(point);
+  var removeStartPoint = document.getElementById("removeStartPoint");
+  var removeEndPoint = document.getElementById("removeEndPoint");
+
+  cekSearch && cekSearch.remove();
+
+  removeStartPoint.addEventListener("click", () => {
+    console.log("halo ", point);
+    inputStart.value = "";
+    removeStartPoint.classList.add("hidden");
+  });
+
+  removeEndPoint.addEventListener("click", () => {
+    console.log("halo ", point);
+    inputEnd.value = "";
+    removeEndPoint.classList.add("hidden");
+  });
 
   const filter =
     point === "start"
@@ -318,22 +333,38 @@ function HandleSearch(point) {
         ul.appendChild(li);
       }
 
-      li.addEventListener("click", () => {
+      li.addEventListener("click", (event) => {
         if (point === "start") {
-          inputStart.value = `${info.text} `;
+          inputStart.value = `${info.text.toUpperCase()} `;
+          removeStartPoint.classList.remove("hidden");
           startPoint = "";
           startPoint = new Vec2(info.pointx, info.pointy);
         } else {
-          inputEnd.value = `${info.text} `;
+          inputEnd.value = `${info.text.toUpperCase()} `;
+          removeEndPoint.classList.remove("hidden");
+
           endPoint = "";
           endPoint = new Vec2(info.pointx, info.pointy);
         }
 
         var containerCanvas = document.getElementById("containerCanvas");
+        scale = 0.6;
+        gCanvas.style.transform = "scale(" + scale + ")";
 
         console.log(info.x - 200 * scale, info.y + 320 * scale);
         containerCanvas.scrollLeft = (info.x - 200) * scale;
         window.scroll(0, (info.y + 320) * scale);
+
+        showModal(info.text, info.code);
+
+        changeColorOnClick(
+          event,
+          info.text,
+          info.x,
+          info.y + 320,
+          info.width,
+          info.height
+        );
 
         // reset();
         // myPath = new PathFindingAlg(grid, startPoint, endPoint);
@@ -349,6 +380,48 @@ function HandleSearch(point) {
   search.appendChild(ul);
 
   document.body.appendChild(search);
+}
+
+function changeColorOnClick(event, name, x, y, width, height) {
+  Tenant(gctx);
+
+  gctx.fillStyle = "#7CFC00";
+  gctx.fillRect(x, y, width, height);
+  gctx.strokeRect(x, y, width, height);
+  gctx.lineWidth = 1;
+
+  const maxWidth = width - 10; // Lebar maksimum teks
+  const lineHeight = 18; // Tinggi baris teks
+
+  let words = name.toUpperCase().split(" ");
+  let line = "";
+  let lines = [];
+
+  // Membagi teks menjadi beberapa baris
+  for (let i = 0; i < words.length; i++) {
+    let testLine = line + words[i] + " ";
+    let testWidth = gctx.measureText(testLine).width;
+    if (testWidth > maxWidth) {
+      lines.push(line);
+      line = words[i] + " ";
+    } else {
+      line = testLine;
+    }
+  }
+  lines.push(line);
+
+  // Mengatur posisi teks
+  let textX = x + width / 2; // Koordinat X untuk teks
+  let textY = y + height / 2 - (lines.length / 2) * lineHeight;
+
+  // Menambahkan teks ke canvas
+  gctx.fillStyle = "black"; // Warna teks
+  gctx.textAlign = "center"; // Posisi teks
+  gctx.textBaseline = "middle"; // Posisi teks
+  for (let i = 0; i < lines.length; i++) {
+    gctx.fillText(lines[i], textX, textY);
+    textY += lineHeight;
+  }
 }
 // function end
 
@@ -818,7 +891,6 @@ gCanvas.addEventListener(
         console.log({
           posx: posx,
           posy: posy,
-          clickedElement: clickedElement,
         });
 
         // handle jika user mengklik icon endPoint
@@ -849,6 +921,14 @@ gCanvas.addEventListener(
 
         if (tenant) {
           showModal(tenant.text, tenant.code);
+          changeColorOnClick(
+            event,
+            tenant.text,
+            tenant.x,
+            tenant.y + 320,
+            tenant.width,
+            tenant.height
+          );
           var rute = document.getElementById("rute");
 
           rute.addEventListener("click", () => {
