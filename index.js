@@ -10,6 +10,9 @@ var btnStart = document.getElementById("btnStart");
 var btnEnd = document.getElementById("btnEnd");
 var iconEnd = document.getElementById("iconEnd");
 var btnPushToWalk = document.getElementById("pushToWalk");
+var cekSearch = document.getElementById("dataSearch");
+var removeStartPoint = document.getElementById("removeStartPoint");
+var removeEndPoint = document.getElementById("removeEndPoint");
 
 var gCanvasOffset;
 var gctx = gCanvas.getContext("2d");
@@ -836,11 +839,11 @@ class Grid {
           // JALAN Y FTY UNION HALL D2
           (countNodes >= 22750 && countNodes <= 22772) ||
           // JALAN X DARI HALL A1
-          ((countNodes - 2331) % 97 === 0 &&
-            countNodes >= 2331 &&
-            countNodes <= 2331 + 97 * 238)
+          ((countNodes - 779) % 97 === 0 &&
+            countNodes >= 779 &&
+            countNodes <= 779 + 97 * 253) ||
           // TEST
-          // countNodes === 21 + 97 * 215
+          countNodes === 2331 - 97 * 16
         ) {
           tempNode.drawNode();
         }

@@ -224,8 +224,8 @@ const A1A2 = [
     height: 60,
     code: ``,
     text: `VISITOR REGISTRATION HALL A1`,
-    pointx: 80,
-    pointy: 340,
+    pointx: 160,
+    pointy: 60,
     border: true,
   },
   {

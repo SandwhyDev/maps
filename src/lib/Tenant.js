@@ -141,6 +141,7 @@ ruteEnd.addEventListener("click", () => {
   inputEnd.value = modalName.innerText;
 
   document.getElementById("modal").classList.add("hidden");
+  removeEndPoint.classList.remove("hidden");
 });
 
 ruteStart.addEventListener("click", (event) => {
@@ -149,4 +150,5 @@ ruteStart.addEventListener("click", (event) => {
   inputStart.value = modalName.innerText;
 
   document.getElementById("modal").classList.add("hidden");
+  removeStartPoint.classList.remove("hidden");
 });
