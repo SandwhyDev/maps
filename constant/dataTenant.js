@@ -3102,7 +3102,7 @@ const A2J3 = [
     height: 120,
     code: "A1A1-31",
     text: "A2J3-01",
-    pointx: 1520,
+    pointx: 1620,
     pointy: 880,
   },
   {
@@ -3114,7 +3114,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-05",
     pointx: 1520,
-    pointy: 1060 + 200,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -3125,7 +3125,7 @@ const A2J3 = [
     code: "A1A1-31",
     text: "A2J3-06",
     pointx: 1700,
-    pointy: 1060 + 120,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -3182,7 +3182,7 @@ const A2K3 = [
     height: 120,
     code: "A1A1-31",
     text: "A2K3-01",
-    pointx: 1700,
+    pointx: 1800,
     pointy: 880,
   },
   {
@@ -3194,7 +3194,7 @@ const A2K3 = [
     code: "A1A1-31",
     text: "A2K3-05",
     pointx: 1700,
-    pointy: 1060 + 120,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -3205,7 +3205,7 @@ const A2K3 = [
     code: "A1A1-31",
     text: "A2K3-06",
     pointx: 1880,
-    pointy: 1060 + 120,
+    pointy: 1080,
   },
   {
     color: "#ff9",
@@ -4495,6 +4495,8 @@ const Medical_TO_Agent = [
     height: 160,
     code: "A1A1-31",
     text: "MEDICAL ROOM",
+    pointx: 480,
+    pointy: 220,
   },
   {
     color: "#B4B4B8",
@@ -4504,6 +4506,8 @@ const Medical_TO_Agent = [
     height: 160,
     code: "A1A1-31",
     text: "FORWARDER OFFICER",
+    pointx: 480,
+    pointy: 220,
   },
   {
     color: "#B4B4B8",
@@ -4513,6 +4517,8 @@ const Medical_TO_Agent = [
     height: 160,
     code: "A1A1-31",
     text: "CONTRACTOR OFFICE",
+    pointx: 1600,
+    pointy: 60,
   },
   {
     color: "#B4B4B8",
@@ -4522,6 +4528,8 @@ const Medical_TO_Agent = [
     height: 160,
     code: "A1A1-31",
     text: "ORGANIZER OFFICE",
+    pointx: 2140,
+    pointy: 60,
   },
   {
     color: "#B4B4B8",
@@ -4531,6 +4539,8 @@ const Medical_TO_Agent = [
     height: 60,
     code: "A1A1-31",
     text: "EXHIBITOR COUNTER",
+    pointx: 2140,
+    pointy: 60,
   },
   {
     color: "#B4B4B8",
@@ -4540,6 +4550,8 @@ const Medical_TO_Agent = [
     height: 160,
     code: "A1A1-31",
     text: "AGENT COUNTER",
+    pointx: 2580,
+    pointy: 60,
   },
   {
     color: "#B4B4B8",
@@ -4549,6 +4561,8 @@ const Medical_TO_Agent = [
     height: 160,
     code: "",
     text: "MEDIA ROOM",
+    pointx: 3140,
+    pointy: 60,
   },
   {
     color: "#B4B4B8",
@@ -4558,6 +4572,8 @@ const Medical_TO_Agent = [
     height: 160,
     code: "D2D1-01",
     text: "VVIP ROOM MEETING ROOM",
+    pointx: 4900,
+    pointy: 60,
   },
   {
     color: "red",
@@ -4567,6 +4583,8 @@ const Medical_TO_Agent = [
     height: 60,
     code: "",
     text: "VISITOR REGISTRATION HALL D2",
+    pointx: 4900,
+    pointy: 60,
   },
 ];
 
@@ -7754,7 +7772,7 @@ const Czyz_TO_D2H3_14 = [
   // KANAN END
 ];
 
-const image = [
+const Toilet = [
   {
     color: "white",
     x: 780,
@@ -7763,6 +7781,8 @@ const image = [
     height: 80,
     code: "",
     text: "toilet hall a1",
+    pointx: 820,
+    pointy: 60,
     // image: "../images/logo.png",
   },
   {
@@ -7774,6 +7794,8 @@ const image = [
     code: "",
     text: "toilet hall a2",
     // image: "../images/logo.png",
+    pointx: 1940,
+    pointy: 60,
   },
   {
     color: "white",
@@ -7784,6 +7806,8 @@ const image = [
     code: "",
     text: "toilet hall a3",
     // image: "../images/logo.png",
+    pointx: 2740,
+    pointy: 60,
   },
   {
     color: "white",
@@ -7794,6 +7818,8 @@ const image = [
     code: "",
     text: "toilet hall d1",
     // image: "../images/logo.png",
+    pointx: 3940,
+    pointy: 60,
   },
   {
     color: "white",
@@ -7804,11 +7830,13 @@ const image = [
     code: "",
     text: "toilet hall d2",
     // image: "../images/logo.png",
+    pointx: 4340,
+    pointy: 60,
   },
 ];
 
 const dataTenant = [
-  ...image,
+  ...Toilet,
   ...Medical_TO_Agent,
   ...JABABEKA_SINGSPA,
   // A1A2 -A3P2

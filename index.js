@@ -482,14 +482,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-    // BETA
+    // // BETA
     // document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
     // // GAMMA
     // document.getElementById("tiltFB").innerHTML = Math.ceil(tiltFB);
     // // ALPHA
-    // document.getElementById("direction").innerHTML = Math.ceil(dir);
+    // document.getElementById("direction").innerHTML = Math.ceil(-dir);
 
-    arrow.style.transform = ` rotateZ(${-dir}deg)`;
+    arrow.style.transform = ` rotateZ(${Math.ceil(-dir)}deg)`;
   }
 });
 
@@ -924,7 +924,6 @@ function canvasClickHandler(event) {
         posy: posy,
         clickedElement: clickedElement,
       });
-
       if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
         endPoint = "";
         endPoint = new Vec2(0, 0);
