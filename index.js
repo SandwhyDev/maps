@@ -117,7 +117,7 @@ function zoomIn() {
 }
 
 function zoomOut() {
-  if (scale > 0.5) {
+  if (scale > 0.4) {
     scale -= 0.1;
     // console.log(scale);
 
