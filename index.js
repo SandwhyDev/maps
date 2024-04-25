@@ -838,9 +838,9 @@ class Grid {
           // JALAN X DARI HALL A1
           ((countNodes - 2331) % 97 === 0 &&
             countNodes >= 2331 &&
-            countNodes <= 2331 + 97 * 238) ||
+            countNodes <= 2331 + 97 * 238)
           // TEST
-          countNodes === 21 + 97 * 215
+          // countNodes === 21 + 97 * 215
         ) {
           tempNode.drawNode();
         }
