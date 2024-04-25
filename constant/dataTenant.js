@@ -293,11 +293,11 @@ const A1A2 = [
     y: 900,
     width: 60,
     height: 120,
-    code: ``,
+    code: `VIP LONGUE HALL A1`,
     text: ``,
     border: true,
     pointx: 80,
-    pointy: 620 + 120,
+    pointy: 1300,
   },
   {
     color: `#ff9`,
