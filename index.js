@@ -320,6 +320,7 @@ function resetWalls() {
   wallSet.clear();
   reset();
 }
+
 function HandleSearch(point) {
   var cekSearch = document.getElementById("dataSearch");
 
@@ -944,13 +945,18 @@ function canvasClickHandler(event) {
     var posx = clickedElement.posx;
     var posy = clickedElement.posy;
 
+    console.log({
+      posx: posx,
+      posy: posy,
+      x: parseInt(endPoint.x),
+      y: parseInt(endPoint.y),
+    });
     if (clickedElement.walkable === true) {
-      console.log({
-        posx: posx,
-        posy: posy,
-        clickedElement: clickedElement,
-      });
-      if (startPoint.x === endPoint.x && startPoint.y === endPoint.y) {
+      if (
+        parseInt(startPoint.x) === parseInt(endPoint.x) &&
+        parseInt(startPoint.y) === parseInt(endPoint.y)
+      ) {
+        inputEnd.value = "";
         endPoint = "";
         endPoint = new Vec2(0, 0);
         myPath = new PathFindingAlg(grid, startPoint, endPoint);
