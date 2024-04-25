@@ -957,6 +957,7 @@ function canvasClickHandler(event) {
         parseInt(startPoint.y) === parseInt(endPoint.y)
       ) {
         inputEnd.value = "";
+        removeEndPoint.classList.add("hidden");
         endPoint = "";
         endPoint = new Vec2(0, 0);
         myPath = new PathFindingAlg(grid, startPoint, endPoint);
