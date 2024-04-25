@@ -99,19 +99,18 @@
     </div>
 
     <!-- CANVAS -->
-    <div
-      id="containerCanvas"
-      class="w-full h-full border-4 border-black overflow-x-scroll"
-    >
+    <div id="containerCanvas" class="w-full h-full overflow-x-scroll">
       <canvas id="gCanvas" width="5700" height="1940"> </canvas>
     </div>
 
     <div id="modal" class="hidden">
-      <div class="modal-content max-w-96">
-        <div class="flex items-center gap-2">
-          <p id="modal-name" class="min-w-24 max-w-44 text-base">Trumecs</p>
+      <div class="modal-content max-w-[22rem]">
+        <div class="flex items-center pr-3 justify-between w-full">
+          <div class="w-24 text-xs">
+            <p id="modal-name" class="">Trumecs</p>
+          </div>
           <div
-            class="rounded p-2 text-sm font-normal flex gap-2 items-center w-full mr-5"
+            class="rounded p-2 text-sm font-normal flex gap-2 items-center w-22"
           >
             <button
               id="ruteStart"
@@ -136,27 +135,28 @@
             </div>
           </div>
         </div>
+
         <p id="modal-code" class="text-sm font-normal">A1A2-01</p>
-        <img
-          src="./images/tenant.webp"
-          alt="Deskripsi gambar"
-          class="modal-image"
-        />
+
+        <div class="">
+          <img
+            id="modal-image"
+            src="./images/tenant.webp"
+            alt="Deskripsi gambar"
+            class="modal-image"
+          />
+        </div>
 
         <div class="hidden space-y-2" id="more-info">
-          <p id="modal-code" class="text-sm font-normal">
-            Lobunta Building, Jl. Pintu Air Raya No.31B Lantai 3, RT.13/RW.8,
-            Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus
-            Ibukota
-          </p>
-          <p id="modal-code" class="text-sm font-normal">021 3812143</p>
-          <p id="modal-code" class="text-sm font-normal">info@trumecs.com</p>
+          <p id="modal-address" class="text-sm font-normal"></p>
+          <p id="modal-telp" class="text-sm font-normal"></p>
+          <p id="modal-email" class="text-sm font-normal"></p>
 
-          <p id="modal-code" class="text-sm font-normal">
-            <a href="#"> trumecs.com </a>
+          <p class="text-sm font-normal underline">
+            <a id="modal-link" href="#"> </a>
           </p>
 
-          <p id="modal-code" class="text-sm font-normal">Product</p>
+          <p id="modal-product" class="text-sm font-normal"></p>
         </div>
 
         <p

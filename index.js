@@ -13,6 +13,13 @@ var btnPushToWalk = document.getElementById("pushToWalk");
 var cekSearch = document.getElementById("dataSearch");
 var removeStartPoint = document.getElementById("removeStartPoint");
 var removeEndPoint = document.getElementById("removeEndPoint");
+var removeStartPoint = document.getElementById("removeStartPoint");
+var removeEndPoint = document.getElementById("removeEndPoint");
+var ruteEnd = document.getElementById("ruteEnd");
+
+let teks = "SELAMAT    SEMPURNA";
+var teks_terbaru = teks.replace(/\s+/g, " ");
+console.log(teks_terbaru);
 
 var gCanvasOffset;
 var gctx = gCanvas.getContext("2d");
@@ -21,7 +28,7 @@ var CANVAS_HEIGHT = gCanvas.height;
 var NODESIZE = 20;
 var startValue;
 var endValue;
-var scale = 1;
+var scale = 0.6;
 var dir;
 var path;
 var openSet = new Set();
@@ -40,6 +47,7 @@ var paramStart = urlParams.get("inputStart");
 var paramEnd = urlParams.get("inputEnd");
 gCanvas.style.transform = "scale(" + scale + ")";
 
+// handle klik
 btnZoomIn.addEventListener("click", zoomIn);
 btnZoomOut.addEventListener("click", zoomOut);
 searchPoint.addEventListener("click", () => {
@@ -73,8 +81,32 @@ inputEnd.addEventListener("click", () => {
   HandleSearch("end");
   document.getElementById("modal").classList.add("hidden");
 });
+removeStartPoint.addEventListener("click", () => {
+  inputStart.value = "";
+  removeStartPoint.classList.add("hidden");
+});
+removeEndPoint.addEventListener("click", () => {
+  inputEnd.value = "";
+  removeEndPoint.classList.add("hidden");
+});
+ruteEnd.addEventListener("click", () => {
+  updatPoint("end", startX.innerText, startY.innerText);
+  inputEnd.value = modalName.innerText;
 
-// function
+  document.getElementById("modal").classList.add("hidden");
+  removeEndPoint.classList.remove("hidden");
+});
+ruteStart.addEventListener("click", (event) => {
+  updatPoint("start", startX.innerText, startY.innerText);
+
+  inputStart.value = modalName.innerText;
+
+  document.getElementById("modal").classList.add("hidden");
+  removeStartPoint.classList.remove("hidden");
+});
+// handle klik end
+
+// function zoom
 function zoomIn() {
   // console.log(scale);
 
@@ -92,7 +124,9 @@ function zoomOut() {
     gCanvas.style.transform = "scale(" + scale + ")";
   }
 }
+// function zoom end
 
+// ICON USER
 function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
   var img = new Image();
   img.onload = function () {
@@ -221,6 +255,7 @@ function nodeDrawer(context, target, lineW, strokeS, fillS) {
   context.stroke();
 }
 
+// icon bulat
 function iconEndNode(context, target, lineW, strokeS, fillS) {
   context.beginPath();
   context.lineWidth = lineW;
@@ -240,6 +275,7 @@ function iconEndNode(context, target, lineW, strokeS, fillS) {
   context.stroke(); // Menggambar lingkaran dengan warna strokeS
 }
 
+// HANDLE TENANT
 function Tenant(context) {
   dataTenant.forEach((e) => {
     HandleTenant(
@@ -257,6 +293,7 @@ function Tenant(context) {
   });
 }
 
+// BUAT GARIS JALAN WARNA HIJAU
 function drawerPath(context, target, lineW, strokeS) {
   context.beginPath();
   context.lineWidth = lineW;
@@ -283,25 +320,12 @@ function resetWalls() {
   wallSet.clear();
   reset();
 }
-
 function HandleSearch(point) {
   var cekSearch = document.getElementById("dataSearch");
-  var removeStartPoint = document.getElementById("removeStartPoint");
-  var removeEndPoint = document.getElementById("removeEndPoint");
 
-  cekSearch && cekSearch.remove();
-
-  removeStartPoint.addEventListener("click", () => {
-    console.log("halo ", point);
-    inputStart.value = "";
-    removeStartPoint.classList.add("hidden");
-  });
-
-  removeEndPoint.addEventListener("click", () => {
-    console.log("halo ", point);
-    inputEnd.value = "";
-    removeEndPoint.classList.add("hidden");
-  });
+  if (cekSearch) {
+    cekSearch.remove();
+  }
 
   const filter =
     point === "start"
@@ -341,13 +365,14 @@ function HandleSearch(point) {
       }
 
       li.addEventListener("click", (event) => {
+        var name = info.text.replace(/\s+/g, " ");
         if (point === "start") {
-          inputStart.value = `${info.text.toUpperCase()} `;
+          inputStart.value = `${name.toUpperCase()} `;
           removeStartPoint.classList.remove("hidden");
           startPoint = "";
           startPoint = new Vec2(info.pointx, info.pointy);
         } else {
-          inputEnd.value = `${info.text.toUpperCase()} `;
+          inputEnd.value = `${name.toUpperCase()} `;
           removeEndPoint.classList.remove("hidden");
 
           endPoint = "";
@@ -360,7 +385,12 @@ function HandleSearch(point) {
         containerCanvas.scrollLeft = (info.x - 200) * scale;
         window.scroll(0, (info.y + 400) * scale);
 
-        // showModal(info.text, info.code);
+        point === "start"
+          ? updatPoint("start", info.pointx, info.pointy)
+          : updatPoint("end", info.pointx, info.pointy);
+
+        search.remove();
+        ul.remove();
 
         changeColorOnClick(
           info.text,
@@ -369,13 +399,6 @@ function HandleSearch(point) {
           info.width,
           info.height
         );
-
-        point === "start"
-          ? updatPoint("start", info.pointx, info.pointy)
-          : updatPoint("end", info.pointx, info.pointy);
-
-        search.remove();
-        ul.remove();
       });
     }
   }
@@ -387,6 +410,8 @@ function HandleSearch(point) {
 
 function changeColorOnClick(name, x, y, width, height) {
   Tenant(gctx);
+
+  console.log(name, x, y, width, height);
 
   if (name.split(" ")[0] === "HALL") {
     return false;
@@ -438,7 +463,6 @@ function updatPoint(point, x, y) {
     startPoint = new Vec2(x, y);
   } else {
     endPoint = "";
-    console.log("halo 2");
     endPoint = new Vec2(x, y);
   }
 
@@ -900,7 +924,6 @@ class Grid {
 //the top left corner of the grid will be located at point 0,0 to fill the canvas
 var grid = new Grid(CANVAS_WIDTH, CANVAS_HEIGHT, 0, 0);
 grid.createGrid();
-var ruteEnd = document.getElementById("ruteEnd");
 
 gCanvas.addEventListener("click", canvasClickHandler);
 
@@ -946,8 +969,19 @@ function canvasClickHandler(event) {
         );
       });
 
-      if (tenant) {
-        showModal(tenant.text, tenant.code, tenant.pointx, tenant.pointy);
+      if (tenant?.text.length > 0) {
+        showModal(
+          tenant.text,
+          tenant.code,
+          tenant.pointx,
+          tenant.pointy,
+          false,
+          tenant.address,
+          tenant.telp,
+          tenant.email,
+          tenant.product,
+          tenant.link
+        );
         changeColorOnClick(
           tenant.text,
           tenant.x,

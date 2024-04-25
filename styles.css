@@ -83,7 +83,7 @@ position:relative;}
 
 }
 .modal-image{
-/* width: 10rem; */
+ width: 20rem; 
   height: 12rem;
   object-fit: cover;
 }
@@ -91,8 +91,8 @@ position:relative;}
 #btn-closed {
   color: #ff0000;                                                                                       
   position: absolute;
-  top: 5px;
-  right:15px;
+  top: 0px;
+  right:10px;
   font-size: 1.875rem; /* equivalent to text-3xl in Tailwind */
 }
 
