@@ -26,39 +26,43 @@ const HandleTenant = (
   text,
   border,
   fontSize,
-  image = false
+  image,
+  code,
+  scale
 ) => {
   context.beginPath();
 
-  if (image) {
-    var img = new Image();
+  // if (image) {
+  //   var img = new Image();
 
-    img.src = "../images/toilet.png";
+  //   img.src = "../images/toilet.png";
 
-    img.onload = function () {
-      context.drawImage(img, x, y, width, height);
-    };
-  }
+  //   img.onload = function () {
+  //     context.drawImage(img, x, y, width, height);
+  //   };
+  // }
 
-  context.lineWidth = 1;
-
+  gctx.fillStyle = color;
   context.strokeStyle = !border ? "black" : color;
-  context.fillStyle = color;
-  context.fillRect(x, y, width, height);
-  context.font = fontSize ? `bold ${fontSize}px Arial` : "bold 12px Arial"; // Font dan ukuran teks awal
-  context.strokeRect(x, y, width, height);
+  context.font = fontSize ? `bold 22px Arial` : "bold 12px Arial"; // Font dan ukuran teks awal
+  gctx.fillRect(x, y, width, height);
+  gctx.strokeRect(x, y, width, height);
+  gctx.lineWidth = 1;
 
   const maxWidth = width - 10; // Lebar maksimum teks
-  const lineHeight = 18; // Tinggi baris teks
+  const lineHeight = 12; // Tinggi baris teks
 
-  let words = text.toUpperCase().split(" ");
+  let words = code.toUpperCase().split(" ");
+  if (scale > 0.6) {
+    words = text.toUpperCase().split(" ");
+  }
   let line = "";
   let lines = [];
 
   // Membagi teks menjadi beberapa baris
   for (let i = 0; i < words.length; i++) {
     let testLine = line + words[i] + " ";
-    let testWidth = context.measureText(testLine).width;
+    let testWidth = gctx.measureText(testLine).width;
     if (testWidth > maxWidth) {
       lines.push(line);
       line = words[i] + " ";
@@ -69,20 +73,20 @@ const HandleTenant = (
   lines.push(line);
 
   // Mengatur posisi teks
-  const textX = x + width / 2; // Koordinat X untuk teks
+  let textX = x + width / 2; // Koordinat X untuk teks
   let textY = y + height / 2 - (lines.length / 2) * lineHeight;
 
   // Menambahkan teks ke canvas
-  context.fillStyle = "black"; // Warna teks
-  context.textAlign = "center"; // Posisi teks
-  context.textBaseline = "middle"; // Posisi teks
+  gctx.fillStyle = "black"; // Warna teks
+  gctx.textAlign = "center"; // Posisi teks
+  gctx.textBaseline = "middle"; // Posisi teks
   for (let i = 0; i < lines.length; i++) {
-    context.fillText(lines[i], textX, textY);
+    gctx.fillText(lines[i], textX, textY);
     textY += lineHeight;
   }
 
-  context.closePath();
-  context.stroke();
+  // context.closePath();
+  // context.stroke();
 };
 
 const showModal = (
@@ -105,7 +109,6 @@ const showModal = (
   var moreInfo = document.getElementById("more-info");
   let click = false;
 
-  console.log(address, telp);
   if (
     text.split(" ")[0] == "toilet" ||
     text.split(" ")[0] == "HALL" ||
@@ -135,15 +138,16 @@ const showModal = (
 
   modal.classList.remove("hidden");
 
+  console.log(codeTenant === text);
   // CONTENT TEXT
   modalName.innerText = text;
   // DESKRIPSI
-  modalCode.innerText = codeTenant;
-  modalImage.src = image ? image : "../images/logo2.jpeg";
+  modalCode.innerText = codeTenant !== text ? codeTenant : "";
+  modalImage.src = image ? `../images/${image}` : "../images/logo2.jpeg";
   modalAddress.innerText = address ? address : "";
   modalTelp.innerText = telp ? telp : "";
   modalEmail.innerText = email ? email : "";
-  modalLink.innerText = link ? "website" : "";
+  modalLink.innerText = link ? link : "";
   modalLink.href = link ? link : "";
   modalProduct.innerText = product ? product : "";
 

@@ -17,10 +17,6 @@ var removeStartPoint = document.getElementById("removeStartPoint");
 var removeEndPoint = document.getElementById("removeEndPoint");
 var ruteEnd = document.getElementById("ruteEnd");
 
-let teks = "SELAMAT    SEMPURNA";
-var teks_terbaru = teks.replace(/\s+/g, " ");
-console.log(teks_terbaru);
-
 var gCanvasOffset;
 var gctx = gCanvas.getContext("2d");
 var CANVAS_WIDTH = gCanvas.width;
@@ -43,8 +39,8 @@ var mode = null;
 var urlParams = new URLSearchParams(window.location.search); // Mendapatkan URL saat ini
 
 // Mendapatkan nilai dari parameter "inputStart"
-var paramStart = urlParams.get("inputStart");
-var paramEnd = urlParams.get("inputEnd");
+var paramStart = urlParams.get("from")?.replace(/"/g, "").toUpperCase();
+console.log(paramStart);
 gCanvas.style.transform = "scale(" + scale + ")";
 
 // handle klik
@@ -90,20 +86,40 @@ removeEndPoint.addEventListener("click", () => {
   removeEndPoint.classList.add("hidden");
 });
 ruteEnd.addEventListener("click", () => {
-  updatPoint("end", startX.innerText, startY.innerText);
+  updatePoint("end", startX.innerText, startY.innerText);
   inputEnd.value = modalName.innerText;
 
   document.getElementById("modal").classList.add("hidden");
   removeEndPoint.classList.remove("hidden");
 });
 ruteStart.addEventListener("click", (event) => {
-  updatPoint("start", startX.innerText, startY.innerText);
+  updatePoint("start", startX.innerText, startY.innerText);
 
   inputStart.value = modalName.innerText;
 
   document.getElementById("modal").classList.add("hidden");
   removeStartPoint.classList.remove("hidden");
 });
+inputStart.addEventListener("input", function (event) {
+  const value = event.target.value;
+
+  console.log(value);
+  if (value.length > 0) {
+    removeStartPoint.classList.remove("hidden");
+    HandleSearch("start");
+  } else {
+    removeStartPoint.classList.add("hidden");
+  }
+});
+inputEnd.addEventListener("input", function (event) {
+  const value = event.target.value;
+  if (value.length > 0) {
+    removeEndPoint.classList.remove("hidden");
+  } else {
+    removeEndPoint.classList.add("hidden");
+  }
+});
+
 // handle klik end
 
 // function zoom
@@ -114,6 +130,11 @@ function zoomIn() {
     scale += 0.1;
     gCanvas.style.transform = "scale(" + scale + ")";
   }
+
+  reset();
+
+  myPath = new PathFindingAlg(grid, startPoint, endPoint);
+  myPath.findPath();
 }
 
 function zoomOut() {
@@ -122,9 +143,12 @@ function zoomOut() {
     // console.log(scale);
 
     gCanvas.style.transform = "scale(" + scale + ")";
+    reset();
+
+    myPath = new PathFindingAlg(grid, startPoint, endPoint);
+    myPath.findPath();
   }
 }
-// function zoom end
 
 // ICON USER
 function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
@@ -288,7 +312,9 @@ function Tenant(context) {
       e.text,
       e?.border,
       e?.fontSize,
-      e?.image
+      e?.image,
+      e?.code,
+      scale
     );
   });
 }
@@ -321,6 +347,7 @@ function resetWalls() {
   reset();
 }
 
+// search bar
 function HandleSearch(point) {
   var cekSearch = document.getElementById("dataSearch");
 
@@ -332,6 +359,9 @@ function HandleSearch(point) {
     point === "start"
       ? inputStart.value.toUpperCase()
       : inputEnd.value.toUpperCase();
+  const trimmedFilter = filter.trim();
+
+  console.log(trimmedFilter);
 
   const search = document.createElement("div");
   search.id = "dataSearch";
@@ -346,8 +376,9 @@ function HandleSearch(point) {
     const info = dataTenant[i];
 
     if (
-      info.text.toUpperCase().indexOf(filter) > -1 ||
-      info.code.toUpperCase().indexOf(filter) > -1
+      info.text.replace(/\s+/g, " ").toUpperCase().indexOf(trimmedFilter) >
+        -1 ||
+      info.code.toUpperCase().indexOf(trimmedFilter) > -1
     ) {
       const li = document.createElement("li");
       li.textContent = `${info.text.toUpperCase()} `;
@@ -387,8 +418,8 @@ function HandleSearch(point) {
         window.scroll(0, (info.y + 400) * scale);
 
         point === "start"
-          ? updatPoint("start", info.pointx, info.pointy)
-          : updatPoint("end", info.pointx, info.pointy);
+          ? updatePoint("start", info.pointx, info.pointy)
+          : updatePoint("end", info.pointx, info.pointy);
 
         search.remove();
         ul.remove();
@@ -409,14 +440,16 @@ function HandleSearch(point) {
   document.body.appendChild(search);
 }
 
+// handle ketika tenant di klik
 function changeColorOnClick(name, x, y, width, height) {
   Tenant(gctx);
-
-  console.log(name, x, y, width, height);
+  console.log(name);
 
   if (name.split(" ")[0] === "HALL") {
     return false;
   }
+
+  // Menggambar kotak putih untuk menutupi teks sebelumnya
 
   gctx.fillStyle = "#7CFC00";
   gctx.fillRect(x, y, width, height);
@@ -424,7 +457,7 @@ function changeColorOnClick(name, x, y, width, height) {
   gctx.lineWidth = 1;
 
   const maxWidth = width - 10; // Lebar maksimum teks
-  const lineHeight = 18; // Tinggi baris teks
+  const lineHeight = 12; // Tinggi baris teks
 
   let words = name.toUpperCase().split(" ");
   let line = "";
@@ -458,7 +491,7 @@ function changeColorOnClick(name, x, y, width, height) {
 }
 
 // update titik
-function updatPoint(point, x, y) {
+function updatePoint(point, x, y) {
   if (point === "start") {
     startPoint = "";
     startPoint = new Vec2(x, y);
@@ -473,6 +506,48 @@ function updatPoint(point, x, y) {
   myPath.findPath();
 }
 
+function getFromUserWithParamUrl(from) {
+  var tenant = dataTenant.find(function (element) {
+    return element.text.toUpperCase() == paramStart;
+  });
+  if (tenant) {
+    console.log(tenant);
+    inputStart.value = tenant.text.toUpperCase();
+
+    startPoint = new Vec2(tenant.pointx, tenant.pointy);
+    containerCanvas.scrollLeft = (tenant.x - 200) * scale;
+    window.scroll(0, (tenant.y + 400) * scale);
+    showModal(
+      tenant.text,
+      tenant.code,
+      tenant.pointx,
+      tenant.pointy,
+      false,
+      tenant.address,
+      tenant.telp,
+      tenant.email,
+      tenant.product,
+      tenant.link
+    );
+
+    setTimeout(
+      () => {
+        console.log("halo");
+        changeColorOnClick(
+          tenant.text,
+          tenant.x,
+          tenant.y + 320,
+          tenant.width,
+          tenant.height
+        );
+      },
+
+      100
+    );
+  } else {
+    startPoint = new Vec2(220, 120);
+  }
+}
 // function end
 
 //any point in 2D space
@@ -484,7 +559,9 @@ class Vec2 {
 }
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
-startPoint = new Vec2(480, 220);
+
+getFromUserWithParamUrl();
+
 endPoint = new Vec2(0, 0);
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -965,7 +1042,7 @@ function canvasClickHandler(event) {
         return;
       }
 
-      updatPoint("start", posx, posy);
+      updatePoint("start", posx, posy);
     } else {
       var tenant = dataTenant.find(function (element) {
         return (

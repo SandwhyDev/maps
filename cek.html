@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 QR Code Scanner</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>HTML5 QR Code Scanner</h1> -->
+    <div class="container relative">
+      <video id="qr-video" width="100%" height="100%" autoplay></video>
+
+      <div
+        class="w-full h-full b absolute top-0 left-0 flex items-center justify-center"
+      >
+        <div class="w-52 h-52 flex relative">
+          <!-- Top border -->
+          <div
+            class="border-l-4 border-t-4 w-10 h-10 border-red-500 absolute top-0 left-0"
+          ></div>
+
+          <!-- Right border -->
+          <div
+            class="border-r-4 border-t-4 w-10 h-10 border-red-500 absolute top-0 right-0"
+          ></div>
+
+          <!-- Bottom border -->
+          <div
+            class="border-l-4 border-b-4 w-10 h-10 border-red-500 absolute bottom-0 left-0"
+          ></div>
+
+          <!-- Left border -->
+          <div
+            class="border-r-4 border-b-4 w-10 h-10 border-red-500 absolute bottom-0 right-0"
+          ></div>
+        </div>
+      </div>
+
+      <div>
+        <video autoplay="true" id="video-webcam">
+          Browsermu tidak mendukung bro, upgrade donk!
+        </video>
+      </div>
+    </div>
+    <!-- <div id="qr-result" class="bg-red-500"></div> -->
+
+    <script>
+      const qrVideo = document.getElementById("qr-video");
+      const qrResult = document.getElementById("qr-result");
+
+      // Use the navigator.mediaDevices.getUserMedia API to access the webcam
+      navigator.mediaDevices
+        .getUserMedia({ video: { facingMode: "environment" } })
+        .then(function (stream) {
+          qrVideo.srcObject = stream;
+          qrVideo.play();
+        })
+        .catch(function (err) {
+          console.error("Error accessing webcam:", err);
+        });
+
+      // Use setInterval to periodically scan the video for QR codes
+      setInterval(() => {
+        const canvas = document.createElement("canvas");
+        canvas.width = qrVideo.videoWidth;
+        canvas.height = qrVideo.videoHeight;
+        canvas
+          .getContext("2d")
+          .drawImage(qrVideo, 0, 0, canvas.width, canvas.height);
+        const imageData = canvas
+          .getContext("2d")
+          .getImageData(0, 0, canvas.width, canvas.height);
+        const code = jsQR(imageData.data, imageData.width, imageData.height, {
+          inversionAttempts: "dontInvert",
+        });
+
+        // COBA KETIKA DISTOP LANGSUNG MATIKAN CAMERA
+        if (code) {
+          alert("QR Code detected: " + code.data);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

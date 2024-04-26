@@ -16,74 +16,67 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body id="body" class="py-28">
-    <div class="w-full max-h-28 flex gap-4 p-2">
-      <div class="object-cover bg-black p-5 rounded">
-        <img src="/images/logo.png" alt="" srcset="" />
-      </div>
-      <div class="object-cover bg-black p-5 rounded w-fit">
-        <img src="/images/logo.png" alt="" srcset="" />
-      </div>
-    </div>
-
+  <body id="body" class="py-12">
     <!-- SEARCH BAR  -->
     <div
-      class="flex flex-col gap-10 fixed top-0 left-0 items-center w-screen z-10"
+      class="flex flex-col gap-10 fixed top-0 left-0 items-center w-screen z-50"
     >
       <!-- <div id="btnWall" class="btn">Wall</div> -->
       <div id="searchPoint" class="StartPoint p-5 w-full flex gap-2 hidden">
         <p class="p-2 rounded w-full text-gray-500 bg-white">Search Point</p>
       </div>
 
-      <div id="containerSearch" class="flex gap-2 p-5 w-96">
-        <div class="w-10 space-y-2">
-          <div class="object-cover p-1">
-            <img src="/images/human.png" alt="" srcset="" />
-          </div>
+      <div id="containerSearch" class="flex gap-2 px-5 w-96 flex-col pt-5">
+        <div class="flex gap-2">
+          <div class="w-10 space-y-3">
+            <div class="object-cover p-1">
+              <img src="/images/human.png" alt="" srcset="" />
+            </div>
 
-          <div class="object-cover p-1.5">
-            <img src="/images/location.png" alt="" srcset="" />
-          </div>
-        </div>
-
-        <!-- SEARCH POINT  -->
-        <div class="space-y-2 w-full">
-          <!-- START POINT  -->
-          <div class="StartPoint flex">
-            <div class="relative w-full">
-              <input
-                class="p-2 rounded w-full pr-10 border-[.5px] border-black p-2 rounded focus:outline-none"
-                type="text"
-                id="inputStart"
-                name="start"
-                onkeyup="HandleSearch(`start`)"
-                placeholder="Start Point "
-              />
-              <span
-                id="removeStartPoint"
-                class="absolute top-2 right-4 text-gray-500 cursor-pointer hidden"
-                ><i class="fa-solid fa-x"></i
-              ></span>
+            <div class="object-cover p-1.5">
+              <img src="/images/location.png" alt="" srcset="" />
             </div>
           </div>
 
-          <!-- END POINT -->
-          <div class="EndPoint flex">
-            <div class="relative w-full">
-              <input
-                class="p-2 rounded w-full pr-10 border-[.5px] border-black p-2 rounded focus:outline-none"
-                type="text"
-                id="inputEnd"
-                name="end"
-                onkeyup="HandleSearch(`end`)"
-                placeholder="End Point "
-              />
+          <!-- SEARCH POINT  -->
+          <div class="w-full space-y-2">
+            <!-- START POINT  -->
+            <div class="StartPoint flex s">
+              <div class="relative w-full">
+                <input
+                  class="p-2 rounded w-full pr-10 border-[.5px] border-black p-2 rounded focus:outline-none"
+                  type="text"
+                  id="inputStart"
+                  name="start"
+                  onkeyup="HandleSearch(`start`)"
+                  placeholder="Start Point "
+                />
+                <span
+                  id="removeStartPoint"
+                  class="absolute top-2 right-4 text-gray-500 cursor-pointer hidden"
+                  ><i class="fa-solid fa-x"></i
+                ></span>
+              </div>
+            </div>
 
-              <span
-                id="removeEndPoint"
-                class="absolute top-2 right-4 text-gray-500 cursor-pointer hidden"
-                ><i class="fa-solid fa-x"></i
-              ></span>
+            <!-- END POINT -->
+            <div class="EndPoint flex">
+              <div class="relative w-full">
+                <input
+                  class="p-2 rounded w-full pr-10 border-[.5px] border-black p-2 rounded focus:outline-none"
+                  type="text"
+                  id="inputEnd"
+                  name="end"
+                  onkeyup="HandleSearch(`end`)"
+                  placeholder="End Point "
+                />
+
+                <span
+                  id="removeEndPoint"
+                  class="absolute top-2 right-4 text-gray-500 cursor-pointer hidden"
+                  ><i class="fa-solid fa-x"></i
+                ></span>
+              </div>
             </div>
           </div>
         </div>
@@ -95,12 +88,23 @@
         <div>Alpha: <span id="direction"></span></div>
       </div> -->
     </div>
+    <!-- SEEARCH BAR END  -->
+
+    <!-- <div class="w-full max-h-28 flex gap-4 p-2 sticky top-28 left-0 z-10">
+      <div class="object-cover bg-black p-5 rounded">
+        <img src="/images/logo.png" alt="" srcset="" />
+      </div>
+      <div class="object-cover bg-black p-5 rounded w-fit">
+        <img src="/images/logo.png" alt="" srcset="" />
+      </div>
+    </div> -->
 
     <!-- CANVAS -->
     <div id="containerCanvas" class="w-full h-full overflow-x-scroll">
       <canvas id="gCanvas" width="5700" height="1940"> </canvas>
     </div>
 
+    <!-- MODAL  -->
     <div id="modal" class="hidden">
       <div class="modal-content max-w-[22rem]">
         <div class="flex items-center pr-3 justify-between w-full">
@@ -150,7 +154,7 @@
           <p id="modal-telp" class="text-sm font-normal"></p>
           <p id="modal-email" class="text-sm font-normal"></p>
 
-          <p class="text-sm font-normal underline">
+          <p class="text-sm font-normal underline lowercase">
             <a id="modal-link" href="#"> </a>
           </p>
 
