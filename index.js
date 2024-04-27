@@ -223,11 +223,10 @@ function enableCamera() {
         qrVideo.srcObject.getTracks().forEach((track) => track.stop()); // Menghentikan pengambilan gambar dari kamera
         // alert("QR Code detected: " + code.data);
 
-        containerSearch.classList.remove("hidden");
-        containerCamera.classList.add("hidden");
-        document
-          .getElementById("container-button-bottom")
-          .classList.remove("hidden");
+        containerSearch.style.display = "flex";
+        containerCamera.style.display = "none";
+        document.getElementById("container-button-bottom").style.display =
+          "flex";
       }
     }
   }, 1000);
