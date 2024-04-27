@@ -16,6 +16,11 @@ var removeEndPoint = document.getElementById("removeEndPoint");
 var removeStartPoint = document.getElementById("removeStartPoint");
 var removeEndPoint = document.getElementById("removeEndPoint");
 var ruteEnd = document.getElementById("ruteEnd");
+var buttonCamera = document.getElementById("btn-camera");
+var CloseCamera = document.getElementById("close-camera");
+var buttonCloseCamera = document.getElementById("button-close-camera");
+const containerCamera = document.getElementById("camera");
+const qrVideo = document.getElementById("qr-video");
 
 var gCanvasOffset;
 var gctx = gCanvas.getContext("2d");
@@ -43,22 +48,48 @@ var paramStart = urlParams.get("from")?.replace(/"/g, "").toUpperCase();
 console.log(paramStart);
 gCanvas.style.transform = "scale(" + scale + ")";
 
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (window.DeviceOrientationEvent) {
+    // document.getElementById("notice").innerHTML = "Working API detected";
+    window.addEventListener(
+      "deviceorientation",
+      (eventData) => {
+        // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
+        const tiltLR = eventData.gamma;
+        // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
+        const tiltFB = eventData.beta;
+        // alpha: The direction the compass of the device aims to in degrees.
+        dir = eventData.alpha;
+        // Call the function to use the data on the page.
+        deviceOrientationHandler(tiltLR, tiltFB, dir);
+      },
+      false
+    );
+  } else {
+    // document.getElementById("notice").innerHTML = "No API detected";
+    // alert("eror");
+  }
+
+  function deviceOrientationHandler(tiltLR, tiltFB, dir) {
+    // // BETA
+    // document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
+    // // GAMMA
+    // document.getElementById("tiltFB").innerHTML = Math.ceil(tiltFB);
+    // // ALPHA
+    // document.getElementById("direction").innerHTML = Math.ceil(-dir);
+
+    arrow.style.transform = ` rotateZ(${Math.ceil(-dir)}deg)`;
+  }
+
+  buttonCamera.addEventListener("click", function () {
+    enableCamera();
+  });
+});
+
 // handle klik
 btnZoomIn.addEventListener("click", zoomIn);
 btnZoomOut.addEventListener("click", zoomOut);
-searchPoint.addEventListener("click", () => {
-  searchPoint.classList.remove("py-5");
-  searchPoint.className = "hidden";
-  containerSearch.classList.remove("hidden");
 
-  // iconEnd.classList.remove("hidden");
-
-  //tambahkan focus di input
-  inputStart.focus();
-
-  //search
-  HandleSearch("start");
-});
 inputStart.addEventListener("click", () => {
   var search = document.getElementById("dataSearch");
   document.getElementById("modal").classList.add("hidden");
@@ -119,10 +150,91 @@ inputEnd.addEventListener("input", function (event) {
     removeEndPoint.classList.add("hidden");
   }
 });
+buttonCamera.addEventListener("click", () => {
+  containerCamera.style.display = "block";
+});
+
+buttonCloseCamera.addEventListener("click", () => {
+  qrVideo.pause(); // Menghentikan pemutaran video
+  qrVideo.srcObject.getTracks().forEach((track) => track.stop()); // Menghentikan pengambilan gambar dari kamera
+  // alert("QR Code detected: " + code.data);
+
+  containerSearch.style.display = "flex";
+  containerCamera.style.display = "none";
+  document.getElementById("container-button-bottom").style.display = "flex";
+});
 
 // handle klik end
 
+// FUNCTION
+function enableCamera() {
+  const loadingText = document.getElementById("loading-text");
+  let scanInterval;
+  const constraints = {
+    video: {
+      facingMode: "environment", // Mengatur kamera belakang secara langsung
+    },
+  };
+
+  // Tampilkan teks "Loading"
+  loadingText.innerText = "Loading...";
+
+  // Use the navigator.mediaDevices.getUserMedia API to access the webcam
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then(function (stream) {
+      containerSearch.style.display = "none";
+
+      qrVideo.srcObject = stream;
+      qrVideo.play();
+      // Setelah video mulai diputar, sembunyikan teks "Loading"
+      loadingText.style.display = "none";
+      CloseCamera.style.display = "flex";
+      document.getElementById("container-button-bottom").style.display = "none";
+      document.getElementById("back-qr").style.display = "flex";
+    })
+    .catch(function (err) {
+      console.error("Error accessing webcam:", err);
+      loadingText.innerText = "Error accessing webcam";
+    });
+
+  // Use setInterval to periodically scan the video for QR codes
+  scanInterval = setInterval(() => {
+    const canvas = document.createElement("canvas");
+    canvas.width = qrVideo.videoWidth;
+    canvas.height = qrVideo.videoHeight;
+
+    canvas
+      .getContext("2d")
+      .drawImage(qrVideo, 0, 0, canvas.width, canvas.height);
+    const imageData = canvas
+      .getContext("2d")
+      .getImageData(0, 0, canvas.width, canvas.height);
+    const code = jsQR(imageData.data, imageData.width, imageData.height, {
+      inversionAttempts: "dontInvert",
+    });
+
+    if (code) {
+      const hasil = getFromUserWithParamUrl(code.data);
+
+      if (hasil) {
+        clearInterval(scanInterval); // Mematikan interval saat QR code terdeteksi
+        qrVideo.pause(); // Menghentikan pemutaran video
+        qrVideo.srcObject.getTracks().forEach((track) => track.stop()); // Menghentikan pengambilan gambar dari kamera
+        // alert("QR Code detected: " + code.data);
+
+        containerSearch.classList.remove("hidden");
+        containerCamera.classList.add("hidden");
+        document
+          .getElementById("container-button-bottom")
+          .classList.remove("hidden");
+      }
+    }
+  }, 1000);
+}
+
 // function zoom
+
 function zoomIn() {
   // console.log(scale);
 
@@ -357,8 +469,8 @@ function HandleSearch(point) {
 
   const filter =
     point === "start"
-      ? inputStart.value.toUpperCase()
-      : inputEnd.value.toUpperCase();
+      ? inputStart.value.replace(/\s+/g, " ").toUpperCase()
+      : inputEnd.value.replace(/\s+/g, " ").toUpperCase();
   const trimmedFilter = filter.trim();
 
   console.log(trimmedFilter);
@@ -507,14 +619,19 @@ function updatePoint(point, x, y) {
 }
 
 function getFromUserWithParamUrl(from) {
-  var tenant = dataTenant.find(function (element) {
-    return element.text.toUpperCase() == paramStart;
-  });
-  if (tenant) {
-    console.log(tenant);
-    inputStart.value = tenant.text.toUpperCase();
+  var containerCanvas = document.getElementById("containerCanvas");
 
-    startPoint = new Vec2(tenant.pointx, tenant.pointy);
+  var tenant = dataTenant.find(function (element) {
+    return (
+      element.text.replace(/\s+/g, " ").toUpperCase() == from.toUpperCase()
+    );
+  });
+
+  if (tenant) {
+    console.log(tenant.text);
+    inputStart.value = tenant.text.replace(/\s+/g, " ").toUpperCase();
+
+    updatePoint("start", tenant.pointx, tenant.pointy);
     containerCanvas.scrollLeft = (tenant.x - 200) * scale;
     window.scroll(0, (tenant.y + 400) * scale);
     showModal(
@@ -544,8 +661,11 @@ function getFromUserWithParamUrl(from) {
 
       100
     );
+
+    return true;
   } else {
-    startPoint = new Vec2(220, 120);
+    alert("data tidak ditemukan");
+    return false;
   }
 }
 // function end
@@ -560,43 +680,10 @@ class Vec2 {
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
 
-getFromUserWithParamUrl();
+// getFromUserWithParamUrl();
 
 endPoint = new Vec2(0, 0);
-
-document.addEventListener("DOMContentLoaded", function (event) {
-  if (window.DeviceOrientationEvent) {
-    // document.getElementById("notice").innerHTML = "Working API detected";
-    window.addEventListener(
-      "deviceorientation",
-      (eventData) => {
-        // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
-        const tiltLR = eventData.gamma;
-        // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
-        const tiltFB = eventData.beta;
-        // alpha: The direction the compass of the device aims to in degrees.
-        dir = eventData.alpha;
-        // Call the function to use the data on the page.
-        deviceOrientationHandler(tiltLR, tiltFB, dir);
-      },
-      false
-    );
-  } else {
-    // document.getElementById("notice").innerHTML = "No API detected";
-    // alert("eror");
-  }
-
-  function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-    // // BETA
-    // document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
-    // // GAMMA
-    // document.getElementById("tiltFB").innerHTML = Math.ceil(tiltFB);
-    // // ALPHA
-    // document.getElementById("direction").innerHTML = Math.ceil(-dir);
-
-    arrow.style.transform = ` rotateZ(${Math.ceil(-dir)}deg)`;
-  }
-});
+startPoint = new Vec2(480, 400);
 
 class Node {
   constructor(id, size, posx, posy, walkable, path, direction = "all", color) {

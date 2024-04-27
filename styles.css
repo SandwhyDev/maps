@@ -9,12 +9,19 @@ body{
 canvas {
   /* border: none; */
   /* border: 0.5px black solid; */
-  transform: rotate(0deg);
-  transform-origin: 250px 250px;
+  /* transform: rotate(0deg); */
+  transform-origin: 0px 0px;
   /* background-color: #ffc000; */
 
 
 }
+
+#containerCanvas {
+  overflow-x: scroll;
+}
+
+
+
 
 #icon-user{
   padding: 10px;
@@ -109,3 +116,197 @@ position:relative;}
   height: 200px;
 } */
 
+/* CAMERA  */
+#camera {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+#qr-video {
+  width: 100%;
+  /* height: 100%; */
+}
+
+#loading-text {
+  background-color: #ff9900;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+#close-camera {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+#button-close-camera {
+  width: 5rem;
+  height: 5rem;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#back-qr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 480px; /* Sesuaikan dengan kebutuhan */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#back-qr > div {
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+  position: relative;
+}
+
+#back-qr > div > div {
+  /* border-bottom: 4px solid #ff9900; */
+  position: absolute;
+}
+
+#back-qr > div > div:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-top: 4px solid #ff9900;
+  border-left: 4px solid #ff9900;
+
+}
+
+#back-qr > div > div:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border-top: 4px solid #ff9900;
+  border-right: 4px solid #ff9900;
+}
+
+#back-qr > div > div:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-bottom: 4px solid #ff9900;
+  border-left: 4px solid #ff9900;
+}
+
+#back-qr > div > div:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border-bottom: 4px solid #ff9900;
+  border-right: 4px solid #ff9900;
+}
+
+/* CAMERA END  */
+
+#container-button-bottom {
+  position: fixed;
+  bottom: 5rem; /* Adjust this value as needed */
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0 2.5rem; /* Adjust padding as needed */
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.w-14,
+.h-14 {
+  width: 3.5rem; /* Adjust width as needed */
+  height: 3.5rem; /* Adjust height as needed */
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem; /* Adjust font size as needed */
+}
+
+.rounded-full {
+  border-radius: 9999px; /* Adjust border radius as needed */
+}
+
+.border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-orange-500 {
+  background-color: #ed8936; /* Adjust background color as needed */
+}
+
+
+
+.text-2xl {
+  font-size: 1.25rem; /* Adjust font size as needed */
+}
+
+.absolute {
+  position: absolute;
+}
+
+.top-8 {
+  top: 2rem; /* Adjust top position as needed */
+}
+
+.right-50 {
+  right: 50%; /* Adjust right position as needed */
+}
+
+.gap-2{
+  gap: 0.5rem;
+}

@@ -57,7 +57,6 @@
 
     <script>
       const qrVideo = document.getElementById("qr-video");
-      const qrResult = document.getElementById("qr-result");
 
       // Use the navigator.mediaDevices.getUserMedia API to access the webcam
       navigator.mediaDevices
@@ -75,6 +74,7 @@
         const canvas = document.createElement("canvas");
         canvas.width = qrVideo.videoWidth;
         canvas.height = qrVideo.videoHeight;
+
         canvas
           .getContext("2d")
           .drawImage(qrVideo, 0, 0, canvas.width, canvas.height);
