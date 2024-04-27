@@ -201,19 +201,16 @@ function enableCamera() {
   // Use setInterval to periodically scan the video for QR codes
   scanInterval = setInterval(() => {
     const canvas = document.createElement("canvas");
-    canvas.width = qrVideo.videoWidth;
-    canvas.height = qrVideo.videoHeight;
+    canvas.width = 150; // Lebar kotak
+    canvas.height = 150; // Tinggi kotak
 
-    canvas
-      .getContext("2d")
-      .drawImage(qrVideo, 0, 0, canvas.width, canvas.height);
-    const imageData = canvas
-      .getContext("2d")
-      .getImageData(0, 0, canvas.width, canvas.height);
+    const context = canvas.getContext("2d");
+    context.drawImage(qrVideo, 0, 0, canvas.width, canvas.height);
+
+    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
     const code = jsQR(imageData.data, imageData.width, imageData.height, {
       inversionAttempts: "dontInvert",
     });
-
     if (code) {
       const hasil = getFromUserWithParamUrl(
         code.data.replace(/\s+/g, " ").toUpperCase()
@@ -665,7 +662,7 @@ function getFromUserWithParamUrl(from) {
 
     return true;
   } else {
-    alert("data tidak ditemukan");
+    alert(`data : ${from} tidak ditemukan`);
     return false;
   }
 }
