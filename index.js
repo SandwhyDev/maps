@@ -215,7 +215,9 @@ function enableCamera() {
     });
 
     if (code) {
-      const hasil = getFromUserWithParamUrl(code.data);
+      const hasil = getFromUserWithParamUrl(
+        code.data.replace(/\s+/g, " ").toUpperCase()
+      );
 
       if (hasil) {
         clearInterval(scanInterval); // Mematikan interval saat QR code terdeteksi
