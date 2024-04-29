@@ -52,9 +52,10 @@ const HandleTenant = (
   const maxWidth = width - 10; // Lebar maksimum teks
   const lineHeight = 12; // Tinggi baris teks
 
-  let words = code.toUpperCase().split(" ");
+  let words = code.replace(/\s+/g, " ").toUpperCase().split(" ");
   if (scale > 0.6) {
-    words = text.toUpperCase().split(" ");
+    words = text.replace(/\s+/g, " ").toUpperCase().split(" ");
+    context.font = fontSize ? `bold 22px Arial` : "bold 10px Arial"; // Font dan ukuran teks awal
   }
   let line = "";
   let lines = [];
@@ -140,7 +141,7 @@ const showModal = (
 
   console.log(codeTenant === text);
   // CONTENT TEXT
-  modalName.innerText = text;
+  modalName.innerText = text.replace(/\s+/g, " ").toUpperCase();
   // DESKRIPSI
   modalCode.innerText = codeTenant !== text ? codeTenant : "";
   modalImage.src = image ? `../images/${image}` : "../images/logo2.jpeg";

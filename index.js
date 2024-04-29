@@ -41,11 +41,6 @@ var startPoint;
 var endPoint;
 var mode = null;
 
-var urlParams = new URLSearchParams(window.location.search); // Mendapatkan URL saat ini
-
-// Mendapatkan nilai dari parameter "inputStart"
-var paramStart = urlParams.get("from")?.replace(/"/g, "").toUpperCase();
-console.log(paramStart);
 gCanvas.style.transform = "scale(" + scale + ")";
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -80,12 +75,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     arrow.style.transform = ` rotateZ(${Math.ceil(-dir)}deg)`;
   }
-
-  buttonCamera.addEventListener("click", function () {
-    enableCamera();
-  });
 });
 
+buttonCamera.addEventListener("click", function () {
+  enableCamera();
+});
 // handle klik
 btnZoomIn.addEventListener("click", zoomIn);
 btnZoomOut.addEventListener("click", zoomOut);
@@ -194,8 +188,12 @@ function enableCamera() {
       document.getElementById("back-qr").style.display = "flex";
     })
     .catch(function (err) {
-      console.error("Error accessing webcam:", err);
-      loadingText.innerText = "Error accessing webcam";
+      console.error("grant camera access permission:", err);
+      loadingText.innerText = "grant camera access permission";
+
+      setInterval(() => {
+        containerCamera.style.display = "none";
+      }, 3000);
     });
 
   // Use setInterval to periodically scan the video for QR codes
@@ -212,9 +210,7 @@ function enableCamera() {
       inversionAttempts: "dontInvert",
     });
     if (code) {
-      const hasil = getFromUserWithParamUrl(
-        code.data.replace(/\s+/g, " ").toUpperCase()
-      );
+      const hasil = getFromQr(code.data.replace(/\s+/g, " ").toUpperCase());
 
       if (hasil) {
         clearInterval(scanInterval); // Mematikan interval saat QR code terdeteksi
@@ -230,7 +226,6 @@ function enableCamera() {
     }
   }, 1000);
 }
-
 // function zoom
 
 function zoomIn() {
@@ -269,7 +264,8 @@ function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
       target.posx + target.size / 2,
       target.posy + target.size / 2
     );
-    //   context.rotate((rotateDegrees * Math.PI) / 180); // Putar gambar
+
+    context.rotate((rotateDegrees * Math.PI) / 180);
 
     //   // Mengubah ukuran gambar sesuai faktor perbesaran
     var scaledSize = target.size * scaleFactor;
@@ -491,7 +487,12 @@ function HandleSearch(point) {
       info.code.toUpperCase().indexOf(trimmedFilter) > -1
     ) {
       const li = document.createElement("li");
-      li.textContent = `${info.text.toUpperCase()} `;
+      console.log(info.text.toUpperCase(), info.code.toUpperCase());
+      li.textContent =
+        info.text.toUpperCase() == info.code.toUpperCase()
+          ? `${info.text.toUpperCase()} `
+          : `${info.text.toUpperCase()} | ${info.code} `;
+
       li.classList.add(
         "px-4",
         "py-2",
@@ -553,7 +554,7 @@ function HandleSearch(point) {
 // handle ketika tenant di klik
 function changeColorOnClick(name, x, y, width, height) {
   Tenant(gctx);
-  console.log(name);
+  console.log(name.replace(/\s+/g, " "));
 
   if (name.split(" ")[0] === "HALL") {
     return false;
@@ -569,7 +570,7 @@ function changeColorOnClick(name, x, y, width, height) {
   const maxWidth = width - 10; // Lebar maksimum teks
   const lineHeight = 12; // Tinggi baris teks
 
-  let words = name.toUpperCase().split(" ");
+  let words = name.replace(/\s+/g, " ").toUpperCase().split(" ");
   let line = "";
   let lines = [];
 
@@ -616,7 +617,7 @@ function updatePoint(point, x, y) {
   myPath.findPath();
 }
 
-function getFromUserWithParamUrl(from) {
+function getFromQr(from) {
   var containerCanvas = document.getElementById("containerCanvas");
 
   var tenant = dataTenant.find(function (element) {
@@ -677,8 +678,6 @@ class Vec2 {
 }
 
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
-
-// getFromUserWithParamUrl();
 
 endPoint = new Vec2(0, 0);
 startPoint = new Vec2(480, 400);
@@ -764,7 +763,9 @@ class Node {
 
     if (this.posx == startPoint.x && this.posy == startPoint.y) {
       // console.log("hit the startNode");
+
       this.createStartNode();
+
       return;
     }
     if (this.inPath === true) {
