@@ -510,12 +510,18 @@ function HandleSearch(point) {
       li.addEventListener("click", (event) => {
         var name = info.text.replace(/\s+/g, " ");
         if (point === "start") {
-          inputStart.value = `${name.toUpperCase()} `;
+          inputStart.value =
+            info.text.toUpperCase() == info.code.toUpperCase()
+              ? `${info.text.toUpperCase()} `
+              : `${info.text.toUpperCase()} | ${info.code} `;
           removeStartPoint.classList.remove("hidden");
           startPoint = "";
           startPoint = new Vec2(info.pointx, info.pointy);
         } else {
-          inputEnd.value = `${name.toUpperCase()} `;
+          inputEnd.value =
+            info.text.toUpperCase() == info.code.toUpperCase()
+              ? `${info.text.toUpperCase()} `
+              : `${info.text.toUpperCase()} | ${info.code} `;
           removeEndPoint.classList.remove("hidden");
 
           endPoint = "";
@@ -632,7 +638,7 @@ function getFromQr(from) {
 
     updatePoint("start", tenant.pointx, tenant.pointy);
     containerCanvas.scrollLeft = (tenant.x - 200) * scale;
-    window.scroll(0, (tenant.y + 400) * scale);
+    window.scroll(0, (tenant.y + 300) * scale);
     showModal(
       tenant.text,
       tenant.code,
