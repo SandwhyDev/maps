@@ -43,40 +43,6 @@ var mode = null;
 
 gCanvas.style.transform = "scale(" + scale + ")";
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  if (window.DeviceOrientationEvent) {
-    // document.getElementById("notice").innerHTML = "Working API detected";
-    window.addEventListener(
-      "deviceorientation",
-      (eventData) => {
-        // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
-        const tiltLR = eventData.gamma;
-        // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
-        const tiltFB = eventData.beta;
-        // alpha: The direction the compass of the device aims to in degrees.
-        dir = eventData.alpha;
-        // Call the function to use the data on the page.
-        deviceOrientationHandler(tiltLR, tiltFB, dir);
-      },
-      false
-    );
-  } else {
-    // document.getElementById("notice").innerHTML = "No API detected";
-    // alert("eror");
-  }
-
-  function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-    // // BETA
-    // document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
-    // // GAMMA
-    // document.getElementById("tiltFB").innerHTML = Math.ceil(tiltFB);
-    // // ALPHA
-    // document.getElementById("direction").innerHTML = Math.ceil(-dir);
-
-    arrow.style.transform = ` rotateZ(${Math.ceil(-dir)}deg)`;
-  }
-});
-
 buttonCamera.addEventListener("click", function () {
   enableCamera();
 });
@@ -255,21 +221,58 @@ function zoomOut() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (window.DeviceOrientationEvent) {
+    // document.getElementById("notice").innerHTML = "Working API detected";
+    window.addEventListener(
+      "deviceorientation",
+      (eventData) => {
+        // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
+        const tiltLR = eventData.gamma;
+        // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
+        const tiltFB = eventData.beta;
+        // alpha: The direction the compass of the device aims to in degrees.
+        dir = eventData.alpha;
+        // Call the function to use the data on the page.
+        deviceOrientationHandler(tiltLR, tiltFB, dir);
+      },
+      false
+    );
+  } else {
+    // document.getElementById("notice").innerHTML = "No API detected";
+    // alert("eror");
+  }
+
+  function deviceOrientationHandler(tiltLR, tiltFB, dir) {
+    // // BETA
+    // document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
+    // // GAMMA
+    // document.getElementById("tiltFB").innerHTML = Math.ceil(tiltFB);
+    // // ALPHA
+    // document.getElementById("direction").innerHTML = Math.ceil(-dir);
+
+    arrow.style.transform = ` rotateZ(${Math.ceil(-dir)}deg)`;
+  }
+});
+
 // ICON USER
 function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
   var img = new Image();
   img.onload = function () {
-    context.save(); // Simpan status konteks gambar
-    context.translate(
-      target.posx + target.size / 2,
-      target.posy + target.size / 2
+    gctx.save(); // Simpan status konteks gambar
+    gctx.translate(
+      target?.posx + target?.size / 2,
+      target?.posy + target?.size / 2
     );
 
-    context.rotate((rotateDegrees * Math.PI) / 180);
+    console.log("halo");
+
+    // gctx.rotate((rotateDegrees * Math.PI) / 180);
+    gctx.rotate((-dir * Math.PI) / 180);
 
     //   // Mengubah ukuran gambar sesuai faktor perbesaran
-    var scaledSize = target.size * scaleFactor;
-    context.drawImage(
+    var scaledSize = target?.size * scaleFactor;
+    gctx.drawImage(
       img,
       -scaledSize / 2,
       -scaledSize / 2,
@@ -278,11 +281,11 @@ function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
     );
 
     // Pusat rotasi
-    context.restore(); // Pulihkan status konteks gambar
-    context.closePath(); // Menutup jalur gambar
+    gctx.restore(); // Pulihkan status konteks gambar
+    gctx.closePath(); // Menutup jalur gambar
   };
 
-  img.src = "./images/human.png";
+  img.src = "./images/arrow.svg";
 }
 
 // jarak dari satu node ke node lainnya
@@ -403,6 +406,25 @@ function iconEndNode(context, target, lineW, strokeS, fillS) {
   context.closePath();
   context.fill(); // Mengisi lingkaran dengan warna fillS
   context.stroke(); // Menggambar lingkaran dengan warna strokeS
+}
+function segitiga(context, target, lineW, strokeS, fillS) {
+  context.beginPath();
+  context.lineWidth = lineW;
+  context.strokeStyle = strokeS;
+  context.fillStyle = fillS;
+
+  // Memutar segitiga sebesar 90 derajat
+  var rotatedX = target.posx + target.size / 2; // X baru setelah rotasi
+  var rotatedY = target.posy + target.size; // Y baru setelah rotasi
+
+  // Menggunakan moveTo() untuk memulai gambaran segitiga yang sudah diputar
+  context.moveTo(rotatedX, rotatedY); // Titik atas segitiga setelah rotasi
+  context.lineTo(target.posx + target.size, target.posy); // Titik kanan bawah segitiga setelah rotasi
+  context.lineTo(target.posx, target.posy); // Titik kiri bawah segitiga setelah rotasi
+  context.closePath();
+
+  context.fill(); // Mengisi segitiga dengan warna fillS
+  context.stroke(); // Menggambar tepi segitiga dengan warna strokeS
 }
 
 // HANDLE TENANT
@@ -708,8 +730,8 @@ class Node {
   }
 
   createStartNode() {
-    iconUser(gctx, this);
-    // iconEndNode(gctx, this, 6, "green", "green");
+    // iconUser(gctx, this);
+    segitiga(gctx, this, 6, "green", "green");
   }
 
   createEndNode() {
@@ -789,6 +811,14 @@ class Node {
     }
   }
 }
+
+setInterval(() => {
+  reset();
+
+  if (endPoint.x !== 0 && endPoint.y !== 0)
+    myPath = new PathFindingAlg(grid, startPoint, endPoint);
+  myPath?.findPath();
+}, 1000);
 
 class PathFindingAlg {
   constructor(grid, startNode, endNode) {
@@ -1115,6 +1145,7 @@ class Grid {
 //the grid will be the exact size of the canvas
 //the top left corner of the grid will be located at point 0,0 to fill the canvas
 var grid = new Grid(CANVAS_WIDTH, CANVAS_HEIGHT, 0, 0);
+
 grid.createGrid();
 
 gCanvas.addEventListener("click", canvasClickHandler);

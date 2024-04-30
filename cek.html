@@ -3,74 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Canvas Grid with Border Radius</title>
+    <title>Compass</title>
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-      }
-
       canvas {
-        border: 1px solid #333;
+        border: 1px solid black;
       }
     </style>
   </head>
   <body>
-    <canvas id="gridCanvas" width="400" height="400"></canvas>
+    <canvas id="canvas" width="300" height="300"></canvas>
+
     <script>
-      const canvas = document.getElementById("gridCanvas");
-      const ctx = canvas.getContext("2d");
-
-      // Fungsi untuk menggambar grid
-      function drawGrid() {
-        const gridSize = 20; // Ukuran kotak grid
-        const width = canvas.width;
-        const height = canvas.height;
-        const cornerRadius = 5; // Radius sudut
-
-        ctx.beginPath();
-
-        // Garis vertikal
-        for (let x = 0; x <= width; x += gridSize) {
-          ctx.moveTo(x + cornerRadius, cornerRadius);
-          ctx.arcTo(
-            x + gridSize,
-            cornerRadius,
-            x + gridSize,
-            height,
-            cornerRadius
-          );
-          ctx.lineTo(x + gridSize, height - cornerRadius);
-          ctx.arcTo(x + gridSize, height, x, height, cornerRadius);
-          ctx.lineTo(x, height);
+      function init() {
+        if (window.DeviceOrientationEvent) {
+          window.addEventListener("deviceorientation", handleOrientation);
+        } else {
+          alert("Device orientation not supported.");
         }
 
-        // Garis horizontal
-        for (let y = 0; y <= height; y += gridSize) {
-          ctx.moveTo(cornerRadius, y);
-          ctx.arcTo(
-            cornerRadius,
-            y + gridSize,
-            width,
-            y + gridSize,
-            cornerRadius
-          );
-          ctx.lineTo(width - cornerRadius, y + gridSize);
-          ctx.arcTo(width, y + gridSize, width, y, cornerRadius);
-          ctx.lineTo(width, y);
+        // Create grid
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        const step = 20; // Adjust this value for grid spacing
+        for (let x = 0; x <= canvas.width; x += step) {
+          ctx.beginPath();
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, canvas.height);
+          ctx.strokeStyle = "rgba(0, 0, 0, 0.2)";
+          ctx.stroke();
+        }
+        for (let y = 0; y <= canvas.height; y += step) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvas.width, y);
+          ctx.strokeStyle = "rgba(0, 0, 0, 0.2)";
+          ctx.stroke();
         }
 
-        ctx.strokeStyle = "black"; // Warna garis grid
-        ctx.stroke();
+        function handleOrientation(event) {
+          const alpha = event.alpha; // Kompass direction in degrees
+
+          const canvas = document.getElementById("canvas");
+          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          const centerX = canvas.width / 2;
+          const centerY = canvas.height / 2;
+
+          // Draw compass base
+          ctx.beginPath();
+          ctx.arc(centerX, centerY, 10, 0, 2 * Math.PI);
+          ctx.strokeStyle = "#000";
+          ctx.lineWidth = 2;
+          ctx.stroke();
+
+          // Draw compass needle
+          ctx.beginPath();
+          ctx.moveTo(centerX, centerY);
+          const angle = alpha * (Math.PI / 180);
+          const needleLength = 80;
+          const needleEndX = centerX + Math.cos(angle) * needleLength;
+          const needleEndY = centerY - Math.sin(angle) * needleLength;
+          ctx.lineTo(needleEndX, needleEndY);
+          ctx.strokeStyle = "red";
+          ctx.lineWidth = 4;
+          ctx.stroke();
+        }
       }
 
-      // Panggil fungsi drawGrid untuk menggambar grid pada canvas
-      drawGrid();
+      init();
     </script>
   </body>
 </html>
