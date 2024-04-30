@@ -1035,14 +1035,36 @@ class Grid {
           // JALAN X DARI HALL A1
           ((countNodes - 779) % 97 === 0 &&
             countNodes >= 779 &&
-            countNodes <= 779 + 97 * 253) ||
+            countNodes <= 779 + 97 * 253)
           // TEST
-          countNodes === 2331 - 97 * 16
+          // countNodes === 2349 + 97 * 191
         ) {
           tempNode.drawNode();
         }
 
-        // else if (countNodes >= 17848) {
+        // else if (
+        //   (countNodes >= 20876 && countNodes <= 20931) ||
+        //   (countNodes >= 20876 + 97 && countNodes <= 20931 + 97) ||
+        //   (countNodes >= 20876 + 97 * 2 && countNodes <= 20931 + 97 * 2) ||
+        //   (countNodes >= 20876 + 97 * 3 && countNodes <= 20931 + 97 * 3) ||
+        //   (countNodes >= 20876 + 97 * 4 && countNodes <= 20931 + 97 * 4) ||
+        //   (countNodes >= 20876 + 97 * 5 && countNodes <= 20931 + 97 * 5) ||
+        //   (countNodes >= 20876 + 97 * 6 && countNodes <= 20931 + 97 * 6) ||
+        //   (countNodes >= 20876 + 97 * 7 && countNodes <= 20931 + 97 * 7) ||
+        //   (countNodes >= 20876 + 97 * 8 && countNodes <= 20931 + 97 * 8) ||
+        //   (countNodes >= 20876 + 97 * 9 && countNodes <= 20931 + 97 * 9) ||
+        //   (countNodes >= 20876 + 97 * 10 && countNodes <= 20931 + 97 * 10) ||
+        //   (countNodes >= 20876 + 97 * 11 && countNodes <= 20931 + 97 * 11) ||
+        //   (countNodes >= 20876 + 97 * 12 && countNodes <= 20931 + 97 * 12) ||
+        //   (countNodes >= 20876 + 97 * 13 && countNodes <= 20931 + 97 * 13) ||
+        //   (countNodes >= 20876 + 97 * 14 && countNodes <= 20931 + 97 * 14) ||
+        //   (countNodes >= 20876 + 97 * 15 && countNodes <= 20931 + 97 * 15) ||
+        //   (countNodes >= 20876 + 97 * 16 && countNodes <= 20931 + 97 * 16) ||
+        //   (countNodes >= 20876 + 97 * 17 && countNodes <= 20931 + 97 * 17) ||
+        //   (countNodes >= 20876 + 97 * 18 && countNodes <= 20931 + 97 * 18) ||
+        //   (countNodes >= 20876 + 97 * 19 && countNodes <= 20931 + 97 * 19) ||
+        //   (countNodes >= 20876 + 97 * 20 && countNodes <= 20931 + 97 * 20)
+        // ) {
         //   tempNode.walkable = false;
 
         //   tempNode.color = "#5BBCFF";
