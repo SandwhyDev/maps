@@ -202,7 +202,7 @@ function zoomIn() {
     gCanvas.style.transform = "scale(" + scale + ")";
   }
 
-  reset();
+  // reset();
 
   myPath = new PathFindingAlg(grid, startPoint, endPoint);
   myPath.findPath();
@@ -214,7 +214,7 @@ function zoomOut() {
     // console.log(scale);
 
     gCanvas.style.transform = "scale(" + scale + ")";
-    reset();
+    // reset();
 
     myPath = new PathFindingAlg(grid, startPoint, endPoint);
     myPath.findPath();
@@ -265,8 +265,6 @@ function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
       target?.posy + target?.size / 2
     );
 
-    console.log("halo");
-
     // gctx.rotate((rotateDegrees * Math.PI) / 180);
     gctx.rotate((-dir * Math.PI) / 180);
 
@@ -285,7 +283,7 @@ function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
     gctx.closePath(); // Menutup jalur gambar
   };
 
-  img.src = "./images/arrow.svg";
+  img.src = "./images/arrow.png";
 }
 
 // jarak dari satu node ke node lainnya
@@ -407,6 +405,7 @@ function iconEndNode(context, target, lineW, strokeS, fillS) {
   context.fill(); // Mengisi lingkaran dengan warna fillS
   context.stroke(); // Menggambar lingkaran dengan warna strokeS
 }
+
 function segitiga(context, target, lineW, strokeS, fillS) {
   context.beginPath();
   context.lineWidth = lineW;
@@ -730,8 +729,9 @@ class Node {
   }
 
   createStartNode() {
-    // iconUser(gctx, this);
-    segitiga(gctx, this, 6, "green", "green");
+    iconUser(gctx, this);
+
+    // segitiga(gctx, this, 6, "green", "green");
   }
 
   createEndNode() {
@@ -812,13 +812,7 @@ class Node {
   }
 }
 
-setInterval(() => {
-  reset();
-
-  if (endPoint.x !== 0 && endPoint.y !== 0)
-    myPath = new PathFindingAlg(grid, startPoint, endPoint);
-  myPath?.findPath();
-}, 1000);
+// window.requestAnimationFrame(this.createStartNode);
 
 class PathFindingAlg {
   constructor(grid, startNode, endNode) {
@@ -1142,6 +1136,14 @@ class Grid {
   }
 }
 
+// setInterval(() => {
+//   reset();
+
+//   if (endPoint.x !== 0 && endPoint.y !== 0) {
+//     myPath = new PathFindingAlg(grid, startPoint, endPoint);
+//     myPath?.findPath();
+//   }
+// }, 1000);
 //the grid will be the exact size of the canvas
 //the top left corner of the grid will be located at point 0,0 to fill the canvas
 var grid = new Grid(CANVAS_WIDTH, CANVAS_HEIGHT, 0, 0);
@@ -1183,7 +1185,7 @@ function canvasClickHandler(event) {
         endPoint = "";
         endPoint = new Vec2(0, 0);
         myPath = new PathFindingAlg(grid, startPoint, endPoint);
-        reset();
+        // reset();
         return;
       }
 
