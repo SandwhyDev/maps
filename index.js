@@ -202,7 +202,7 @@ function zoomIn() {
     gCanvas.style.transform = "scale(" + scale + ")";
   }
 
-  // reset();
+  reset();
 
   myPath = new PathFindingAlg(grid, startPoint, endPoint);
   myPath.findPath();
@@ -214,7 +214,7 @@ function zoomOut() {
     // console.log(scale);
 
     gCanvas.style.transform = "scale(" + scale + ")";
-    // reset();
+    reset();
 
     myPath = new PathFindingAlg(grid, startPoint, endPoint);
     myPath.findPath();
@@ -1136,14 +1136,15 @@ class Grid {
   }
 }
 
-// setInterval(() => {
-//   reset();
+setInterval(() => {
+  reset();
 
-//   if (endPoint.x !== 0 && endPoint.y !== 0) {
-//     myPath = new PathFindingAlg(grid, startPoint, endPoint);
-//     myPath?.findPath();
-//   }
-// }, 1000);
+  if (endPoint.x !== 0 && endPoint.y !== 0) {
+    myPath = new PathFindingAlg(grid, startPoint, endPoint);
+    myPath?.findPath();
+  }
+}, 1000);
+
 //the grid will be the exact size of the canvas
 //the top left corner of the grid will be located at point 0,0 to fill the canvas
 var grid = new Grid(CANVAS_WIDTH, CANVAS_HEIGHT, 0, 0);
