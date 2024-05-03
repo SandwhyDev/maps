@@ -16,7 +16,7 @@ const JABABEKA_SINGSPA = [
     email: "info@trumecs.com",
     link: "https://trumecs.com/",
     product: "e-commerce alat berat",
-    image: "human.png",
+    image: "tenant.webp",
   },
   {
     color: `#ff9`,

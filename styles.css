@@ -71,6 +71,9 @@ position:relative;}
 }
 
 .modal-content{
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
     background-color: #ffffff;
     width: 100%;
     height: 100%;
@@ -806,6 +809,9 @@ video {
 .w-screen {
   width: 100vw;
 }
+.h-full{
+  height: 100%;
+}
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -946,4 +952,61 @@ video {
 }
 .max-w-22rem{
   max-width: 22rem;
+}
+
+
+.h-screen {
+  height: 100vh;
+}
+
+
+.pt-32 {
+  padding-top: 8rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
+.overflow-scroll{
+  overflow: scroll;
+}
+
+.px-4 {
+  padding-left: 1rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+  padding-right: 1rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
+
+.py-2 {
+  padding-top: 0.5rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+  padding-bottom: 0.5rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
+
+.bg-white {
+  background-color: #fff; /* Sesuaikan nilai warna sesuai kebutuhan Anda */
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db; /* Sesuaikan nilai warna sesuai kebutuhan Anda */
+}
+
+.rounded-md {
+  border-radius: 0.375rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.py-32{
+  padding-top: 8rem; /* 128px */
+  padding-bottom: 8rem; /* 128px */
+}
+.bg-red-500{
+  background-color: rgb(239 68 68);
+}
+.overflow-y-scroll	{
+  overflow-y: scroll;
 }

@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Panah Merah Menunjuk ke Bawah</title>
-    <style>
-      .panah {
-        width: 0px;
-        height: 0px;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-bottom: 40px solid red;
-      }
-    </style>
+    <title>Contoh Database</title>
   </head>
   <body>
-    <div class="panah"></div>
+    <h1>Contoh Database</h1>
+
+    <input type="text" id="nama" placeholder="Masukkan nama" />
+    <button onclick="tambahData()">Tambah Data</button>
+
+    <ul id="daftarNama"></ul>
+
+    <script>
+      // Data sementara, seharusnya diambil dari database
+      var dataNama = [];
+
+      function tambahData() {
+        var nama = document.getElementById("nama").value;
+        dataNama.push(nama);
+        tampilkanData();
+      }
+
+      function tampilkanData() {
+        var daftarNamaElemen = document.getElementById("daftarNama");
+        daftarNamaElemen.innerHTML = "";
+        for (var i = 0; i < dataNama.length; i++) {
+          var li = document.createElement("li");
+          li.appendChild(document.createTextNode(dataNama[i]));
+          daftarNamaElemen.appendChild(li);
+        }
+      }
+    </script>
   </body>
 </html>

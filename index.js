@@ -40,16 +40,16 @@ var wallSet = new Set();
 var startPoint;
 var endPoint;
 var mode = null;
+var clickTenant;
 
 gCanvas.style.transform = "scale(" + scale + ")";
 
+// handle klik
 buttonCamera.addEventListener("click", function () {
   enableCamera();
 });
-// handle klik
 btnZoomIn.addEventListener("click", zoomIn);
 btnZoomOut.addEventListener("click", zoomOut);
-
 inputStart.addEventListener("click", () => {
   var search = document.getElementById("dataSearch");
   document.getElementById("modal").classList.add("hidden");
@@ -110,11 +110,15 @@ inputEnd.addEventListener("input", function (event) {
     removeEndPoint.classList.add("hidden");
   }
 });
+// buka camera scan qr
 buttonCamera.addEventListener("click", () => {
+  clickTenant = true;
   containerCamera.style.display = "block";
 });
-
+// tutup camera scan qr
 buttonCloseCamera.addEventListener("click", () => {
+  clickTenant = false;
+
   qrVideo.pause(); // Menghentikan pemutaran video
   qrVideo.srcObject.getTracks().forEach((track) => track.stop()); // Menghentikan pengambilan gambar dari kamera
   // alert("QR Code detected: " + code.data);
@@ -123,7 +127,6 @@ buttonCloseCamera.addEventListener("click", () => {
   containerCamera.style.display = "none";
   document.getElementById("container-button-bottom").style.display = "flex";
 });
-
 // handle klik end
 
 // FUNCTION
@@ -488,8 +491,6 @@ function HandleSearch(point) {
       : inputEnd.value.replace(/\s+/g, " ").toUpperCase();
   const trimmedFilter = filter.trim();
 
-  console.log(trimmedFilter);
-
   const search = document.createElement("div");
   search.id = "dataSearch";
 
@@ -508,7 +509,6 @@ function HandleSearch(point) {
       info.code.toUpperCase().indexOf(trimmedFilter) > -1
     ) {
       const li = document.createElement("li");
-      console.log(info.text.toUpperCase(), info.code.toUpperCase());
       li.textContent =
         info.text.toUpperCase() == info.code.toUpperCase()
           ? `${info.text.toUpperCase()} `
@@ -532,17 +532,17 @@ function HandleSearch(point) {
         var name = info.text.replace(/\s+/g, " ");
         if (point === "start") {
           inputStart.value =
-            info.text.toUpperCase() == info.code.toUpperCase()
-              ? `${info.text.toUpperCase()} `
-              : `${info.text.toUpperCase()} | ${info.code} `;
+            name.toUpperCase() == info.code.toUpperCase()
+              ? `${name.toUpperCase()} `
+              : `${name.toUpperCase()} | ${info.code} `;
           removeStartPoint.classList.remove("hidden");
           startPoint = "";
           startPoint = new Vec2(info.pointx, info.pointy);
         } else {
           inputEnd.value =
-            info.text.toUpperCase() == info.code.toUpperCase()
-              ? `${info.text.toUpperCase()} `
-              : `${info.text.toUpperCase()} | ${info.code} `;
+            name.toUpperCase() == info.code.toUpperCase()
+              ? `${name.toUpperCase()} `
+              : `${name.toUpperCase()} | ${info.code} `;
           removeEndPoint.classList.remove("hidden");
 
           endPoint = "";
@@ -561,6 +561,8 @@ function HandleSearch(point) {
 
         search.remove();
         ul.remove();
+
+        showModal(info);
 
         changeColorOnClick(
           info.text,
@@ -630,6 +632,8 @@ function changeColorOnClick(name, x, y, width, height) {
 
 // update titik
 function updatePoint(point, x, y) {
+  clickTenant = false;
+
   if (point === "start") {
     startPoint = "";
     startPoint = new Vec2(x, y);
@@ -660,18 +664,7 @@ function getFromQr(from) {
     updatePoint("start", tenant.pointx, tenant.pointy);
     containerCanvas.scrollLeft = (tenant.x - 200) * scale;
     window.scroll(0, (tenant.y + 300) * scale);
-    showModal(
-      tenant.text,
-      tenant.code,
-      tenant.pointx,
-      tenant.pointy,
-      false,
-      tenant.address,
-      tenant.telp,
-      tenant.email,
-      tenant.product,
-      tenant.link
-    );
+    showModal(tenant);
 
     setTimeout(
       () => {
@@ -811,8 +804,6 @@ class Node {
     }
   }
 }
-
-// window.requestAnimationFrame(this.createStartNode);
 
 class PathFindingAlg {
   constructor(grid, startNode, endNode) {
@@ -1137,11 +1128,15 @@ class Grid {
 }
 
 setInterval(() => {
-  reset();
+  console.log("tenant ", clickTenant);
 
-  if (endPoint.x !== 0 && endPoint.y !== 0) {
-    myPath = new PathFindingAlg(grid, startPoint, endPoint);
-    myPath?.findPath();
+  modal.className === "hidden" ? "" : (clickTenant = true);
+  if (!clickTenant) {
+    reset();
+    if (endPoint.x !== 0 && endPoint.y !== 0) {
+      myPath = new PathFindingAlg(grid, startPoint, endPoint);
+      myPath?.findPath();
+    }
   }
 }, 1000);
 
@@ -1177,6 +1172,7 @@ function canvasClickHandler(event) {
       y: parseInt(endPoint.y),
     });
     if (clickedElement.walkable === true) {
+      closeModal();
       if (
         parseInt(startPoint.x) === parseInt(endPoint.x) &&
         parseInt(startPoint.y) === parseInt(endPoint.y)
@@ -1202,18 +1198,11 @@ function canvasClickHandler(event) {
       });
 
       if (tenant?.text.length > 0) {
-        showModal(
-          tenant.text,
-          tenant.code,
-          tenant.pointx,
-          tenant.pointy,
-          false,
-          tenant.address,
-          tenant.telp,
-          tenant.email,
-          tenant.product,
-          tenant.link
-        );
+        tenantWidth.innerText = tenant.width;
+        tenantHeight.innerText = tenant.height;
+        clickTenant = true;
+
+        showModal(tenant);
         changeColorOnClick(
           tenant.text,
           tenant.x,
