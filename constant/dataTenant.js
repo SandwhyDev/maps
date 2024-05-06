@@ -10,8 +10,8 @@ const JABABEKA_SINGSPA = [
     pointx: 120,
     pointy: 240 + 160,
     address: `Lobunta Building, Jl. Pintu Air Raya No.31B Lantai 3, RT.13/RW.8,
-    Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus
-    Ibukota`,
+      Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus
+      Ibukota`,
     telp: "021 3812143",
     email: "info@trumecs.com",
     link: "https://trumecs.com/",
@@ -29,8 +29,8 @@ const JABABEKA_SINGSPA = [
     pointx: 280,
     pointy: 240 + 160,
     address: `Lobunta Building, Jl. Pintu Air Raya No.31B Lantai 3, RT.13/RW.8,
-    Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus
-    Ibukota`,
+      Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus
+      Ibukota`,
   },
   {
     color: `#ff9`,
@@ -43,8 +43,8 @@ const JABABEKA_SINGSPA = [
     pointx: 620,
     pointy: 240 + 160,
     address: `Lobunta Building, Jl. Pintu Air Raya No.31B Lantai 3, RT.13/RW.8,
-    Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus
-    Ibukota`,
+      Ps. Baru, Kecamatan Sawah Besar, Kota Jakarta Pusat, Daerah Khusus
+      Ibukota`,
     telp: "021 3812143",
   },
   {
@@ -579,7 +579,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-01`,
     text: `KENDA
-    RUBBER`,
+      RUBBER`,
     pointx: 440,
     pointy: 300 + 160,
   },
@@ -591,7 +591,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-02`,
     text: `INTERNATIONAL
-    INDUSTRIAL`,
+      INDUSTRIAL`,
     pointx: 620,
     pointy: 300 + 160,
   },
@@ -614,7 +614,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-04`,
     text: `CHK 
-    SEALING`,
+      SEALING`,
     pointx: 620,
     pointy: 300 + 160 + 60,
   },
@@ -627,7 +627,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-05`,
     text: `ING TIEN
-    INTERPRISE`,
+      INTERPRISE`,
     pointx: 440,
     pointy: 300 + 160 + 60 * 2,
   },
@@ -639,7 +639,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-06`,
     text: `JEE 
-    TECHNOLOGY`,
+      TECHNOLOGY`,
     pointx: 620,
     pointy: 300 + 160 + 60 * 2,
   },
@@ -651,7 +651,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-07`,
     text: `SHINIEST
-    INDUSTRIES`,
+      INDUSTRIES`,
     pointx: 440,
     pointy: 300 + 160 + 60 * 3,
   },
@@ -663,7 +663,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-08`,
     text: `TAIWAN
-    EXTERNAL`,
+      EXTERNAL`,
     pointx: 620,
     pointy: 300 + 160 + 60 * 3,
   },
@@ -676,7 +676,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-09`,
     text: `Transportation
-    Vehicle`,
+      Vehicle`,
     pointx: 440,
     pointy: 300 + 160 + 60 * 4,
   },
@@ -688,7 +688,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-10`,
     text: `TOP
-    SCREW`,
+      SCREW`,
     pointx: 620,
     pointy: 300 + 160 + 60 * 4,
   },
@@ -701,7 +701,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-11`,
     text: `HUSHAN
-    AUTOPARTS`,
+      AUTOPARTS`,
     pointx: 440,
     pointy: 300 + 160 + 60 * 5,
   },
@@ -713,7 +713,7 @@ const A1D2 = [
     height: 60,
     code: `A1D2-12`,
     text: `SUNMATCH
-    INDUSTRIAL`,
+      INDUSTRIAL`,
     pointx: 620,
     pointy: 300 + 160 + 60 * 5,
   },
@@ -806,7 +806,7 @@ const A1E2 = [
     height: 80,
     code: `A1E2-08`,
     text: `Pro-tec
-    Wire`,
+      Wire`,
     pointx: 800,
     pointy: 340 + 260 + 60,
   },
@@ -842,7 +842,7 @@ const A1E2 = [
     height: 80,
     code: `A1E2-13`,
     text: `Pong
-    Codan`,
+      Codan`,
     pointx: 620,
     pointy: 340 + 260 + 60 * 4,
   },
@@ -879,7 +879,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-02`,
     text: `ZHEJIANG
-    GONGZHENG`,
+      GONGZHENG`,
     pointx: 800,
     pointy: 420 + 160,
   },
@@ -891,7 +891,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-03`,
     text: `WENZHOU
-    COJO`,
+      COJO`,
     pointx: 980,
     pointy: 420 + 160,
   },
@@ -903,7 +903,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-04`,
     text: `SHUOYE
-    BEARING`,
+      BEARING`,
     pointx: 800,
     pointy: 420 + 220,
   },
@@ -915,7 +915,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-05`,
     text: `ZHEJIANG
-    SHUAIHAO`,
+      SHUAIHAO`,
     pointx: 980,
     pointy: 420 + 220,
   },
@@ -927,7 +927,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-06`,
     text: `BEIJING
-    RACING`,
+      RACING`,
     pointx: 800,
     pointy: 700,
   },
@@ -939,7 +939,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-07`,
     text: `WENZHOU
-    FIOT`,
+      FIOT`,
     pointx: 980,
     pointy: 700,
   },
@@ -951,7 +951,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-08`,
     text: `LIANGSHANG
-    LUHENG`,
+      LUHENG`,
     pointx: 800,
     pointy: 760,
   },
@@ -963,7 +963,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-09`,
     text: `HANGZHOU
-    HUAJIDA`,
+      HUAJIDA`,
     pointx: 980,
     pointy: 760,
   },
@@ -975,7 +975,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-10`,
     text: `CARSON
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 800,
     pointy: 820,
   },
@@ -987,7 +987,7 @@ const A1F2 = [
     height: 60,
     code: `A1F2-11`,
     text: `ACHANGZHOU
-    BONA`,
+      BONA`,
     pointx: 980,
     pointy: 820,
   },
@@ -1011,7 +1011,7 @@ const A1G2 = [
     height: 120,
     code: `A1G2-01`,
     text: `ZHEJIANG
-    LAMDA`,
+      LAMDA`,
     pointx: 1080,
     pointy: 400,
   },
@@ -1023,7 +1023,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-02`,
     text: `JUMP
-    INDUSTRIES`,
+      INDUSTRIES`,
     pointx: 980,
     pointy: 420 + 160,
   },
@@ -1035,7 +1035,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-03`,
     text: `RUNJIE
-    VEHICHLE`,
+      VEHICHLE`,
     pointx: 1160,
     pointy: 420 + 160,
   },
@@ -1047,7 +1047,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-04`,
     text: `New 
-    Highway Gear`,
+      Highway Gear`,
     pointx: 980,
     pointy: 640,
   },
@@ -1070,7 +1070,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-06`,
     text: `INTELLIGENT
-    EQUIPMENT`,
+      EQUIPMENT`,
     pointx: 980,
     pointy: 640 + 60,
   },
@@ -1082,7 +1082,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-07`,
     text: `HERI
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 1160,
     pointy: 640 + 60,
   },
@@ -1094,7 +1094,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-08`,
     text: `LINGYUE
-    AUTOMOTIVE`,
+      AUTOMOTIVE`,
     pointx: 980,
     pointy: 760,
   },
@@ -1106,7 +1106,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-09`,
     text: `HEATSPIN
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 1160,
     pointy: 760,
   },
@@ -1118,7 +1118,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-10`,
     text: `BRIGHT
-    PEAK`,
+      PEAK`,
     pointx: 980,
     pointy: 820,
   },
@@ -1130,7 +1130,7 @@ const A1G2 = [
     height: 60,
     code: `A1G2-11`,
     text: `TURBO
-    CHARGER`,
+      CHARGER`,
     pointx: 1160,
     pointy: 820,
   },
@@ -1145,7 +1145,7 @@ const A1H2 = [
     height: 60,
     code: `A1H2-01`,
     text: `Green Collor 
-    Automobile`,
+      Automobile`,
     pointx: 1160,
     pointy: 460,
   },
@@ -1168,7 +1168,7 @@ const A1H2 = [
     height: 60,
     code: `A1H2-03`,
     text: `Liangde 
-    Electronic`,
+      Electronic`,
     pointx: 1160,
     pointy: 460 + 60,
   },
@@ -1191,7 +1191,7 @@ const A1H2 = [
     height: 60,
     code: `A1H2-05`,
     text: `Shunwo 
-    Auto Parts`,
+      Auto Parts`,
     pointx: 1160,
     pointy: 460 + 60 * 2,
   },
@@ -1214,7 +1214,7 @@ const A1H2 = [
     height: 60,
     code: `A1H2-07`,
     text: `Huaxu 
-    Bearing`,
+      Bearing`,
     pointx: 1160,
     pointy: 460 + 60 * 3,
   },
@@ -1237,7 +1237,7 @@ const A1H2 = [
     height: 60,
     code: `A1H2-09`,
     text: `Yong Xin 
-    Brake`,
+      Brake`,
     pointx: 1160,
     pointy: 460 + 60 * 4,
   },
@@ -1260,7 +1260,7 @@ const A1H2 = [
     height: 60,
     code: `A1H2-11`,
     text: `Ao Tong 
-    Trading`,
+      Trading`,
     pointx: 1160,
     pointy: 460 + 60 * 5,
   },
@@ -1283,7 +1283,7 @@ const A1H2 = [
     height: 60,
     code: `A1H2-13`,
     text: `Si Hai 
-    Electrical`,
+      Electrical`,
     pointx: 1160,
     pointy: 460 + 60 * 6,
   },
@@ -1320,7 +1320,7 @@ const A2I2 = [
     height: 80,
     code: `A2I2-07`,
     text: `ICAR
-    Vietnam`,
+      Vietnam`,
     pointx: 1340,
     pointy: 620,
   },
@@ -1332,7 +1332,7 @@ const A2I2 = [
     height: 80,
     code: `A2I2-08`,
     text: `Sumber 
-    Bahagia`,
+      Bahagia`,
     pointx: 1520,
     pointy: 620,
   },
@@ -1366,7 +1366,7 @@ const A2I2 = [
     height: 120,
     code: `A2I2-11`,
     text: `Sarana
-    Karya`,
+      Karya`,
     pointx: 1340,
     pointy: 620 + 80 * 2,
   },
@@ -1378,7 +1378,7 @@ const A2I2 = [
     height: 120,
     code: `A2I2-12`,
     text: `Zhuji
-    Muya`,
+      Muya`,
     pointx: 1520,
     pointy: 620 + 80 * 2,
   },
@@ -1426,7 +1426,7 @@ const A2J2 = [
     height: 80,
     code: `A2J2-05`,
     text: `Empire
-    Trading`,
+      Trading`,
     pointx: 1520,
     pointy: 560 + 80,
   },
@@ -1438,7 +1438,7 @@ const A2J2 = [
     height: 80,
     code: `A2J2-06`,
     text: `Garima
-    Global`,
+      Global`,
     pointx: 1700,
     pointy: 640,
   },
@@ -1450,7 +1450,7 @@ const A2J2 = [
     height: 80,
     code: `A2J2-07`,
     text: `Emmforce
-    Auto Tech`,
+      Auto Tech`,
     pointx: 1520,
     pointy: 740,
   },
@@ -1462,7 +1462,7 @@ const A2J2 = [
     height: 80,
     code: `A2J2-08`,
     text: `MN
-    Auto Products`,
+      Auto Products`,
     pointx: 1700,
     pointy: 740,
   },
@@ -1485,7 +1485,7 @@ const A2J2 = [
     height: 80,
     code: `A2J2-12`,
     text: `KK 
-    Lighting`,
+      Lighting`,
     pointx: 1700,
     pointy: 820,
   },
@@ -1522,7 +1522,7 @@ const A2K2 = [
     height: 60,
     code: `A2K2-04`,
     text: `Bongil
-    Metal`,
+      Metal`,
     pointx: 1880,
     pointy: 460 + 60,
   },
@@ -1545,7 +1545,7 @@ const A2K2 = [
     height: 60,
     code: `A2K2-06`,
     text: `Korea
-    Autopart`,
+      Autopart`,
     pointx: 1880,
     pointy: 580,
   },
@@ -1568,7 +1568,7 @@ const A2K2 = [
     height: 60,
     code: `A2K2-08`,
     text: `Hong Song 
-    Brake`,
+      Brake`,
     pointx: 1880,
     pointy: 580 + 60,
   },
@@ -1591,7 +1591,7 @@ const A2K2 = [
     height: 60,
     code: `A2K2-10`,
     text: `Ain 
-    Global`,
+      Global`,
     pointx: 1880,
     pointy: 580 + 60 * 2,
   },
@@ -1617,7 +1617,7 @@ const A3L2 = [
     height: 120,
     code: `A3L2-01`,
     text: `YUDE
-    MECHINERY`,
+      MECHINERY`,
     pointx: 1980,
     pointy: 400,
   },
@@ -1630,7 +1630,7 @@ const A3L2 = [
     height: 60,
     code: `A3L2-05`,
     text: `RONGSHUN
-    MACHINERY`,
+      MACHINERY`,
     pointx: 1880,
     pointy: 580,
   },
@@ -1642,7 +1642,7 @@ const A3L2 = [
     height: 60,
     code: `A3L2-06`,
     text: `MALI
-    DIESEL`,
+      DIESEL`,
     pointx: 2060,
     pointy: 580,
   },
@@ -1654,7 +1654,7 @@ const A3L2 = [
     height: 60,
     code: `A3L2-07`,
     text: `BOLT 
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 1880,
     pointy: 580 + 60,
   },
@@ -1666,7 +1666,7 @@ const A3L2 = [
     height: 60,
     code: `A3L2-08`,
     text: `LITECH
-    LIGHTING`,
+      LIGHTING`,
     pointx: 2060,
     pointy: 580 + 60,
   },
@@ -1678,7 +1678,7 @@ const A3L2 = [
     height: 60,
     code: `A3L2-09`,
     text: `TIANZHONG
-    MACHINERY`,
+      MACHINERY`,
     pointx: 1880,
     pointy: 580 + 60 * 2,
   },
@@ -1712,7 +1712,7 @@ const A3L2 = [
     height: 60,
     code: `A3L2-12`,
     text: `HUAGAI
-    MACHINERY`,
+      MACHINERY`,
     pointx: 2060,
     pointy: 580 + 60 * 3,
   },
@@ -1749,7 +1749,7 @@ const A3M2 = [
     height: 120,
     code: `A3M2-01`,
     text: `ADD INDUSTRY
-    COORPORATION`,
+      COORPORATION`,
     pointx: 2140,
     pointy: 400,
   },
@@ -1762,7 +1762,7 @@ const A3M2 = [
     height: 60,
     code: `A3M2-05`,
     text: `Future 
-    Auto Part`,
+      Auto Part`,
     pointx: 2060,
     pointy: 580,
   },
@@ -1785,7 +1785,7 @@ const A3M2 = [
     height: 60,
     code: `A3M2-07`,
     text: `DONGTAI
-    MACHINARY`,
+      MACHINARY`,
     pointx: 2060,
     pointy: 580 + 60,
   },
@@ -1797,7 +1797,7 @@ const A3M2 = [
     height: 60,
     code: `A3M2-08`,
     text: `DANYANG 
-    GONGMING`,
+      GONGMING`,
     pointx: 2240,
     pointy: 580 + 60,
   },
@@ -1842,7 +1842,7 @@ const A3M2 = [
     height: 60,
     code: `A3M2-12`,
     text: `TOOLS &
-    HARDWARE`,
+      HARDWARE`,
     pointx: 2240,
     pointy: 580 + 60 * 3,
   },
@@ -1890,8 +1890,8 @@ const A3N2 = [
     height: 80,
     code: `A3N2-05`,
     text: `Jiangxi 
-    Chief 
-    Industrial`,
+      Chief 
+      Industrial`,
     pointx: 2240,
     pointy: 600,
   },
@@ -1945,7 +1945,7 @@ const A3N2 = [
     height: 120,
     code: `A3N2-11`,
     text: `Leafar
-    (HK Yichuan)`,
+      (HK Yichuan)`,
     pointx: 2240,
     pointy: 800,
   },
@@ -1957,7 +1957,7 @@ const A3N2 = [
     height: 120,
     code: `A3N2-12`,
     text: `Diamond 
-    Tech`,
+      Tech`,
     pointx: 2420,
     pointy: 800,
   },
@@ -1995,7 +1995,7 @@ const A3O2 = [
     height: 80,
     code: `A3O2-04`,
     text: `Saccan
-    Industries`,
+      Industries`,
     pointx: 2600,
     pointy: 700,
   },
@@ -2019,8 +2019,8 @@ const A3O2 = [
     height: 120,
     code: `A3O2-08`,
     text: `PT.VISION 
-    ELECTRONICS 
-    TECHNOLOGY`,
+      ELECTRONICS 
+      TECHNOLOGY`,
     pointx: 2600,
     pointy: 700 + 100,
   },
@@ -2035,7 +2035,7 @@ const A3P2 = [
     height: 220,
     code: `A3P2-01`,
     text: `YOKOMITSU
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 2700,
     pointy: 400,
   },
@@ -2058,7 +2058,7 @@ const A3P2 = [
     height: 200,
     code: `A3P2-08`,
     text: `WD 40 Bersama kita Karya
-    Trinimandiri`,
+      Trinimandiri`,
     pointx: 2780,
     pointy: 760,
   },
@@ -3340,7 +3340,7 @@ const A3L3 = [
     height: 120,
     code: `A3L3-01`,
     text: `VASURE
-    IOT`,
+      IOT`,
     pointx: 1880,
     pointy: 980,
   },
@@ -3352,7 +3352,7 @@ const A3L3 = [
     height: 120,
     code: `A3L3-02`,
     text: `LIANGJAN
-    LIGHTING`,
+      LIGHTING`,
     pointx: 2060,
     pointy: 980,
   },
@@ -3364,7 +3364,7 @@ const A3L3 = [
     height: 60,
     code: `A3L3-05`,
     text: `NUOQIN
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 1880,
     pointy: 980 + 80,
   },
@@ -3376,7 +3376,7 @@ const A3L3 = [
     height: 60,
     code: `A3L3-06`,
     text: `YUANDONG
-    RUBBER`,
+      RUBBER`,
     pointx: 2060,
     pointy: 980 + 80,
   },
@@ -3399,7 +3399,7 @@ const A3L3 = [
     height: 60,
     code: `A3L3-08`,
     text: `ZL
-    AUTOMOTVE`,
+      AUTOMOTVE`,
     pointx: 2060,
     pointy: 1120,
   },
@@ -3411,7 +3411,7 @@ const A3L3 = [
     height: 60,
     code: `A3L3-09`,
     text: `YINGXIN
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 1880,
     pointy: 1180,
   },
@@ -3423,7 +3423,7 @@ const A3L3 = [
     height: 60,
     code: `A3L3-10`,
     text: `XINWEI
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 2060,
     pointy: 1180,
   },
@@ -3435,7 +3435,7 @@ const A3L3 = [
     height: 60,
     code: `A3L3-11`,
     text: `MEICHE
-    INDUSTRY`,
+      INDUSTRY`,
     pointx: 1880,
     pointy: 1240,
   },
@@ -3447,7 +3447,7 @@ const A3L3 = [
     height: 60,
     code: `A3L3-12`,
     text: `DJERMA 
-    HEAT`,
+      HEAT`,
     pointx: 2060,
     pointy: 1240,
   },
@@ -3462,8 +3462,8 @@ const A3M3 = [
     height: 120,
     code: `A3M3-01`,
     text: `YAHUA
-    MACHINO-
-    FACTURE`,
+      MACHINO-
+      FACTURE`,
     pointx: 2060,
     pointy: 980,
   },
@@ -3475,8 +3475,8 @@ const A3M3 = [
     height: 120,
     code: `A3M3-02`,
     text: `FARET
-    AUTO
-    RADIATOR`,
+      AUTO
+      RADIATOR`,
     pointx: 2240,
     pointy: 980,
   },
@@ -3488,7 +3488,7 @@ const A3M3 = [
     height: 60,
     code: `A3M3-05`,
     text: `RICHING
-    AUTO SPARE`,
+      AUTO SPARE`,
     pointx: 2060,
     pointy: 980 + 80,
   },
@@ -3500,7 +3500,7 @@ const A3M3 = [
     height: 60,
     code: `A3M3-06`,
     text: `JINGKUN
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 2240,
     pointy: 980 + 80,
   },
@@ -3512,7 +3512,7 @@ const A3M3 = [
     height: 60,
     code: `A3M3-07`,
     text: `ZHUOYE 
-    AUTOMOTIVE`,
+      AUTOMOTIVE`,
     pointx: 2060,
     pointy: 1120,
   },
@@ -3524,7 +3524,7 @@ const A3M3 = [
     height: 60,
     code: `A3M3-08`,
     text: `BASHENG
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 2240,
     pointy: 1120,
   },
@@ -3536,7 +3536,7 @@ const A3M3 = [
     height: 60,
     code: `A3M3-09`,
     text: `KING
-    AUTO POWER`,
+      AUTO POWER`,
     pointx: 2060,
     pointy: 1120 + 60,
   },
@@ -3548,7 +3548,7 @@ const A3M3 = [
     height: 60,
     code: `A3M3-10`,
     text: `GUANRUN
-    AUTOMOBILE`,
+      AUTOMOBILE`,
     pointx: 2240,
     pointy: 1120 + 60,
   },
@@ -3560,7 +3560,7 @@ const A3M3 = [
     height: 60,
     code: `A3M3-11`,
     text: `DEERFU
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 2060,
     pointy: 1120 + 60 * 2,
   },
@@ -3572,7 +3572,7 @@ const A3M3 = [
     height: 60,
     code: `A3M3-12`,
     text: `TRANSMISSION
-    TECHNOLOGY`,
+      TECHNOLOGY`,
     pointx: 2240,
     pointy: 1120 + 60 * 2,
   },
@@ -3587,8 +3587,8 @@ const A3N3 = [
     height: 120,
     code: `A3N3-01`,
     text: `BTE
-    SPARE
-    PARTS`,
+      SPARE
+      PARTS`,
     pointx: 2240,
     pointy: 980,
   },
@@ -3600,8 +3600,8 @@ const A3N3 = [
     height: 120,
     code: `A3N3-02`,
     text: `I-LIKE
-    FINE
-    CHEMICAL`,
+      FINE
+      CHEMICAL`,
     pointx: 2420,
     pointy: 980,
   },
@@ -3613,7 +3613,7 @@ const A3N3 = [
     height: 60,
     code: `A3N3-05`,
     text: `DONGQI
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 2240,
     pointy: 1060,
   },
@@ -3636,7 +3636,7 @@ const A3N3 = [
     height: 60,
     code: `A3N3-07`,
     text: `RICH
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 2240,
     pointy: 1060 + 60,
   },
@@ -3648,7 +3648,7 @@ const A3N3 = [
     height: 60,
     code: `A3N3-08`,
     text: `HENGLI
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 2420,
     pointy: 1060 + 60,
   },
@@ -3660,7 +3660,7 @@ const A3N3 = [
     height: 60,
     code: `A3N3-09`,
     text: `ZHENCHI
-    AUTO`,
+      AUTO`,
     pointx: 2240,
     pointy: 1060 + 60 * 2,
   },
@@ -3708,7 +3708,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-01`,
     text: `Jinli 
-    Auto Parts`,
+      Auto Parts`,
     pointx: 2420,
     pointy: 940,
   },
@@ -3720,7 +3720,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-02`,
     text: `Hanzhuang 
-    Automotive`,
+      Automotive`,
     pointx: 2600,
     pointy: 940,
   },
@@ -3743,7 +3743,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-04`,
     text: `Baoerte 
-    Auto Parts`,
+      Auto Parts`,
     pointx: 2600,
     pointy: 940 + 60,
   },
@@ -3755,7 +3755,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-05`,
     text: `Jingtong 
-    Auto Parts`,
+      Auto Parts`,
     pointx: 2420,
     pointy: 940 + 60 * 2,
   },
@@ -3767,7 +3767,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-06`,
     text: `Hejie 
-    Machinery`,
+      Machinery`,
     pointx: 2600,
     pointy: 940 + 60 * 2,
   },
@@ -3779,7 +3779,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-07`,
     text: `Spm 
-    Lighting`,
+      Lighting`,
     pointx: 2420,
     pointy: 940 + 60 * 3,
   },
@@ -3802,7 +3802,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-09`,
     text: `Guoyu 
-    Auto Parts`,
+      Auto Parts`,
     pointx: 2420,
     pointy: 940 + 60 * 4,
   },
@@ -3814,7 +3814,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-10`,
     text: `Puyi 
-    Machinery`,
+      Machinery`,
     pointx: 2600,
     pointy: 940 + 60 * 4,
   },
@@ -3826,7 +3826,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-11`,
     text: `Shuangyou 
-    Automotive`,
+      Automotive`,
     pointx: 2420,
     pointy: 940 + 60 * 5,
   },
@@ -3838,7 +3838,7 @@ const A3O3 = [
     height: 60,
     code: `A3O3-12`,
     text: `Tuoyuan 
-    Machinery`,
+      Machinery`,
     pointx: 2600,
     pointy: 940 + 60 * 5,
   },
@@ -3853,7 +3853,7 @@ const A3P3 = [
     height: 60,
     code: `A3P3-01`,
     text: `Topsee
-    New`,
+      New`,
     pointx: 2600,
     pointy: 940,
   },
@@ -3865,7 +3865,7 @@ const A3P3 = [
     height: 60,
     code: `A3P3-02`,
     text: `Carlas
-    Industrial`,
+      Industrial`,
     pointx: 2780,
     pointy: 940,
   },
@@ -3877,7 +3877,7 @@ const A3P3 = [
     height: 60,
     code: `A3P3-03`,
     text: `Teehon
-    Electronic`,
+      Electronic`,
     pointx: 2600,
     pointy: 940 + 60,
   },
@@ -3889,7 +3889,7 @@ const A3P3 = [
     height: 60,
     code: `A3P3-04`,
     text: `Sharmeal
-    Tech`,
+      Tech`,
     pointx: 2780,
     pointy: 940 + 60,
   },
@@ -3901,7 +3901,7 @@ const A3P3 = [
     height: 60,
     code: `A3P3-05`,
     text: `Jierui
-    Electronic`,
+      Electronic`,
     pointx: 2600,
     pointy: 940 + 60 * 2,
   },
@@ -3924,7 +3924,7 @@ const A3P3 = [
     height: 60,
     code: `A3P3-07`,
     text: `Kaqidun
-    Auto`,
+      Auto`,
     pointx: 2600,
     pointy: 940 + 60 * 3,
   },
@@ -3969,7 +3969,7 @@ const A3P3 = [
     height: 60,
     code: `A3P3-11`,
     text: `Winzone
-    Auto Parts`,
+      Auto Parts`,
     pointx: 2600,
     pointy: 940 + 60 * 5,
   },
@@ -3981,7 +3981,7 @@ const A3P3 = [
     height: 60,
     code: `A3P3-12`,
     text: `Baiwang 
-    Industrial`,
+      Industrial`,
     pointx: 2780,
     pointy: 940 + 60 * 5,
   },
@@ -4008,7 +4008,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A1C4-01`,
     text: `Zhengzhou 
-    Toway`,
+      Toway`,
     pointx: 540,
     pointy: 1300,
   },
@@ -4164,7 +4164,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A2J4-01`,
     text: `Yulong 
-    Automotive`,
+      Automotive`,
     pointx: 780 + 60 * 12,
     pointy: 1300,
   },
@@ -4176,7 +4176,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A2J4-02`,
     text: `Saizhishun 
-    Brake`,
+      Brake`,
     pointx: 780 + 60 * 13,
     pointy: 1300,
   },
@@ -4188,7 +4188,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A2J4-03`,
     text: `Fengcheng 
-    Liyu Machinery`,
+      Liyu Machinery`,
     pointx: 780 + 60 * 14,
     pointy: 1300,
   },
@@ -4224,7 +4224,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-01`,
     text: `KAZOKU
-    AUTO`,
+      AUTO`,
     pointx: 1900,
     pointy: 1300,
   },
@@ -4237,7 +4237,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-02`,
     text: `YONGXI
-    IMPORT`,
+      IMPORT`,
     pointx: 1900 + 60,
     pointy: 1300,
   },
@@ -4249,7 +4249,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-03`,
     text: `SANMEN 
-    SOUTH`,
+      SOUTH`,
     pointx: 1900 + 60 * 2,
     pointy: 1300,
   },
@@ -4261,7 +4261,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-04`,
     text: `GELING
-    TECHNOLOGY`,
+      TECHNOLOGY`,
     pointx: 1900 + 60 * 3,
     pointy: 1300,
   },
@@ -4273,7 +4273,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-05`,
     text: `YRD
-    TECHNOLOGY`,
+      TECHNOLOGY`,
     pointx: 1900 + 60 * 4,
     pointy: 1300,
   },
@@ -4285,7 +4285,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-06`,
     text: `FRICTION 
-    PRODUCTS`,
+      PRODUCTS`,
     pointx: 1900 + 60 * 5,
     pointy: 1300,
   },
@@ -4297,7 +4297,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-07`,
     text: `ARTIN
-    TECH`,
+      TECH`,
     pointx: 1900 + 60 * 6,
     pointy: 1300,
   },
@@ -4309,7 +4309,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-08`,
     text: `CHENLING
-    AUTO PUMP`,
+      AUTO PUMP`,
     pointx: 1900 + 60 * 7,
     pointy: 1300,
   },
@@ -4321,7 +4321,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-09`,
     text: `THALES
-    ELECTRONICS`,
+      ELECTRONICS`,
     pointx: 1900 + 60 * 8,
     pointy: 1300,
   },
@@ -4333,7 +4333,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-10`,
     text: `HUIFENG
-    VEHICLE`,
+      VEHICLE`,
     pointx: 1900 + 60 * 9,
     pointy: 1300,
   },
@@ -4345,7 +4345,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-11`,
     text: `NEWSUN
-    AUTO `,
+      AUTO `,
     pointx: 1900 + 60 * 10,
     pointy: 1300,
   },
@@ -4357,7 +4357,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-12`,
     text: `HAOMANTE
-    MACHINERY`,
+      MACHINERY`,
     pointx: 1900 + 60 * 11,
     pointy: 1300,
   },
@@ -4369,7 +4369,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-13`,
     text: `TONGSHENG
-    ELECTRONICS`,
+      ELECTRONICS`,
     pointx: 1900 + 60 * 12,
     pointy: 1300,
   },
@@ -4381,7 +4381,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-14`,
     text: `IVOK
-    AUTO PARTS`,
+      AUTO PARTS`,
     pointx: 1900 + 60 * 13,
     pointy: 1300,
   },
@@ -4393,7 +4393,7 @@ const Shuangfei_Tube = [
     height: 60,
     code: `A3L4-15`,
     text: `TUBE
-    PILE`,
+      PILE`,
     pointx: 1900 + 60 * 14,
     pointy: 1300,
   },
@@ -4430,7 +4430,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 140,
     code: `D1A2-05`,
     text: `Selamat
-    Sempurna`,
+      Sempurna`,
     pointx: 2780,
     pointy: 640,
   },
@@ -4475,7 +4475,7 @@ const TEC_ALIIANCE_TO_PPS_POLICE = [
     height: 60,
     code: `A3Q3-05`,
     text: `Posung
-    New Energy`,
+      New Energy`,
     pointx: 2780,
     pointy: 940 + 60 * 2,
   },
@@ -4728,7 +4728,7 @@ const Medical_TO_Agent = [
     y: -160,
     width: 500,
     height: 160,
-    code: `D2D1-01`,
+    code: `VVIP ROOM MEETING ROOM`,
     text: `VVIP ROOM MEETING ROOM`,
     pointx: 4580,
     pointy: 240,
@@ -6976,7 +6976,7 @@ const Transtrack_TO_Deeone = [
     y: 800 + 60,
     width: 60,
     height: 80,
-    code: `D2I2-06`,
+    code: `D2I3-06`,
     text: `TUV`,
     pointx: 5560,
     pointy: 1200,
@@ -6987,7 +6987,7 @@ const Transtrack_TO_Deeone = [
     y: 1000 + 60,
     width: 60,
     height: 80,
-    code: `D2I2-09`,
+    code: `D2I3-09`,
     text: `Primanusa`,
     pointx: 5560,
     pointy: 1400,
@@ -7411,7 +7411,7 @@ const FTY_TO_YUTE = [
     y: 820 + 60 * 5,
     width: 60,
     height: 60,
-    code: `D2D3-11`,
+    code: `D2D3-13`,
     text: `QIANNENG AUTOPARTS`,
     pointx: 4680,
     pointy: 1160 + 60 * 5,

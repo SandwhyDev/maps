@@ -82,6 +82,10 @@ ruteEnd.addEventListener("click", () => {
 
   document.getElementById("modal").classList.add("hidden");
   removeEndPoint.classList.remove("hidden");
+
+  console.log(modalCode.innerText);
+
+  const push = PushDatabase(modalCode.innerText, "visit");
 });
 ruteStart.addEventListener("click", (event) => {
   updatePoint("start", startX.innerText, startY.innerText);
@@ -130,6 +134,7 @@ buttonCloseCamera.addEventListener("click", () => {
 // handle klik end
 
 // FUNCTION
+
 function enableCamera() {
   const loadingText = document.getElementById("loading-text");
   let scanInterval;
@@ -547,6 +552,7 @@ function HandleSearch(point) {
 
           endPoint = "";
           endPoint = new Vec2(info.pointx, info.pointy);
+          const push = PushDatabase(info.code, "visit");
         }
 
         var containerCanvas = document.getElementById("containerCanvas");
@@ -1201,6 +1207,10 @@ function canvasClickHandler(event) {
         tenantWidth.innerText = tenant.width;
         tenantHeight.innerText = tenant.height;
         clickTenant = true;
+
+        const push = PushDatabase(
+          tenant.code.replace(/\s+/g, " ").toUpperCase()
+        );
 
         showModal(tenant);
         changeColorOnClick(
