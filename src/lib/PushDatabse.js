@@ -8,7 +8,7 @@ if (!username) {
 
 function PushDatabase(params, kebutuhan = "view") {
   const data = {
-    code_tenant: params,
+    code_tenant: params.toUpperCase(),
     session: username,
   };
   // Konversi objek params ke dalam format JSON

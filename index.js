@@ -82,10 +82,11 @@ ruteEnd.addEventListener("click", () => {
 
   document.getElementById("modal").classList.add("hidden");
   removeEndPoint.classList.remove("hidden");
-
-  console.log(modalCode.innerText);
-
-  const push = PushDatabase(modalCode.innerText, "visit");
+  const code =
+    modalCode.innerText.length > 0
+      ? modalCode.innerText.toUpperCase()
+      : modalName.innerText.toUpperCase();
+  const push = PushDatabase(code, "visit");
 });
 ruteStart.addEventListener("click", (event) => {
   updatePoint("start", startX.innerText, startY.innerText);
@@ -552,6 +553,7 @@ function HandleSearch(point) {
 
           endPoint = "";
           endPoint = new Vec2(info.pointx, info.pointy);
+
           const push = PushDatabase(info.code, "visit");
         }
 
