@@ -21,6 +21,7 @@ var CloseCamera = document.getElementById("close-camera");
 var buttonCloseCamera = document.getElementById("button-close-camera");
 const containerCamera = document.getElementById("camera");
 const qrVideo = document.getElementById("qr-video");
+var containerCanvas = document.getElementById("containerCanvas");
 
 var gCanvasOffset;
 var gctx = gCanvas.getContext("2d");
@@ -86,7 +87,7 @@ ruteEnd.addEventListener("click", () => {
     modalCode.innerText.length > 0
       ? modalCode.innerText.toUpperCase()
       : modalName.innerText.toUpperCase();
-  const push = PushDatabase(code, "visit");
+  // const push = PushDatabase(code, "visit");
 });
 ruteStart.addEventListener("click", (event) => {
   updatePoint("start", startX.innerText, startY.innerText);
@@ -99,10 +100,8 @@ ruteStart.addEventListener("click", (event) => {
 inputStart.addEventListener("input", function (event) {
   const value = event.target.value;
 
-  console.log(value);
   if (value.length > 0) {
     removeStartPoint.classList.remove("hidden");
-    HandleSearch("start");
   } else {
     removeStartPoint.classList.add("hidden");
   }
@@ -132,6 +131,7 @@ buttonCloseCamera.addEventListener("click", () => {
   containerCamera.style.display = "none";
   document.getElementById("container-button-bottom").style.display = "flex";
 });
+
 // handle klik end
 
 // FUNCTION
@@ -223,6 +223,7 @@ function zoomOut() {
     // console.log(scale);
 
     gCanvas.style.transform = "scale(" + scale + ")";
+
     reset();
 
     myPath = new PathFindingAlg(grid, startPoint, endPoint);
@@ -554,14 +555,11 @@ function HandleSearch(point) {
           endPoint = "";
           endPoint = new Vec2(info.pointx, info.pointy);
 
-          const push = PushDatabase(info.code, "visit");
+          // const push = PushDatabase(info.code, "visit");
         }
 
-        var containerCanvas = document.getElementById("containerCanvas");
         scale = 0.6;
         gCanvas.style.transform = "scale(" + scale + ")";
-        containerCanvas.scrollLeft = (info.x - 200) * scale;
-        window.scroll(0, (info.y + 400) * scale);
 
         point === "start"
           ? updatePoint("start", info.pointx, info.pointy)
@@ -583,6 +581,17 @@ function HandleSearch(point) {
     }
   }
 
+  const cancel = document.createElement("div");
+  cancel.id = "cancelSearch";
+  cancel.className = `w-screen  fixed bottom-0 left-0 bg-white  bg-red-500 text-3xl text-center p-15`;
+  cancel.innerHTML = "<i class='fa fa-times'></i>";
+
+  cancel.addEventListener("click", () => {
+    search.remove();
+    ul.remove();
+  });
+
+  search.appendChild(cancel);
   search.appendChild(ul);
 
   document.body.appendChild(search);
@@ -639,7 +648,7 @@ function changeColorOnClick(name, x, y, width, height) {
 }
 
 // update titik
-function updatePoint(point, x, y) {
+function updatePoint(point, x, y, move = true) {
   clickTenant = false;
 
   if (point === "start") {
@@ -650,6 +659,11 @@ function updatePoint(point, x, y) {
     endPoint = new Vec2(x, y);
   }
 
+  if (move) {
+    containerCanvas.scrollLeft = (x - 400) * scale;
+    window.scroll(0, (y - 400) * scale);
+  }
+
   reset();
 
   myPath = new PathFindingAlg(grid, startPoint, endPoint);
@@ -657,8 +671,6 @@ function updatePoint(point, x, y) {
 }
 
 function getFromQr(from) {
-  var containerCanvas = document.getElementById("containerCanvas");
-
   var tenant = dataTenant.find(function (element) {
     return (
       element.text.replace(/\s+/g, " ").toUpperCase() == from.toUpperCase()
@@ -670,8 +682,6 @@ function getFromQr(from) {
     inputStart.value = tenant.text.replace(/\s+/g, " ").toUpperCase();
 
     updatePoint("start", tenant.pointx, tenant.pointy);
-    containerCanvas.scrollLeft = (tenant.x - 200) * scale;
-    window.scroll(0, (tenant.y + 300) * scale);
     showModal(tenant);
 
     setTimeout(
@@ -1194,7 +1204,7 @@ function canvasClickHandler(event) {
         return;
       }
 
-      updatePoint("start", posx, posy);
+      updatePoint("start", posx, posy, false);
     } else {
       var tenant = dataTenant.find(function (element) {
         return (
@@ -1210,9 +1220,9 @@ function canvasClickHandler(event) {
         tenantHeight.innerText = tenant.height;
         clickTenant = true;
 
-        const push = PushDatabase(
-          tenant.code.replace(/\s+/g, " ").toUpperCase()
-        );
+        // const push = PushDatabase(
+        //   tenant.code.replace(/\s+/g, " ").toUpperCase()
+        // );
 
         showModal(tenant);
         changeColorOnClick(

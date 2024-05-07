@@ -1,35 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Contoh Database</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Tenant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>Contoh Database</h1>
+    <div
+      id="kategoriLinks"
+      class="flex flex-col gap-2 fixed top-0 left-0 w-screen z-50 p-5"
+    >
+      <div id="fasum" class="flex flex-col gap-2">
+        <div
+          class="w-full px-4 py-2 border-[.5px] rounded border-black bg-green-500"
+        >
+          Fasilitas Umum
+        </div>
 
-    <input type="text" id="nama" placeholder="Masukkan nama" />
-    <button onclick="tambahData()">Tambah Data</button>
+        <div id="dataFasum" class="hidden">
+          <ul>
+            <li class="w-full px-4 py-2 border-[.5px] rounded border-black">
+              Toilet
+            </li>
+          </ul>
+        </div>
+      </div>
 
-    <ul id="daftarNama"></ul>
+      <div id="officer" class="flex flex-col gap-2">
+        <div
+          class="w-full px-4 py-2 border-[.5px] rounded border-black bg-red-500"
+        >
+          Officer
+        </div>
+
+        <div id="dataOfficer" class="hidden">
+          <ul>
+            <li class="w-full px-4 py-2 border-[.5px] rounded border-black">
+              Toilet
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="tenant" class="flex flex-col gap-2">
+        <div
+          class="w-full px-4 py-2 border-[.5px] rounded border-black bg-yellow-500"
+        >
+          Tenant
+        </div>
+
+        <div id="dataTenant" class="hidden">
+          <ul>
+            <li class="w-full px-4 py-2 border-[.5px] rounded border-black">
+              Toilet
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <script>
-      // Data sementara, seharusnya diambil dari database
-      var dataNama = [];
+      const Fasum = document.getElementById("fasum");
+      const DataFasum = document.getElementById("dataFasum");
+      const dataOfficer = document.getElementById("dataOfficer");
+      const dataTenant = document.getElementById("dataTenant");
 
-      function tambahData() {
-        var nama = document.getElementById("nama").value;
-        dataNama.push(nama);
-        tampilkanData();
-      }
+      Fasum.addEventListener("click", () => {
+        DataFasum.classList.remove("hidden");
+        dataOfficer.classList.add("hidden");
+        dataTenant.classList.add("hidden");
+      });
 
-      function tampilkanData() {
-        var daftarNamaElemen = document.getElementById("daftarNama");
-        daftarNamaElemen.innerHTML = "";
-        for (var i = 0; i < dataNama.length; i++) {
-          var li = document.createElement("li");
-          li.appendChild(document.createTextNode(dataNama[i]));
-          daftarNamaElemen.appendChild(li);
-        }
-      }
+      const Officer = document.getElementById("officer");
+
+      Officer.addEventListener("click", () => {
+        dataOfficer.classList.remove("hidden");
+        DataFasum.classList.add("hidden");
+        dataTenant.classList.add("hidden");
+      });
+
+      const Tenant = document.getElementById("tenant");
+
+      Tenant.addEventListener("click", () => {
+        dataTenant.classList.remove("hidden");
+        dataOfficer.classList.add("hidden");
+        DataFasum.classList.add("hidden");
+      });
     </script>
   </body>
 </html>
