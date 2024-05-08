@@ -48,6 +48,7 @@ gCanvas.style.transform = "scale(" + scale + ")";
 // handle klik
 buttonCamera.addEventListener("click", function () {
   enableCamera();
+  clickTenant = true;
 });
 btnZoomIn.addEventListener("click", zoomIn);
 btnZoomOut.addEventListener("click", zoomOut);
@@ -250,10 +251,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     );
   } else {
     // document.getElementById("notice").innerHTML = "No API detected";
-    // alert("eror");
   }
 
   function deviceOrientationHandler(tiltLR, tiltFB, dir) {
+    console.log("halo ");
+
     // // BETA
     // document.getElementById("tiltLR").innerHTML = Math.ceil(tiltLR);
     // // GAMMA
@@ -267,33 +269,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 // ICON USER
 function iconUser(context, target, rotateDegrees = 0, scaleFactor = 1.6) {
-  var img = new Image();
-  img.onload = function () {
-    gctx.save(); // Simpan status konteks gambar
-    gctx.translate(
-      target?.posx + target?.size / 2,
-      target?.posy + target?.size / 2
-    );
+  // var img = new Image();
+  const img = document.getElementById("icon-user");
+  // gctx.drawImage(img, 10, 10);
+  var scaledSize = target?.size * scaleFactor;
 
-    // gctx.rotate((rotateDegrees * Math.PI) / 180);
-    gctx.rotate((-dir * Math.PI) / 180);
+  // gctx.clearRect(target.posx - 15, target.posy - 15, 60, 60);
 
-    //   // Mengubah ukuran gambar sesuai faktor perbesaran
-    var scaledSize = target?.size * scaleFactor;
-    gctx.drawImage(
-      img,
-      -scaledSize / 2,
-      -scaledSize / 2,
-      scaledSize,
-      scaledSize
-    );
+  // img.onload = function () {
+  gctx.save(); // Simpan status konteks gambar
+  gctx.translate(
+    target?.posx + target?.size / 2,
+    target?.posy + target?.size / 2
+  );
 
-    // Pusat rotasi
-    gctx.restore(); // Pulihkan status konteks gambar
-    gctx.closePath(); // Menutup jalur gambar
-  };
+  // gctx.rotate((rotateDegrees * Math.PI) / 180);
+  gctx.rotate((-dir * Math.PI) / 180);
 
-  img.src = "./images/arrow.png";
+  //   // Mengubah ukuran gambar sesuai faktor perbesaran
+  gctx.drawImage(img, -scaledSize / 2, -scaledSize / 2, scaledSize, scaledSize);
+
+  // Pusat rotasi
+  gctx.restore(); // Pulihkan status konteks gambar
+  gctx.closePath(); // Menutup jalur gambar
+  // };
+
+  // img.src = "./images/arrow.png";
 }
 
 // jarak dari satu node ke node lainnya
@@ -740,9 +741,9 @@ class Node {
   }
 
   createStartNode() {
+    // setInterval(() => {
     iconUser(gctx, this);
-
-    // segitiga(gctx, this, 6, "green", "green");
+    // }, 120);
   }
 
   createEndNode() {
@@ -1145,18 +1146,18 @@ class Grid {
   }
 }
 
-setInterval(() => {
-  console.log("tenant ", clickTenant);
+// setInterval(() => {
+//   console.log("tenant ", clickTenant);
 
-  modal.className === "hidden" ? "" : (clickTenant = true);
-  if (!clickTenant) {
-    reset();
-    if (endPoint.x !== 0 && endPoint.y !== 0) {
-      myPath = new PathFindingAlg(grid, startPoint, endPoint);
-      myPath?.findPath();
-    }
-  }
-}, 1000);
+//   modal.className === "hidden" ? "" : (clickTenant = true);
+//   if (!clickTenant) {
+//     reset();
+//     if (endPoint.x !== 0 && endPoint.y !== 0) {
+//       myPath = new PathFindingAlg(grid, startPoint, endPoint);
+//       myPath?.findPath();
+//     }
+//   }
+// }, 120);
 
 //the grid will be the exact size of the canvas
 //the top left corner of the grid will be located at point 0,0 to fill the canvas

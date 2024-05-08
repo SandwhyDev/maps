@@ -90,6 +90,13 @@ position:relative;}
     border-radius: 0.5rem; /* 12px */
 
 }
+.uppercase{
+  text-transform: uppercase;
+
+}
+.text-justify{
+  text-align: justify;
+}
 .modal-image{
  width: 20rem; 
   height: 12rem;
@@ -103,7 +110,9 @@ position:relative;}
   right:10px;
   font-size: 1.875rem; /* equivalent to text-3xl in Tailwind */
 }
-
+.font-bold{
+  font-weight: 700;
+}
 #btn-closed:hover {
   cursor: pointer;
 }

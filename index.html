@@ -9,7 +9,7 @@
 
     <title>Maps</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/jsqr"></script>
 
@@ -23,6 +23,14 @@
     <div
       class="flex flex-col gap-10 fixed top-0 left-0 items-center w-screen z-50"
     >
+      <img
+        style="display: none"
+        id="icon-user"
+        src="/images/arrow.png"
+        alt="user"
+        width="20"
+        height="20"
+      />
       <div
         id="containerSearch"
         class="flex gap-2 px-5 w-96 flex-col pt-5 items-center"
@@ -132,7 +140,7 @@
         <div class="">
           <img
             id="modal-image"
-            src="./images/logo2.jpeg"
+            src="https://drive.google.com/thumbnail?id=1MwEABR_f-LeZl0oTT2VbozTbg9pCJOxo"
             alt="Deskripsi gambar"
             class="modal-image"
           />
@@ -224,7 +232,7 @@
     >
       <div
         id="popup"
-        class="w-full h-96 overflow-scroll bg-white rounded p-5 max-w-96 uppercase"
+        class="w-96 h-96 overflow-scroll bg-white rounded p-5 max-w-96 uppercase"
       >
         <div class="flex justify-between items-center">
           <h1>TALKSHOW</h1>
@@ -232,30 +240,30 @@
             <i class="fa fa-times text-red-500 text-2xl"></i>
           </span>
         </div>
-      </div>
-    </div>
 
-    <!-- CAMERA SCAN -->
-    <div id="camera">
-      <video id="qr-video" width="100%" height="100%" autoplay></video>
-      <p id="loading-text"></p>
-      <div id="close-camera">
-        <div id="button-close-camera">X</div>
-      </div>
+        <!-- CAMERA SCAN -->
+        <div id="camera">
+          <video id="qr-video" width="100%" height="100%" autoplay></video>
+          <p id="loading-text"></p>
+          <div id="close-camera">
+            <div id="button-close-camera">X</div>
+          </div>
 
-      <div id="back-qr">
-        <div class="w-52 h-52 flex relative">
-          <!-- Top border -->
-          <div class="animate-pulse"></div>
+          <div id="back-qr">
+            <div class="w-52 h-52 flex relative">
+              <!-- Top border -->
+              <div class="animate-pulse"></div>
 
-          <!-- Right border -->
-          <div class="animate-pulse"></div>
+              <!-- Right border -->
+              <div class="animate-pulse"></div>
 
-          <!-- Bottom border -->
-          <div class="animate-pulse"></div>
+              <!-- Bottom border -->
+              <div class="animate-pulse"></div>
 
-          <!-- Left border -->
-          <div class="animate-pulse"></div>
+              <!-- Left border -->
+              <div class="animate-pulse"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

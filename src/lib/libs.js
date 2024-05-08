@@ -8,7 +8,8 @@ var btnAgenda = document.getElementById("btn-agenda");
 const talkshowEvents = [
   {
     id: 1,
-    eventName: "Nama Acara Acara 1",
+    eventName: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam incidunt rem perferendis repellat. 
+    `,
     location: "Seminar Area Hall A1",
     time: "Rabu 15 Mei 2024, 12.45 - 14.00",
     pointx: 200,
@@ -49,26 +50,26 @@ btnAgenda.addEventListener("click", () => {
       eventElement.classList.add(
         "flex",
         "w-full",
-        "justify-between",
         "gap-2",
         "border-b-2",
         "py-2"
       );
       eventElement.innerHTML = `
       <span>${event.id}.</span>
-      <div class="flex flex-col gap-2">
-      <h1 class="w-32">${event.eventName}</h1>
-      <h1 id="locationEvent" class="w-20 underline cursor-pointer">${event.location}</h1>
+      <div class="flex flex-col  gap-2 w-full">
+      <h1 class="uppercase ">${event.eventName}</h1>
+      <h1 id="locationEvent" class=" underline cursor-pointer">${event.location}</h1>
+      <h1 class="font-bold">${event.time}</h1>
+
       </div>
       
-      <h1 class="w-56">${event.time}</h1>
     `;
 
       eventElement.addEventListener("click", () => {
         updatePoint("end", event.pointx, event.pointy);
         clickTenant = false;
-
         ContainerPopup.classList.add("hidden");
+        inputEnd.value = event.location;
       });
       Popup.appendChild(eventElement);
     });
