@@ -79,7 +79,7 @@ removeEndPoint.addEventListener("click", () => {
   removeEndPoint.classList.add("hidden");
 });
 ruteEnd.addEventListener("click", () => {
-  updatePoint("end", startX.innerText, startY.innerText);
+  updatePoint("end", startX.innerText, startY.innerText, false);
   inputEnd.value = modalName.innerText;
 
   document.getElementById("modal").classList.add("hidden");
@@ -91,7 +91,7 @@ ruteEnd.addEventListener("click", () => {
   // const push = PushDatabase(code, "visit");
 });
 ruteStart.addEventListener("click", (event) => {
-  updatePoint("start", startX.innerText, startY.innerText);
+  updatePoint("start", startX.innerText, startY.innerText, false);
 
   inputStart.value = modalName.innerText;
 
@@ -584,7 +584,7 @@ function HandleSearch(point) {
 
   const cancel = document.createElement("div");
   cancel.id = "cancelSearch";
-  cancel.className = `w-screen  fixed bottom-0 left-0 bg-white  bg-red-500 text-3xl text-center p-15`;
+  cancel.className = `w-screen  fixed bottom-0 left-0 bg-white  bg-red-500 text-3xl text-center p-15 cursor-pointer`;
   cancel.innerHTML = "<i class='fa fa-times'></i>";
 
   cancel.addEventListener("click", () => {
@@ -601,7 +601,7 @@ function HandleSearch(point) {
 // handle ketika tenant di klik
 function changeColorOnClick(name, x, y, width, height) {
   Tenant(gctx);
-  console.log(name.replace(/\s+/g, " "));
+  // console.log(name.replace(/\s+/g, " "));
 
   if (name.split(" ")[0] === "HALL") {
     return false;
@@ -1146,18 +1146,25 @@ class Grid {
   }
 }
 
-// setInterval(() => {
-//   console.log("tenant ", clickTenant);
+var userAgent = navigator.userAgent;
 
-//   modal.className === "hidden" ? "" : (clickTenant = true);
-//   if (!clickTenant) {
-//     reset();
-//     if (endPoint.x !== 0 && endPoint.y !== 0) {
-//       myPath = new PathFindingAlg(grid, startPoint, endPoint);
-//       myPath?.findPath();
-//     }
-//   }
-// }, 120);
+if (
+  /Windows|Macintosh|Linux x86_64|Linux i686|MacIntel|MacPPC/.test(userAgent)
+) {
+} else {
+  setInterval(() => {
+    console.log("tenant ", clickTenant);
+
+    modal.className === "hidden" ? "" : (clickTenant = true);
+    if (!clickTenant) {
+      reset();
+      if (endPoint.x !== 0 && endPoint.y !== 0) {
+        myPath = new PathFindingAlg(grid, startPoint, endPoint);
+        myPath?.findPath();
+      }
+    }
+  }, 120);
+}
 
 //the grid will be the exact size of the canvas
 //the top left corner of the grid will be located at point 0,0 to fill the canvas

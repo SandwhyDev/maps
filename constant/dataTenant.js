@@ -239,7 +239,7 @@ const A1A2 = [
     height: 60,
     code: `VISITOR REGISTRATION HALL A1`,
     text: `VISITOR REGISTRATION HALL A1`,
-    pointx: 4880,
+    pointx: 220,
     pointy: 60,
     border: true,
   },
@@ -4647,23 +4647,12 @@ const D1A2_TO_D1A3 = [
 const Medical_TO_Agent = [
   {
     color: `#B4B4B8`,
-    x: 260,
-    y: -160,
-    width: 120,
-    height: 160,
-    code: `MEDICAL ROOM`,
-    text: `MEDICAL ROOM`,
-    pointx: 480,
-    pointy: 220,
-  },
-  {
-    color: `#B4B4B8`,
     x: 580,
     y: -160,
     width: 180,
     height: 160,
-    code: `FORWARDER OFFICER`,
-    text: `FORWARDER OFFICER`,
+    code: `FORWARDER OFFICE`,
+    text: `FORWARDER OFFICE`,
     pointx: 480,
     pointy: 220,
   },
@@ -7931,6 +7920,17 @@ const Czyz_TO_D2H3_14 = [
 ];
 
 const Toilet = [
+  {
+    color: `#B4B4B8`,
+    x: 260,
+    y: -160,
+    width: 120,
+    height: 160,
+    code: `MEDICAL ROOM`,
+    text: `MEDICAL ROOM`,
+    pointx: 480,
+    pointy: 220,
+  },
   {
     color: `white`,
     x: 780,

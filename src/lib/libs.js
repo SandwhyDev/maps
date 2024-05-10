@@ -55,11 +55,13 @@ btnAgenda.addEventListener("click", () => {
         "py-2"
       );
       eventElement.innerHTML = `
-      <span>${event.id}.</span>
+
+      
+      <span class="w-5">${event.id}.</span>
       <div class="flex flex-col  gap-2 w-full">
-      <h1 class="uppercase ">${event.eventName}</h1>
-      <h1 id="locationEvent" class=" underline cursor-pointer">${event.location}</h1>
-      <h1 class="font-bold">${event.time}</h1>
+          <h1 class="uppercase ">${event.eventName}</h1>
+          <h1 id="locationEvent" class=" underline cursor-pointer">${event.location}</h1>
+          <h1 class="font-bold">${event.time}</h1>
 
       </div>
       

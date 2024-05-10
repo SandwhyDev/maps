@@ -816,6 +816,9 @@ video {
 .w-3\.5 {
   width: 0.875rem;
 }
+.w-4 {
+  width: 1rem;
+}
 .w-5 {
   width: 1.25rem;
 }
@@ -1022,10 +1025,23 @@ video {
 .pb-10 {
   padding-bottom: 2.5rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
 }
+.pb-56 {
+  padding-bottom: 14rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
 .overflow-scroll{
   overflow: scroll;
+  
 }
 
+.overflow-x-scroll{
+  overflow-x: scroll;
+  
+}
+
+.overflow-y-scroll{
+  overflow-y: scroll;
+  
+}
 .px-4 {
   padding-left: 1rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
   padding-right: 1rem; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
