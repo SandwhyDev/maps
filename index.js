@@ -42,8 +42,35 @@ var startPoint;
 var endPoint;
 var mode = null;
 var clickTenant;
+//any point in 2D space
+class Vec2 {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
 
 gCanvas.style.transform = "scale(" + scale + ")";
+
+const urlParams = new URLSearchParams(window.location.search);
+const pointStart = urlParams.get("start")?.replace(/"/g, "");
+
+if (pointStart) {
+  var tenant = dataTenant.find(function (element) {
+    return element.text === pointStart;
+  });
+
+  console.log(pointStart, tenant.pointx, tenant.pointy);
+
+  startPoint = new Vec2(tenant.pointx, tenant.pointy);
+
+  containerCanvas.scrollLeft = (tenant.pointx - 400) * scale;
+  window.scroll(0, (tenant.pointy - 400) * scale);
+} else {
+  startPoint = new Vec2(480, 400);
+}
+
+endPoint = new Vec2(0, 0);
 
 // handle klik
 buttonCamera.addEventListener("click", function () {
@@ -708,18 +735,7 @@ function getFromQr(from) {
 }
 // function end
 
-//any point in 2D space
-class Vec2 {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-}
-
 gCanvasOffset = new Vec2(gCanvas.offsetLeft, gCanvas.offsetTop);
-
-endPoint = new Vec2(0, 0);
-startPoint = new Vec2(480, 400);
 
 class Node {
   constructor(id, size, posx, posy, walkable, path, direction = "all", color) {
